@@ -2,6 +2,7 @@
     "header": {
         "inicio": "Home",
         "servicios": "Services",
+        "areas": "Service Areas",
         "tecnologías": "Technologies",
         "proyectos": "Portfolio",
         "nosotros": "About Us",
@@ -9,14 +10,36 @@
         "contacto": "Contact"
     },
     "banner": {
-        "span": "Custom Development",
-        "titulo": "We transform ideas into IT solutions",
-        "subtitulo": "We are a multidisciplinary team that supports you from the conception of the idea to its implementation.",
-        "boton": "Contact Us",
+        "span": "IT Consulting",
+        "titulo": "We transform ideas into digital solutions",
+        "subtitulo": "We are a multidisciplinary team that supports you from the initial concept through to full implementation.",
+        "boton": "Contact us",
         "reviews": [
-            "Working with ADINI for the development of our application was an exceptional experience. Their team demonstrated a high level of professionalism and technical skills.",
-            "They met all the established deadlines, ensuring the project stayed on track with smooth and effective communication at all times.",
-            "It was an excellent experience. They handled the entire process professionally, always attentive and ensuring everything was ready on time."
+            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+        ]
+    },
+    "bannerDev": {
+        "span": "Development",
+        "titulo": "Custom digital solution development",
+        "subtitulo": "We design and build digital systems that support the evolution and growth of each organization.",
+        "boton": "Contact us",
+        "reviews": [
+            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+        ]
+    },
+    "bannerInfra": {
+        "span": "Infrastructure",
+        "titulo": "Automated infrastructure and operations for modern, scalable environments",
+        "subtitulo": "We design, implement, and manage infrastructure, data, network, and security environments that ensure continuity, performance, and operational control.",
+        "boton": "Contact us",
+        "reviews": [
+            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
         ]
     },
     "services": {
@@ -55,6 +78,24 @@
                     "High Availability and Scalable Solutions",
                     "Linux and Windows Server Administration"
                 ]
+            }
+        ]
+    },
+    "serviceAreas": {
+        "titulo": "Our Specialties",
+        "subtitulo": "that empower your projects",
+        "areas": [
+            {
+                "title": "Software Development",
+                "subtitle": "CUSTOM SOLUTIONS",
+                "description": "We design and develop custom, scalable, and maintainable software solutions, crafted to support the growth and objectives of your organization.",
+                "cta": "View services"
+            },
+            {
+                "title": "Infrastructure & Cloud",
+                "subtitle": "SCALABILITY AND SECURITY",
+                "description": "We implement and manage resilient infrastructures and secure cloud environments, optimized to ensure stability, performance, and operational continuity.",
+                "cta": "View services"
             }
         ]
     },
@@ -397,6 +438,10 @@
     "aboutUs": {
         "titulo": "Our team",
         "subtitulo": "committed to your success",
+        "tituloDev": "Specialists in",
+        "subtituloDev": "software, product, and analytics",
+        "tituloInfra": "Specialists in",
+        "subtituloInfra": "operations, security, and system continuity",
         "desarrollador": "Developer",
         "analista": "Analyst",
         "bi": "B.I.",
@@ -412,10 +457,10 @@
             "proyectos": "Projects",
             "nosotros": "About Us"
         },
-        "soporte": {
-            "titulo": "Support",
-            "ayuda": "Help Center",
-            "contacto": "Contact"
+        "areas": {
+            "titulo": "Service Areas",
+            "desarrollo": "Development",
+            "infra": "Infrastructure"
         },
         "redes": {
             "titulo": "Our Social Media"

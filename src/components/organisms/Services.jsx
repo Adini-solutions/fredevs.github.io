@@ -6,7 +6,7 @@ import Service from "../molecules/Service";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-export default function Services() {
+export default function Services({ variant = "default" }) {
   const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.2), []);
   const { t } = useTranslation();
 
@@ -16,7 +16,7 @@ export default function Services() {
 
   return (
     <>
-      <Title title={t("services.titulo")} subtitle={t("services.subtitulo")} mt="50px" mb="140px" />
+      <Title title={t("services.titulo")} subtitle={t("services.subtitulo")} variant={variant} mt="50px" mb="140px" />
 
       <motion.div
         ref={ref}
@@ -26,7 +26,7 @@ export default function Services() {
       >
         <Flex justify="center" gap={{ base: 12, xl: 20 }} wrap="wrap" mx={10}>
           {services.map((service, index) => (
-            <Service key={index} title={service.titulo} image={service.imagen} serviceList={service.lista} />
+            <Service key={index} title={service.titulo} image={service.imagen} serviceList={service.lista} variant={variant} />
           ))}
         </Flex>
       </motion.div>

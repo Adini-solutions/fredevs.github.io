@@ -12,7 +12,7 @@ import { Turnstile } from "@marsidev/react-turnstile";
 const WORKER_URL = "https://email-worker.adini.workers.dev";
 const TURNSTILE_SITE_KEY = "0x4AAAAAACH7eEMqIQ4uu34n";
 
-export default function Contact() {
+export default function Contact({ variant = "default" }) {
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,7 +23,7 @@ export default function Contact() {
   const [turnstileToken, setTurnstileToken] = useState(null);
 
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setResponseMessage(null);
@@ -72,7 +72,7 @@ const handleSubmit = async (e) => {
 
   return (
     <>
-      <Title title={t("contact.titulo")} subtitle={t("contact.subtitulo")} mt="60px" mb="40px" />
+      <Title title={t("contact.titulo")} subtitle={t("contact.subtitulo")} variant={variant} mt="60px" mb="40px" />
 
       <Flex>
         <motion.div
@@ -94,7 +94,7 @@ const handleSubmit = async (e) => {
               w={"100%"}
             >
               <Flex alignItems="center" mb={6}>
-                <Icon as={HiMail} boxSize={8} color="#6c63ff" mr={4} />
+                <Icon as={HiMail} boxSize={8} color={variant === "infra" ? "#238b6f" : "#6c63ff"} mr={4} />
                 <Text my={0} fontSize="xl" fontWeight="bold" color="#071e37">
                   {t("contact.descripcion")}
                 </Text>
@@ -109,8 +109,8 @@ const handleSubmit = async (e) => {
                     bg="#f9f9f9"
                     color="#071e37"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: "#6c63ff" }}
-                    _placeholder={{ color: "#999999" }} 
+                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
                   />
@@ -122,8 +122,8 @@ const handleSubmit = async (e) => {
                     bg="#f9f9f9"
                     color="#071e37"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: "#6c63ff" }}
-                    _placeholder={{ color: "#999999" }} 
+                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
                   />
@@ -135,8 +135,8 @@ const handleSubmit = async (e) => {
                     bg="#f9f9f9"
                     color="#071e37"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: "#6c63ff" }}
-                    _placeholder={{ color: "#999999" }} 
+                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
                   />
@@ -151,12 +151,11 @@ const handleSubmit = async (e) => {
                     maxHeight="200px"
                     minHeight="150px"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: "#6c63ff" }}
-                    _placeholder={{ color: "#999999" }} 
+                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
                   />
-                  {/* Turnstile captcha */}
                   <Turnstile
                     siteKey={TURNSTILE_SITE_KEY}
                     onSuccess={(token) => setTurnstileToken(token)}
@@ -172,15 +171,15 @@ const handleSubmit = async (e) => {
                         </Text>
                       ) :
                       (
-                        <Text pr={3} m={0} fontSize={{ base: "md", md: "lg" }} color="#6c63ff" fontWeight="bold">
+                        <Text pr={3} m={0} fontSize={{ base: "md", md: "lg" }} color={variant === "infra" ? "#238b6f" : "#6c63ff"} fontWeight="bold">
                           {t("contact.span")}
                         </Text>
                       )
                     }
                     <Button
-                      bg="#6c63ff"
+                      bg={variant === "infra" ? "#238b6f" : "#6c63ff"}
                       color="white"
-                      _hover={{ bg: "#5548e2" }}
+                      _hover={{ bg: variant === "infra" ? "#1f7862" : "#5548e6" }}
                       type="submit"
                       isDisabled={
                         !message.trim() ||

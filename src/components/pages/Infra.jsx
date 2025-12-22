@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
-import ServiceAreas from "../organisms/ServiceAreas";
+import Services from "../organisms/Services";
 import Technologies from "../organisms/Technologies";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
@@ -11,7 +11,7 @@ import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
 
-export default function Home() {
+export default function Infra() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
   const [isTranslateVisible, setIsTranslateVisible] = useState(false);
 
@@ -33,19 +33,19 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header variant="infra" />
       <Box bg={"quarter.500"} overflowX={"hidden"}>
         <Box id="inicio">
-          <Banner />
+          <Banner variant="infra" />
         </Box>
-        <Box id="areas">
-          <ServiceAreas />
+        <Box id="servicios">
+          <Services variant="infra" />
         </Box>
         <Box id="contacto">
-          <Contact />
+          <Contact variant="infra" />
         </Box>
         <Box id="nosotros">
-          <AboutUs />
+          <AboutUs variant="infra" />
         </Box>
         <Footer />
         {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
