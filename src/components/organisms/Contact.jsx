@@ -7,6 +7,10 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import axios from "axios";
+import { Turnstile } from "@marsidev/react-turnstile";
+
+const WORKER_URL = "https://email-worker.adini.workers.dev";
+const TURNSTILE_SITE_KEY = "0x4AAAAAACH7eEMqIQ4uu34n";
 
 export default function Contact() {
   const [message, setMessage] = useState("");
@@ -16,27 +20,46 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [responseMessage, setResponseMessage] = useState(null);
   const { t } = useTranslation();
+  const [turnstileToken, setTurnstileToken] = useState(null);
 
-  const handleSubmit = async (e) => {
+
+const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setResponseMessage(null);
 
     try {
-      const formData = new FormData();
-      formData.append("email", email);
-      formData.append("name", name);
-      formData.append("phone", phone);
-      formData.append("comments", message);
+      if (!turnstileToken) {
+        throw new Error("Completa el captcha");
+      }
 
-      await axios.post("https://api-contactos.dev.adini.com.ar/comments/", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
+      const payload = {
+        to: "contacto@adini.com.ar",
+        subject: `Contacto web - ${name || "Sin nombre"}`,
+        text: [
+          `Nombre: ${name}`,
+          `Email: ${email}`,
+          `Tel: ${phone || "N/D"}`,
+          "",
+          message
+        ].join("\n"),
+        html: null, // opcional: podrías armar HTML
+        turnstileToken
+      };
+
+      await axios.post(WORKER_URL, payload, {
+        headers: { "Content-Type": "application/json" },
       });
 
       setResponseMessage({ type: "success", text: t("contact.mensajeEnviado") });
+      setMessage("");
+      setName("");
+      setEmail("");
+      setPhone("");
+      setTurnstileToken(null);
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
-      setResponseMessage({ type: "error", text: t("contact.mensajeNoEnviado") });
+      setResponseMessage({ type: "error", text: error?.response?.data?.error || t("contact.mensajeNoEnviado") });
     } finally {
       setLoading(false);
     }
@@ -133,6 +156,14 @@ export default function Contact() {
                     borderRadius="md"
                     p={4}
                   />
+                  {/* Turnstile captcha */}
+                  <Turnstile
+                    siteKey={TURNSTILE_SITE_KEY}
+                    onSuccess={(token) => setTurnstileToken(token)}
+                    onExpire={() => setTurnstileToken(null)}
+                    onError={() => setTurnstileToken(null)}
+                    options={{ theme: "light" }}
+                  />
                   <Flex justifyContent="space-between" align="center">
                     {responseMessage ?
                       (
@@ -151,7 +182,13 @@ export default function Contact() {
                       color="white"
                       _hover={{ bg: "#5548e2" }}
                       type="submit"
-                      isDisabled={!message.trim() || !name.trim() || !email.trim() || loading}
+                      isDisabled={
+                        !message.trim() ||
+                        !name.trim() ||
+                        !email.trim() ||
+                        !turnstileToken ||
+                        loading
+                      }
                       rightIcon={<Icon as={FiSend} />}
                       borderRadius="md"
                       p={4}
