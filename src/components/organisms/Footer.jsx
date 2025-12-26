@@ -1,16 +1,27 @@
 import { Box, Grid, GridItem, Text, Link, Icon, VStack, HStack, Divider } from "@chakra-ui/react";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaInstagram, FaFacebook } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Footer() {
     const { t } = useTranslation();
+    const navigate = useNavigate();
+
+    const navigateWithScroll = (path) => {
+        navigate(path);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
     const information = {
         name: "Adini",
         email: "contacto@adini.com",
-        instagram: "https://www.instagram.com/adini",
-        linkedin: "https://www.linkedin.com/in/adini-undefined-985241327/",
-        twitter: "https://twitter.com/adini",
+        instagram: "https://www.instagram.com/adini.solutions/",
+        linkedin: "https://www.linkedin.com/company/adiniar",
+        facebook: "https://www.facebook.com/profile.php?id=61581291992126",
     };
 
     const scrollToSection = (id) => {
@@ -50,31 +61,42 @@ export default function Footer() {
                         <Link onClick={() => scrollToSection("tecnologías")} _hover={{ color: "white" }}>{t("footer.empresa.tecnologías")}</Link>
                         <Link onClick={() => scrollToSection("proyectos")} _hover={{ color: "white" }}>{t("footer.empresa.proyectos")}</Link>
                         <Link onClick={() => scrollToSection("nosotros")} _hover={{ color: "white" }}>{t("footer.empresa.nosotros")}</Link>
-
                     </VStack>
                 </GridItem>
 
                 <GridItem>
-                    <Text fontWeight="bold" color="white" mb={3}>{t("footer.soporte.titulo")}</Text>
+                    <Text fontWeight="bold" color="white" mb={3}>
+                        {t("footer.areas.titulo")}
+                    </Text>
                     <VStack align={{ base: "center", md: "start" }} spacing={2}>
-                        <Link href="#" _hover={{ color: "white" }}>{t("footer.soporte.ayuda")}</Link>
+                        <Link
+                            onClick={() => navigateWithScroll("/dev")}
+                            _hover={{ color: "white", cursor: "pointer" }}
+                        >
+                            {t("footer.areas.desarrollo")}
+                        </Link>
 
-                        <Link onClick={() => scrollToSection("contacto")} _hover={{ color: "white" }}>{t("footer.soporte.contacto")}</Link>
+                        <Link
+                            onClick={() => navigateWithScroll("/infra")}
+                            _hover={{ color: "white", cursor: "pointer" }}
+                        >
+                            {t("footer.areas.infra")}
+                        </Link>
                     </VStack>
                 </GridItem>
 
                 <GridItem>
                     <Text fontWeight="bold" color="white" mb={3}>{t("footer.redes.titulo")}</Text>
                     <HStack justify={{ base: "center", md: "start" }} spacing={4}>
-                        {/* <Link href={information.instagram} isExternal>
+                        <Link href={information.instagram} isExternal>
                             <Icon as={FaInstagram} w={5} h={5} _hover={{ color: "white" }} />
-                        </Link> */}
+                        </Link>
                         <Link href={information.linkedin} isExternal>
                             <Icon as={FaLinkedin} w={5} h={5} _hover={{ color: "white" }} />
                         </Link>
-                        {/* <Link href={information.twitter} isExternal>
-                            <Icon as={FaTwitter} w={5} h={5} _hover={{ color: "white" }} />
-                        </Link> */}
+                        <Link href={information.facebook} isExternal>
+                            <Icon as={FaFacebook} w={5} h={5} _hover={{ color: "white" }} />
+                        </Link>
                         <Link href={`mailto:${information.email}`} isExternal>
                             <Icon as={FaEnvelope} w={5} h={5} _hover={{ color: "white" }} />
                         </Link>

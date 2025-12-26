@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
-import Services from "../organisms/Services";
-import Technologies from "../organisms/Technologies";
+import ServiceAreas from "../organisms/ServiceAreas";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
-import Portfolio from "../organisms/Portfolio";
 import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
+import SEO from "../../utils/SEO";
 
 export default function Home() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
@@ -33,19 +32,19 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="ADINI | Software Agency"
+        description="Diseñamos e implementamos soluciones digitales integrales para empresas."
+        canonical="https://adini.com.ar/"
+        image="https://adini.com.ar/assets/images/banner.webp"
+      />
       <Header />
       <Box bg={"quarter.500"} overflowX={"hidden"}>
         <Box id="inicio">
           <Banner />
         </Box>
-        <Box id="servicios">
-          <Services />
-        </Box>
-        <Box id="tecnologías">
-          <Technologies />
-        </Box>
-        <Box id="proyectos">
-          <Portfolio />
+        <Box id="areas">
+          <ServiceAreas />
         </Box>
         <Box id="contacto">
           <Contact />

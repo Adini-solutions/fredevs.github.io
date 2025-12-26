@@ -2,6 +2,7 @@
     "header": {
         "inicio": "Inicio",
         "servicios": "Servicios",
+        "areas": "Areas de Servicio",
         "tecnologías": "Tecnologías",
         "proyectos": "Proyectos",
         "nosotros": "Nosotros",
@@ -9,7 +10,7 @@
         "contacto": "Contacto"
     },
     "banner": {
-        "span": "Desarrollo a medida",
+        "span": "Consultoria IT",
         "titulo": "Transformamos ideas en soluciones informáticas",
         "subtitulo": "Somos un equipo multidisciplinario que te acompaña desde la concepción de la idea hasta su implementación.",
         "boton": "Contáctanos",
@@ -17,6 +18,109 @@
             "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
             "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
             "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
+        ]
+    },
+    "bannerDev": {
+        "span": "Desarrollo",
+        "titulo": "Desarrollo de soluciones digitales a medida",
+        "subtitulo": "Diseñamos y construimos sistemas digitales que acompañan la evolución y el crecimiento de cada organización.",
+        "boton": "Contáctanos",
+        "reviews": [
+            "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
+            "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
+            "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
+        ]
+    },
+    "bannerInfra": {
+        "span": "Infraestructura",
+        "titulo": "Infraestructura y operaciones automatizadas para entornos modernos y escalables",
+        "subtitulo": "Diseñamos, implementamos y gestionamos entornos de infraestructura, datos, redes y seguridad que aseguran continuidad, rendimiento y control operativo.",
+        "boton": "Contáctanos",
+        "reviews": [
+            "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
+            "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
+            "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
+        ]
+    },
+    "infraServices": {
+        "titulo": "Infraestructura",
+        "subtitulo": "robusta, segura y escalable",
+        "servicios": [
+            {
+                "titulo": "Infraestructura Core y Datacenter",
+                "imagen": "/assets/icons/devops.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Administración de cómputo y virtualización",
+                    "Gestión de almacenamiento (Storage)",
+                    "Mantenimiento de Datacenter",
+                    "Nube híbrida y pública",
+                    "Orquestación y contenedores",
+                    "Alta disponibilidad y replicación (HA)"
+                ]
+            },
+            {
+                "titulo": "Gestión de Datos y Continuidad",
+                "imagen": "/assets/icons/dataManage.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Administración de bases de datos (DBA)",
+                    "Respaldo y recuperación (Backup & DR)",
+                    "Gestión de archivos y colaboración"
+                ]
+            },
+            {
+                "titulo": "Redes y Conectividad",
+                "imagen": "/assets/icons/networking.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Gestión de redes LAN/WAN",
+                    "Infraestructura WiFi",
+                    "Conectividad remota (VPN)",
+                    "DNS y certificados digitales (PKI/SSL)",
+                    "Telefonía IP y comunicaciones unificadas"
+                ]
+            },
+            {
+                "titulo": "Seguridad de la Información",
+                "imagen": "/assets/icons/security.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Firewalls y seguridad perimetral",
+                    "Endpoint security",
+                    "Gestión de identidad y accesos (IAM)"
+                ]
+            },
+            {
+                "titulo": "Monitoreo y Observabilidad",
+                "imagen": "/assets/icons/monitoring.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Monitoreo de disponibilidad y rendimiento",
+                    "Gestión de alertas y capacidad"
+                ]
+            },
+            {
+                "titulo": "Operaciones y Automatización",
+                "imagen": "/assets/icons/automation.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Infraestructura como código (IaC)",
+                    "Gestión del ciclo de vida de aplicaciones",
+                    "Gestión de activos IT (ITAM)"
+                ]
+            },
+            {
+                "titulo": "Soporte y Gestión de Servicios",
+                "imagen": "/assets/icons/support.svg",
+                "descripcion": "Toda tuya negri",
+                "lista": [
+                    "Soporte nivel 2 y 3",
+                    "Gestión de proveedores IT",
+                    "Documentación técnica",
+                    "Consultoría y compras de IT"
+                ]
+            }
         ]
     },
     "services": {
@@ -55,6 +159,24 @@
                     "Alta Disponibilidad y Soluciones Escalables",
                     "Administración de Servidores Linux y Windows"
                 ]
+            }
+        ]
+    },
+    "serviceAreas": {
+        "titulo": "Nuestras especialidades",
+        "subtitulo": "que potencian tus proyectos",
+        "areas": [
+            {
+                "title": "Desarrollo de Software",
+                "subtitle": "SOLUCIONES A MEDIDA",
+                "description": "Diseñamos y desarrollamos soluciones de software a medida, escalables y mantenibles, pensadas para acompañar el crecimiento y los objetivos de tu organización.",
+                "cta": "Ver servicios"
+            },
+            {
+                "title": "Infraestructura & Cloud",
+                "subtitle": "ESCALABILIDAD Y SEGURIDAD",
+                "description": "Implementamos y gestionamos infraestructuras resilientes y entornos cloud seguros, optimizados para garantizar estabilidad, rendimiento y continuidad operativa.",
+                "cta": "Ver servicios"
             }
         ]
     },
@@ -397,6 +519,10 @@
     "aboutUs": {
         "titulo": "Nuestro equipo",
         "subtitulo": "comprometido con tu éxito",
+        "tituloDev": "Especialistas en",
+        "subtituloDev": "software, producto y analítica",
+        "tituloInfra": "Especialistas en",
+        "subtituloInfra": "operación, seguridad y continuidad de sistemas",
         "desarrollador": "Desarrollador",
         "analista": "Analista",
         "bi": "B.I.",
@@ -412,10 +538,10 @@
             "proyectos": "Proyectos",
             "nosotros": "Nosotros"
         },
-        "soporte": {
-            "titulo": "Soporte",
-            "ayuda": "Centro de Ayuda",
-            "contacto": "Contacto"
+        "areas": {
+            "titulo": "Áreas de Servicio",
+            "desarrollo": "Desarrollo",
+            "infra": "Infraestructura"
         },
         "redes": {
             "titulo": "Nuestras Redes"
