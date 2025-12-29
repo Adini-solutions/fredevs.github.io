@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, List, ListItem, ListIcon, Button } from "@chakra-ui/react";
+import { Box, Flex, Heading, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
 import { useDisclosure } from "@chakra-ui/react";
 import ServiceModal from "../organisms/ServiceModal";

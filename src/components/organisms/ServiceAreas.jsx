@@ -103,6 +103,7 @@ export default function ServiceAreas() {
                     color={area.accent}
                     border="1px solid"
                     borderColor="gray.100"
+                    mr={4}
                     transition="all 0.3s ease"
                     _groupHover={{
                       bg: area.accent,

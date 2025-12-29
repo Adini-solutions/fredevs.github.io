@@ -2,17 +2,17 @@ import { Box, Flex, Heading } from "@chakra-ui/react";
 import Title from "../molecules/Title";
 import WebProyect from "../molecules/WebProyect";
 import MobileProyect from "../molecules/MobileProyect";
-import credencial1 from "../../videos/credencial1.webm";
-import credencial2 from "../../videos/credencial2.webm";
-import ripApp1 from "../../videos/ripapp1.webm";
-import ripApp2 from "../../videos/ripapp2.webm";
-import amigosCole1 from "../../videos/amigoscole1.webm";
-import amigosCole2 from "../../videos/amigoscole2.webm";
-import sia from "../../videos/sia.webm";
-import samay from "../../videos/samay.webm";
-import moviltrack from "../../videos/moviltrack.webm";
-import pap from "../../videos/pap.webm";
-import ripAdmin from "../../videos/ripadmin.webm";
+import credencial1 from "../../videos/credencial1.mp4";
+import credencial2 from "../../videos/credencial2.mp4";
+import ripApp1 from "../../videos/ripapp1.mp4";
+import ripApp2 from "../../videos/ripapp2.mp4";
+import amigosCole1 from "../../videos/amigoscole1.mp4";
+import amigosCole2 from "../../videos/amigoscole2.mp4";
+import sia from "../../videos/sia.mp4";
+import samay from "../../videos/samay.mp4";
+import moviltrack from "../../videos/moviltrack.mp4";
+import pap from "../../videos/pap.mp4";
+import ripAdmin from "../../videos/ripadmin.mp4";
 import { useTranslation } from "react-i18next";
 
 export default function Portfolio() {

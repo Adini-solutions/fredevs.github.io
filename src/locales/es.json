@@ -7,7 +7,9 @@
         "proyectos": "Proyectos",
         "nosotros": "Nosotros",
         "menu": "Menú",
-        "contacto": "Contacto"
+        "contacto": "Contacto",
+        "blog": "Artículos",
+        "cases": "Casos de Éxito"
     },
     "banner": {
         "span": "Consultoria IT",
@@ -179,6 +181,14 @@
                 "cta": "Ver servicios"
             }
         ]
+    },
+    "blog": {
+        "titulo": "Insights tecnológicos",
+        "subtitulo": "que inspiran decisiones",
+        "label": "Nuestro Blog",
+        "title": "Ideas y Novedades en IT",
+        "subtitle": "Compartimos conocimiento sobre desarrollo, infraestructura y el futuro digital.",
+        "boton": "Leer artículo"
     },
     "technologies": {
         "titulo": "Herramientas",

@@ -55,7 +55,7 @@ export default function Dev() {
           <Portfolio />
         </Box>
         <Box id="contacto">
-          <Contact />
+          <Contact variant="dev" />
         </Box>
         <Box id="nosotros">
           <AboutUs variant="dev" />

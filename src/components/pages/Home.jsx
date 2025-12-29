@@ -5,6 +5,8 @@ import Banner from "../organisms/Banner";
 import ServiceAreas from "../organisms/ServiceAreas";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
+import CaseStudies from "../organisms/CaseStudies";
+import Blog from "../organisms/Blog";
 import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
@@ -46,11 +48,17 @@ export default function Home() {
         <Box id="areas">
           <ServiceAreas />
         </Box>
-        <Box id="contacto">
-          <Contact />
+        <Box id="cases">
+          {/* <CaseStudies /> */}
+        </Box>
+        <Box id="blog">
+          <Blog />
         </Box>
         <Box id="nosotros">
           <AboutUs />
+        </Box>
+        <Box id="contacto">
+          <Contact />
         </Box>
         <Footer />
         {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}

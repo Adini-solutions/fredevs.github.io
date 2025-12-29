@@ -4,10 +4,12 @@
         "servicios": "Services",
         "areas": "Service Areas",
         "tecnologías": "Technologies",
-        "proyectos": "Portfolio",
+        "proyectos": "Projects",
         "nosotros": "About Us",
         "menu": "Menu",
-        "contacto": "Contact"
+        "contacto": "Contact",
+        "blog": "Articles",
+        "cases": "Success Stories"
     },
     "banner": {
         "span": "IT Consulting",
@@ -179,6 +181,14 @@
                 "cta": "View services"
             }
         ]
+    },
+    "blog": {
+        "titulo": "Technology Insights",
+        "subtitulo": "that inspire decisions",
+        "label": "Our Blog",
+        "title": "Ideas and Trends in IT",
+        "subtitle": "We share knowledge about development, infrastructure, and the digital future.",
+        "boton": "Read article"
     },
     "technologies": {
         "titulo": "Tools",
