@@ -49,7 +49,7 @@ export default function Home() {
           <ServiceAreas />
         </Box>
         <Box id="cases">
-          {/* <CaseStudies /> */}
+          <CaseStudies />
         </Box>
         <Box id="blog">
           <Blog />

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import axios from 'axios';
 import {
   Box,
@@ -12,11 +12,16 @@ import {
 import Article from '../molecules/Article';
 import Title from '../molecules/Title';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-export default function Blog() {
+export default function Blog({ variant = 'default' }) {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const { t } = useTranslation();
+
+  const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.2), []);
+  const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
   useEffect(() => {
     axios
@@ -68,11 +73,18 @@ export default function Blog() {
               <Spinner size="lg" color="purple.300" />
             </Flex>
           ) : (
-            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-              {articles.map(article => (
-                <Article key={article.id} article={article} />
-              ))}
-            </SimpleGrid>
+            <motion.div
+              ref={ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+                {articles.map(article => (
+                  <Article key={article.id} article={article} />
+                ))}
+              </SimpleGrid>
+            </motion.div>
           )}
         </Container>
       </Box>

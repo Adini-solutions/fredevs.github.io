@@ -190,6 +190,58 @@
         "subtitle": "We share knowledge about development, infrastructure, and the digital future.",
         "boton": "Read article"
     },
+    "cases": {
+        "titulo": "Real challenges,",
+        "subtitulo": "real results",
+        "etiquetaResultado": "Key Outcome",
+        "items": [
+            {
+                "id": 1,
+                "cliente": "National Technological University",
+                "titulo": "Institutional Broadcast System",
+                "descripcion": "We designed and developed a proprietary institutional broadcast system for UTN, replacing third-party software of unverified origin, insecure and with recurring costs. The solution centralized official communications, improved delivery control and monitoring, and eliminated security risks.",
+                "resultado": "Secure Proprietary Software",
+                "tecnologias": [
+                    "Node.js",
+                    "React",
+                    "Material UI",
+                    "Docker",
+                    "SMTP",
+                    "PHP"
+                ],
+                "link": "/casos/utn-difusiones"
+            },
+            {
+                "id": 2,
+                "cliente": "Secretariat of Science and Technology – UTN",
+                "titulo": "SICYT: Integrated Project and Researcher Management",
+                "descripcion": "We developed the SICYT system to digitalize and centralize the management of projects and researchers, replacing manual processes based on Excel and Microsoft Access. The result was a centralized, auditable and consistent management of scientific information.",
+                "resultado": "Centralized and Auditable Management",
+                "tecnologias": [
+                    "React",
+                    "Tailwind CSS",
+                    "Node.js",
+                    "Docker",
+                    "Keycloak (Auth)"
+                ],
+                "link": "/casos/utn-sicyt"
+            },
+            {
+                "id": 3,
+                "cliente": "National Technological University",
+                "titulo": "Virtualization Infrastructure with OpenNebula",
+                "descripcion": "We implemented OpenNebula as the main virtualization platform, replacing fragmented and costly solutions. The new infrastructure enabled centralized operations, improved control, and optimized resource usage for academic and research environments.",
+                "resultado": "Operational Control and Autonomy",
+                "tecnologias": [
+                    "OpenNebula",
+                    "Linux",
+                    "Virtualization",
+                    "On-Prem Infrastructure"
+                ],
+                "link": "/casos/utn-opennebula"
+            }
+        ]
+    },
     "technologies": {
         "titulo": "Tools",
         "subtitulo": "that boost your growth",
