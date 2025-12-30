@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { Box, Flex, Text, Heading, Button } from "@chakra-ui/react";
 import { ViewIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";

@@ -27,7 +27,7 @@ export default function Header({ variant = "default" }) {
   }
 
   const menuType = {
-    default: ["inicio", "areas", , "cases", "blog", "nosotros", "contacto"],
+    default: ["inicio", "areas", "cases", "blog", "nosotros", "contacto"],
     dev: ["inicio", "servicios", "tecnologías", "proyectos", "contacto", "nosotros",],
     infra: ["inicio", "servicios", "contacto", "nosotros"],
   };
