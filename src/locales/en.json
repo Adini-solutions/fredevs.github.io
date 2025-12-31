@@ -126,7 +126,63 @@
         ]
     },
     "devServices": {
-    
+        "titulo": "Soluciones",
+        "subtitulo": "a medida para tu negocio",
+        "servicios": [
+            {
+                "titulo": "Soluciones Web Simples",
+                "imagen": "/assets/icons/dev.svg",
+                "lista": [
+                    "Tu página web lista rápido",
+                    "Diseño profesional y atractivo",
+                    "Plantillas listas o personalizadas",
+                    "Costo accesible y transparente"
+                ]
+            },
+            {
+                "titulo": "Desarrollo a Medida",
+                "imagen": "/assets/icons/dev.svg",
+                "lista": [
+                    "Soluciones adaptadas a tu negocio",
+                    "Procesos claros y organizados",
+                    "Funcionalidades únicas según necesidad",
+                    "Escalable y mantenible",
+                    "Presupuesto ajustado a tu proyecto"
+                ]
+            },
+            {
+                "titulo": "Desarrollo Mobile",
+                "imagen": "/assets/icons/dev.svg",
+                "lista": [
+                    "Apps móviles para tus clientes",
+                    "Interfaz amigable y funcional",
+                    "Integración con tus sistemas existentes",
+                    "Disponible para iOS y Android"
+                ]
+            },
+            {
+                "titulo": "Servicios Complementarios",
+                "imagen": "/assets/icons/support.svg",
+                "lista": [
+                    "Optimización y mejoras de tus sistemas",
+                    "Integración con otras herramientas",
+                    "Consultoría para decisiones tecnológicas",
+                    "Soporte técnico confiable",
+                    "Planes flexibles de mantenimiento"
+                ]
+            },
+            {
+                "titulo": "Implementación de Soluciones de Código Abierto",
+                "imagen": "/assets/icons/dev.svg",
+                "lista": [
+                    "Aprovecha soluciones maduras y gratuitas",
+                    "Implementación rápida y profesional",
+                    "Personalización según tu negocio",
+                    "Integración sin complicaciones",
+                    "Soporte y actualizaciones incluidas"
+                ]
+            }
+        ]
     },
     "serviceAreas": {
         "titulo": "Our Specialties",
