@@ -32,9 +32,9 @@
         ]
     },
     "bannerInfra": {
-        "span": "Infraestructura",
-        "titulo": "Infraestructura y operaciones automatizadas para entornos modernos y escalables",
-        "subtitulo": "Diseñamos, implementamos y gestionamos entornos de infraestructura, datos, redes y seguridad que aseguran continuidad, rendimiento y control operativo.",
+        "span": "Infrastructure & Cloud Services",
+        "titulo": "Infraestructura y operaciones para entornos empresariales",
+        "subtitulo": "Diseñamos y gestionamos infraestructuras modernas, seguras y escalables que permiten a nuestros clientes enfocarse en su negocio, mientras nosotros nos ocupamos de la operación, la seguridad y la evolución continua de su ecosistema tecnológico.",
         "boton": "Contáctanos",
         "reviews": [
             "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
@@ -43,26 +43,24 @@
         ]
     },
     "infraServices": {
-        "titulo": "Infraestructura",
-        "subtitulo": "robusta, segura y escalable",
+        "titulo": "Infraestructura que ",
+        "subtitulo": "sostiene el negocio",
         "servicios": [
             {
                 "titulo": "Infraestructura Core y Datacenter",
                 "imagen": "/assets/icons/devops.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Gestión integral de la infraestructura core que soporta las aplicaciones y servicios críticos del negocio, tanto en datacenters propios como en entornos cloud e híbridos.",
                 "lista": [
-                    "Administración de cómputo y virtualización",
-                    "Gestión de almacenamiento (Storage)",
-                    "Mantenimiento de Datacenter",
-                    "Nube híbrida y pública",
-                    "Orquestación y contenedores",
-                    "Alta disponibilidad y replicación (HA)"
+                    "Virtualización, cómputo y storage",
+                    "Entornos Cloud e híbridos",
+                    "Mantenimiento de datacenter",
+                    "Alta disponibilidad y continuidad operativa"
                 ]
             },
             {
                 "titulo": "Gestión de Datos y Continuidad",
                 "imagen": "/assets/icons/dataManage.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Gestión integral de los datos del negocio, enfocada en su disponibilidad, integridad y recuperación ante incidentes para asegurar la continuidad operativa.",
                 "lista": [
                     "Administración de bases de datos (DBA)",
                     "Respaldo y recuperación (Backup & DR)",
@@ -72,51 +70,52 @@
             {
                 "titulo": "Redes y Conectividad",
                 "imagen": "/assets/icons/networking.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Gestión integral de la conectividad del negocio, asegurando redes estables, accesos remotos seguros y comunicaciones empresariales confiables.",
                 "lista": [
-                    "Gestión de redes LAN/WAN",
-                    "Infraestructura WiFi",
-                    "Conectividad remota (VPN)",
-                    "DNS y certificados digitales (PKI/SSL)",
-                    "Telefonía IP y comunicaciones unificadas"
+                    "Redes corporativas",
+                    "Conectividad segura y remota",
+                    "Comunicaciones empresariales"
                 ]
             },
             {
                 "titulo": "Seguridad de la Información",
                 "imagen": "/assets/icons/security.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Servicios de ciberseguridad orientados a proteger la infraestructura, los usuarios y los activos digitales del negocio, reduciendo riesgos y fortaleciendo los controles de acceso y operación.",
                 "lista": [
                     "Firewalls y seguridad perimetral",
                     "Endpoint security",
-                    "Gestión de identidad y accesos (IAM)"
+                    "Gestión de identidad y accesos (IAM)",
+                    "Protección de activos digitales"
                 ]
             },
             {
                 "titulo": "Monitoreo y Observabilidad",
                 "imagen": "/assets/icons/monitoring.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Servicios de monitoreo y observabilidad que brindan visibilidad continua sobre la infraestructura y los sistemas, permitiendo detectar, alertar y anticipar incidentes antes de que impacten en el negocio.",
                 "lista": [
                     "Monitoreo de disponibilidad y rendimiento",
-                    "Gestión de alertas y capacidad"
+                    "Gestión de alertas y capacidad",
+                    "Prevención de incidentes"
                 ]
             },
             {
                 "titulo": "Operaciones y Automatización",
                 "imagen": "/assets/icons/automation.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Servicios orientados a optimizar y estandarizar la operación IT mediante automatización, soporte continuo y una gestión alineada a las normativas y políticas internas de cada organización.",
                 "lista": [
-                    "Infraestructura como código (IaC)",
-                    "Gestión del ciclo de vida de aplicaciones",
-                    "Gestión de activos IT (ITAM)"
+                    "Estandarización y automatización operativa",
+                    "Soporte a aplicaciones de negocio",
+                    "Control de activos tecnológicos",
+                    "Alineación con compliance y normativas internas"
                 ]
             },
             {
                 "titulo": "Soporte y Gestión de Servicios",
                 "imagen": "/assets/icons/support.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Servicios dedicados a brindar soporte técnico especializado y gestionar eficientemente los servicios de TI para garantizar la continuidad y calidad operativa.",
                 "lista": [
                     "Soporte nivel 2 y 3",
-                    "Gestión de proveedores IT",
+                    "Gestión de proveedores",
                     "Documentación técnica",
                     "Consultoría y compras de IT"
                 ]
@@ -173,9 +172,9 @@
                 "cta": "Ver servicios"
             },
             {
-                "title": "Infraestructura & Cloud",
-                "subtitle": "ESCALABILIDAD Y SEGURIDAD",
-                "description": "Implementamos y gestionamos infraestructuras resilientes y entornos cloud seguros, optimizados para garantizar estabilidad, rendimiento y continuidad operativa.",
+                "title": "Infrastructure & Cloud Services",
+                "subtitle": "Confiable. Seguro. Escalable.",
+                "description": "Desde el area de Infrastructure & Cloud Services, ayudamos a las organizaciones a operar su tecnología de forma confiable y sin interrupciones.",
                 "cta": "Ver servicios"
             }
         ]
@@ -541,7 +540,7 @@
         "areas": {
             "titulo": "Áreas de Servicio",
             "desarrollo": "Desarrollo",
-            "infra": "Infraestructura"
+            "infra": "Infrastructure & Cloud Services"
         },
         "redes": {
             "titulo": "Nuestras Redes"

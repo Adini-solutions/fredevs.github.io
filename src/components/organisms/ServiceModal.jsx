@@ -37,7 +37,7 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
 
                 <ModalHeader pb={0}>
                     <Text mb={0} fontSize="md" color={variant === "infra" ? "#238b6f" : "#4d45d6"} fontWeight="600">
-                        {"Fijate q le inventas aca"}
+                        {"Adini | Infrastructure"}
                     </Text>
                     <Text mb={0} fontSize="3xl" fontWeight="semibold" color="gray.800">
                         {service.titulo}
