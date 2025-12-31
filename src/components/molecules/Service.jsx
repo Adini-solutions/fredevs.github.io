@@ -1,10 +1,13 @@
 import { Box, Flex, Heading, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
+import { LuArrowRight } from "react-icons/lu";
 import { useDisclosure } from "@chakra-ui/react";
 import ServiceModal from "../organisms/ServiceModal";
+import { useTranslation } from "react-i18next";
 
 export default function Service({ service, variant }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -52,21 +55,24 @@ export default function Service({ service, variant }) {
         </List>
         <Box
           position="absolute"
-          left="50%"
-          bottom="16px"
-          px={3}
-          py={1.5}
-          bg={variant === "infra" ? "#238b6f" : "#6c63ff"}
-          color="white"
+          right="16px"
+          bottom="12px"
+          display="flex"
+          alignItems="center"
+          gap={1}
           fontSize="sm"
-          borderRadius="md"
+          color={variant === "infra" ? "#238b6f" : "#6c63ff"}
           opacity={0}
-          transform="translate(-50%, 6px)"
+          transform="translateX(-4px)"
           transition="all 0.2s ease"
           pointerEvents="none"
-          _groupHover={{ opacity: 1, transform: "translate(-50%, 0)" }}
+          _groupHover={{
+            opacity: 1,
+            transform: "translateX(0)",
+          }}
         >
-          Ver más
+          {t("infraServices.verMas")}
+          <Box as={LuArrowRight} />
         </Box>
       </Box>
       <ServiceModal service={service} isOpen={isOpen} onClose={onClose} variant={variant} />

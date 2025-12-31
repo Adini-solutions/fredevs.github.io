@@ -18,6 +18,7 @@ import {
     MdElectricalServices,
     MdBuild,
 } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const iconMap = {
     MdBuild,
@@ -26,6 +27,8 @@ const iconMap = {
 };
 
 export default function ServiceModal({ isOpen, onClose, service, variant }) {
+    const { t } = useTranslation();
+
     return (
         <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
             <ModalOverlay />
@@ -57,7 +60,6 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
 
                     <Divider borderColor="gray.300" mb={6} />
 
-                    {/* Estos habria q agregarlos en los es.json y en.json*/}
                     <Flex wrap="wrap" gap={6}>
                         {service.detalles?.map((detalle, index) => (
                             <ServiceItem
@@ -81,7 +83,7 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
                         _hover={{ backgroundColor: "#1c334d" }}
                         px={8}
                     >
-                        Cerrar
+                        {t("infraServices.cerrar")}
                     </Button>
                 </ModalFooter>
             </ModalContent>

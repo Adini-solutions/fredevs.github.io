@@ -47,6 +47,8 @@
     "infraServices": {
         "titulo": "Infraestructura ",
         "subtitulo": "robusta, segura y escalable",
+        "cerrar": "Cerrar",
+        "verMas": "Ver más",
         "servicios": [
             {
                 "titulo": "Infraestructura Core y Datacenter",
@@ -276,6 +278,8 @@
     "devServices": {
         "titulo": "Soluciones",
         "subtitulo": "a medida para tu negocio",
+        "cerrar": "Cerrar",
+        "verMas": "Ver más",
         "servicios": [
             {
                 "titulo": "Soluciones Web Simples",
