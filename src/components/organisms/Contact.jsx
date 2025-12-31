@@ -22,6 +22,11 @@ export default function Contact({ variant = "default" }) {
   const { t } = useTranslation();
   const [turnstileToken, setTurnstileToken] = useState(null);
 
+  const getContactEmail = () => {
+    if (variant === "dev") return "dev@adini.com.ar";
+    if (variant === "infra") return "infra@adini.com.ar";
+    return "contacto@adini.com.ar";
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +39,7 @@ export default function Contact({ variant = "default" }) {
       }
 
       const payload = {
-        to: "contacto@adini.com.ar",
+        to: getContactEmail(),
         subject: `Contacto web - ${name || "Sin nombre"}`,
         text: [
           `Nombre: ${name}`,
@@ -43,7 +48,7 @@ export default function Contact({ variant = "default" }) {
           "",
           message
         ].join("\n"),
-        html: null, // opcional: podrías armar HTML
+        html: null,
         turnstileToken
       };
 
@@ -95,7 +100,7 @@ export default function Contact({ variant = "default" }) {
             >
               <Flex alignItems="center" mb={6}>
                 <Icon as={HiMail} boxSize={8} color={variant === "infra" ? "#238b6f" : "#6c63ff"} mr={4} />
-                <Text my={0} fontSize="xl" fontWeight="bold" color="#071e37">
+                <Text my={0} fontSize="xl" fontWeight="bold" color="primary.500">
                   {t("contact.descripcion")}
                 </Text>
               </Flex>
@@ -107,7 +112,7 @@ export default function Contact({ variant = "default" }) {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     bg="#f9f9f9"
-                    color="#071e37"
+                    color="primary.500"
                     border="2px solid #e0e0e0"
                     _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
                     _placeholder={{ color: "#999999" }}
@@ -120,7 +125,7 @@ export default function Contact({ variant = "default" }) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     bg="#f9f9f9"
-                    color="#071e37"
+                    color="primary.500"
                     border="2px solid #e0e0e0"
                     _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
                     _placeholder={{ color: "#999999" }}
@@ -133,7 +138,7 @@ export default function Contact({ variant = "default" }) {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     bg="#f9f9f9"
-                    color="#071e37"
+                    color="primary.500"
                     border="2px solid #e0e0e0"
                     _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
                     _placeholder={{ color: "#999999" }}
@@ -146,7 +151,7 @@ export default function Contact({ variant = "default" }) {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     bg="#f9f9f9"
-                    color="#071e37"
+                    color="primary.500"
                     resize="vertical"
                     maxHeight="200px"
                     minHeight="150px"

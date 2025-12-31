@@ -1,13 +1,15 @@
 import { Box, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next"; import { useNavigate } from "react-router-dom";
+
 import { useEffect, useState } from 'react';
 import Button from "../molecules/Button";
 
 export default function Header({ variant = "default" }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [backgroundColor, setBackgroundColor] = useState('linear-gradient(to right, rgba(7, 30, 55, 0.9), rgba(7, 30, 55, 0.5))');
   const [headerBoxShadow, setHeaderBoxShadow] = useState('');
   const [contactButtonStyle, setContactButtonStyle] = useState(false);
@@ -25,7 +27,7 @@ export default function Header({ variant = "default" }) {
   }
 
   const menuType = {
-    default: ["inicio", "areas", "contacto", "nosotros"],
+    default: ["inicio", "areas", "cases", "blog", "nosotros", "contacto"],
     dev: ["inicio", "servicios", "tecnologías", "proyectos", "contacto", "nosotros",],
     infra: ["inicio", "servicios", "contacto", "nosotros"],
   };
@@ -81,6 +83,15 @@ export default function Header({ variant = "default" }) {
       onClose();
     }
   };
+
+  const navigateWithScroll = (path) => {
+    navigate(path);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Box position="sticky" w="100%" height="auto" zIndex={10} top={0} transition="0.15s ease-in-out" bg={backgroundColor}>
       <Flex bg={backgroundColor} justifyContent="space-between" transition="0.15s ease-in-out" alignItems="center" py={{ base: 3, lg: 4 }} px={{ base: "30px", lg: "70px" }} boxShadow={headerBoxShadow}>
@@ -109,7 +120,6 @@ export default function Header({ variant = "default" }) {
             {variantType[variant] && (
               <Text
                 mb="7px"
-                fontWeight="semibold"
                 color={variantColor}
                 fontSize="11px"
                 letterSpacing="0.025em"
@@ -123,6 +133,7 @@ export default function Header({ variant = "default" }) {
         </Flex>
 
         <Flex display={{ base: "none", lg: "flex" }} gap={12} fontSize="md">
+
           {menuItems.map((section) => (
             <Text color={itemsColor} key={section} as="button" onClick={() => scrollToSection(section)} p="8px" _hover={{
               color: contactButtonStyle ? getHoverColor() : "#d2d1e3",
@@ -131,6 +142,17 @@ export default function Header({ variant = "default" }) {
               {t(`header.${section}`)}
             </Text>
           ))}
+          {(variant === "infra" || variant === "dev") && (
+            <Text
+              as="button"
+              onClick={() => navigateWithScroll("/")}
+              fontWeight="semibold"
+              color={itemsColor}
+              _hover={{ color: getHoverColor() }}
+            >
+              ADINI
+            </Text>
+          )}
         </Flex>
         <Button
           display={{ base: "none", xl: "flex" }}
@@ -181,6 +203,20 @@ export default function Header({ variant = "default" }) {
                       {t(`header.${section}`)}
                     </Text>
                   ))}
+                  {(variant === "infra" || variant === "dev") && (
+
+                    <Text
+                      as="button"
+                      textAlign={"left"}
+                      onClick={() => navigateWithScroll("/")}
+                      fontSize="lg"
+                      color="gray.700"
+                      transition="0.3s ease-in-out"
+                      _hover={{ color: getHoverColor(), transform: "translateX(5px)" }}
+                    >
+                      ADINI
+                    </Text>
+                  )}
                 </Flex>
 
                 <Box>
@@ -208,6 +244,7 @@ export default function Header({ variant = "default" }) {
                         fontSize="25px"
                         color={variant === "infra" ? "#238b6f" : "#4d45d6"}
                         fontFamily="Poppins, sans-serif"
+                        onClick={() => navigateWithScroll("/")}
                       >
                         Adini
                       </Text>

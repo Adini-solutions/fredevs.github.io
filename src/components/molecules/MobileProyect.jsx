@@ -1,10 +1,11 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { Box, Flex, Text, Heading, Button } from "@chakra-ui/react";
 import { ViewIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from "react-i18next";
 import ModalPortfolio from "./ModalPortfolio";
+import useAutoplayVideoInView from "../../utils/useAutoplayVideoInView";
 
 const MotionBox = motion(Flex);
 
@@ -12,42 +13,14 @@ export default function MobileProyect({ title, summary, description, video1, vid
     const videoRef1 = useRef(null);
     const videoRef2 = useRef(null);
     const { t } = useTranslation();
-
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.4,
-    });
     const [isOpen, setIsOpen] = useState(false);
 
-    function handleVideoEnded(ref) {
-        return () => {
-            if (ref.current) {
-                ref.current.currentTime = 0;
-                ref.current.play();
-            }
-        };
-    }
+    const { ref, inView } = useInView({
+        threshold: 0.4,
+    });
 
-    useEffect(() => {
-        const video1RefCurrent = videoRef1.current;
-        const video2RefCurrent = videoRef2.current;
-
-        if (video1RefCurrent) {
-            video1RefCurrent.addEventListener("ended", handleVideoEnded(videoRef1));
-        }
-        if (video2RefCurrent) {
-            video2RefCurrent.addEventListener("ended", handleVideoEnded(videoRef2));
-        }
-
-        return () => {
-            if (video1RefCurrent) {
-                video1RefCurrent.removeEventListener("ended", handleVideoEnded(videoRef1));
-            }
-            if (video2RefCurrent) {
-                video2RefCurrent.removeEventListener("ended", handleVideoEnded(videoRef2));
-            }
-        };
-    }, []);
+    useAutoplayVideoInView(videoRef1, inView);
+    useAutoplayVideoInView(videoRef2, inView);
 
     return (
         <>
@@ -76,12 +49,28 @@ export default function MobileProyect({ title, summary, description, video1, vid
                     </Flex>
                     <Flex w="100%" rounded="md" mb={4} justify="space-between" gap={4}>
                         <Box flex="1" borderRadius="lg" overflow="hidden" boxShadow="md">
-                            <video ref={videoRef1} autoPlay muted loop style={{ width: "100%" }}>
+                            <video
+                                ref={videoRef1}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                preload="metadata"
+                                style={{ width: "100%" }}
+                            >
                                 <source src={video1} type="video/mp4" />
                             </video>
                         </Box>
                         <Box flex="1" borderRadius="lg" overflow="hidden" boxShadow="md">
-                            <video ref={videoRef2} autoPlay muted loop style={{ width: "100%" }}>
+                            <video
+                                ref={videoRef2}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                preload="metadata"
+                                style={{ width: "100%" }}
+                            >
                                 <source src={video2} type="video/mp4" />
                             </video>
                         </Box>

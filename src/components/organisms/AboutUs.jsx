@@ -105,7 +105,7 @@ export default function AboutUs({ variant = "default" }) {
                                         boxSize={{ base: "130px", md: "180px" }}
                                         mx="auto"
                                         mb={4}
-                                        borderBottom="1px solid #071e37"
+                                        borderBottom="1px solid #091c30"
                                     />
                                     <Link position={"absolute"} right={3} bottom={0} href={member.linkedin} isExternal>
                                         <Box

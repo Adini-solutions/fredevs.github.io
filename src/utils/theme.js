@@ -25,13 +25,13 @@ const theme = extendTheme({
       },
       html: {
         scrollbarWidth: "thin",
-        scrollbarColor: "#071e37 #f7f8ff",
+        scrollbarColor: "#091c30 #f7f8ff",
       },
     },
   },
   colors: {
     primary: {
-      500: "#071e37",
+      500: "#091c30",
     },
     secondary: {
       500: "#f2f2f2",
@@ -47,16 +47,16 @@ const theme = extendTheme({
     Button: {
       variants: {
         primary: (props) => ({
-          border: "2px solid #071e37",
+          border: "2px solid #091c30",
           borderRadius: "md",
-          bg: "#071e37",
+          bg: "#091c30",
           color: "#f2f2f2",
           px: "12px",
           py: "1px",
           _hover: {
             bg: "#f2f2f2",
-            borderColor: "#071e37",
-            border: "2px solid #071e37",
+            borderColor: "#091c30",
+            border: "2px solid #091c30",
             color: "#044978",
           },
           _active: {

@@ -1,43 +1,24 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { Box, Flex, Text, Heading, Button } from "@chakra-ui/react";
 import { ViewIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from "react-i18next";
 import ModalPortfolio from "./ModalPortfolio";
+import useAutoplayVideoInView from "../../utils/useAutoplayVideoInView";
 
 const MotionBox = motion(Flex);
 
 export default function WebProyect({ title, summary, description, video, imgs, tecnologies }) {
     const videoRef = useRef(null);
     const { t } = useTranslation();
-
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.4,
-    });
     const [isOpen, setIsOpen] = useState(false);
 
-    function handleVideoEnded() {
-        if (videoRef.current) {
-            videoRef.current.currentTime = 0;
-            videoRef.current.play();
-        }
-    }
+    const { ref, inView } = useInView({
+        threshold: 0.4,
+    });
 
-    useEffect(() => {
-        const videoElement = videoRef.current;
-
-        if (videoElement) {
-            videoElement.addEventListener("ended", handleVideoEnded);
-        }
-
-        return () => {
-            if (videoElement) {
-                videoElement.removeEventListener("ended", handleVideoEnded);
-            }
-        };
-    }, []);
+    useAutoplayVideoInView(videoRef, inView);
 
     return (
         <>
@@ -65,7 +46,15 @@ export default function WebProyect({ title, summary, description, video, imgs, t
                         <Heading fontSize="2xl" textAlign={"center"} fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
                     </Flex>
                     <Box mb={4} rounded="md" overflow="hidden" boxShadow="md">
-                        <video ref={videoRef} autoPlay muted loop style={{ width: "100%", borderRadius: "8px" }}>
+                        <video
+                            ref={videoRef}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            style={{ width: "100%", borderRadius: "8px" }}
+                        >
                             <source src={video} type="video/mp4" />
                         </video>
                     </Box>

@@ -7,7 +7,9 @@
         "proyectos": "Proyectos",
         "nosotros": "Nosotros",
         "menu": "Menú",
-        "contacto": "Contacto"
+        "contacto": "Contacto",
+        "blog": "Artículos",
+        "cases": "Casos de Éxito"
     },
     "banner": {
         "span": "Consultoria IT",
@@ -176,6 +178,66 @@
                 "subtitle": "Confiable. Seguro. Escalable.",
                 "description": "Desde el area de Infrastructure & Cloud Services, ayudamos a las organizaciones a operar su tecnología de forma confiable y sin interrupciones.",
                 "cta": "Ver servicios"
+            }
+        ]
+    },
+    "blog": {
+        "titulo": "Insights tecnológicos",
+        "subtitulo": "que inspiran decisiones",
+        "label": "Nuestro Blog",
+        "title": "Ideas y Novedades en IT",
+        "subtitle": "Compartimos conocimiento sobre desarrollo, infraestructura y el futuro digital.",
+        "boton": "Leer artículo"
+    },
+    "cases": {
+        "titulo": "Desafíos reales,",
+        "subtitulo": "resultados reales",
+        "etiquetaResultado": "Resultado Clave",
+        "items": [
+            {
+                "id": 1,
+                "cliente": "Universidad Tecnológica Nacional",
+                "titulo": "Sistema de Difusiones Institucional",
+                "descripcion": "Diseñamos y desarrollamos un sistema propio de difusiones institucionales para la UTN, reemplazando software de terceros de origen no certificado, inseguro y con costos recurrentes. La solución centralizó las comunicaciones oficiales, mejoró el control y seguimiento de los envíos y eliminó riesgos de seguridad.",
+                "resultado": "Software Propio y Seguro",
+                "tecnologias": [
+                    "Node.js",
+                    "React",
+                    "Material UI",
+                    "Docker",
+                    "SMTP",
+                    "PHP"
+                ],
+                "link": "/casos/utn-difusiones"
+            },
+            {
+                "id": 2,
+                "cliente": "Secretaría de Ciencia y Tecnología – UTN",
+                "titulo": "SICYT: Gestión Integral de Proyectos e Investigadores",
+                "descripcion": "Desarrollamos el sistema SICYT para digitalizar y centralizar la gestión de proyectos e investigadores, reemplazando procesos manuales basados en Excel y Microsoft Access. Se logró una gestión centralizada, auditable y consistente de la información científica.",
+                "resultado": "Gestión Centralizada y Auditable",
+                "tecnologias": [
+                    "React",
+                    "Tailwind CSS",
+                    "Node.js",
+                    "Docker",
+                    "Keycloak (Auth)"
+                ],
+                "link": "/casos/utn-sicyt"
+            },
+            {
+                "id": 3,
+                "cliente": "Universidad Tecnológica Nacional",
+                "titulo": "Infraestructura de Virtualización con OpenNebula",
+                "descripcion": "Implementamos OpenNebula como plataforma principal de virtualización, reemplazando soluciones fragmentadas y costosas. La nueva infraestructura permitió centralizar la operación, mejorar el control y optimizar el uso de recursos para entornos académicos y de investigación.",
+                "resultado": "Control y Autonomía Operativa",
+                "tecnologias": [
+                    "OpenNebula",
+                    "Linux",
+                    "Virtualización",
+                    "Infraestructura On-Prem"
+                ],
+                "link": "/casos/utn-opennebula"
             }
         ]
     },

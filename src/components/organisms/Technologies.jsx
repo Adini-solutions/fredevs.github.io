@@ -75,7 +75,7 @@ export default function Technologies() {
         <>
             <Title title={t("technologies.titulo")} subtitle={t("technologies.subtitulo")} mb="50px" />
 
-            <Box position={"relative"} bg={{ base: "#071e37", lg: "linear-gradient(-90deg, #071e37 97%, #6c63ff 80%)" }} p={8} pt={4}>
+            <Box position={"relative"} bg={{ base: "#091c30", lg: "linear-gradient(-90deg, #091c30 97%, #6c63ff 80%)" }} p={8} pt={4}>
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, x: 100 }}

@@ -4,10 +4,12 @@
         "servicios": "Services",
         "areas": "Service Areas",
         "tecnologías": "Technologies",
-        "proyectos": "Portfolio",
+        "proyectos": "Projects",
         "nosotros": "About Us",
         "menu": "Menu",
-        "contacto": "Contact"
+        "contacto": "Contact",
+        "blog": "Articles",
+        "cases": "Success Stories"
     },
     "banner": {
         "span": "IT Consulting",
@@ -177,6 +179,66 @@
                 "subtitle": "Reliable. Secure. Scalable.",
                 "description": "We implement and manage resilient infrastructures and secure cloud environments, optimized to ensure stability, performance, and operational continuity.",
                 "cta": "View services"
+            }
+        ]
+    },
+    "blog": {
+        "titulo": "Technology Insights",
+        "subtitulo": "that inspire decisions",
+        "label": "Our Blog",
+        "title": "Ideas and Trends in IT",
+        "subtitle": "We share knowledge about development, infrastructure, and the digital future.",
+        "boton": "Read article"
+    },
+    "cases": {
+        "titulo": "Real challenges,",
+        "subtitulo": "real results",
+        "etiquetaResultado": "Key Outcome",
+        "items": [
+            {
+                "id": 1,
+                "cliente": "National Technological University",
+                "titulo": "Institutional Broadcast System",
+                "descripcion": "We designed and developed a proprietary institutional broadcast system for UTN, replacing third-party software of unverified origin, insecure and with recurring costs. The solution centralized official communications, improved delivery control and monitoring, and eliminated security risks.",
+                "resultado": "Secure Proprietary Software",
+                "tecnologias": [
+                    "Node.js",
+                    "React",
+                    "Material UI",
+                    "Docker",
+                    "SMTP",
+                    "PHP"
+                ],
+                "link": "/casos/utn-difusiones"
+            },
+            {
+                "id": 2,
+                "cliente": "Secretariat of Science and Technology – UTN",
+                "titulo": "SICYT: Integrated Project and Researcher Management",
+                "descripcion": "We developed the SICYT system to digitalize and centralize the management of projects and researchers, replacing manual processes based on Excel and Microsoft Access. The result was a centralized, auditable and consistent management of scientific information.",
+                "resultado": "Centralized and Auditable Management",
+                "tecnologias": [
+                    "React",
+                    "Tailwind CSS",
+                    "Node.js",
+                    "Docker",
+                    "Keycloak (Auth)"
+                ],
+                "link": "/casos/utn-sicyt"
+            },
+            {
+                "id": 3,
+                "cliente": "National Technological University",
+                "titulo": "Virtualization Infrastructure with OpenNebula",
+                "descripcion": "We implemented OpenNebula as the main virtualization platform, replacing fragmented and costly solutions. The new infrastructure enabled centralized operations, improved control, and optimized resource usage for academic and research environments.",
+                "resultado": "Operational Control and Autonomy",
+                "tecnologias": [
+                    "OpenNebula",
+                    "Linux",
+                    "Virtualization",
+                    "On-Prem Infrastructure"
+                ],
+                "link": "/casos/utn-opennebula"
             }
         ]
     },

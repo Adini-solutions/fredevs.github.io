@@ -20,6 +20,7 @@ export default function TranslateButton({ position }) {
             alignItems="center"
             justifyContent="center"
             gap={3}
+            zIndex={1000}
         >
             <Button
                 onClick={handleLanguageChange}
