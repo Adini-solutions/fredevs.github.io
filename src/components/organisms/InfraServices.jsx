@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useMemo } from "react";
 import Service from "../molecules/Service";
 
-export default function ServicesInfra({ variant = "infra" }) {
+export default function InfraServices({ variant = "infra" }) {
   const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.2), []);
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
   const { t } = useTranslation();
