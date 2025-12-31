@@ -45,7 +45,7 @@
         ]
     },
     "infraServices": {
-        "titulo": "Infrastructure designed to be",
+        "titulo": "Infrastructure designed to be ",
         "subtitulo": "robust, secure, and scalable",
         "servicios": [
             {
@@ -324,7 +324,7 @@
             },
             {
                 "title": "Infrastructure & Cloud",
-                "subtitle": "Reliable. Secure. Scalable.",
+                "subtitle": "Reliable, Secure and Scalable.",
                 "description": "We implement and manage resilient infrastructures and secure cloud environments, optimized to ensure stability, performance, and operational continuity.",
                 "cta": "View services"
             }

@@ -45,8 +45,8 @@
         ]
     },
     "infraServices": {
-        "titulo": "Infraestructura que ",
-        "subtitulo": "sostiene el negocio",
+        "titulo": "Infraestructura ",
+        "subtitulo": "robusta, segura y escalable",
         "servicios": [
             {
                 "titulo": "Infraestructura Core y Datacenter",
@@ -324,7 +324,7 @@
             },
             {
                 "title": "Infrastructure & Cloud Services",
-                "subtitle": "Confiable. Seguro. Escalable.",
+                "subtitle": "Confiable, Seguro y Escalable.",
                 "description": "Desde el area de Infrastructure & Cloud Services, ayudamos a las organizaciones a operar su tecnología de forma confiable y sin interrupciones.",
                 "cta": "Ver servicios"
             }
