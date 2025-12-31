@@ -57,6 +57,38 @@
                     "Entornos Cloud e híbridos",
                     "Mantenimiento de datacenter",
                     "Alta disponibilidad y continuidad operativa"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Virtualización y Cómputo",
+                        "descripcion": "Gestión de hipervisores, creación y optimización de máquinas virtuales (VMs) y administración de recursos de servidor."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestión de Almacenamiento",
+                        "descripcion": "Administración de cabinas de discos, redes SAN/NAS y asignación de cuotas de disco para aplicaciones y usuarios."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Mantenimiento de Datacenter",
+                        "descripcion": "Supervisión de la capa física en los dos nodos (racks, cableado estructurado, monitoreo de UPS y suministro eléctrico)."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Gestión de Nube Hibrída y Publica",
+                        "descripcion": "Administración de instancias y servicios en la nube, garantizando que los recursos externos estén correctamente integrados, dimensionados y conectados con la infraestructura local."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Orquestación y Contenedores",
+                        "descripcion": "Gestión de entornos basados en Docker o Kubernetes, asegurando el despliegue ágil de aplicaciones y la portabilidad entre el Datacenter y la Nube."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Alta Disponibilidad y Replicacion (HA)",
+                        "descripcion": "Configuración y supervisión de la réplica de datos y servicios para garantizar que la operación continúe ante fallos."
+                    }
                 ]
             },
             {
@@ -67,6 +99,23 @@
                     "Administración de bases de datos (DBA)",
                     "Respaldo y recuperación (Backup & DR)",
                     "Gestión de archivos y colaboración"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Administración de Bases de Datos",
+                        "descripcion": "Instalación, optimización, tunning y mantenimiento de motores de bases de datos."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Respaldo, Recuperación y Disaster Recovery",
+                        "descripcion": "Ejecución de políticas de respaldo y pruebas periódicas de restauración y recuperación ante desastres."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Gestión de Archivos y Colaboración",
+                        "descripcion": "Administración de servidores de archivos, permisos compartidos y cuotas de almacenamiento de documentos."
+                    }
                 ]
             },
             {
@@ -77,6 +126,38 @@
                     "Redes corporativas",
                     "Conectividad segura y remota",
                     "Comunicaciones empresariales"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Gestión de Redes LAN/WAN",
+                        "descripcion": "Configuración de switches, segmentación de redes (VLANs) y mantenimiento del cableado troncal."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Infraestructura WiFi",
+                        "descripcion": "Gestión de puntos de acceso, controladores inalámbricos y redes de invitados/corporativas."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Conectividad Remota (VPN)",
+                        "descripcion": "Administración de accesos seguros para el personal que trabaja fuera de la oficina."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Servicios de Resolución de Nombres (DNS)",
+                        "descripcion": "Administración de zonas internas y externas, gestión de registros (A, CNAME, MX) y mantenimiento de la jerarquía de nombres para que los servicios sean localizables por nombre y no solo por IP."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestión de Certificados Digitales (PKI/SSL)",
+                        "descripcion": "Administración del ciclo de vida (generación, renovación e instalación) de certificados SSL/TLS para asegurar que el tráfico web (HTTPS) y las comunicaciones entre servidores estén cifradas y sean confiables."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Comunicaciones Unificadas y Telefonía IP",
+                        "descripcion": "Administración de la central telefónica (PBX), gestión de internos, preatendedores y provisión de servicios de voz sobre IP (VoIP)."
+                    }
                 ]
             },
             {
@@ -88,6 +169,23 @@
                     "Endpoint security",
                     "Gestión de identidad y accesos (IAM)",
                     "Protección de activos digitales"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Seguridad Perimetral (Firewalls)",
+                        "descripcion": "Gestión de reglas de entrada/salida, prevención de intrusos (IPS/IDS) y filtrado de contenido."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Endpoint Security",
+                        "descripcion": "Administración centralizada de antivirus, antimalware y parches de seguridad en servidores y estaciones."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Gestión de Identidad y Accesos (IAM)",
+                        "descripcion": "Control de altas, bajas y modificaciones de usuarios en el Directorio Activo o sistemas de autenticación."
+                    }
                 ]
             },
             {
@@ -98,6 +196,18 @@
                     "Monitoreo de disponibilidad y rendimiento",
                     "Gestión de alertas y capacidad",
                     "Prevención de incidentes"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Monitoreo de Disponibilidad y Rendimiento",
+                        "descripcion": "Supervisión 24/7 de la salud de servidores, servicios y enlaces de comunicaciones."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestión de Alertas y Capacidad",
+                        "descripcion": "Notificación proactiva de fallos y análisis de tendencias para saber cuándo hay que comprar más recursos (CPU, RAM, Disco)."
+                    }
                 ]
             },
             {
@@ -109,6 +219,23 @@
                     "Soporte a aplicaciones de negocio",
                     "Control de activos tecnológicos",
                     "Alineación con compliance y normativas internas"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Automatización de Infraestructura (IaC)",
+                        "descripcion": "Uso de herramientas como Ansible para la configuración estandarizada de servidores."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestión de Ciclo de Vida de Aplicaciones",
+                        "descripcion": "Soporte técnico a las aplicaciones de negocio, servidores web (IIS, Apache, Nginx) y middleware."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Gestión de Activos (ITAM)",
+                        "descripcion": "Inventario actualizado de hardware y control de fechas de vencimiento de garantías y contratos de soporte."
+                    }
                 ]
             },
             {
@@ -120,6 +247,28 @@
                     "Gestión de proveedores",
                     "Documentación técnica",
                     "Consultoría y compras de IT"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Soporte Nivel 2 y 3",
+                        "descripcion": "Resolución de incidencias técnicas complejas que no pueden ser resueltas en primera instancia."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestion de Proveedores de IT",
+                        "descripcion": "Coordinación técnica con ISPs, proveedores de hardware y soporte de software de terceros."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Documentación Técnica y Base de Conocimientos",
+                        "descripcion": "Creación y mantenimiento de manuales, diagramas de red y procedimientos operativos."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Consultoría Técnica y Compras de IT",
+                        "descripcion": "Asesoramiento técnico para la adquisición de nueva tecnología, evaluación de presupuestos y asegurar que cualquier equipo nuevo sea compatible con los estándares de la empresa."
+                    }
                 ]
             }
         ]

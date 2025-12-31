@@ -51,76 +51,224 @@
             {
                 "titulo": "Core Infrastructure and Datacenter",
                 "imagen": "/assets/icons/devops.svg",
-                "descripcion": "All yours nigga",
+                "descripcion": "Comprehensive management of core infrastructure supporting critical business applications and services, both in on-premise datacenters and cloud and hybrid environments.",
                 "lista": [
-                    "Compute and virtualization management",
-                    "Storage management",
+                    "Virtualization, compute and storage",
+                    "Cloud and hybrid environments",
                     "Datacenter maintenance",
-                    "Hybrid and public cloud",
-                    "Container orchestration",
-                    "High availability and replication (HA)"
+                    "High availability and operational continuity"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Virtualization and Compute",
+                        "descripcion": "Hypervisor management, virtual machine (VM) creation and optimization, and server resource administration."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Storage Management",
+                        "descripcion": "Disk array administration, SAN/NAS network management, and disk quota allocation for applications and users."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Datacenter Maintenance",
+                        "descripcion": "Physical layer supervision across both nodes (racks, structured cabling, UPS monitoring, and power supply)."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Hybrid and Public Cloud Management",
+                        "descripcion": "Cloud instance and service administration, ensuring external resources are properly integrated, sized, and connected with on-premise infrastructure."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Orchestration and Containers",
+                        "descripcion": "Management of Docker or Kubernetes-based environments, ensuring agile application deployment and portability between Datacenter and Cloud."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "High Availability and Replication (HA)",
+                        "descripcion": "Configuration and supervision of data and service replication to ensure operations continue in case of failures."
+                    }
                 ]
             },
             {
                 "titulo": "Data Management and Business Continuity",
                 "imagen": "/assets/icons/dataManage.svg",
-                "descripcion": "All yours nigga",
+                "descripcion": "Comprehensive business data management, focused on availability, integrity, and incident recovery to ensure operational continuity.",
                 "lista": [
                     "Database administration (DBA)",
                     "Backup and disaster recovery (Backup & DR)",
                     "File management and collaboration"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Database Administration",
+                        "descripcion": "Installation, optimization, tuning, and maintenance of database engines."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Backup, Recovery and Disaster Recovery",
+                        "descripcion": "Execution of backup policies and periodic restoration and disaster recovery tests."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "File Management and Collaboration",
+                        "descripcion": "File server administration, shared permissions, and document storage quotas."
+                    }
                 ]
             },
             {
                 "titulo": "Networking and Connectivity",
                 "imagen": "/assets/icons/networking.svg",
-                "descripcion": "All yours nigga",
+                "descripcion": "Comprehensive business connectivity management, ensuring stable networks, secure remote access, and reliable enterprise communications.",
                 "lista": [
-                    "LAN/WAN network management",
-                    "WiFi infrastructure",
-                    "Remote connectivity (VPN)",
-                    "DNS and digital certificates (PKI/SSL)",
-                    "IP telephony and unified communications"
+                    "Corporate networks",
+                    "Secure and remote connectivity",
+                    "Enterprise communications"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "LAN/WAN Network Management",
+                        "descripcion": "Switch configuration, network segmentation (VLANs), and backbone cabling maintenance."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "WiFi Infrastructure",
+                        "descripcion": "Access point management, wireless controllers, and guest/corporate networks."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Remote Connectivity (VPN)",
+                        "descripcion": "Secure access administration for staff working outside the office."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Name Resolution Services (DNS)",
+                        "descripcion": "Internal and external zone administration, record management (A, CNAME, MX), and name hierarchy maintenance so services are discoverable by name and not just IP."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Digital Certificate Management (PKI/SSL)",
+                        "descripcion": "Lifecycle administration (generation, renewal, and installation) of SSL/TLS certificates to ensure web traffic (HTTPS) and server-to-server communications are encrypted and trustworthy."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Unified Communications and IP Telephony",
+                        "descripcion": "PBX administration, extension management, auto-attendants, and Voice over IP (VoIP) service provisioning."
+                    }
                 ]
             },
             {
                 "titulo": "Information Security",
                 "imagen": "/assets/icons/security.svg",
-                "descripcion": "All yours nigga",
+                "descripcion": "Cybersecurity services aimed at protecting infrastructure, users, and digital business assets, reducing risks and strengthening access and operation controls.",
                 "lista": [
                     "Firewalls and perimeter security",
                     "Endpoint security",
-                    "Identity and access management (IAM)"
+                    "Identity and access management (IAM)",
+                    "Digital asset protection"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Perimeter Security (Firewalls)",
+                        "descripcion": "Inbound/outbound rule management, intrusion prevention (IPS/IDS), and content filtering."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Endpoint Security",
+                        "descripcion": "Centralized antivirus, antimalware, and security patch management on servers and workstations."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Identity and Access Management (IAM)",
+                        "descripcion": "Control of user additions, removals, and modifications in Active Directory or authentication systems."
+                    }
                 ]
             },
             {
                 "titulo": "Monitoring and Observability",
                 "imagen": "/assets/icons/monitoring.svg",
-                "descripcion": "All yours nigga",
+                "descripcion": "Monitoring and observability services providing continuous visibility into infrastructure and systems, enabling detection, alerting, and anticipation of incidents before they impact the business.",
                 "lista": [
                     "Availability and performance monitoring",
-                    "Alerting and capacity management"
+                    "Alerting and capacity management",
+                    "Incident prevention"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Availability and Performance Monitoring",
+                        "descripcion": "24/7 supervision of server, service, and communications link health."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Alerting and Capacity Management",
+                        "descripcion": "Proactive failure notification and trend analysis to determine when more resources (CPU, RAM, Disk) need to be acquired."
+                    }
                 ]
             },
             {
                 "titulo": "Operations and Automation",
                 "imagen": "/assets/icons/automation.svg",
-                "descripcion": "All yours nigga",
+                "descripcion": "Services aimed at optimizing and standardizing IT operations through automation, continuous support, and management aligned with each organization's internal regulations and policies.",
                 "lista": [
-                    "Infrastructure as Code (IaC)",
-                    "Application lifecycle management",
-                    "IT asset management (ITAM)"
+                    "Standardization and operational automation",
+                    "Business application support",
+                    "Technology asset control",
+                    "Alignment with compliance and internal regulations"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Infrastructure Automation (IaC)",
+                        "descripcion": "Use of tools like Ansible for standardized server configuration."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Application Lifecycle Management",
+                        "descripcion": "Technical support for business applications, web servers (IIS, Apache, Nginx), and middleware."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "IT Asset Management (ITAM)",
+                        "descripcion": "Updated hardware inventory and control of warranty expiration dates and support contracts."
+                    }
                 ]
             },
             {
                 "titulo": "Support and Service Management",
                 "imagen": "/assets/icons/support.svg",
-                "descripcion": "All yours nigga",
+                "descripcion": "Services dedicated to providing specialized technical support and efficiently managing IT services to ensure operational continuity and quality.",
                 "lista": [
                     "Level 2 and 3 support",
-                    "IT vendor management",
+                    "Vendor management",
                     "Technical documentation",
                     "IT consulting and procurement"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Level 2 and 3 Support",
+                        "descripcion": "Resolution of complex technical incidents that cannot be resolved at first instance."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "IT Vendor Management",
+                        "descripcion": "Technical coordination with ISPs, hardware vendors, and third-party software support."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Technical Documentation and Knowledge Base",
+                        "descripcion": "Creation and maintenance of manuals, network diagrams, and operational procedures."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Technical Consulting and IT Procurement",
+                        "descripcion": "Technical advisory for new technology acquisition, budget evaluation, and ensuring any new equipment is compatible with company standards."
+                    }
                 ]
             }
         ]

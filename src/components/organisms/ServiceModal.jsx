@@ -19,6 +19,12 @@ import {
     MdBuild,
 } from "react-icons/md";
 
+const iconMap = {
+    MdBuild,
+    MdPlumbing,
+    MdElectricalServices,
+};
+
 export default function ServiceModal({ isOpen, onClose, service, variant }) {
     return (
         <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
@@ -53,25 +59,15 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
 
                     {/* Estos habria q agregarlos en los es.json y en.json*/}
                     <Flex wrap="wrap" gap={6}>
-                        <ServiceItem
-                            icon={MdBuild}
-                            title="Ejemplo"
-                            description="ChamuyoChamuyoChamuyoChamuyo."
-                            variant={variant}
-                        />
-                        <ServiceItem
-                            icon={MdPlumbing}
-                            title="Ejemplo"
-                            description="ChamuyoChamuyoChamuyoChamuyo."
-                            variant={variant}
-
-                        />
-                        <ServiceItem
-                            icon={MdElectricalServices}
-                            title="Ejemplo"
-                            description="ChamuyoChamuyoChamuyoChamuyo."
-                            variant={variant}
-                        />
+                        {service.detalles?.map((detalle, index) => (
+                            <ServiceItem
+                                key={index}
+                                icon={iconMap[detalle.icono]}
+                                title={detalle.titulo}
+                                description={detalle.descripcion}
+                                variant={variant}
+                            />
+                        ))}
                     </Flex>
                     <Divider borderColor="gray.300" mb={3} />
 
