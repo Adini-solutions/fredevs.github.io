@@ -9,8 +9,11 @@ export default function Service({ service, variant }) {
   return (
     <>
       <Box
+        role="group"
+        position="relative"
         onClick={onOpen}
         p={6}
+        pb={10}
         boxShadow="lg"
         borderRadius="md"
         bg="linear-gradient(to top, white, #f7f8ff)"
@@ -20,7 +23,13 @@ export default function Service({ service, variant }) {
         textAlign="center"
         borderBottom={variant === "infra" ? "4px solid #238b6f" : "4px solid #6c63ff"}
         transition="transform 0.2s ease-in-out"
-        _hover={{ transform: "translateY(-5px)", cursor: "pointer", bg: variant === "infra" ? "linear-gradient(to top, #f0fcf9, #f7f8ff)" : "linear-gradient(to top, #f1f0ff, #f7f8ff)" }}
+        _hover={{
+          transform: "translateY(-5px)",
+          cursor: "pointer",
+          bg: variant === "infra"
+            ? "linear-gradient(to top, #f0fcf9, #f7f8ff)"
+            : "linear-gradient(to top, #f1f0ff, #f7f8ff)"
+        }}
         mb={"80px"}
       >
         <Flex justify={"center"} align={"center"}>
@@ -41,6 +50,24 @@ export default function Service({ service, variant }) {
             </ListItem>
           ))}
         </List>
+        <Box
+          position="absolute"
+          left="50%"
+          bottom="16px"
+          px={3}
+          py={1.5}
+          bg={variant === "infra" ? "#238b6f" : "#6c63ff"}
+          color="white"
+          fontSize="sm"
+          borderRadius="md"
+          opacity={0}
+          transform="translate(-50%, 6px)"
+          transition="all 0.2s ease"
+          pointerEvents="none"
+          _groupHover={{ opacity: 1, transform: "translate(-50%, 0)" }}
+        >
+          Ver más
+        </Box>
       </Box>
       <ServiceModal service={service} isOpen={isOpen} onClose={onClose} variant={variant} />
     </>

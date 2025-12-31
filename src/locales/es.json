@@ -34,9 +34,9 @@
         ]
     },
     "bannerInfra": {
-        "span": "Infraestructura",
-        "titulo": "Infraestructura y operaciones automatizadas para entornos modernos y escalables",
-        "subtitulo": "Diseñamos, implementamos y gestionamos entornos de infraestructura, datos, redes y seguridad que aseguran continuidad, rendimiento y control operativo.",
+        "span": "Infrastructure & Cloud Services",
+        "titulo": "Infraestructura y operaciones para entornos empresariales",
+        "subtitulo": "Diseñamos y gestionamos infraestructuras modernas, seguras y escalables que permiten a nuestros clientes enfocarse en su negocio, mientras nosotros nos ocupamos de la operación, la seguridad y la evolución continua de su ecosistema tecnológico.",
         "boton": "Contáctanos",
         "reviews": [
             "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
@@ -45,82 +45,230 @@
         ]
     },
     "infraServices": {
-        "titulo": "Infraestructura",
-        "subtitulo": "robusta, segura y escalable",
+        "titulo": "Infraestructura que ",
+        "subtitulo": "sostiene el negocio",
         "servicios": [
             {
                 "titulo": "Infraestructura Core y Datacenter",
                 "imagen": "/assets/icons/devops.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Gestión integral de la infraestructura core que soporta las aplicaciones y servicios críticos del negocio, tanto en datacenters propios como en entornos cloud e híbridos.",
                 "lista": [
-                    "Administración de cómputo y virtualización",
-                    "Gestión de almacenamiento (Storage)",
-                    "Mantenimiento de Datacenter",
-                    "Nube híbrida y pública",
-                    "Orquestación y contenedores",
-                    "Alta disponibilidad y replicación (HA)"
+                    "Virtualización, cómputo y storage",
+                    "Entornos Cloud e híbridos",
+                    "Mantenimiento de datacenter",
+                    "Alta disponibilidad y continuidad operativa"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Virtualización y Cómputo",
+                        "descripcion": "Gestión de hipervisores, creación y optimización de máquinas virtuales (VMs) y administración de recursos de servidor."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestión de Almacenamiento",
+                        "descripcion": "Administración de cabinas de discos, redes SAN/NAS y asignación de cuotas de disco para aplicaciones y usuarios."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Mantenimiento de Datacenter",
+                        "descripcion": "Supervisión de la capa física en los dos nodos (racks, cableado estructurado, monitoreo de UPS y suministro eléctrico)."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Gestión de Nube Hibrída y Publica",
+                        "descripcion": "Administración de instancias y servicios en la nube, garantizando que los recursos externos estén correctamente integrados, dimensionados y conectados con la infraestructura local."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Orquestación y Contenedores",
+                        "descripcion": "Gestión de entornos basados en Docker o Kubernetes, asegurando el despliegue ágil de aplicaciones y la portabilidad entre el Datacenter y la Nube."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Alta Disponibilidad y Replicacion (HA)",
+                        "descripcion": "Configuración y supervisión de la réplica de datos y servicios para garantizar que la operación continúe ante fallos."
+                    }
                 ]
             },
             {
                 "titulo": "Gestión de Datos y Continuidad",
                 "imagen": "/assets/icons/dataManage.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Gestión integral de los datos del negocio, enfocada en su disponibilidad, integridad y recuperación ante incidentes para asegurar la continuidad operativa.",
                 "lista": [
                     "Administración de bases de datos (DBA)",
                     "Respaldo y recuperación (Backup & DR)",
                     "Gestión de archivos y colaboración"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Administración de Bases de Datos",
+                        "descripcion": "Instalación, optimización, tunning y mantenimiento de motores de bases de datos."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Respaldo, Recuperación y Disaster Recovery",
+                        "descripcion": "Ejecución de políticas de respaldo y pruebas periódicas de restauración y recuperación ante desastres."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Gestión de Archivos y Colaboración",
+                        "descripcion": "Administración de servidores de archivos, permisos compartidos y cuotas de almacenamiento de documentos."
+                    }
                 ]
             },
             {
                 "titulo": "Redes y Conectividad",
                 "imagen": "/assets/icons/networking.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Gestión integral de la conectividad del negocio, asegurando redes estables, accesos remotos seguros y comunicaciones empresariales confiables.",
                 "lista": [
-                    "Gestión de redes LAN/WAN",
-                    "Infraestructura WiFi",
-                    "Conectividad remota (VPN)",
-                    "DNS y certificados digitales (PKI/SSL)",
-                    "Telefonía IP y comunicaciones unificadas"
+                    "Redes corporativas",
+                    "Conectividad segura y remota",
+                    "Comunicaciones empresariales"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Gestión de Redes LAN/WAN",
+                        "descripcion": "Configuración de switches, segmentación de redes (VLANs) y mantenimiento del cableado troncal."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Infraestructura WiFi",
+                        "descripcion": "Gestión de puntos de acceso, controladores inalámbricos y redes de invitados/corporativas."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Conectividad Remota (VPN)",
+                        "descripcion": "Administración de accesos seguros para el personal que trabaja fuera de la oficina."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Servicios de Resolución de Nombres (DNS)",
+                        "descripcion": "Administración de zonas internas y externas, gestión de registros (A, CNAME, MX) y mantenimiento de la jerarquía de nombres para que los servicios sean localizables por nombre y no solo por IP."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestión de Certificados Digitales (PKI/SSL)",
+                        "descripcion": "Administración del ciclo de vida (generación, renovación e instalación) de certificados SSL/TLS para asegurar que el tráfico web (HTTPS) y las comunicaciones entre servidores estén cifradas y sean confiables."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Comunicaciones Unificadas y Telefonía IP",
+                        "descripcion": "Administración de la central telefónica (PBX), gestión de internos, preatendedores y provisión de servicios de voz sobre IP (VoIP)."
+                    }
                 ]
             },
             {
                 "titulo": "Seguridad de la Información",
                 "imagen": "/assets/icons/security.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Servicios de ciberseguridad orientados a proteger la infraestructura, los usuarios y los activos digitales del negocio, reduciendo riesgos y fortaleciendo los controles de acceso y operación.",
                 "lista": [
                     "Firewalls y seguridad perimetral",
                     "Endpoint security",
-                    "Gestión de identidad y accesos (IAM)"
+                    "Gestión de identidad y accesos (IAM)",
+                    "Protección de activos digitales"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Seguridad Perimetral (Firewalls)",
+                        "descripcion": "Gestión de reglas de entrada/salida, prevención de intrusos (IPS/IDS) y filtrado de contenido."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Endpoint Security",
+                        "descripcion": "Administración centralizada de antivirus, antimalware y parches de seguridad en servidores y estaciones."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Gestión de Identidad y Accesos (IAM)",
+                        "descripcion": "Control de altas, bajas y modificaciones de usuarios en el Directorio Activo o sistemas de autenticación."
+                    }
                 ]
             },
             {
                 "titulo": "Monitoreo y Observabilidad",
                 "imagen": "/assets/icons/monitoring.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Servicios de monitoreo y observabilidad que brindan visibilidad continua sobre la infraestructura y los sistemas, permitiendo detectar, alertar y anticipar incidentes antes de que impacten en el negocio.",
                 "lista": [
                     "Monitoreo de disponibilidad y rendimiento",
-                    "Gestión de alertas y capacidad"
+                    "Gestión de alertas y capacidad",
+                    "Prevención de incidentes"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Monitoreo de Disponibilidad y Rendimiento",
+                        "descripcion": "Supervisión 24/7 de la salud de servidores, servicios y enlaces de comunicaciones."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestión de Alertas y Capacidad",
+                        "descripcion": "Notificación proactiva de fallos y análisis de tendencias para saber cuándo hay que comprar más recursos (CPU, RAM, Disco)."
+                    }
                 ]
             },
             {
                 "titulo": "Operaciones y Automatización",
                 "imagen": "/assets/icons/automation.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Servicios orientados a optimizar y estandarizar la operación IT mediante automatización, soporte continuo y una gestión alineada a las normativas y políticas internas de cada organización.",
                 "lista": [
-                    "Infraestructura como código (IaC)",
-                    "Gestión del ciclo de vida de aplicaciones",
-                    "Gestión de activos IT (ITAM)"
+                    "Estandarización y automatización operativa",
+                    "Soporte a aplicaciones de negocio",
+                    "Control de activos tecnológicos",
+                    "Alineación con compliance y normativas internas"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Automatización de Infraestructura (IaC)",
+                        "descripcion": "Uso de herramientas como Ansible para la configuración estandarizada de servidores."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestión de Ciclo de Vida de Aplicaciones",
+                        "descripcion": "Soporte técnico a las aplicaciones de negocio, servidores web (IIS, Apache, Nginx) y middleware."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Gestión de Activos (ITAM)",
+                        "descripcion": "Inventario actualizado de hardware y control de fechas de vencimiento de garantías y contratos de soporte."
+                    }
                 ]
             },
             {
                 "titulo": "Soporte y Gestión de Servicios",
                 "imagen": "/assets/icons/support.svg",
-                "descripcion": "Toda tuya negri",
+                "descripcion": "Servicios dedicados a brindar soporte técnico especializado y gestionar eficientemente los servicios de TI para garantizar la continuidad y calidad operativa.",
                 "lista": [
                     "Soporte nivel 2 y 3",
-                    "Gestión de proveedores IT",
+                    "Gestión de proveedores",
                     "Documentación técnica",
                     "Consultoría y compras de IT"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Soporte Nivel 2 y 3",
+                        "descripcion": "Resolución de incidencias técnicas complejas que no pueden ser resueltas en primera instancia."
+                    },
+                    {
+                        "icono": "MdPlumbing",
+                        "titulo": "Gestion de Proveedores de IT",
+                        "descripcion": "Coordinación técnica con ISPs, proveedores de hardware y soporte de software de terceros."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Documentación Técnica y Base de Conocimientos",
+                        "descripcion": "Creación y mantenimiento de manuales, diagramas de red y procedimientos operativos."
+                    },
+                    {
+                        "icono": "MdElectricalServices",
+                        "titulo": "Consultoría Técnica y Compras de IT",
+                        "descripcion": "Asesoramiento técnico para la adquisición de nueva tecnología, evaluación de presupuestos y asegurar que cualquier equipo nuevo sea compatible con los estándares de la empresa."
+                    }
                 ]
             }
         ]
@@ -175,9 +323,9 @@
                 "cta": "Ver servicios"
             },
             {
-                "title": "Infraestructura & Cloud",
-                "subtitle": "ESCALABILIDAD Y SEGURIDAD",
-                "description": "Implementamos y gestionamos infraestructuras resilientes y entornos cloud seguros, optimizados para garantizar estabilidad, rendimiento y continuidad operativa.",
+                "title": "Infrastructure & Cloud Services",
+                "subtitle": "Confiable. Seguro. Escalable.",
+                "description": "Desde el area de Infrastructure & Cloud Services, ayudamos a las organizaciones a operar su tecnología de forma confiable y sin interrupciones.",
                 "cta": "Ver servicios"
             }
         ]
@@ -603,7 +751,7 @@
         "areas": {
             "titulo": "Áreas de Servicio",
             "desarrollo": "Desarrollo",
-            "infra": "Infraestructura"
+            "infra": "Infrastructure & Cloud Services"
         },
         "redes": {
             "titulo": "Nuestras Redes"
