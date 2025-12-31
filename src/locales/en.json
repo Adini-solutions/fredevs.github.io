@@ -125,44 +125,8 @@
             }
         ]
     },
-    "services": {
-        "titulo": "Solutions",
-        "subtitulo": "tailored for your business",
-        "servicios": [
-            {
-                "titulo": "Analysis and Development",
-                "imagen": "/assets/icons/dev.svg",
-                "lista": [
-                    "Web Application Development",
-                    "E-commerce Development",
-                    "Cross-Platform Development",
-                    "Web Application Maintenance",
-                    "Implementation of Open-Source Solutions"
-                ]
-            },
-            {
-                "titulo": "Data Analytics",
-                "imagen": "/assets/icons/bi.svg",
-                "lista": [
-                    "Monitoring and Support",
-                    "ETL Design and Implementation",
-                    "Data Flow Control",
-                    "Data Analysis Using Predictive Models",
-                    "Creation of Business Intelligence Dashboards"
-                ]
-            },
-            {
-                "titulo": "DevOps and Infrastructure",
-                "imagen": "/assets/icons/devops.svg",
-                "lista": [
-                    "Continuous Integration and Delivery (CI/CD)",
-                    "System and Application Monitoring",
-                    "SQL and NoSQL Databases",
-                    "High Availability and Scalable Solutions",
-                    "Linux and Windows Server Administration"
-                ]
-            }
-        ]
+    "devServices": {
+    
     },
     "serviceAreas": {
         "titulo": "Our Specialties",

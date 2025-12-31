@@ -125,41 +125,61 @@
             }
         ]
     },
-    "services": {
+    "devServices": {
         "titulo": "Soluciones",
         "subtitulo": "a medida para tu negocio",
         "servicios": [
             {
-                "titulo": "Análisis y Desarrollo",
+                "titulo": "Soluciones Web Simples",
                 "imagen": "/assets/icons/dev.svg",
                 "lista": [
-                    "Desarrollo de Aplicaciones Web",
-                    "Desarrollo de E-commerce",
-                    "Desarrollo Multiplataforma",
-                    "Mantenimiento de Aplicaciones Web",
-                    "Implementación de Soluciones Open-Source"
+                    "Tu página web lista rápido",
+                    "Diseño profesional y atractivo",
+                    "Plantillas listas o personalizadas",
+                    "Costo accesible y transparente"
                 ]
             },
             {
-                "titulo": "Análisis de Datos",
-                "imagen": "/assets/icons/bi.svg",
+                "titulo": "Desarrollo a Medida",
+                "imagen": "/assets/icons/dev.svg",
                 "lista": [
-                    "Monitoreo y Soporte",
-                    "Diseño e Implementación de ETL",
-                    "Control de Flujos de Datos",
-                    "Análisis de Datos Mediante Modelos Predictivos",
-                    "Creación de Tableros de Inteligencia Empresarial"
+                    "Soluciones adaptadas a tu negocio",
+                    "Procesos claros y organizados",
+                    "Funcionalidades únicas según necesidad",
+                    "Escalable y mantenible",
+                    "Presupuesto ajustado a tu proyecto"
                 ]
             },
             {
-                "titulo": "DevOps e Infraestructura",
-                "imagen": "/assets/icons/devops.svg",
+                "titulo": "Desarrollo Mobile",
+                "imagen": "/assets/icons/dev.svg",
                 "lista": [
-                    "Integración y Entrega Continua (CI/CD)",
-                    "Monitoreo de Sistemas y Aplicaciones",
-                    "Bases de datos SQL y NoSQL",
-                    "Alta Disponibilidad y Soluciones Escalables",
-                    "Administración de Servidores Linux y Windows"
+                    "Apps móviles para tus clientes",
+                    "Interfaz amigable y funcional",
+                    "Integración con tus sistemas existentes",
+                    "Disponible para iOS y Android"
+                ]
+            },
+            {
+                "titulo": "Servicios Complementarios",
+                "imagen": "/assets/icons/support.svg",
+                "lista": [
+                    "Optimización y mejoras de tus sistemas",
+                    "Integración con otras herramientas",
+                    "Consultoría para decisiones tecnológicas",
+                    "Soporte técnico confiable",
+                    "Planes flexibles de mantenimiento"
+                ]
+            },
+            {
+                "titulo": "Implementación de Soluciones de Código Abierto",
+                "imagen": "/assets/icons/dev.svg",
+                "lista": [
+                    "Aprovecha soluciones maduras y gratuitas",
+                    "Implementación rápida y profesional",
+                    "Personalización según tu negocio",
+                    "Integración sin complicaciones",
+                    "Soporte y actualizaciones incluidas"
                 ]
             }
         ]

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
-import ServicesInfra from "../organisms/ServicesInfra";
+import InfraServices from "../organisms/InfraServices";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
 import Footer from "../organisms/Footer";
@@ -45,7 +45,7 @@ export default function Infra() {
           <Banner variant="infra" />
         </Box>
         <Box id="servicios">
-          <ServicesInfra variant="infra" />
+          <InfraServices variant="infra" />
         </Box>
         <Box id="contacto">
           <Contact variant="infra" />

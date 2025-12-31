@@ -11,11 +11,11 @@ export default function DevServices({ variant = "default" }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
   const { t } = useTranslation();
 
-  const services = t("services.servicios", { returnObjects: true });
+  const devServices = t("devServices.servicios", { returnObjects: true });
 
   return (
     <>
-      <Title title={t("services.titulo")} subtitle={t("services.subtitulo")} variant={variant} mt="50px" mb="140px" />
+      <Title title={t("devServices.titulo")} subtitle={t("devServices.subtitulo")} variant={variant} mt="50px" mb="140px" />
 
       <motion.div
         ref={ref}
@@ -23,8 +23,14 @@ export default function DevServices({ variant = "default" }) {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <Flex justify="center" gap={{ base: 12, xl: 20 }} wrap="wrap" mx={10}>
-          {services.map((service, index) => (
+        <Flex
+          justify="center"
+          gap={{ base: 12, xl: 20 }}
+          wrap="wrap"
+          maxWidth={"1700px"}
+          mx="auto"
+        >
+          {devServices.map((service, index) => (
             <Service key={index} service={service} variant={variant} />
           ))}
         </Flex>
