@@ -4,9 +4,29 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Footer() {
+export default function Footer({ variant = "default" }) {
     const { t } = useTranslation();
     const navigate = useNavigate();
+
+    const menuType = {
+        default: ["inicio", "areas", "cases", "blog", "nosotros", "contacto"],
+        dev: ["inicio", "servicios", "tecnologías", "proyectos", "contacto", "nosotros"],
+        infra: ["inicio", "servicios", "contacto", "nosotros"],
+    };
+
+    const empresaLinks = menuType[variant].map((item) => {
+        const label = t(`footer.empresa.${item}`, { defaultValue: item });
+
+        return (
+            <Link
+                key={item}
+                onClick={() => (scrollToSection(item))}
+                _hover={{ color: "white" }}
+            >
+                {label}
+            </Link>
+        );
+    });
 
     const navigateWithScroll = (path) => {
         navigate(path);
@@ -57,10 +77,7 @@ export default function Footer() {
                 <GridItem>
                     <Text fontWeight="bold" color="white" mb={3}>{t("footer.empresa.titulo")}</Text>
                     <VStack align={{ base: "center", md: "start" }} spacing={2}>
-                        <Link onClick={() => scrollToSection("servicios")} _hover={{ color: "white" }}>{t("footer.empresa.servicios")}</Link>
-                        <Link onClick={() => scrollToSection("tecnologías")} _hover={{ color: "white" }}>{t("footer.empresa.tecnologías")}</Link>
-                        <Link onClick={() => scrollToSection("proyectos")} _hover={{ color: "white" }}>{t("footer.empresa.proyectos")}</Link>
-                        <Link onClick={() => scrollToSection("nosotros")} _hover={{ color: "white" }}>{t("footer.empresa.nosotros")}</Link>
+                        {empresaLinks}
                     </VStack>
                 </GridItem>
 

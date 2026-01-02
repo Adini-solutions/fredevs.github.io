@@ -49,6 +49,7 @@
         "subtitulo": "robusta, segura y escalable",
         "cerrar": "Cerrar",
         "verMas": "Ver más",
+        "label": "Adini | Infraestructura",
         "servicios": [
             {
                 "titulo": "Infraestructura Core y Datacenter",
@@ -280,6 +281,7 @@
         "subtitulo": "a medida para tu negocio",
         "cerrar": "Cerrar",
         "verMas": "Ver más",
+        "label": "Adini | Desarrollo",
         "servicios": [
             {
                 "titulo": "Soluciones Web Simples",
@@ -360,7 +362,8 @@
         "label": "Nuestro Blog",
         "title": "Ideas y Novedades en IT",
         "subtitle": "Compartimos conocimiento sobre desarrollo, infraestructura y el futuro digital.",
-        "boton": "Leer artículo"
+        "boton": "Leer artículo",
+        "verTodos": "Ver todos los artículos"
     },
     "cases": {
         "titulo": "Desafíos reales,",
@@ -768,13 +771,18 @@
         "empresa": {
             "titulo": "Empresa",
             "servicios": "Servicios",
+            "areas": "Areas de Servicio",
             "tecnologías": "Tecnologías",
             "proyectos": "Proyectos",
-            "nosotros": "Nosotros"
+            "nosotros": "Nosotros",
+            "menu": "Menú",
+            "contacto": "Contacto",
+            "blog": "Artículos",
+            "cases": "Casos de Éxito"
         },
         "areas": {
             "titulo": "Áreas de Servicio",
-            "desarrollo": "Desarrollo",
+            "desarrollo": "Desarrollo de Software",
             "infra": "Infrastructure & Cloud Services"
         },
         "redes": {

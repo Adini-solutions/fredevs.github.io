@@ -7,7 +7,9 @@ import {
   Text,
   SimpleGrid,
   Flex,
-  Spinner
+  Spinner,
+  Button,
+  Link
 } from '@chakra-ui/react';
 import Article from '../molecules/Article';
 import Title from '../molecules/Title';
@@ -46,7 +48,6 @@ export default function Blog({ variant = 'default' }) {
             mb={12}
             direction="column"
             gap={4}
-            maxW="800px"
           >
             <Text
               m={0}
@@ -59,9 +60,27 @@ export default function Blog({ variant = 'default' }) {
               {t("blog.label")}
             </Text>
 
-            <Heading as="h2" size="xl" color="white">
-              {t("blog.title")}
-            </Heading>
+            <Flex justify="space-between">
+              <Heading as="h2" size="xl" color="white">
+                {t("blog.title")}
+              </Heading>
+              <Button
+                as={Link}
+                href="https://dev.to/adini"
+                isExternal
+                variant="outline"
+                colorScheme="white"
+                size="md"
+                _hover={{
+                  bg: 'purple.800',
+                  color: 'white',
+                  textDecoration: 'none'
+                }}
+                display={{ base: 'none', md: 'inline-flex' }}
+              >
+                {t("blog.verTodos")}
+              </Button>
+            </Flex>
 
             <Text m={0} color="gray.400" fontSize="lg">
               {t("blog.subtitle")}
@@ -73,18 +92,42 @@ export default function Blog({ variant = 'default' }) {
               <Spinner size="lg" color="purple.300" />
             </Flex>
           ) : (
-            <motion.div
-              ref={ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-            >
-              <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-                {articles.map(article => (
-                  <Article key={article.id} article={article} />
-                ))}
-              </SimpleGrid>
-            </motion.div>
+            <>
+              <motion.div
+                ref={ref}
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+              >
+                <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+                  {articles.map(article => (
+                    <Article key={article.id} article={article} />
+                  ))}
+                </SimpleGrid>
+              </motion.div>
+
+              <Flex
+                justify="center"
+                display={{ base: "flex", md: 'none' }}
+                mt={12}
+              >
+                <Button
+                  as={Link}
+                  href="https://dev.to/adini"
+                  isExternal
+                  variant="outline"
+                  colorScheme="white"
+                  size="md"
+                  _hover={{
+                    bg: 'purple.800',
+                    color: 'white',
+                    textDecoration: 'none'
+                  }}
+                >
+                  {t("blog.verTodos")}
+                </Button>
+              </Flex>
+            </>
           )}
         </Container>
       </Box>

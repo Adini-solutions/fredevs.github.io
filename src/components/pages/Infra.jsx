@@ -53,7 +53,7 @@ export default function Infra() {
         <Box id="nosotros">
           <AboutUs variant="infra" />
         </Box>
-        <Footer />
+        <Footer variant="infra" />
         {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
         {isTranslateVisible && <TranslateButton position={"fixed"} />}
       </Box>

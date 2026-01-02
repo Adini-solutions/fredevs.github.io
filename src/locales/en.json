@@ -49,6 +49,7 @@
         "subtitulo": "robust, secure, and scalable",
         "cerrar": "Close",
         "verMas": "View more",
+        "label": "Adini | Infrastructure",
         "servicios": [
             {
                 "titulo": "Core Infrastructure and Datacenter",
@@ -280,6 +281,7 @@
         "subtitulo": "a medida para tu negocio",
         "cerrar": "Close",
         "verMas": "View more",
+        "label": "Adini | Development",
         "servicios": [
             {
                 "titulo": "Soluciones Web Simples",
@@ -360,7 +362,8 @@
         "label": "Our Blog",
         "title": "Ideas and Trends in IT",
         "subtitle": "We share knowledge about development, infrastructure, and the digital future.",
-        "boton": "Read article"
+        "boton": "Read article",
+        "verTodos": "View all articles"
     },
     "cases": {
         "titulo": "Real challenges,",
@@ -768,14 +771,19 @@
         "empresa": {
             "titulo": "Company",
             "servicios": "Services",
+            "areas": "Service Areas",
             "tecnologías": "Technologies",
             "proyectos": "Projects",
-            "nosotros": "About Us"
+            "nosotros": "About Us",
+            "menu": "Menu",
+            "contacto": "Contact",
+            "blog": "Articles",
+            "cases": "Success Stories"
         },
         "areas": {
             "titulo": "Service Areas",
-            "desarrollo": "Development",
-            "infra": "Infrastructure"
+            "desarrollo": "Software development",
+            "infra": "Infrastructure & Cloud Services"
         },
         "redes": {
             "titulo": "Our Social Media"

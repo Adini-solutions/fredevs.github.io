@@ -91,7 +91,7 @@ export default function CaseStudyItem({ study, isEven }) {
 
         <Flex gap={2} wrap="wrap">
           {study.tech.map(t => (
-            <Text key={t} fontSize="xs" fontWeight="bold" color="gray.400">
+            <Text m={0} key={t} fontSize="xs" fontWeight="bold" color="gray.400">
               #{t}
             </Text>
           ))}

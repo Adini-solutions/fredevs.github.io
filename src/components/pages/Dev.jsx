@@ -46,7 +46,7 @@ export default function Dev() {
           <Banner variant="dev" />
         </Box>
         <Box id="servicios">
-          <DevServices />
+          <DevServices variant="dev" />
         </Box>
         <Box id="tecnologías">
           <Technologies />
@@ -60,7 +60,7 @@ export default function Dev() {
         <Box id="nosotros">
           <AboutUs variant="dev" />
         </Box>
-        <Footer />
+        <Footer variant="dev" />
         {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
         {isTranslateVisible && <TranslateButton position={"fixed"} />}
       </Box>
