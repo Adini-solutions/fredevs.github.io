@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Stack } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 import Title from '../molecules/Title';
 import { useTranslation } from 'react-i18next';
 import CaseStudyItem from '../molecules/CaseStudyItem';
