@@ -62,7 +62,7 @@ export default function Service({ service, variant }) {
           gap={1}
           fontSize="sm"
           color={variant === "infra" ? "#238b6f" : "#6c63ff"}
-          opacity={0}
+          opacity={{ base: 1, lg: 0 }}
           transform="translateX(-4px)"
           transition="all 0.2s ease"
           pointerEvents="none"

@@ -42,7 +42,14 @@ export default function Blog({ variant = 'default' }) {
     <>
       <Title title={t("blog.titulo")} subtitle={t("blog.subtitulo")} mt="60px" mb="50px" />
 
-      <Box as="section" px={5} py={{ base: 12, md: 16 }} bg="primary.500">
+      <Box
+        as="section"
+        px={5}
+        py={{ base: 12, md: 16 }}
+        bg="primary.500"
+        overflow="hidden"
+        transform="translateZ(0)"
+      >
         <Container maxW="container.xl">
           <Flex
             mb={12}

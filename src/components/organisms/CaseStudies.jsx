@@ -53,19 +53,23 @@ export default function CaseStudies() {
         mb="40px"
       />
 
-      <Box as="section">
-        <Container maxW="container.xl">
-          <Stack spacing={{ base: 12, lg: 16 }}>
-            {caseStudies.map((study, index) => (
-              <CaseStudyItem
-                key={study.id}
-                study={study}
-                isEven={index % 2 === 0}
-              />
-            ))}
-          </Stack>
-        </Container>
+      <Box
+        as="section"
+        maxW="1280px"
+        mx="auto"
+        px={{ base: "15px", md: "60px", }}
+      >
+        <Stack spacing={{ base: 12, lg: 16 }}>
+          {caseStudies.map((study, index) => (
+            <CaseStudyItem
+              key={study.id}
+              study={study}
+              isEven={index % 2 === 0}
+            />
+          ))}
+        </Stack>
       </Box>
+
     </>
   );
 }

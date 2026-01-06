@@ -132,7 +132,7 @@ export default function Header({ variant = "default" }) {
           </Flex>
         </Flex>
 
-        <Flex display={{ base: "none", lg: "flex" }} gap={12} fontSize="md">
+        <Flex display={{ base: "none", xl: "flex" }} gap={12} fontSize="md">
 
           {menuItems.map((section) => (
             <Text color={itemsColor} key={section} as="button" onClick={() => scrollToSection(section)} p="8px" _hover={{
@@ -155,7 +155,7 @@ export default function Header({ variant = "default" }) {
           )}
         </Flex>
         <Button
-          display={{ base: "none", xl: "flex" }}
+          display={{ base: "none", "2xl": "flex" }}
           leftIcon={<HiMail />}
           text="contacto@adini.com.ar"
           variant={variant}
@@ -166,7 +166,7 @@ export default function Header({ variant = "default" }) {
           _hover={contactButtonStyle ? { transform: "scale(1.05)", bg: "#f0f0f0" } : undefined}
         />
         <IconButton
-          display={{ base: "flex", lg: "none" }}
+          display={{ base: "flex", xl: "none" }}
           icon={<FaBars />}
           variant="ghost"
           aria-label="Open Menu"

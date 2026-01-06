@@ -243,7 +243,7 @@
             },
             {
                 "titulo": "Support and Service Management",
-                "imagen": "/assets/icons/support.svg",
+                "imagen": "/assets/icons/supportInfra.svg",
                 "descripcion": "Services dedicated to providing specialized technical support and efficiently managing IT services to ensure operational continuity and quality.",
                 "lista": [
                     "Level 2 and 3 support",
@@ -277,63 +277,171 @@
         ]
     },
     "devServices": {
-        "titulo": "Soluciones",
-        "subtitulo": "a medida para tu negocio",
+        "titulo": "Solutions",
+        "subtitulo": "tailored for your business",
         "cerrar": "Close",
-        "verMas": "View more",
+        "verMas": "See more",
         "label": "Adini | Development",
         "servicios": [
             {
-                "titulo": "Soluciones Web Simples",
+                "titulo": "Custom Development",
                 "imagen": "/assets/icons/dev.svg",
                 "lista": [
-                    "Tu página web lista rápido",
-                    "Diseño profesional y atractivo",
-                    "Plantillas listas o personalizadas",
-                    "Costo accesible y transparente"
+                    "Requirements analysis and assessment",
+                    "Solutions adapted to business processes",
+                    "Custom functionalities",
+                    "Scalability and evolutionary maintenance",
+                    "Integration with existing systems"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Analysis and Design",
+                        "descripcion": "Requirements gathering, solution architecture definition and design according to business needs."
+                    },
+                    {
+                        "icono": "MdCode",
+                        "titulo": "Development and Programming",
+                        "descripcion": "Implementation of custom functionalities using modern technologies and best development practices."
+                    },
+                    {
+                        "icono": "MdIntegrationInstructions",
+                        "titulo": "Integration with Existing Systems",
+                        "descripcion": "Secure connection and synchronization with internal and external systems to ensure continuity and information flow."
+                    },
+                    {
+                        "icono": "MdTimeline",
+                        "titulo": "Evolutionary Maintenance",
+                        "descripcion": "Updates, improvements, and support to ensure the solution evolves with the business."
+                    }
                 ]
             },
             {
-                "titulo": "Desarrollo a Medida",
-                "imagen": "/assets/icons/dev.svg",
+                "titulo": "Mobile Development",
+                "imagen": "/assets/icons/mobileDev.svg",
                 "lista": [
-                    "Soluciones adaptadas a tu negocio",
-                    "Procesos claros y organizados",
-                    "Funcionalidades únicas según necesidad",
-                    "Escalable y mantenible",
-                    "Presupuesto ajustado a tu proyecto"
+                    "Android and iOS mobile applications",
+                    "Hybrid and cross-platform apps",
+                    "Integration with APIs and external services",
+                    "Store publication and post-launch support",
+                    "Performance optimization and user experience"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdPhoneAndroid",
+                        "titulo": "Native and Cross-Platform Apps",
+                        "descripcion": "Development of Android and iOS apps with hybrid options to maximize reach and efficiency."
+                    },
+                    {
+                        "icono": "MdIntegrationInstructions",
+                        "titulo": "Integration with Services and APIs",
+                        "descripcion": "Secure connection with internal and external systems to provide full app functionality."
+                    },
+                    {
+                        "icono": "MdStorefront",
+                        "titulo": "Publication and Maintenance",
+                        "descripcion": "Managing the app lifecycle, including store publication, updates, and post-launch support."
+                    },
+                    {
+                        "icono": "MdDevices",
+                        "titulo": "Optimization and User Experience",
+                        "descripcion": "Performance, design, and usability improvements to ensure the app is fast, intuitive, and engaging for users."
+                    }
                 ]
             },
             {
-                "titulo": "Desarrollo Mobile",
-                "imagen": "/assets/icons/dev.svg",
+                "titulo": "Simple Web Solutions",
+                "imagen": "/assets/icons/landing.svg",
                 "lista": [
-                    "Apps móviles para tus clientes",
-                    "Interfaz amigable y funcional",
-                    "Integración con tus sistemas existentes",
-                    "Disponible para iOS y Android"
+                    "Institutional landing pages",
+                    "Fast and self-manageable websites",
+                    "Mobile optimization",
+                    "Form and contact integration",
+                    "Quick and cost-effective implementation"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdWeb",
+                        "titulo": "Quick Design and Development",
+                        "descripcion": "Creation of websites and landing pages with a focus on speed, attractive design, and usability."
+                    },
+                    {
+                        "icono": "MdDevices",
+                        "titulo": "Mobile Optimization",
+                        "descripcion": "Ensuring sites are fully responsive and look perfect on any device."
+                    },
+                    {
+                        "icono": "MdIntegrationInstructions",
+                        "titulo": "Integration and Functionality",
+                        "descripcion": "Implementation of forms, contact buttons, and any interaction needed to convert visitors into customers."
+                    }
                 ]
             },
             {
-                "titulo": "Servicios Complementarios",
-                "imagen": "/assets/icons/support.svg",
+                "titulo": "Open Source Solutions Implementation",
+                "imagen": "/assets/icons/openSource.svg",
                 "lista": [
-                    "Optimización y mejoras de tus sistemas",
-                    "Integración con otras herramientas",
-                    "Consultoría para decisiones tecnológicas",
-                    "Soporte técnico confiable",
-                    "Planes flexibles de mantenimiento"
+                    "Selection of open source tools according to business needs",
+                    "Installation and initial configuration",
+                    "Customization and functional adjustments",
+                    "Integration with existing infrastructure",
+                    "Basic training and support"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Selection and Configuration",
+                        "descripcion": "Choosing the most suitable open source tools and installing them according to client needs."
+                    },
+                    {
+                        "icono": "MdCode",
+                        "titulo": "Functional Customization",
+                        "descripcion": "Adapting the open source solution to the specific business processes."
+                    },
+                    {
+                        "icono": "MdIntegrationInstructions",
+                        "titulo": "Integration with Existing Systems",
+                        "descripcion": "Connecting the open source solution with other platforms and systems to ensure continuous information flow."
+                    },
+                    {
+                        "icono": "MdSchool",
+                        "titulo": "Training and Support",
+                        "descripcion": "Training the client team and providing initial support to ensure effective use of the solution."
+                    }
                 ]
             },
             {
-                "titulo": "Implementación de Soluciones de Código Abierto",
-                "imagen": "/assets/icons/dev.svg",
+                "titulo": "Complementary Services",
+                "imagen": "/assets/icons/supportDev.svg",
                 "lista": [
-                    "Aprovecha soluciones maduras y gratuitas",
-                    "Implementación rápida y profesional",
-                    "Personalización según tu negocio",
-                    "Integración sin complicaciones",
-                    "Soporte y actualizaciones incluidas"
+                    "Optimization and improvements of existing systems",
+                    "Refactors and performance enhancements",
+                    "Integration with APIs and third-party services",
+                    "ETLs and data processing",
+                    "Technical support and evolutionary maintenance",
+                    "Consulting for technological decisions"
+                ],
+                "detalles": [
+                    {
+                        "icono": "MdBuild",
+                        "titulo": "Optimization and Refactors",
+                        "descripcion": "Improving the efficiency, performance, and maintainability of your current systems."
+                    },
+                    {
+                        "icono": "MdIntegrationInstructions",
+                        "titulo": "Integration with Tools and APIs",
+                        "descripcion": "Connecting your systems with new applications or services to enhance functionality."
+                    },
+                    {
+                        "icono": "MdDataObject",
+                        "titulo": "Data Processing",
+                        "descripcion": "Design and implementation of ETLs and pipelines to transform and organize your data efficiently and reliably."
+                    },
+                    {
+                        "icono": "MdSupportAgent",
+                        "titulo": "Support and Consulting",
+                        "descripcion": "Technical advice, maintenance plans, and incident resolution to ensure operational continuity."
+                    }
                 ]
             }
         ]
@@ -762,9 +870,11 @@
         "subtituloInfra": "operations, security, and system continuity",
         "desarrollador": "Developer",
         "analista": "Analyst",
-        "bi": "B.I.",
+        "bi": "Business Intelligence",
+        "fullstack": "Fullstack Developer",
         "devops": "DevOps",
-        "sysadmin": "SysAdmin"
+        "sysadmin": "SysAdmin",
+        "cloud": "Cloud Engineer"
     },
     "footer": {
         "descripcion": "We drive digital transformation with tailor-made technological solutions, helping businesses grow and adapt to the future.",

@@ -17,6 +17,16 @@ import {
     MdPlumbing,
     MdElectricalServices,
     MdBuild,
+    MdCode,
+    MdIntegrationInstructions,
+    MdTimeline,
+    MdPhoneAndroid,
+    MdStorefront,
+    MdWeb,
+    MdDevices,
+    MdSchool,
+    MdDataObject,
+    MdSupportAgent
 } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
@@ -24,6 +34,16 @@ const iconMap = {
     MdBuild,
     MdPlumbing,
     MdElectricalServices,
+    MdCode,
+    MdIntegrationInstructions,
+    MdTimeline,
+    MdPhoneAndroid,
+    MdStorefront,
+    MdWeb,
+    MdDevices,
+    MdSchool,
+    MdDataObject,
+    MdSupportAgent
 };
 
 export default function ServiceModal({ isOpen, onClose, service, variant }) {
@@ -36,13 +56,13 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
             <ModalContent
                 my={{ base: "0.5rem", md: "2.5rem" }}
                 maxW={{ base: "95%", md: "70%", lg: "70%", xl: "60%", "2xl": "50%" }}
-                maxHeight={{ base: "97%", md: "90%" }}
+                maxHeight={{ base: "95%", md: "90%" }}
                 overflowY={"auto"}
                 bg={"quarter.500"}
                 color="gray.700"
                 p={4}
             >
-                <ModalCloseButton p={8} />
+                <ModalCloseButton m={4} />
 
                 <ModalHeader pb={0}>
                     <Text mb={0} fontSize="md" color={variant === "infra" ? "#238b6f" : "#4d45d6"} fontWeight="600">
