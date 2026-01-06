@@ -50,6 +50,8 @@
         "cerrar": "Cerrar",
         "verMas": "Ver más",
         "label": "Adini | Infraestructura",
+        "contactar": "Contactar",
+        "messageTemplate": "¡Hola!\n\nEstoy interesado en el servicio de “{{service}}”.\n\n",
         "servicios": [
             {
                 "titulo": "Infraestructura Core y Datacenter",
@@ -282,6 +284,8 @@
         "cerrar": "Cerrar",
         "verMas": "Ver más",
         "label": "Adini | Desarrollo",
+        "contactar": "Contactar",
+        "messageTemplate": "¡Hola!\n\nEstoy interesado en el servicio de “{{service}}”.\n\n",
         "servicios": [
             {
                 "titulo": "Desarrollo a Medida",

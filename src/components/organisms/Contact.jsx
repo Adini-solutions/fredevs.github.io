@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Box, Button, Flex, Text, Textarea, Input, Icon, VStack, Image } from "@chakra-ui/react";
 import { useState } from "react";
 import { FiSend } from "react-icons/fi";
@@ -69,6 +70,18 @@ export default function Contact({ variant = "default" }) {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const handler = (event) => {
+      setMessage(event.detail);
+    };
+
+    window.addEventListener("contact:setMessage", handler);
+
+    return () => {
+      window.removeEventListener("contact:setMessage", handler);
+    };
+  }, []);
 
   const { ref, inView } = useInView({
     triggerOnce: true,

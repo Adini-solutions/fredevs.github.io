@@ -49,6 +49,28 @@ const iconMap = {
 export default function ServiceModal({ isOpen, onClose, service, variant }) {
     const { t } = useTranslation();
 
+    const scrollToSection = (message) => {
+        const section = document.getElementById("contacto");
+
+        if (section) {
+            const offset = 120;
+            const top = section.getBoundingClientRect().top + window.scrollY - offset;
+
+            window.dispatchEvent(
+                new CustomEvent("contact:setMessage", {
+                    detail: message,
+                })
+            );
+
+            window.scrollTo({
+                top,
+                behavior: "smooth",
+            });
+
+            onClose();
+        }
+    };
+
     return (
         <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered>
             <ModalOverlay />
@@ -95,19 +117,41 @@ export default function ServiceModal({ isOpen, onClose, service, variant }) {
 
                 </ModalBody>
 
-                <ModalFooter>
+                <ModalFooter justifyContent="flex-end">
                     <Button
+                        mr={2}
                         onClick={onClose}
-                        backgroundColor="primary.500"
-                        color="white"
-                        _hover={{ backgroundColor: "#1c334d" }}
+                        variant="outline"
+                        borderColor="gray.300"
+                        color="gray.600"
+                        bg={"bg.50"}
+                        _hover={{
+                            bg: "gray.100",
+                        }}
                         px={8}
                     >
                         {t("infraServices.cerrar")}
                     </Button>
+
+                    <Button
+                        bg={variant === "infra" ? "#238b6f" : "#4d45d6"}
+                        color="white"
+                        _hover={{ opacity: 0.9 }}
+                        px={8}
+                        onClick={() =>
+                            scrollToSection(
+                                t("infraServices.messageTemplate", {
+                                    service: service.titulo,
+                                })
+                            )
+                        }
+                    >
+                        {t("infraServices.contactar")}
+                    </Button>
                 </ModalFooter>
+
             </ModalContent>
-        </Modal>
+        </Modal >
     );
 }
 
