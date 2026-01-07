@@ -80,15 +80,32 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                         <Box px={8} py={3}>
                             <Text fontFamily="Poppins, sans-serif" mb={10}>{description}</Text>
                             <h4 style={{ fontFamily: "Poppins, sans-serif" }}>{t("portfolio.stacks")}</h4>
-                            <Flex align={"center"} wrap="wrap" gap={10} mt={9} mb={4}>
+                            <Flex align={"flex-start"} wrap="wrap" gap={8} mt={10} >
                                 {tecnologies.map((tec, index) => (
-                                    <div key={index}>
+                                    <Flex
+                                        key={index}
+                                        direction="column"
+                                        align="center"
+                                        justify="center"
+                                        width={{ base: "60px", md: "80px" }}
+                                    >
                                         <Image
-                                            src={tec}
-                                            alt={`Icon ${index + 1}`}
-                                            boxSize={{ base: "35px", md: "40px", xl: "45px" }}
+                                            src={tec.path}
+                                            alt={tec.name}
+                                            boxSize={{ base: "30px", md: "40px" }}
+                                            objectFit="contain"
                                         />
-                                    </div>
+                                        <Text
+                                            fontSize="xs"
+                                            mt={2}
+                                            textAlign="center"
+                                            fontFamily="Poppins, sans-serif"
+                                            fontWeight="500"
+                                            color="gray.600"
+                                        >
+                                            {tec.name}
+                                        </Text>
+                                    </Flex>
                                 ))}
                             </Flex>
                         </Box>
@@ -135,7 +152,7 @@ export default function ModalPortfolio({ title, description, isOpen, setIsOpen, 
                 <Modal isOpen={isFullscreen} onClose={() => setIsFullscreen(false)} size={"full"}>
                     <ModalOverlay />
                     <ModalContent bg={"quarter.500"}                    >
-                        <ModalCloseButton color={'gray.700'} _hover={{bg:'gray.200'}} />
+                        <ModalCloseButton color={'gray.700'} _hover={{ bg: 'gray.200' }} />
                         <ModalBody p={0}>
                             <Flex height={"100vh"} align={"center"} justify={"center"}>
                                 <Slider style={{ position: "relative", width: mobile ? "80%" : "100%" }} {...settings}>

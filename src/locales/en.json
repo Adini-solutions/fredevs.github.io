@@ -542,15 +542,15 @@
         }
     },
     "portfolio": {
-        "titulo": "Main",
-        "subtitulo": "completed projects",
-        "web": "Web Applications",
-        "detalles": "More details",
+        "titulo": "Key",
+        "subtitulo": "Success Stories",
+        "web": "Web Solutions",
+        "detalles": "Analyze Case",
         "stacks": "Used Stacks",
         "proyectosWeb": {
             "sia": {
                 "titulo": "Integrated Applications System",
-                "resumen": "The Integrated Applications System (SIA) of UTN Buenos Aires manages administrative and academic processes with a microservices architecture, ensuring scalability and security. It integrates OAuth 2.0 for authentication, role segmentation, and remote access via VPN. Its modules include Student Credential, User and Area Management, Broadcasts, Translations, and Incident Reporting, optimizing institutional administration and communication.",
+                "resumen": "Institutional platform designed for the centralized management of administrative and academic processes at UTN Buenos Aires. The system enhances internal operations through a secure and scalable architecture, enabling user and credential management, internal communications, reporting, role-based access control, and support for remote work.",
                 "descripcion": {
                     "titulo": "Project",
                     "descripcion": "This is the main system of the National Technological University (UTN), Buenos Aires, Argentina. Designed to manage and optimize various administrative and academic processes. Built on a modern microservices infrastructure, SIA combines scalability, security, and flexibility to meet the demands of a high-level institution.",
@@ -608,37 +608,9 @@
                     "link": "Website Link"
                 }
             },
-            "pap": {
-                "titulo": "Paso a Paso",
-                "resumen": "A web application developed for a wholesale company that allows users to browse available products and add them to a cart for inquiries. It also includes an admin panel for managing products and configuring general site settings.",
-                "descripcion": {
-                    "titulo": "Project",
-                    "descripcion": "Paso a Paso Distributor is an e-commerce platform designed to optimize wholesale product sales online. Developed with React.js, it combines a modern and intuitive design with advanced functionalities that simplify both the customer experience and administrative management of the company.",
-                    "funcionalidades": "Main Features",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "Wholesale E-commerce",
-                            "descripcion": "An online store specifically designed to meet the needs of wholesale commerce, allowing customers to browse and purchase products quickly and efficiently."
-                        },
-                        {
-                            "titulo": "Comprehensive Management",
-                            "descripcion": "The platform includes a dedicated admin panel that allows administrators to manage catalogs, categories, and products (add, edit, and delete), as well as update business information such as social media and contact details."
-                        },
-                        {
-                            "titulo": "Sales Optimization",
-                            "descripcion": "Paso a Paso Distributor simplifies the purchasing process for wholesale customers, improving product accessibility and visibility."
-                        },
-                        {
-                            "titulo": "Total Control",
-                            "descripcion": "The admin panel provides easy-to-use tools to keep the store and business information up to date."
-                        }
-                    ],
-                    "conclusion": "Paso a Paso Distributor is the perfect solution for wholesale businesses looking to professionalize their digital presence and maximize sales through a robust, modern, and easy-to-manage platform."
-                }
-            },
             "ripAdmin": {
-                "titulo": "RIP Admin",
-                "resumen": "Web application for managing the mobile application 'RIP Alive'. Allows administrators to view user information, manage subscription and payment statuses, configure app catalogs, generate discount coupons, among other features.",
+                "titulo": "RIP Alive Admin",
+                "resumen": "Administration platform designed to manage and scale the operation of the RIP Alive mobile application. It centralizes user management, subscriptions, payments, and catalogs, enabling efficient operational control, commercial configuration, and the creation of promotional actions from a single environment.",
                 "descripcion": {
                     "titulo": "Project",
                     "descripcion": "RIP Admin is a web platform designed for complete management of content and users in RIP Alive, providing administrators with centralized and efficient control over the app's functionalities and data. Developed with a focus on productivity and security, RIP Admin ensures that the app operates smoothly and is adaptable to end users' needs.",
@@ -668,37 +640,9 @@
                     "conclusion": "RIP Admin is the operational core that ensures the proper functioning of RIP Alive, providing administrators with robust and adaptable tools to maintain an optimal user experience and a scalable system. It offers a centralized view of all activities in RIP Alive, simplifying decision-making, problem-solving, and facilitating administrative tasks for efficient data and functionality management."
                 }
             },
-            "samay": {
-                "titulo": "Samay Wayra",
-                "resumen": "Website developed for a cabin rental company. It includes a photo gallery and a contact section to make accommodation reservations.",
-                "descripcion": {
-                    "titulo": "Project",
-                    "descripcion": "Samay Wayra is a static website created with the purpose of promoting an exclusive vacation lodging service. Designed to offer an attractive and functional visual experience, it allows visitors to learn about the complex, its features, and contact information in a clear and accessible manner.",
-                    "funcionalidades": "Main Features",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "Minimalist and attractive design",
-                            "descripcion": "The clean and user-friendly aesthetics of the website aim to capture the user's attention, conveying a sense of tranquility and comfort aligned with the lodging experience."
-                        },
-                        {
-                            "titulo": "Clear and organized information",
-                            "descripcion": "It presents essential details about the accommodation, including images, location, amenities, and key features to help potential guests make an informed decision."
-                        },
-                        {
-                            "titulo": "Integrated contact form",
-                            "descripcion": "The website facilitates direct communication with the property owner through a simple and intuitive form, enabling quick and efficient inquiries."
-                        },
-                        {
-                            "titulo": "Personalized Experience",
-                            "descripcion": "Management of notifications and direct communication with app users."
-                        }
-                    ],
-                    "conclusion": "Samay Wayra is the gateway for future guests looking for a cozy and well-presented destination on the web. Thanks to its visual focus and ease of use, it allows interested parties to quickly and easily get information and contact the owner."
-                }
-            },
             "moviltrack": {
-                "titulo": "Moviltrack",
-                "resumen": "Moviltrack is a comprehensive solution designed to optimize internal project and resource management, centralizing the company's information. It allows generating reports, extracting metrics, checking profitability, and managing clients, suppliers, products, projects, and more.",
+                "titulo": "Moviltrack Management",
+                "resumen": "Internal management solution designed to centralize the company’s operational and financial information. It enables project, client, and resource tracking, generating key metrics and reports to support profitability analysis and strategic decision-making.",
                 "descripcion": {
                     "titulo": "Project",
                     "descripcion": "A custom management application developed for the company's internal project administration, with full-featured functionalities including handling quotes, remittances, products, projects, clients, suppliers, and other key elements. The platform includes a role-based system that allows segmented and supervised access according to each user's needs, as well as dashboards that facilitate monitoring of metrics and overall company performance to oversee profitability and support strategic decision-making.",
@@ -745,7 +689,7 @@
         "proyectosMobile": {
             "credencial": {
                 "titulo": "Student Credential",
-                "resumen": "Mobile app designed as a digital credential for a university. It allows students to validate their status as students through a QR code and provides access to useful information such as current courses, academic history, and a detailed schedule with the times for each subject. It also includes a section to download the student certificate with their academic history.",
+                "resumen": "Institutional mobile application that serves as a digital credential for university students. It enables identity validation through QR codes and centralizes access to relevant academic information—including current courses, academic records, class schedules, and official documentation—enhancing the student experience and the institution's operational efficiency.",
                 "descripcion": {
                     "titulo": "Project",
                     "descripcion": "The Student Credential is a mobile app developed to function as a digital credential for students at the National Technological University (UTN), Buenos Aires, Argentina. Its modern and functional design is aimed at simplifying student identity validation and providing quick access to key academic information.",
@@ -768,12 +712,12 @@
                             "descripcion": "The digital credential replaces the use of physical documents, improving practicality and reducing the risks of loss or forgery."
                         }
                     ],
-                    "conclusion": "Student Credential is a comprehensive resource for students, designed to enhance their academic experience and facilitate interaction with university services."
+                    "conclusion": "The Student Credential is a comprehensive resource for students, designed to enhance their academic experience and facilitate interaction with university services."
                 }
             },
             "ripApp": {
                 "titulo": "RIP Alive",
-                "resumen": "Mobile app designed to allow users to store their important information in case of death, to inform their family members about their last wishes. Users can store details about what to do with their belongings, key contacts, investments, personal and health information, among others. The app features a paid subscription system and a store with products.",
+                "resumen": "A mobile application designed for secure personal information management and digital planning. It allows users to centralize sensitive data, key contacts, and vital instructions for family members, providing a reliable solution for organizing and safeguarding private information. The product operates on a subscription model and features integrated commercial functionalities.",
                 "descripcion": {
                     "titulo": "Project",
                     "descripcion": "RIP Alive is an innovative mobile app developed in React Native, designed to allow users to leave a clear and accessible legacy for their beneficiaries in the event of death. With a focus on planning and security, the app provides an organized and customizable environment to manage crucial information and personal wishes.",
@@ -805,7 +749,7 @@
             },
             "amigosDelCole": {
                 "titulo": "Amigos del Cole",
-                "resumen": "Mobile app designed as a digital wallet for students, where parents can load money into their children's accounts who attend school. The app allows students to make purchases at school buffets using a QR code. It includes three user roles: parent accounts to manage the balance, student accounts to make purchases, and buffet accounts to manage the payments received.",
+                "resumen": "A digital wallet designed for educational environments that streamlines money management and payments within schools. The platform allows parents to manage their children's balances, students to make purchases via QR codes, and school vendors to handle transactions, ensuring control, traceability, and simplicity in every operation.",
                 "descripcion": {
                     "titulo": "Project",
                     "descripcion": "An app that serves as a student digital wallet developed to simplify and optimize money management in the school environment. Designed to provide security and control to parents, it allows them to load balance into their children's accounts, who can then use it to make purchases at their school buffets via a QR code payment system.",

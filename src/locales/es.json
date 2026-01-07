@@ -543,14 +543,14 @@
     },
     "portfolio": {
         "titulo": "Principales",
-        "subtitulo": "proyectos realizados",
-        "web": "Aplicaciones Web",
-        "detalles": "Más detalles",
+        "subtitulo": "Casos de Éxito",
+        "web": "Soluciones Web",
+        "detalles": "Analizar caso",
         "stacks": "Tecnologias Utilizadas",
         "proyectosWeb": {
             "sia": {
                 "titulo": "Sistema Integrado de Aplicaciones",
-                "resumen": "El Sistema Integrado de Aplicaciones (SIA) de la UTN Buenos Aires gestiona procesos administrativos y académicos con una arquitectura de microservicios, garantizando escalabilidad y seguridad. Integra OAuth 2.0 para autenticación, segmentación de roles y acceso remoto mediante VPN. Sus módulos incluyen Credencial Estudiantil, Gestión de Usuarios y Áreas, Difusiones, Traducciones y Reporte de Incidencias, optimizando la administración y comunicación institucional.",
+                "resumen": "Sistema institucional para la gestión centralizada de procesos administrativos y académicos de la UTN Buenos Aires. La plataforma optimiza la operación interna mediante una arquitectura escalable y segura, permitiendo la administración de usuarios, credenciales, comunicaciones y reportes, con control de accesos por roles y soporte para trabajo remoto.",
                 "descripcion": {
                     "titulo": "Proyecto",
                     "descripcion": "Es el sistema principal de la Universidad Tecnológica Nacional (UTN), Buenos Aires, Argentina. Diseñado para gestionar y optimizar diversos procesos administrativos y académicos. Construido sobre una moderna infraestructura de microservicios, el SIA combina escalabilidad, seguridad y flexibilidad para satisfacer las demandas de una institución de alto nivel.",
@@ -608,37 +608,9 @@
                     "link": "Link al Sitio"
                 }
             },
-            "pap": {
-                "titulo": "Paso a Paso",
-                "resumen": "Aplicación web desarrollada para una empresa mayorista, permite visualizar los productos disponibles y añadirlos a un carrito para realizar consultas. Además, incluye un panel de administrador para gestionar productos y configurar aspectos generales de la página.",
-                "descripcion": {
-                    "titulo": "Proyecto",
-                    "descripcion": "Paso a Paso Distribuidora es una plataforma de comercio electrónico diseñada para optimizar la venta mayorista de productos de forma online. Desarrollada con React.js, combina un diseño moderno e intuitivo con funcionalidades avanzadas que simplifican tanto la experiencia del cliente como la gestión administrativa de la empresa.",
-                    "funcionalidades": "Funcionalidades Principales",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "E-commerce de Venta Mayorista",
-                            "descripcion": "Una tienda online diseñada específicamente para satisfacer las necesidades del comercio mayorista, permitiendo a los clientes explorar y adquirir productos de forma rápida y eficiente."
-                        },
-                        {
-                            "titulo": "Gestión Integral",
-                            "descripcion": "La plataforma incluye un panel de administración propio que permite a los administradores gestionar catálogos, categorías y productos (agregar, editar y eliminar), así como actualizar la información empresarial, como redes sociales y números de contacto."
-                        },
-                        {
-                            "titulo": "Optimización de Ventas",
-                            "descripcion": "Paso a Paso Distribuidora simplifica el proceso de compra para los clientes mayoristas, mejorando la accesibilidad y visibilidad de los productos."
-                        },
-                        {
-                            "titulo": "Control Total",
-                            "descripcion": "El panel de administración brinda herramientas fáciles de usar para mantener actualizada la tienda y la información de la empresa."
-                        }
-                    ],
-                    "conclusion": "Paso a Paso Distribuidora es la solución perfecta para empresas mayoristas que buscan profesionalizar su presencia digital y maximizar sus ventas mediante una plataforma robusta, moderna y de fácil gestión."
-                }
-            },
             "ripAdmin": {
-                "titulo": "RIP Admin",
-                "resumen": "Aplicación web para la administración de la aplicación móvil 'RIP Alive'. Permite a los administradores visualizar la información de los usuarios, gestionar el estado de las suscripciones y pagos, configurar catálogos de la aplicación, generar cupones de descuento, entre otras funcionalidades.",
+                "titulo": "RIP Alive Admin",
+                "resumen": "Plataforma de administración diseñada para gestionar y escalar la operación de la aplicación móvil RIP Alive. Centraliza la gestión de usuarios, suscripciones, pagos y catálogos, facilitando el control operativo, la configuración comercial y la generación de acciones promocionales desde un único entorno.",
                 "descripcion": {
                     "titulo": "Proyecto",
                     "descripcion": "RIP Admin es una plataforma web diseñada para la gestión completa de los contenidos y usuarios de RIP Alive, ofreciendo a los administradores un control centralizado y eficiente sobre las funcionalidades y datos de la aplicación. Desarrollada con un enfoque en la productividad y la seguridad, RIP Admin asegura que la operación de la app sea fluida y adaptable a las necesidades de los usuarios finales.",
@@ -668,37 +640,9 @@
                     "conclusion": "RIP Admin es el núcleo operativo que asegura el correcto funcionamiento de RIP Alive, ofreciendo a los administradores herramientas robustas y adaptables para mantener una experiencia de usuario óptima y un sistema escalable. Proporciona una visión centralizada de toda la actividad en RIP Alive, simplificando la toma de decisiones, la resolución de problemas y facilitando tareas administrativas para una gestión eficiente de los datos y funcionalidades."
                 }
             },
-            "samay": {
-                "titulo": "Samay Wayra",
-                "resumen": "Página web desarrollada para una empresa de alquiler de cabañas. Incluye una galería de fotos y una sección de contacto para realizar reservas de alojamiento.",
-                "descripcion": {
-                    "titulo": "Proyecto",
-                    "descripcion": "Samay Wayra es una web estática creada con el propósito de promocionar un exclusivo servicio de hospedaje vacacional. Diseñada para ofrecer una experiencia visual atractiva y funcional, permite a los visitantes conocer el complejo, sus características y los medios de contacto de manera clara y accesible.",
-                    "funcionalidades": "Características Principales",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "Diseño minimalista y atractivo",
-                            "descripcion": "La estética limpia y amigable de la web busca captar la atención del usuario, transmitiendo una sensación de tranquilidad y confort, alineada con la experiencia que ofrece el hospedaje."
-                        },
-                        {
-                            "titulo": "Información clara y organizada",
-                            "descripcion": "Presenta detalles esenciales sobre el alojamiento, incluyendo imágenes, ubicación, comodidades y características clave para ayudar a los potenciales huéspedes a tomar una decisión informada."
-                        },
-                        {
-                            "titulo": "Formulario de contacto integrado",
-                            "descripcion": "La web facilita la comunicación directa con el propietario del complejo mediante un formulario sencillo e intuitivo, permitiendo consultas rápidas y eficientes."
-                        },
-                        {
-                            "titulo": "Personalización de la Experiencia",
-                            "descripcion": "Gestión de notificaciones y comunicaciones directas con los usuarios de la app."
-                        }
-                    ],
-                    "conclusion": "Samay Wayra es la puerta de entrada para futuros huéspedes que buscan un destino acogedor y bien presentado en la web. Gracias a su enfoque visual y su facilidad de uso, permite que los interesados se informen y contacten con el dueño de manera rápida y sencilla."
-                }
-            },
             "moviltrack": {
-                "titulo": "Moviltrack",
-                "resumen": "Moviltrack es una solución integral diseñada para optimizar la gestión interna de proyectos y recursos de la empresa permitiendo centralizar la información de la misma. Pudiendo generar reportes, sacar métricas, consultar rentabilidades y gestionar a clientes, proveedores, productos, proyectos y demás.",
+                "titulo": "Moviltrack Gestión",
+                "resumen": "Solución de gestión interna orientada a centralizar la información operativa y financiera de la empresa. Permite el seguimiento de proyectos, clientes y recursos, generando métricas y reportes clave para el análisis de rentabilidad y la toma de decisiones estratégicas.",
                 "descripcion": {
                     "titulo": "Proyecto",
                     "descripcion": "Aplicación de gestión desarrollada a medida para la administración interna de proyectos de la empresa, con funcionalidades integrales que incluyen manejo de cotizaciones, remisiones, productos, proyectos, clientes, proveedores y otros elementos clave. La plataforma cuenta con un sistema de roles que permite un acceso segmentado y supervisado según las necesidades de cada usuario, así como un apartado de dashboards que facilita el seguimiento de las métricas y el desempeño general de la empresa para supervisar la rentabilidad y la toma de decisiones estratégicas",
@@ -745,7 +689,7 @@
         "proyectosMobile": {
             "credencial": {
                 "titulo": "Credencial Estudiantil",
-                "resumen": "Aplicación móvil diseñada como credencial digital para una universidad. Permite a los estudiantes validarse como alumnos mediante un código QR y facilita el acceso a información útil, como las materias en curso, el historial académico y una agenda detallada con los horarios de cada asignatura. También incluye una sección para descargar la constancia de alumno con su historial académico.",
+                "resumen": "Aplicación móvil institucional que funciona como credencial digital para estudiantes universitarios. Permite la validación de identidad mediante códigos QR y centraliza el acceso a información académica relevante, como materias en curso, historial académico, agenda de cursadas y documentación oficial, mejorando la experiencia del estudiante y la eficiencia operativa de la institución.",
                 "descripcion": {
                     "titulo": "Proyecto",
                     "descripcion": "La Credencial Estudiantil es una aplicación móvil desarrollada para funcionar como una credencial digital para los alumnos de la Universidad Tecnológica Nacional, Buenos Aires, Argentina. Su diseño moderno y funcional está orientado a simplificar la validación de identidad estudiantil y brindar acceso rápido a información académica clave.",
@@ -768,12 +712,12 @@
                             "descripcion": "La credencial digital reemplaza el uso de documentos físicos, mejorando la practicidad y reduciendo riesgos de extravío o falsificación."
                         }
                     ],
-                    "conclusion": "Credencial Estudiantil es un recurso integral para los estudiantes, diseñado para mejorar su experiencia académica y facilitar la interacción con los servicios de la universidad."
+                    "conclusion": "La Credencial Estudiantil es un recurso integral para los estudiantes, diseñado para mejorar su experiencia académica y facilitar la interacción con los servicios de la universidad."
                 }
             },
             "ripApp": {
                 "titulo": "RIP Alive",
-                "resumen": "Aplicación móvil diseñada para permitir a los usuarios guardar su información importante en caso de fallecimiento, con el fin de informar a sus familiares sobre sus últimos deseos. Los usuarios pueden almacenar detalles sobre qué hacer con sus pertenencias, contactos clave, inversiones, información personal y de salud, entre otros. La app cuenta con un sistema de suscripción de pago y una tienda con productos.",
+                "resumen": "Aplicación móvil orientada a la gestión segura de información personal y planificación digital. Permite a los usuarios centralizar datos relevantes, contactos clave y definiciones importantes para sus familiares, ofreciendo una solución confiable para la organización y resguardo de información sensible. El producto opera bajo un modelo de suscripción e incluye funcionalidades comerciales integradas.",
                 "descripcion": {
                     "titulo": "Proyecto",
                     "descripcion": "RIP Alive es una innovadora aplicación móvil desarrollada en React Native, diseñada para permitir que los usuarios dejen un legado claro y accesible para sus beneficiarios en caso de fallecimiento. Con un enfoque en la planificación y la seguridad, la aplicación ofrece un entorno organizado y personalizable para gestionar información crucial y deseos personales.",
@@ -805,7 +749,7 @@
             },
             "amigosDelCole": {
                 "titulo": "Amigos del Cole",
-                "resumen": "Aplicación móvil diseñada como billetera digital para estudiantes, en la que los padres pueden cargar dinero en las cuentas de sus hijos que asisten al colegio. La app permite a los estudiantes realizar compras en los buffets de las escuelas mediante un código QR. Incluye tres roles de usuario: cuentas de padres para administrar el saldo, cuentas de hijos para realizar las compras, y cuentas de buffet para gestionar los pagos recibidos.",
+                "resumen": "Billetera digital diseñada para entornos educativos que facilita la administración de dinero y pagos dentro de instituciones escolares. La plataforma permite a los padres gestionar el saldo de sus hijos, a los estudiantes realizar compras mediante códigos QR y a los comercios escolares administrar los cobros, garantizando control, trazabilidad y simplicidad en las transacciones.",
                 "descripcion": {
                     "titulo": "Proyecto",
                     "descripcion": "Aplicación que actúa como billetera digital estudiantil desarrollada para simplificar y optimizar la gestión del dinero en el entorno escolar. Diseñada para brindar seguridad y control a los padres, permite realizar cargas de saldo en las cuentas de sus hijos, quienes pueden utilizarlo para comprar en los buffets de sus colegios a través de un sistema de pago con código QR.",
