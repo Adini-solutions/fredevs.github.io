@@ -23,22 +23,28 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
                 ref={ref}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
-                transition={{ duration: 0.5 }}
-                direction={"column"}
-                justifyContent={"space-between"}
-                w="100%"
-                maxW="lg"
-                mb={5} p={4}
-                borderRadius="md"
-                boxShadow="md"
-                bg={"white"}
-                cursor={"pointer"}
-                borderTop={"2px solid #5548e6"}
-                borderBottom={"2px solid #5548e6"}
-                _hover={{ boxShadow: "xl" }}
-                onClick={() => setIsOpen(true)}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+
             >
-                <Box>
+                <Flex
+                    direction={"column"}
+                    justifyContent={"space-between"}
+                    transition="transform 0.2s ease-in-out"
+                    w="100%"
+                    maxW="md"
+                    mb={5} p={4}
+                    borderRadius="md"
+                    boxShadow="md"
+                    bg={"white"}
+                    cursor={"pointer"}
+                    borderTop={"2px solid #5548e6"}
+                    borderBottom={"2px solid #5548e6"}
+                    _hover={{
+                        boxShadow: "xl",
+                        transform: "translateY(-5px)",
+                    }}
+                    onClick={() => setIsOpen(true)}
+                >
                     <Flex justify="center" align="center" mb={3}>
                         <Heading fontSize="2xl" textAlign={"center"} fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
                     </Flex>
@@ -60,35 +66,35 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
                     <Box p={4} pb={0}>
                         <Text fontSize="md" color="gray.700" mb={4}>{summary}</Text>
                     </Box>
-                </Box>
-                <Flex
-                    as="button"
-                    justify="center"
-                    align="center"
-                    gap={2}
-                    my={2}
-                    fontSize={{ base: "md", lg: "lg" }}
-                    fontWeight="600"
-                    color="#3d2b99"
-                    role="group"
-                    onClick={() => setIsOpen(true)}
-                >
-                    <Text
-                        as="span"
-                        display="inline-block"
-                        borderBottom="1px solid transparent"
-                        transition="border-color 0.2s ease"
-                        _groupHover={{ borderColor: "tertiary.500" }}
+                    <Flex
+                        as="button"
+                        justify="center"
+                        align="center"
+                        gap={2}
+                        my={2}
+                        fontSize={"md"}
+                        fontWeight="600"
+                        color="#3d2b99"
+                        role="group"
+                        onClick={() => setIsOpen(true)}
                     >
-                        {t("portfolio.detalles")}
-                    </Text>
+                        <Text
+                            as="span"
+                            display="inline-block"
+                            borderBottom="1px solid transparent"
+                            transition="border-color 0.2s ease"
+                            _groupHover={{ borderColor: "tertiary.500" }}
+                        >
+                            {t("portfolio.detalles")}
+                        </Text>
 
-                    <Box
-                        as={LuArrowRight}
-                        size={16}
-                        transition="transform 0.2s ease"
-                        _groupHover={{ transform: "translateX(4px)" }}
-                    />
+                        <Box
+                            as={LuArrowRight}
+                            size={16}
+                            transition="transform 0.2s ease"
+                            _groupHover={{ transform: "translateX(4px)" }}
+                        />
+                    </Flex>
                 </Flex>
             </MotionBox>
 

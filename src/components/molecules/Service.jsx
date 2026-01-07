@@ -24,6 +24,7 @@ export default function Service({ service, variant }) {
         borderRight={"1px solid #f3f3f3"}
         w={{ base: "330px", "2xl": "380px" }}
         textAlign="center"
+        mb={"80px"}
         borderBottom={variant === "infra" ? "4px solid #238b6f" : "4px solid #6c63ff"}
         transition="transform 0.2s ease-in-out"
         _hover={{
@@ -33,7 +34,6 @@ export default function Service({ service, variant }) {
             ? "linear-gradient(to top, #f0fcf9, #f7f8ff)"
             : "linear-gradient(to top, #f1f0ff, #f7f8ff)"
         }}
-        mb={"80px"}
       >
         <Flex justify={"center"} align={"center"}>
           <img
