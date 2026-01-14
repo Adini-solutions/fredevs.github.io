@@ -75,8 +75,8 @@ export default function Blog({ variant = 'default' }) {
                 as={Link}
                 href="https://dev.to/adini"
                 isExternal
-                variant="outline"
                 colorScheme="white"
+                border="1px solid #ededed"
                 size="md"
                 _hover={{
                   bg: 'purple.800',
@@ -122,7 +122,7 @@ export default function Blog({ variant = 'default' }) {
                   as={Link}
                   href="https://dev.to/adini"
                   isExternal
-                  variant="outline"
+                  border="1px solid #ededed"
                   colorScheme="white"
                   size="md"
                   _hover={{
