@@ -2,7 +2,7 @@
   "name": "adini",
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://fredevs.github.io",
+  "homepage": "https://adini.com.ar",
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development react-scripts start",

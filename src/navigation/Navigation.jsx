@@ -5,22 +5,13 @@ import Dev from "../components/pages/Dev";
 import Infra from "../components/pages/Infra";
 
 export default function Navigation() {
-
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route>
-          <Route path="/" element={<Home />} />
-        </Route>
-        <Route>
-          <Route path="/dev" element={<Dev />} />
-        </Route>
-        <Route>
-          <Route path="/infra" element={<Infra />} />
-        </Route>
-        <Route>
-          <Route path="/*" element={<NotFound />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/dev" element={<Dev />} />
+        <Route path="/infra" element={<Infra />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
