@@ -39,7 +39,11 @@ export default function Article({ article }) {
             borderColor="gray.700"
             h="100%"
         >
-            <Box position="relative" h="240px" overflow="hidden">
+            <Box
+                position="relative"
+                aspectRatio={1000 / 420}
+                overflow="hidden"
+            >
                 <Image
                     src={articleImage}
                     alt={article.title}
