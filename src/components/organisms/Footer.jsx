@@ -9,7 +9,7 @@ export default function Footer({ variant = "default" }) {
     const navigate = useNavigate();
 
     const menuType = {
-        default: ["inicio", "areas", "cases", "blog", "nosotros", "contacto"],
+        default: ["inicio", "areas", "ia", "cases", "blog", "nosotros", "contacto"],
         dev: ["inicio", "servicios", "tecnologías", "proyectos", "contacto", "nosotros"],
         infra: ["inicio", "servicios", "contacto", "nosotros"],
     };

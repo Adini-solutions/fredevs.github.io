@@ -5,6 +5,7 @@ import Banner from "../organisms/Banner";
 import ServiceAreas from "../organisms/ServiceAreas";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
+import AISection from "../organisms/AISection";
 import CaseStudies from "../organisms/CaseStudies";
 import Blog from "../organisms/Blog";
 import Footer from "../organisms/Footer";
@@ -47,6 +48,9 @@ export default function Home() {
         </Box>
         <Box id="areas">
           <ServiceAreas />
+        </Box>
+        <Box id="ia">
+          <AISection />
         </Box>
         <Box id="cases">
           <CaseStudies />

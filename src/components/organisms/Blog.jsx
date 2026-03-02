@@ -17,7 +17,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-export default function Blog({ variant = 'default' }) {
+export default function Blog() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const { t } = useTranslation();

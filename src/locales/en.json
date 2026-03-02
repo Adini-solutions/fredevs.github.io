@@ -1,851 +1,869 @@
 {
-    "header": {
-        "inicio": "Home",
-        "servicios": "Services",
-        "areas": "Service Areas",
-        "tecnologías": "Technologies",
-        "proyectos": "Projects",
-        "nosotros": "About Us",
-        "menu": "Menu",
-        "contacto": "Contact",
-        "blog": "Articles",
-        "cases": "Success Stories"
-    },
-    "banner": {
-        "span": "IT Consulting",
-        "titulo": "We transform ideas into digital solutions",
-        "subtitulo": "We are a multidisciplinary team that supports you from the initial concept through to full implementation.",
-        "boton": "Contact us",
-        "reviews": [
-            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
-            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
-            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+  "header": {
+    "inicio": "Home",
+    "servicios": "Services",
+    "areas": "Service Areas",
+    "ia": "AI",
+    "tecnologías": "Technologies",
+    "proyectos": "Projects",
+    "nosotros": "About Us",
+    "menu": "Menu",
+    "contacto": "Contact",
+    "blog": "Articles",
+    "cases": "Success Stories"
+  },
+  "banner": {
+    "span": "IT Consulting",
+    "titulo": "We transform ideas into digital solutions",
+    "subtitulo": "We are a multidisciplinary team that supports you from the initial concept through to full implementation.",
+    "boton": "Contact us",
+    "reviews": [
+      "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+      "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+      "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+    ]
+  },
+  "bannerDev": {
+    "span": "Development",
+    "titulo": "Custom digital solution development",
+    "subtitulo": "We design and build digital systems that support the evolution and growth of each organization.",
+    "boton": "Contact us",
+    "reviews": [
+      "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+      "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+      "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+    ]
+  },
+  "bannerInfra": {
+    "span": "Infrastructure",
+    "titulo": "Automated infrastructure and operations for modern, scalable environments",
+    "subtitulo": "We design, implement, and manage infrastructure, data, network, and security environments that ensure continuity, performance, and operational control.",
+    "boton": "Contact us",
+    "reviews": [
+      "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
+      "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
+      "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+    ]
+  },
+  "infraServices": {
+    "titulo": "Infrastructure designed to be ",
+    "subtitulo": "robust, secure, and scalable",
+    "cerrar": "Close",
+    "verMas": "View more",
+    "label": "Adini | Infrastructure",
+    "contactar": "Contact",
+    "messageTemplate": "Hello!\n\nI’m interested in the “{{service}}” service.\n\n",
+    "servicios": [
+      {
+        "titulo": "Core Infrastructure and Datacenter",
+        "imagen": "/assets/icons/devops.svg",
+        "descripcion": "Comprehensive management of core infrastructure supporting critical business applications and services, both in on-premise datacenters and cloud and hybrid environments.",
+        "lista": [
+          "Virtualization, compute and storage",
+          "Cloud and hybrid environments",
+          "Datacenter maintenance",
+          "High availability and operational continuity"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Virtualization and Compute",
+            "descripcion": "Hypervisor management, virtual machine (VM) creation and optimization, and server resource administration."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "Storage Management",
+            "descripcion": "Disk array administration, SAN/NAS network management, and disk quota allocation for applications and users."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "Datacenter Maintenance",
+            "descripcion": "Physical layer supervision across both nodes (racks, structured cabling, UPS monitoring, and power supply)."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "Hybrid and Public Cloud Management",
+            "descripcion": "Cloud instance and service administration, ensuring external resources are properly integrated, sized, and connected with on-premise infrastructure."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "Orchestration and Containers",
+            "descripcion": "Management of Docker or Kubernetes-based environments, ensuring agile application deployment and portability between Datacenter and Cloud."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "High Availability and Replication (HA)",
+            "descripcion": "Configuration and supervision of data and service replication to ensure operations continue in case of failures."
+          }
         ]
-    },
-    "bannerDev": {
-        "span": "Development",
-        "titulo": "Custom digital solution development",
-        "subtitulo": "We design and build digital systems that support the evolution and growth of each organization.",
-        "boton": "Contact us",
-        "reviews": [
-            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
-            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
-            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+      },
+      {
+        "titulo": "Data Management and Business Continuity",
+        "imagen": "/assets/icons/dataManage.svg",
+        "descripcion": "Comprehensive business data management, focused on availability, integrity, and incident recovery to ensure operational continuity.",
+        "lista": [
+          "Database administration (DBA)",
+          "Backup and disaster recovery (Backup & DR)",
+          "File management and collaboration"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Database Administration",
+            "descripcion": "Installation, optimization, tuning, and maintenance of database engines."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "Backup, Recovery and Disaster Recovery",
+            "descripcion": "Execution of backup policies and periodic restoration and disaster recovery tests."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "File Management and Collaboration",
+            "descripcion": "File server administration, shared permissions, and document storage quotas."
+          }
         ]
-    },
-    "bannerInfra": {
-        "span": "Infrastructure",
-        "titulo": "Automated infrastructure and operations for modern, scalable environments",
-        "subtitulo": "We design, implement, and manage infrastructure, data, network, and security environments that ensure continuity, performance, and operational control.",
-        "boton": "Contact us",
-        "reviews": [
-            "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
-            "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
-            "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+      },
+      {
+        "titulo": "Networking and Connectivity",
+        "imagen": "/assets/icons/networking.svg",
+        "descripcion": "Comprehensive business connectivity management, ensuring stable networks, secure remote access, and reliable enterprise communications.",
+        "lista": [
+          "Corporate networks",
+          "Secure and remote connectivity",
+          "Enterprise communications"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "LAN/WAN Network Management",
+            "descripcion": "Switch configuration, network segmentation (VLANs), and backbone cabling maintenance."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "WiFi Infrastructure",
+            "descripcion": "Access point management, wireless controllers, and guest/corporate networks."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "Remote Connectivity (VPN)",
+            "descripcion": "Secure access administration for staff working outside the office."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "Name Resolution Services (DNS)",
+            "descripcion": "Internal and external zone administration, record management (A, CNAME, MX), and name hierarchy maintenance so services are discoverable by name and not just IP."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "Digital Certificate Management (PKI/SSL)",
+            "descripcion": "Lifecycle administration (generation, renewal, and installation) of SSL/TLS certificates to ensure web traffic (HTTPS) and server-to-server communications are encrypted and trustworthy."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "Unified Communications and IP Telephony",
+            "descripcion": "PBX administration, extension management, auto-attendants, and Voice over IP (VoIP) service provisioning."
+          }
         ]
-    },
-    "infraServices": {
-        "titulo": "Infrastructure designed to be ",
-        "subtitulo": "robust, secure, and scalable",
-        "cerrar": "Close",
-        "verMas": "View more",
-        "label": "Adini | Infrastructure",
-        "contactar": "Contact",
-        "messageTemplate": "Hello!\n\nI’m interested in the “{{service}}” service.\n\n",
-        "servicios": [
-            {
-                "titulo": "Core Infrastructure and Datacenter",
-                "imagen": "/assets/icons/devops.svg",
-                "descripcion": "Comprehensive management of core infrastructure supporting critical business applications and services, both in on-premise datacenters and cloud and hybrid environments.",
-                "lista": [
-                    "Virtualization, compute and storage",
-                    "Cloud and hybrid environments",
-                    "Datacenter maintenance",
-                    "High availability and operational continuity"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Virtualization and Compute",
-                        "descripcion": "Hypervisor management, virtual machine (VM) creation and optimization, and server resource administration."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "Storage Management",
-                        "descripcion": "Disk array administration, SAN/NAS network management, and disk quota allocation for applications and users."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "Datacenter Maintenance",
-                        "descripcion": "Physical layer supervision across both nodes (racks, structured cabling, UPS monitoring, and power supply)."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "Hybrid and Public Cloud Management",
-                        "descripcion": "Cloud instance and service administration, ensuring external resources are properly integrated, sized, and connected with on-premise infrastructure."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "Orchestration and Containers",
-                        "descripcion": "Management of Docker or Kubernetes-based environments, ensuring agile application deployment and portability between Datacenter and Cloud."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "High Availability and Replication (HA)",
-                        "descripcion": "Configuration and supervision of data and service replication to ensure operations continue in case of failures."
-                    }
-                ]
-            },
-            {
-                "titulo": "Data Management and Business Continuity",
-                "imagen": "/assets/icons/dataManage.svg",
-                "descripcion": "Comprehensive business data management, focused on availability, integrity, and incident recovery to ensure operational continuity.",
-                "lista": [
-                    "Database administration (DBA)",
-                    "Backup and disaster recovery (Backup & DR)",
-                    "File management and collaboration"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Database Administration",
-                        "descripcion": "Installation, optimization, tuning, and maintenance of database engines."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "Backup, Recovery and Disaster Recovery",
-                        "descripcion": "Execution of backup policies and periodic restoration and disaster recovery tests."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "File Management and Collaboration",
-                        "descripcion": "File server administration, shared permissions, and document storage quotas."
-                    }
-                ]
-            },
-            {
-                "titulo": "Networking and Connectivity",
-                "imagen": "/assets/icons/networking.svg",
-                "descripcion": "Comprehensive business connectivity management, ensuring stable networks, secure remote access, and reliable enterprise communications.",
-                "lista": [
-                    "Corporate networks",
-                    "Secure and remote connectivity",
-                    "Enterprise communications"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "LAN/WAN Network Management",
-                        "descripcion": "Switch configuration, network segmentation (VLANs), and backbone cabling maintenance."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "WiFi Infrastructure",
-                        "descripcion": "Access point management, wireless controllers, and guest/corporate networks."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "Remote Connectivity (VPN)",
-                        "descripcion": "Secure access administration for staff working outside the office."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "Name Resolution Services (DNS)",
-                        "descripcion": "Internal and external zone administration, record management (A, CNAME, MX), and name hierarchy maintenance so services are discoverable by name and not just IP."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "Digital Certificate Management (PKI/SSL)",
-                        "descripcion": "Lifecycle administration (generation, renewal, and installation) of SSL/TLS certificates to ensure web traffic (HTTPS) and server-to-server communications are encrypted and trustworthy."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "Unified Communications and IP Telephony",
-                        "descripcion": "PBX administration, extension management, auto-attendants, and Voice over IP (VoIP) service provisioning."
-                    }
-                ]
-            },
-            {
-                "titulo": "Information Security",
-                "imagen": "/assets/icons/security.svg",
-                "descripcion": "Cybersecurity services aimed at protecting infrastructure, users, and digital business assets, reducing risks and strengthening access and operation controls.",
-                "lista": [
-                    "Firewalls and perimeter security",
-                    "Endpoint security",
-                    "Identity and access management (IAM)",
-                    "Digital asset protection"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Perimeter Security (Firewalls)",
-                        "descripcion": "Inbound/outbound rule management, intrusion prevention (IPS/IDS), and content filtering."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "Endpoint Security",
-                        "descripcion": "Centralized antivirus, antimalware, and security patch management on servers and workstations."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "Identity and Access Management (IAM)",
-                        "descripcion": "Control of user additions, removals, and modifications in Active Directory or authentication systems."
-                    }
-                ]
-            },
-            {
-                "titulo": "Monitoring and Observability",
-                "imagen": "/assets/icons/monitoring.svg",
-                "descripcion": "Monitoring and observability services providing continuous visibility into infrastructure and systems, enabling detection, alerting, and anticipation of incidents before they impact the business.",
-                "lista": [
-                    "Availability and performance monitoring",
-                    "Alerting and capacity management",
-                    "Incident prevention"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Availability and Performance Monitoring",
-                        "descripcion": "24/7 supervision of server, service, and communications link health."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "Alerting and Capacity Management",
-                        "descripcion": "Proactive failure notification and trend analysis to determine when more resources (CPU, RAM, Disk) need to be acquired."
-                    }
-                ]
-            },
-            {
-                "titulo": "Operations and Automation",
-                "imagen": "/assets/icons/automation.svg",
-                "descripcion": "Services aimed at optimizing and standardizing IT operations through automation, continuous support, and management aligned with each organization's internal regulations and policies.",
-                "lista": [
-                    "Standardization and operational automation",
-                    "Business application support",
-                    "Technology asset control",
-                    "Alignment with compliance and internal regulations"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Infrastructure Automation (IaC)",
-                        "descripcion": "Use of tools like Ansible for standardized server configuration."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "Application Lifecycle Management",
-                        "descripcion": "Technical support for business applications, web servers (IIS, Apache, Nginx), and middleware."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "IT Asset Management (ITAM)",
-                        "descripcion": "Updated hardware inventory and control of warranty expiration dates and support contracts."
-                    }
-                ]
-            },
-            {
-                "titulo": "Support and Service Management",
-                "imagen": "/assets/icons/supportInfra.svg",
-                "descripcion": "Services dedicated to providing specialized technical support and efficiently managing IT services to ensure operational continuity and quality.",
-                "lista": [
-                    "Level 2 and 3 support",
-                    "Vendor management",
-                    "Technical documentation",
-                    "IT consulting and procurement"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Level 2 and 3 Support",
-                        "descripcion": "Resolution of complex technical incidents that cannot be resolved at first instance."
-                    },
-                    {
-                        "icono": "MdPlumbing",
-                        "titulo": "IT Vendor Management",
-                        "descripcion": "Technical coordination with ISPs, hardware vendors, and third-party software support."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "Technical Documentation and Knowledge Base",
-                        "descripcion": "Creation and maintenance of manuals, network diagrams, and operational procedures."
-                    },
-                    {
-                        "icono": "MdElectricalServices",
-                        "titulo": "Technical Consulting and IT Procurement",
-                        "descripcion": "Technical advisory for new technology acquisition, budget evaluation, and ensuring any new equipment is compatible with company standards."
-                    }
-                ]
-            }
+      },
+      {
+        "titulo": "Information Security",
+        "imagen": "/assets/icons/security.svg",
+        "descripcion": "Cybersecurity services aimed at protecting infrastructure, users, and digital business assets, reducing risks and strengthening access and operation controls.",
+        "lista": [
+          "Firewalls and perimeter security",
+          "Endpoint security",
+          "Identity and access management (IAM)",
+          "Digital asset protection"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Perimeter Security (Firewalls)",
+            "descripcion": "Inbound/outbound rule management, intrusion prevention (IPS/IDS), and content filtering."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "Endpoint Security",
+            "descripcion": "Centralized antivirus, antimalware, and security patch management on servers and workstations."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "Identity and Access Management (IAM)",
+            "descripcion": "Control of user additions, removals, and modifications in Active Directory or authentication systems."
+          }
         ]
-    },
-    "devServices": {
-        "titulo": "Solutions",
-        "subtitulo": "tailored for your business",
-        "cerrar": "Close",
-        "verMas": "See more",
-        "label": "Adini | Development",
-        "contactar": "Contact",
-        "messageTemplate": "Hello!\n\nI’m interested in the “{{service}}” service.\n\n",
-        "servicios": [
-            {
-                "titulo": "Custom Development",
-                "imagen": "/assets/icons/dev.svg",
-                "lista": [
-                    "Requirements analysis and assessment",
-                    "Solutions adapted to business processes",
-                    "Custom functionalities",
-                    "Scalability and evolutionary maintenance",
-                    "Integration with existing systems"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Analysis and Design",
-                        "descripcion": "Requirements gathering, solution architecture definition and design according to business needs."
-                    },
-                    {
-                        "icono": "MdCode",
-                        "titulo": "Development and Programming",
-                        "descripcion": "Implementation of custom functionalities using modern technologies and best development practices."
-                    },
-                    {
-                        "icono": "MdIntegrationInstructions",
-                        "titulo": "Integration with Existing Systems",
-                        "descripcion": "Secure connection and synchronization with internal and external systems to ensure continuity and information flow."
-                    },
-                    {
-                        "icono": "MdTimeline",
-                        "titulo": "Evolutionary Maintenance",
-                        "descripcion": "Updates, improvements, and support to ensure the solution evolves with the business."
-                    }
-                ]
-            },
-            {
-                "titulo": "Mobile Development",
-                "imagen": "/assets/icons/mobileDev.svg",
-                "lista": [
-                    "Android and iOS mobile applications",
-                    "Hybrid and cross-platform apps",
-                    "Integration with APIs and external services",
-                    "Store publication and post-launch support",
-                    "Performance optimization and user experience"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdPhoneAndroid",
-                        "titulo": "Native and Cross-Platform Apps",
-                        "descripcion": "Development of Android and iOS apps with hybrid options to maximize reach and efficiency."
-                    },
-                    {
-                        "icono": "MdIntegrationInstructions",
-                        "titulo": "Integration with Services and APIs",
-                        "descripcion": "Secure connection with internal and external systems to provide full app functionality."
-                    },
-                    {
-                        "icono": "MdStorefront",
-                        "titulo": "Publication and Maintenance",
-                        "descripcion": "Managing the app lifecycle, including store publication, updates, and post-launch support."
-                    },
-                    {
-                        "icono": "MdDevices",
-                        "titulo": "Optimization and User Experience",
-                        "descripcion": "Performance, design, and usability improvements to ensure the app is fast, intuitive, and engaging for users."
-                    }
-                ]
-            },
-            {
-                "titulo": "Simple Web Solutions",
-                "imagen": "/assets/icons/landing.svg",
-                "lista": [
-                    "Institutional landing pages",
-                    "Fast and self-manageable websites",
-                    "Mobile optimization",
-                    "Form and contact integration",
-                    "Quick and cost-effective implementation"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdWeb",
-                        "titulo": "Quick Design and Development",
-                        "descripcion": "Creation of websites and landing pages with a focus on speed, attractive design, and usability."
-                    },
-                    {
-                        "icono": "MdDevices",
-                        "titulo": "Mobile Optimization",
-                        "descripcion": "Ensuring sites are fully responsive and look perfect on any device."
-                    },
-                    {
-                        "icono": "MdIntegrationInstructions",
-                        "titulo": "Integration and Functionality",
-                        "descripcion": "Implementation of forms, contact buttons, and any interaction needed to convert visitors into customers."
-                    }
-                ]
-            },
-            {
-                "titulo": "Open Source Solutions Implementation",
-                "imagen": "/assets/icons/openSource.svg",
-                "lista": [
-                    "Selection of open source tools according to business needs",
-                    "Installation and initial configuration",
-                    "Customization and functional adjustments",
-                    "Integration with existing infrastructure",
-                    "Basic training and support"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Selection and Configuration",
-                        "descripcion": "Choosing the most suitable open source tools and installing them according to client needs."
-                    },
-                    {
-                        "icono": "MdCode",
-                        "titulo": "Functional Customization",
-                        "descripcion": "Adapting the open source solution to the specific business processes."
-                    },
-                    {
-                        "icono": "MdIntegrationInstructions",
-                        "titulo": "Integration with Existing Systems",
-                        "descripcion": "Connecting the open source solution with other platforms and systems to ensure continuous information flow."
-                    },
-                    {
-                        "icono": "MdSchool",
-                        "titulo": "Training and Support",
-                        "descripcion": "Training the client team and providing initial support to ensure effective use of the solution."
-                    }
-                ]
-            },
-            {
-                "titulo": "Complementary Services",
-                "imagen": "/assets/icons/supportDev.svg",
-                "lista": [
-                    "Optimization and improvements of existing systems",
-                    "Refactors and performance enhancements",
-                    "Integration with APIs and third-party services",
-                    "ETLs and data processing",
-                    "Technical support and evolutionary maintenance",
-                    "Consulting for technological decisions"
-                ],
-                "detalles": [
-                    {
-                        "icono": "MdBuild",
-                        "titulo": "Optimization and Refactors",
-                        "descripcion": "Improving the efficiency, performance, and maintainability of your current systems."
-                    },
-                    {
-                        "icono": "MdIntegrationInstructions",
-                        "titulo": "Integration with Tools and APIs",
-                        "descripcion": "Connecting your systems with new applications or services to enhance functionality."
-                    },
-                    {
-                        "icono": "MdDataObject",
-                        "titulo": "Data Processing",
-                        "descripcion": "Design and implementation of ETLs and pipelines to transform and organize your data efficiently and reliably."
-                    },
-                    {
-                        "icono": "MdSupportAgent",
-                        "titulo": "Support and Consulting",
-                        "descripcion": "Technical advice, maintenance plans, and incident resolution to ensure operational continuity."
-                    }
-                ]
-            }
+      },
+      {
+        "titulo": "Monitoring and Observability",
+        "imagen": "/assets/icons/monitoring.svg",
+        "descripcion": "Monitoring and observability services providing continuous visibility into infrastructure and systems, enabling detection, alerting, and anticipation of incidents before they impact the business.",
+        "lista": [
+          "Availability and performance monitoring",
+          "Alerting and capacity management",
+          "Incident prevention"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Availability and Performance Monitoring",
+            "descripcion": "24/7 supervision of server, service, and communications link health."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "Alerting and Capacity Management",
+            "descripcion": "Proactive failure notification and trend analysis to determine when more resources (CPU, RAM, Disk) need to be acquired."
+          }
         ]
-    },
-    "serviceAreas": {
-        "titulo": "Our Specialties",
-        "subtitulo": "that empower your projects",
-        "areas": [
-            {
-                "title": "Software Development",
-                "subtitle": "CUSTOM SOLUTIONS",
-                "description": "We design and develop custom, scalable, and maintainable software solutions, crafted to support the growth and objectives of your organization.",
-                "cta": "View services"
-            },
-            {
-                "title": "Infrastructure & Cloud",
-                "subtitle": "Reliable, Secure and Scalable.",
-                "description": "We help organizations reduce their operational costs, scale their operations efficiently, and reach new levels of growth by aligning technology with the specific needs of their business.",
-                "cta": "View services"
-            }
+      },
+      {
+        "titulo": "Operations and Automation",
+        "imagen": "/assets/icons/automation.svg",
+        "descripcion": "Services aimed at optimizing and standardizing IT operations through automation, continuous support, and management aligned with each organization's internal regulations and policies.",
+        "lista": [
+          "Standardization and operational automation",
+          "Business application support",
+          "Technology asset control",
+          "Alignment with compliance and internal regulations"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Infrastructure Automation (IaC)",
+            "descripcion": "Use of tools like Ansible for standardized server configuration."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "Application Lifecycle Management",
+            "descripcion": "Technical support for business applications, web servers (IIS, Apache, Nginx), and middleware."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "IT Asset Management (ITAM)",
+            "descripcion": "Updated hardware inventory and control of warranty expiration dates and support contracts."
+          }
         ]
-    },
-    "blog": {
-        "titulo": "Technology Insights",
-        "subtitulo": "that inspire decisions",
-        "label": "Our Blog",
-        "title": "Ideas and Trends in IT",
-        "subtitle": "We share knowledge about development, infrastructure, and the digital future.",
-        "boton": "Read article",
-        "verTodos": "View all articles"
-    },
-    "cases": {
-        "titulo": "Real challenges,",
-        "subtitulo": "real results",
-        "etiquetaResultado": "Key Outcome",
-        "items": [
-            {
-                "id": 1,
-                "cliente": "National Technological University",
-                "titulo": "Institutional Broadcast System",
-                "descripcion": "We designed and developed a proprietary institutional broadcast system for UTN, replacing third-party software of unverified origin, insecure and with recurring costs. The solution centralized official communications, improved delivery control and monitoring, and eliminated security risks.",
-                "resultado": "Secure Proprietary Software",
-                "tecnologias": [
-                    "Node.js",
-                    "React",
-                    "Material UI",
-                    "Docker",
-                    "SMTP",
-                    "PHP"
-                ],
-                "link": "/casos/utn-difusiones"
-            },
-            {
-                "id": 2,
-                "cliente": "Secretariat of Science and Technology – UTN",
-                "titulo": "SICYT: Integrated Project and Researcher Management",
-                "descripcion": "We developed the SICYT system to digitalize and centralize the management of projects and researchers, replacing manual processes based on Excel and Microsoft Access. The result was a centralized, auditable and consistent management of scientific information.",
-                "resultado": "Centralized and Auditable Management",
-                "tecnologias": [
-                    "React",
-                    "Tailwind CSS",
-                    "Node.js",
-                    "Docker",
-                    "Keycloak (Auth)"
-                ],
-                "link": "/casos/utn-sicyt"
-            },
-            {
-                "id": 3,
-                "cliente": "National Technological University",
-                "titulo": "Virtualization Infrastructure with OpenNebula",
-                "descripcion": "We implemented OpenNebula as the main virtualization platform, replacing fragmented and costly solutions. The new infrastructure enabled centralized operations, improved control, and optimized resource usage for academic and research environments.",
-                "resultado": "Operational Control and Autonomy",
-                "tecnologias": [
-                    "OpenNebula",
-                    "Linux",
-                    "Virtualization",
-                    "On-Prem Infrastructure"
-                ],
-                "link": "/casos/utn-opennebula"
-            }
+      },
+      {
+        "titulo": "Support and Service Management",
+        "imagen": "/assets/icons/supportInfra.svg",
+        "descripcion": "Services dedicated to providing specialized technical support and efficiently managing IT services to ensure operational continuity and quality.",
+        "lista": [
+          "Level 2 and 3 support",
+          "Vendor management",
+          "Technical documentation",
+          "IT consulting and procurement"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Level 2 and 3 Support",
+            "descripcion": "Resolution of complex technical incidents that cannot be resolved at first instance."
+          },
+          {
+            "icono": "MdPlumbing",
+            "titulo": "IT Vendor Management",
+            "descripcion": "Technical coordination with ISPs, hardware vendors, and third-party software support."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "Technical Documentation and Knowledge Base",
+            "descripcion": "Creation and maintenance of manuals, network diagrams, and operational procedures."
+          },
+          {
+            "icono": "MdElectricalServices",
+            "titulo": "Technical Consulting and IT Procurement",
+            "descripcion": "Technical advisory for new technology acquisition, budget evaluation, and ensuring any new equipment is compatible with company standards."
+          }
         ]
+      }
+    ]
+  },
+  "devServices": {
+    "titulo": "Solutions",
+    "subtitulo": "tailored for your business",
+    "cerrar": "Close",
+    "verMas": "See more",
+    "label": "Adini | Development",
+    "contactar": "Contact",
+    "messageTemplate": "Hello!\n\nI’m interested in the “{{service}}” service.\n\n",
+    "servicios": [
+      {
+        "titulo": "Custom Development",
+        "imagen": "/assets/icons/dev.svg",
+        "lista": [
+          "Requirements analysis and assessment",
+          "Solutions adapted to business processes",
+          "Custom functionalities",
+          "Scalability and evolutionary maintenance",
+          "Integration with existing systems"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Analysis and Design",
+            "descripcion": "Requirements gathering, solution architecture definition and design according to business needs."
+          },
+          {
+            "icono": "MdCode",
+            "titulo": "Development and Programming",
+            "descripcion": "Implementation of custom functionalities using modern technologies and best development practices."
+          },
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Integration with Existing Systems",
+            "descripcion": "Secure connection and synchronization with internal and external systems to ensure continuity and information flow."
+          },
+          {
+            "icono": "MdTimeline",
+            "titulo": "Evolutionary Maintenance",
+            "descripcion": "Updates, improvements, and support to ensure the solution evolves with the business."
+          }
+        ]
+      },
+      {
+        "titulo": "Mobile Development",
+        "imagen": "/assets/icons/mobileDev.svg",
+        "lista": [
+          "Android and iOS mobile applications",
+          "Hybrid and cross-platform apps",
+          "Integration with APIs and external services",
+          "Store publication and post-launch support",
+          "Performance optimization and user experience"
+        ],
+        "detalles": [
+          {
+            "icono": "MdPhoneAndroid",
+            "titulo": "Native and Cross-Platform Apps",
+            "descripcion": "Development of Android and iOS apps with hybrid options to maximize reach and efficiency."
+          },
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Integration with Services and APIs",
+            "descripcion": "Secure connection with internal and external systems to provide full app functionality."
+          },
+          {
+            "icono": "MdStorefront",
+            "titulo": "Publication and Maintenance",
+            "descripcion": "Managing the app lifecycle, including store publication, updates, and post-launch support."
+          },
+          {
+            "icono": "MdDevices",
+            "titulo": "Optimization and User Experience",
+            "descripcion": "Performance, design, and usability improvements to ensure the app is fast, intuitive, and engaging for users."
+          }
+        ]
+      },
+      {
+        "titulo": "Simple Web Solutions",
+        "imagen": "/assets/icons/landing.svg",
+        "lista": [
+          "Institutional landing pages",
+          "Fast and self-manageable websites",
+          "Mobile optimization",
+          "Form and contact integration",
+          "Quick and cost-effective implementation"
+        ],
+        "detalles": [
+          {
+            "icono": "MdWeb",
+            "titulo": "Quick Design and Development",
+            "descripcion": "Creation of websites and landing pages with a focus on speed, attractive design, and usability."
+          },
+          {
+            "icono": "MdDevices",
+            "titulo": "Mobile Optimization",
+            "descripcion": "Ensuring sites are fully responsive and look perfect on any device."
+          },
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Integration and Functionality",
+            "descripcion": "Implementation of forms, contact buttons, and any interaction needed to convert visitors into customers."
+          }
+        ]
+      },
+      {
+        "titulo": "Open Source Solutions Implementation",
+        "imagen": "/assets/icons/openSource.svg",
+        "lista": [
+          "Selection of open source tools according to business needs",
+          "Installation and initial configuration",
+          "Customization and functional adjustments",
+          "Integration with existing infrastructure",
+          "Basic training and support"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Selection and Configuration",
+            "descripcion": "Choosing the most suitable open source tools and installing them according to client needs."
+          },
+          {
+            "icono": "MdCode",
+            "titulo": "Functional Customization",
+            "descripcion": "Adapting the open source solution to the specific business processes."
+          },
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Integration with Existing Systems",
+            "descripcion": "Connecting the open source solution with other platforms and systems to ensure continuous information flow."
+          },
+          {
+            "icono": "MdSchool",
+            "titulo": "Training and Support",
+            "descripcion": "Training the client team and providing initial support to ensure effective use of the solution."
+          }
+        ]
+      },
+      {
+        "titulo": "Complementary Services",
+        "imagen": "/assets/icons/supportDev.svg",
+        "lista": [
+          "Optimization and improvements of existing systems",
+          "Refactors and performance enhancements",
+          "Integration with APIs and third-party services",
+          "ETLs and data processing",
+          "Technical support and evolutionary maintenance",
+          "Consulting for technological decisions"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Optimization and Refactors",
+            "descripcion": "Improving the efficiency, performance, and maintainability of your current systems."
+          },
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Integration with Tools and APIs",
+            "descripcion": "Connecting your systems with new applications or services to enhance functionality."
+          },
+          {
+            "icono": "MdDataObject",
+            "titulo": "Data Processing",
+            "descripcion": "Design and implementation of ETLs and pipelines to transform and organize your data efficiently and reliably."
+          },
+          {
+            "icono": "MdSupportAgent",
+            "titulo": "Support and Consulting",
+            "descripcion": "Technical advice, maintenance plans, and incident resolution to ensure operational continuity."
+          }
+        ]
+      }
+    ]
+  },
+  "serviceAreas": {
+    "titulo": "Our Specialties",
+    "subtitulo": "that empower your projects",
+    "areas": [
+      {
+        "title": "Software Development",
+        "subtitle": "CUSTOM SOLUTIONS",
+        "description": "We design and develop custom, scalable, and maintainable software solutions, crafted to support the growth and objectives of your organization.",
+        "cta": "View services"
+      },
+      {
+        "title": "Infrastructure & Cloud",
+        "subtitle": "Reliable, Secure and Scalable.",
+        "description": "We help organizations reduce their operational costs, scale their operations efficiently, and reach new levels of growth by aligning technology with the specific needs of their business.",
+        "cta": "View services"
+      }
+    ]
+  },
+  "aiSection": {
+    "titulo": "Artificial Intelligence",
+    "subtitulo": "that transforms your business",
+    "label": "Artificial Intelligence",
+    "caratula": "AI built for your business",
+    "descripcion": "We integrate robust, scalable AI solutions — from process automation to intelligent custom assistants.",
+    "cta": "Integrate AI into your business",
+    "capabilities": [
+      "Chatbots & Assistants",
+      "Process Automation",
+      "LLM Integration",
+      "RAG & Knowledge Bases",
+      "Document Processing",
+      "AI-driven Data Analytics"
+    ]
+  },
+  "blog": {
+    "titulo": "Technology Insights",
+    "subtitulo": "that inspire decisions",
+    "label": "Our Blog",
+    "title": "Ideas and Trends in IT",
+    "subtitle": "We share knowledge about development, infrastructure, and the digital future.",
+    "boton": "Read article",
+    "verTodos": "View all articles"
+  },
+  "cases": {
+    "titulo": "Real challenges,",
+    "subtitulo": "real results",
+    "etiquetaResultado": "Key Outcome",
+    "items": [
+      {
+        "id": 1,
+        "cliente": "National Technological University",
+        "titulo": "Institutional Broadcast System",
+        "descripcion": "We designed and developed a proprietary institutional broadcast system for UTN, replacing third-party software of unverified origin, insecure and with recurring costs. The solution centralized official communications, improved delivery control and monitoring, and eliminated security risks.",
+        "resultado": "Secure Proprietary Software",
+        "tecnologias": [
+          "Node.js",
+          "React",
+          "Material UI",
+          "Docker",
+          "SMTP",
+          "PHP"
+        ],
+        "link": "/casos/utn-difusiones"
+      },
+      {
+        "id": 2,
+        "cliente": "Secretariat of Science and Technology – UTN",
+        "titulo": "SICYT: Integrated Project and Researcher Management",
+        "descripcion": "We developed the SICYT system to digitalize and centralize the management of projects and researchers, replacing manual processes based on Excel and Microsoft Access. The result was a centralized, auditable and consistent management of scientific information.",
+        "resultado": "Centralized and Auditable Management",
+        "tecnologias": [
+          "React",
+          "Tailwind CSS",
+          "Node.js",
+          "Docker",
+          "Keycloak (Auth)"
+        ],
+        "link": "/casos/utn-sicyt"
+      },
+      {
+        "id": 3,
+        "cliente": "National Technological University",
+        "titulo": "Virtualization Infrastructure with OpenNebula",
+        "descripcion": "We implemented OpenNebula as the main virtualization platform, replacing fragmented and costly solutions. The new infrastructure enabled centralized operations, improved control, and optimized resource usage for academic and research environments.",
+        "resultado": "Operational Control and Autonomy",
+        "tecnologias": [
+          "OpenNebula",
+          "Linux",
+          "Virtualization",
+          "On-Prem Infrastructure"
+        ],
+        "link": "/casos/utn-opennebula"
+      }
+    ]
+  },
+  "technologies": {
+    "titulo": "Tools",
+    "subtitulo": "that boost your growth",
+    "web": {
+      "titulo": "Web Development",
+      "descripcion": "We develop fast, interactive, and optimized websites for all types of devices, using technologies like React, Next.js, and Express to deliver exceptional user experiences and high performance."
     },
-    "technologies": {
-        "titulo": "Tools",
-        "subtitulo": "that boost your growth",
-        "web": {
-            "titulo": "Web Development",
-            "descripcion": "We develop fast, interactive, and optimized websites for all types of devices, using technologies like React, Next.js, and Express to deliver exceptional user experiences and high performance."
-        },
-        "movil": {
-            "titulo": "Mobile Development",
-            "descripcion": "We create native and hybrid mobile applications with Expo and React Native, optimized for both Android and iOS, offering fast performance and a smooth experience on mobile devices."
-        }
-    },
-    "portfolio": {
-        "titulo": "Key",
-        "subtitulo": "Success Stories",
-        "web": "Web Solutions",
-        "detalles": "See case",
-        "stacks": "Used Stacks",
-        "proyectosWeb": {
-            "sia": {
-                "titulo": "Integrated Applications System",
-                "resumen": "Institutional platform designed for the centralized management of administrative and academic processes at UTN Buenos Aires. The system enhances internal operations through a secure and scalable architecture, enabling user and credential management, internal communications, reporting, role-based access control, and support for remote work.",
-                "descripcion": {
-                    "titulo": "Project",
-                    "descripcion": "This is the main system of the National Technological University (UTN), Buenos Aires, Argentina. Designed to manage and optimize various administrative and academic processes. Built on a modern microservices infrastructure, SIA combines scalability, security, and flexibility to meet the demands of a high-level institution.",
-                    "funcionalidades": "Main Features",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "OAuth 2.0 Integration",
-                            "descripcion": "Uses authentication services for institutional user management, ensuring a secure and centralized experience."
-                        },
-                        {
-                            "titulo": "Role Segmentation",
-                            "descripcion": "Users are grouped by roles, allowing detailed customization of access to resources and functionalities."
-                        },
-                        {
-                            "titulo": "Controlled Scalability",
-                            "descripcion": "The modular and microservices-based design allows the system to grow efficiently."
-                        }
-                    ],
-                    "modulos": "System Modules",
-                    "listaModulos": [
-                        {
-                            "titulo": "Student Credential",
-                            "descripcion": "Allows students to view their academic information and generate a verifiable QR code."
-                        },
-                        {
-                            "titulo": "Alias Management",
-                            "descripcion": "Facilitate the creation and elimination of institutional aliases."
-                        },
-                        {
-                            "titulo": "Area Management",
-                            "descripcion": "Manages institutional groups with segmented authentication."
-                        },
-                        {
-                            "titulo": "Translations Module",
-                            "descripcion": "Optimizes academic translation workflows."
-                        },
-                        {
-                            "titulo": "Broadcast Sending",
-                            "descripcion": "Mass communication with predefined recipient lists."
-                        },
-                        {
-                            "titulo": "User Management",
-                            "descripcion": "Manages users, permissions, and access."
-                        },
-                        {
-                            "titulo": "VPN Module",
-                            "descripcion": "Remote access to resources via VPN."
-                        },
-                        {
-                            "titulo": "Incident Reporting",
-                            "descripcion": "Tracks technical issues with the institutional ticketing system."
-                        }
-                    ],
-                    "conclusion": "SIA is a key tool for the efficient operation of UTN, designed to meet the needs of students, teachers, and administrative staff.",
-                    "link": "Website Link"
-                }
-            },
-            "ripAdmin": {
-                "titulo": "RIP Alive Admin",
-                "resumen": "Administration platform designed to manage and scale the operation of the RIP Alive mobile application. It centralizes user management, subscriptions, payments, and catalogs, enabling efficient operational control, commercial configuration, and the creation of promotional actions from a single environment.",
-                "descripcion": {
-                    "titulo": "Project",
-                    "descripcion": "RIP Admin is a web platform designed for complete management of content and users in RIP Alive, providing administrators with centralized and efficient control over the app's functionalities and data. Developed with a focus on productivity and security, RIP Admin ensures that the app operates smoothly and is adaptable to end users' needs.",
-                    "funcionalidades": "Main Features",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "User Management",
-                            "descripcion": "Detailed control of user accounts, including profile verification, subscription management, and invitation code validation. Ability to suspend, enable, or modify access as needed."
-                        },
-                        {
-                            "titulo": "Content Control",
-                            "descripcion": "Management of data and settings available to users in RIP Alive, including legacy templates, QR code settings, and profile preferences."
-                        },
-                        {
-                            "titulo": "Product Management",
-                            "descripcion": "Management and tracking of the store integrated within the application."
-                        },
-                        {
-                            "titulo": "Activity Tracking",
-                            "descripcion": "Monitoring of active subscriptions, payment history via Mercado Pago, control of the status of shipped products from the store, and generating financial reports."
-                        },
-                        {
-                            "titulo": "User Experience Personalization",
-                            "descripcion": "Management of notifications and direct communication with app users."
-                        }
-                    ],
-                    "conclusion": "RIP Admin is the operational core that ensures the proper functioning of RIP Alive, providing administrators with robust and adaptable tools to maintain an optimal user experience and a scalable system. It offers a centralized view of all activities in RIP Alive, simplifying decision-making, problem-solving, and facilitating administrative tasks for efficient data and functionality management."
-                }
-            },
-            "moviltrack": {
-                "titulo": "Moviltrack Management",
-                "resumen": "Internal management solution designed to centralize the company’s operational and financial information. It enables project, client, and resource tracking, generating key metrics and reports to support profitability analysis and strategic decision-making.",
-                "descripcion": {
-                    "titulo": "Project",
-                    "descripcion": "A custom management application developed for the company's internal project administration, with full-featured functionalities including handling quotes, remittances, products, projects, clients, suppliers, and other key elements. The platform includes a role-based system that allows segmented and supervised access according to each user's needs, as well as dashboards that facilitate monitoring of metrics and overall company performance to oversee profitability and support strategic decision-making.",
-                    "funcionalidades": "Main Features",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "User Management",
-                            "descripcion": "Detailed control of user accounts, with role and permission assignments, enabling or suspending access, and monitoring each user's activity within the platform."
-                        },
-                        {
-                            "titulo": "Project Management",
-                            "descripcion": "Creation, tracking, and administration of internal projects, assignment of responsible parties and deadlines, and monitoring progress through key performance indicators."
-                        },
-                        {
-                            "titulo": "Client and Supplier Management",
-                            "descripcion": "Centralization of client and supplier information, including contact details, transaction history, and associated documentation."
-                        },
-                        {
-                            "titulo": "Product Management",
-                            "descripcion": "Complete administration of products and services, including inventory, pricing, descriptions, and categorization, with support for reports and downloadable documents."
-                        },
-                        {
-                            "titulo": "Quotes and Remittances Handling",
-                            "descripcion": "Generation and tracking of quotes and remittances, with change history and the possibility to export documents in downloadable formats."
-                        },
-                        {
-                            "titulo": "Dashboards and Metrics",
-                            "descripcion": "Visualization of key company metrics through customizable dashboards, facilitating supervision of projects, products, and user performance."
-                        },
-                        {
-                            "titulo": "Reports and Downloadable Documents",
-                            "descripcion": "Generation of financial, activity, and tracking reports, all available for download in compatible formats for filing and analysis."
-                        },
-                        {
-                            "titulo": "Dark Mode",
-                            "descripcion": "The application features a dark mode, allowing users to work comfortably in low-light environments, enhancing visual experience and reducing eye strain."
-                        }
-                    ],
-                    "conclusion": "Moviltrack is a comprehensive solution that centralizes internal company management, optimizing processes and improving efficiency in administering projects, clients, suppliers, and products. With its reporting tools, dashboards, and user management features, it enables detailed supervision and strategic decision-making based on accurate data."
-                }
-            }
-        },
-        "movil": "Mobile Applications",
-        "proyectosMobile": {
-            "credencial": {
-                "titulo": "Student Credential",
-                "resumen": "Institutional mobile application that serves as a digital credential for university students. It enables identity validation through QR codes and centralizes access to relevant academic information—including current courses, academic records, class schedules, and official documentation—enhancing the student experience and the institution's operational efficiency.",
-                "descripcion": {
-                    "titulo": "Project",
-                    "descripcion": "The Student Credential is a mobile app developed to function as a digital credential for students at the National Technological University (UTN), Buenos Aires, Argentina. Its modern and functional design is aimed at simplifying student identity validation and providing quick access to key academic information.",
-                    "funcionalidades": "Main Features",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "Identity Validation with QR",
-                            "descripcion": "Students can generate a dynamic, time-limited QR code that certifies their status as regular students, ensuring a secure and reliable process."
-                        },
-                        {
-                            "titulo": "Centralized Academic Information",
-                            "descripcion": "Allows viewing of current courses, academic history with access to a complete record of performance and subjects taken, and an academic schedule that organizes the times of each subject, optimizing time management."
-                        },
-                        {
-                            "titulo": "Certificate Download",
-                            "descripcion": "Enables quick and efficient downloading of a regular student certificate."
-                        },
-                        {
-                            "titulo": "Fast and Secure Access",
-                            "descripcion": "The digital credential replaces the use of physical documents, improving practicality and reducing the risks of loss or forgery."
-                        }
-                    ],
-                    "conclusion": "The Student Credential is a comprehensive resource for students, designed to enhance their academic experience and facilitate interaction with university services."
-                }
-            },
-            "ripApp": {
-                "titulo": "RIP Alive",
-                "resumen": "A mobile application designed for secure personal information management and digital planning. It allows users to centralize sensitive data, key contacts, and vital instructions for family members, providing a reliable solution for organizing and safeguarding private information. The product operates on a subscription model and features integrated commercial functionalities.",
-                "descripcion": {
-                    "titulo": "Project",
-                    "descripcion": "RIP Alive is an innovative mobile app developed in React Native, designed to allow users to leave a clear and accessible legacy for their beneficiaries in the event of death. With a focus on planning and security, the app provides an organized and customizable environment to manage crucial information and personal wishes.",
-                    "funcionalidades": "Main Features",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "Personalized Legacy",
-                            "descripcion": "Users can register all relevant information about their data and wishes, ensuring that their beneficiaries have clear and structured access to everything they need."
-                        },
-                        {
-                            "titulo": "Unique Identification",
-                            "descripcion": "Includes a section with a personal QR code that uniquely identifies the user, facilitating identity verification."
-                        },
-                        {
-                            "titulo": "Subscription Management",
-                            "descripcion": "Integration with the Mercado Pago payment gateway for automated subscriptions, including the generation of invitation codes to expand app usage."
-                        },
-                        {
-                            "titulo": "Profile",
-                            "descripcion": "Full control from the user's profile to manage subscription, settings, and profile status."
-                        },
-                        {
-                            "titulo": "Integrated Store",
-                            "descripcion": "A store within the app allows users to make purchases, with tools to track the status of their shipments."
-                        }
-                    ],
-                    "conclusion": "The app has been designed with a scalable and modular approach for Android and iOS, allowing for the addition of new features as future needs arise. It also features an intuitive interface that simplifies the management of data, subscriptions, and purchases from a single location. The integration with Mercado Pago ensures a smooth and automatic payment flow, simplifying the user experience."
-                }
-            },
-            "amigosDelCole": {
-                "titulo": "Amigos del Cole",
-                "resumen": "A digital wallet designed for educational environments that streamlines money management and payments within schools. The platform allows parents to manage their children's balances, students to make purchases via QR codes, and school vendors to handle transactions, ensuring control, traceability, and simplicity in every operation.",
-                "descripcion": {
-                    "titulo": "Project",
-                    "descripcion": "An app that serves as a student digital wallet developed to simplify and optimize money management in the school environment. Designed to provide security and control to parents, it allows them to load balance into their children's accounts, who can then use it to make purchases at their school buffets via a QR code payment system.",
-                    "funcionalidades": "Main Features",
-                    "listaFuncionalidades": [
-                        {
-                            "titulo": "Family Balance Management",
-                            "descripcion": "Parents can load money into their children's accounts and monitor real-time transactions and spending within the app."
-                        },
-                        {
-                            "titulo": "Quick and Secure Purchases",
-                            "descripcion": "Students can pay at school buffets quickly and without the need for cash, simply by scanning a QR code."
-                        },
-                        {
-                            "titulo": "Efficient Payment Management",
-                            "descripcion": "Buffet managers can easily manage received transactions, verifying payments and keeping track of purchases."
-                        },
-                        {
-                            "titulo": "Differentiated User Roles System",
-                            "descripcion": "The app has three types of users:",
-                            "subfuncionalidades": [
-                                {
-                                    "titulo": "Parents",
-                                    "descripcion": "Manage the balance and monitor the usage of the money."
-                                },
-                                {
-                                    "titulo": "Students",
-                                    "descripcion": "Use the digital wallet to make purchases."
-                                },
-                                {
-                                    "titulo": "Buffet",
-                                    "descripcion": "Manages payments and verifies transactions."
-                                }
-                            ]
-                        }
-                    ],
-                    "conclusion": "Amigos del Cole transforms the way students make payments at their school, providing parents with peace of mind and control, while offering buffets a modern tool to efficiently manage payments."
-                }
-            }
-        }
-    },
-    "contact": {
-        "titulo": "Contact us",
-        "subtitulo": "to assist you",
-        "descripcion": "Send us your message",
-        "nombreInput": "Your name",
-        "correoInput": "Your email",
-        "telefonoInput": "Your phone number (optional)",
-        "mensajeInput": "Write your message",
-        "mail": {
-            "encabezado": "Contact from the web",
-            "cuerpo": "Hello, my name is"
-        },
-        "span": "Thank you for trusting us!",
-        "boton": "Send",
-        "mensajeEnviando": "Sending",
-        "mensajeEnviado": "Message sent successfully.",
-        "mensajeNoEnviado": "Message could not be sent."
-    },
-    "aboutUs": {
-        "titulo": "Our team",
-        "subtitulo": "committed to your success",
-        "tituloDev": "Specialists in",
-        "subtituloDev": "software, product, and analytics",
-        "tituloInfra": "Specialists in",
-        "subtituloInfra": "operations, security, and system continuity",
-        "desarrollador": "Developer",
-        "analista": "Analyst",
-        "bi": "Business Intelligence",
-        "fullstack": "Fullstack Developer",
-        "devops": "DevOps",
-        "sysadmin": "SysAdmin",
-        "cloud": "Cloud Engineer"
-    },
-    "footer": {
-        "descripcion": "We drive digital transformation with tailor-made technological solutions, helping businesses grow and adapt to the future.",
-        "empresa": {
-            "titulo": "Company",
-            "servicios": "Services",
-            "areas": "Service Areas",
-            "tecnologías": "Technologies",
-            "proyectos": "Projects",
-            "nosotros": "About Us",
-            "menu": "Menu",
-            "contacto": "Contact",
-            "blog": "Articles",
-            "cases": "Success Stories"
-        },
-        "areas": {
-            "titulo": "Service Areas",
-            "desarrollo": "Software development",
-            "infra": "Infrastructure & Cloud Services"
-        },
-        "redes": {
-            "titulo": "Our Social Media"
-        },
-        "end": "All rights reserved."
+    "movil": {
+      "titulo": "Mobile Development",
+      "descripcion": "We create native and hybrid mobile applications with Expo and React Native, optimized for both Android and iOS, offering fast performance and a smooth experience on mobile devices."
     }
+  },
+  "portfolio": {
+    "titulo": "Key",
+    "subtitulo": "Success Stories",
+    "web": "Web Solutions",
+    "detalles": "See case",
+    "stacks": "Used Stacks",
+    "proyectosWeb": {
+      "sia": {
+        "titulo": "Integrated Applications System",
+        "resumen": "Institutional platform designed for the centralized management of administrative and academic processes at UTN Buenos Aires. The system enhances internal operations through a secure and scalable architecture, enabling user and credential management, internal communications, reporting, role-based access control, and support for remote work.",
+        "descripcion": {
+          "titulo": "Project",
+          "descripcion": "This is the main system of the National Technological University (UTN), Buenos Aires, Argentina. Designed to manage and optimize various administrative and academic processes. Built on a modern microservices infrastructure, SIA combines scalability, security, and flexibility to meet the demands of a high-level institution.",
+          "funcionalidades": "Main Features",
+          "listaFuncionalidades": [
+            {
+              "titulo": "OAuth 2.0 Integration",
+              "descripcion": "Uses authentication services for institutional user management, ensuring a secure and centralized experience."
+            },
+            {
+              "titulo": "Role Segmentation",
+              "descripcion": "Users are grouped by roles, allowing detailed customization of access to resources and functionalities."
+            },
+            {
+              "titulo": "Controlled Scalability",
+              "descripcion": "The modular and microservices-based design allows the system to grow efficiently."
+            }
+          ],
+          "modulos": "System Modules",
+          "listaModulos": [
+            {
+              "titulo": "Student Credential",
+              "descripcion": "Allows students to view their academic information and generate a verifiable QR code."
+            },
+            {
+              "titulo": "Alias Management",
+              "descripcion": "Facilitate the creation and elimination of institutional aliases."
+            },
+            {
+              "titulo": "Area Management",
+              "descripcion": "Manages institutional groups with segmented authentication."
+            },
+            {
+              "titulo": "Translations Module",
+              "descripcion": "Optimizes academic translation workflows."
+            },
+            {
+              "titulo": "Broadcast Sending",
+              "descripcion": "Mass communication with predefined recipient lists."
+            },
+            {
+              "titulo": "User Management",
+              "descripcion": "Manages users, permissions, and access."
+            },
+            {
+              "titulo": "VPN Module",
+              "descripcion": "Remote access to resources via VPN."
+            },
+            {
+              "titulo": "Incident Reporting",
+              "descripcion": "Tracks technical issues with the institutional ticketing system."
+            }
+          ],
+          "conclusion": "SIA is a key tool for the efficient operation of UTN, designed to meet the needs of students, teachers, and administrative staff.",
+          "link": "Website Link"
+        }
+      },
+      "ripAdmin": {
+        "titulo": "RIP Alive Admin",
+        "resumen": "Administration platform designed to manage and scale the operation of the RIP Alive mobile application. It centralizes user management, subscriptions, payments, and catalogs, enabling efficient operational control, commercial configuration, and the creation of promotional actions from a single environment.",
+        "descripcion": {
+          "titulo": "Project",
+          "descripcion": "RIP Admin is a web platform designed for complete management of content and users in RIP Alive, providing administrators with centralized and efficient control over the app's functionalities and data. Developed with a focus on productivity and security, RIP Admin ensures that the app operates smoothly and is adaptable to end users' needs.",
+          "funcionalidades": "Main Features",
+          "listaFuncionalidades": [
+            {
+              "titulo": "User Management",
+              "descripcion": "Detailed control of user accounts, including profile verification, subscription management, and invitation code validation. Ability to suspend, enable, or modify access as needed."
+            },
+            {
+              "titulo": "Content Control",
+              "descripcion": "Management of data and settings available to users in RIP Alive, including legacy templates, QR code settings, and profile preferences."
+            },
+            {
+              "titulo": "Product Management",
+              "descripcion": "Management and tracking of the store integrated within the application."
+            },
+            {
+              "titulo": "Activity Tracking",
+              "descripcion": "Monitoring of active subscriptions, payment history via Mercado Pago, control of the status of shipped products from the store, and generating financial reports."
+            },
+            {
+              "titulo": "User Experience Personalization",
+              "descripcion": "Management of notifications and direct communication with app users."
+            }
+          ],
+          "conclusion": "RIP Admin is the operational core that ensures the proper functioning of RIP Alive, providing administrators with robust and adaptable tools to maintain an optimal user experience and a scalable system. It offers a centralized view of all activities in RIP Alive, simplifying decision-making, problem-solving, and facilitating administrative tasks for efficient data and functionality management."
+        }
+      },
+      "moviltrack": {
+        "titulo": "Moviltrack Management",
+        "resumen": "Internal management solution designed to centralize the company’s operational and financial information. It enables project, client, and resource tracking, generating key metrics and reports to support profitability analysis and strategic decision-making.",
+        "descripcion": {
+          "titulo": "Project",
+          "descripcion": "A custom management application developed for the company's internal project administration, with full-featured functionalities including handling quotes, remittances, products, projects, clients, suppliers, and other key elements. The platform includes a role-based system that allows segmented and supervised access according to each user's needs, as well as dashboards that facilitate monitoring of metrics and overall company performance to oversee profitability and support strategic decision-making.",
+          "funcionalidades": "Main Features",
+          "listaFuncionalidades": [
+            {
+              "titulo": "User Management",
+              "descripcion": "Detailed control of user accounts, with role and permission assignments, enabling or suspending access, and monitoring each user's activity within the platform."
+            },
+            {
+              "titulo": "Project Management",
+              "descripcion": "Creation, tracking, and administration of internal projects, assignment of responsible parties and deadlines, and monitoring progress through key performance indicators."
+            },
+            {
+              "titulo": "Client and Supplier Management",
+              "descripcion": "Centralization of client and supplier information, including contact details, transaction history, and associated documentation."
+            },
+            {
+              "titulo": "Product Management",
+              "descripcion": "Complete administration of products and services, including inventory, pricing, descriptions, and categorization, with support for reports and downloadable documents."
+            },
+            {
+              "titulo": "Quotes and Remittances Handling",
+              "descripcion": "Generation and tracking of quotes and remittances, with change history and the possibility to export documents in downloadable formats."
+            },
+            {
+              "titulo": "Dashboards and Metrics",
+              "descripcion": "Visualization of key company metrics through customizable dashboards, facilitating supervision of projects, products, and user performance."
+            },
+            {
+              "titulo": "Reports and Downloadable Documents",
+              "descripcion": "Generation of financial, activity, and tracking reports, all available for download in compatible formats for filing and analysis."
+            },
+            {
+              "titulo": "Dark Mode",
+              "descripcion": "The application features a dark mode, allowing users to work comfortably in low-light environments, enhancing visual experience and reducing eye strain."
+            }
+          ],
+          "conclusion": "Moviltrack is a comprehensive solution that centralizes internal company management, optimizing processes and improving efficiency in administering projects, clients, suppliers, and products. With its reporting tools, dashboards, and user management features, it enables detailed supervision and strategic decision-making based on accurate data."
+        }
+      }
+    },
+    "movil": "Mobile Applications",
+    "proyectosMobile": {
+      "credencial": {
+        "titulo": "Student Credential",
+        "resumen": "Institutional mobile application that serves as a digital credential for university students. It enables identity validation through QR codes and centralizes access to relevant academic information—including current courses, academic records, class schedules, and official documentation—enhancing the student experience and the institution's operational efficiency.",
+        "descripcion": {
+          "titulo": "Project",
+          "descripcion": "The Student Credential is a mobile app developed to function as a digital credential for students at the National Technological University (UTN), Buenos Aires, Argentina. Its modern and functional design is aimed at simplifying student identity validation and providing quick access to key academic information.",
+          "funcionalidades": "Main Features",
+          "listaFuncionalidades": [
+            {
+              "titulo": "Identity Validation with QR",
+              "descripcion": "Students can generate a dynamic, time-limited QR code that certifies their status as regular students, ensuring a secure and reliable process."
+            },
+            {
+              "titulo": "Centralized Academic Information",
+              "descripcion": "Allows viewing of current courses, academic history with access to a complete record of performance and subjects taken, and an academic schedule that organizes the times of each subject, optimizing time management."
+            },
+            {
+              "titulo": "Certificate Download",
+              "descripcion": "Enables quick and efficient downloading of a regular student certificate."
+            },
+            {
+              "titulo": "Fast and Secure Access",
+              "descripcion": "The digital credential replaces the use of physical documents, improving practicality and reducing the risks of loss or forgery."
+            }
+          ],
+          "conclusion": "The Student Credential is a comprehensive resource for students, designed to enhance their academic experience and facilitate interaction with university services."
+        }
+      },
+      "ripApp": {
+        "titulo": "RIP Alive",
+        "resumen": "A mobile application designed for secure personal information management and digital planning. It allows users to centralize sensitive data, key contacts, and vital instructions for family members, providing a reliable solution for organizing and safeguarding private information. The product operates on a subscription model and features integrated commercial functionalities.",
+        "descripcion": {
+          "titulo": "Project",
+          "descripcion": "RIP Alive is an innovative mobile app developed in React Native, designed to allow users to leave a clear and accessible legacy for their beneficiaries in the event of death. With a focus on planning and security, the app provides an organized and customizable environment to manage crucial information and personal wishes.",
+          "funcionalidades": "Main Features",
+          "listaFuncionalidades": [
+            {
+              "titulo": "Personalized Legacy",
+              "descripcion": "Users can register all relevant information about their data and wishes, ensuring that their beneficiaries have clear and structured access to everything they need."
+            },
+            {
+              "titulo": "Unique Identification",
+              "descripcion": "Includes a section with a personal QR code that uniquely identifies the user, facilitating identity verification."
+            },
+            {
+              "titulo": "Subscription Management",
+              "descripcion": "Integration with the Mercado Pago payment gateway for automated subscriptions, including the generation of invitation codes to expand app usage."
+            },
+            {
+              "titulo": "Profile",
+              "descripcion": "Full control from the user's profile to manage subscription, settings, and profile status."
+            },
+            {
+              "titulo": "Integrated Store",
+              "descripcion": "A store within the app allows users to make purchases, with tools to track the status of their shipments."
+            }
+          ],
+          "conclusion": "The app has been designed with a scalable and modular approach for Android and iOS, allowing for the addition of new features as future needs arise. It also features an intuitive interface that simplifies the management of data, subscriptions, and purchases from a single location. The integration with Mercado Pago ensures a smooth and automatic payment flow, simplifying the user experience."
+        }
+      },
+      "amigosDelCole": {
+        "titulo": "Amigos del Cole",
+        "resumen": "A digital wallet designed for educational environments that streamlines money management and payments within schools. The platform allows parents to manage their children's balances, students to make purchases via QR codes, and school vendors to handle transactions, ensuring control, traceability, and simplicity in every operation.",
+        "descripcion": {
+          "titulo": "Project",
+          "descripcion": "An app that serves as a student digital wallet developed to simplify and optimize money management in the school environment. Designed to provide security and control to parents, it allows them to load balance into their children's accounts, who can then use it to make purchases at their school buffets via a QR code payment system.",
+          "funcionalidades": "Main Features",
+          "listaFuncionalidades": [
+            {
+              "titulo": "Family Balance Management",
+              "descripcion": "Parents can load money into their children's accounts and monitor real-time transactions and spending within the app."
+            },
+            {
+              "titulo": "Quick and Secure Purchases",
+              "descripcion": "Students can pay at school buffets quickly and without the need for cash, simply by scanning a QR code."
+            },
+            {
+              "titulo": "Efficient Payment Management",
+              "descripcion": "Buffet managers can easily manage received transactions, verifying payments and keeping track of purchases."
+            },
+            {
+              "titulo": "Differentiated User Roles System",
+              "descripcion": "The app has three types of users:",
+              "subfuncionalidades": [
+                {
+                  "titulo": "Parents",
+                  "descripcion": "Manage the balance and monitor the usage of the money."
+                },
+                {
+                  "titulo": "Students",
+                  "descripcion": "Use the digital wallet to make purchases."
+                },
+                {
+                  "titulo": "Buffet",
+                  "descripcion": "Manages payments and verifies transactions."
+                }
+              ]
+            }
+          ],
+          "conclusion": "Amigos del Cole transforms the way students make payments at their school, providing parents with peace of mind and control, while offering buffets a modern tool to efficiently manage payments."
+        }
+      }
+    }
+  },
+  "contact": {
+    "titulo": "Contact us",
+    "subtitulo": "to assist you",
+    "descripcion": "Send us your message",
+    "nombreInput": "Your name",
+    "correoInput": "Your email",
+    "telefonoInput": "Your phone number (optional)",
+    "mensajeInput": "Write your message",
+    "mail": {
+      "encabezado": "Contact from the web",
+      "cuerpo": "Hello, my name is"
+    },
+    "span": "Thank you for trusting us!",
+    "boton": "Send",
+    "mensajeEnviando": "Sending",
+    "mensajeEnviado": "Message sent successfully.",
+    "mensajeNoEnviado": "Message could not be sent."
+  },
+  "aboutUs": {
+    "titulo": "Our team",
+    "subtitulo": "committed to your success",
+    "tituloDev": "Specialists in",
+    "subtituloDev": "software, product, and analytics",
+    "tituloInfra": "Specialists in",
+    "subtituloInfra": "operations, security, and system continuity",
+    "desarrollador": "Developer",
+    "analista": "Analyst",
+    "bi": "Business Intelligence",
+    "fullstack": "Fullstack Developer",
+    "devops": "DevOps",
+    "sysadmin": "SysAdmin",
+    "cloud": "Cloud Engineer"
+  },
+  "footer": {
+    "descripcion": "We drive digital transformation with tailor-made technological solutions, helping businesses grow and adapt to the future.",
+    "empresa": {
+      "titulo": "Company",
+      "servicios": "Services",
+      "areas": "Service Areas",
+      "tecnologías": "Technologies",
+      "proyectos": "Projects",
+      "ia": "AI",
+      "nosotros": "About Us",
+      "menu": "Menu",
+      "contacto": "Contact",
+      "blog": "Articles",
+      "cases": "Success Stories"
+    },
+    "areas": {
+      "titulo": "Service Areas",
+      "desarrollo": "Software development",
+      "infra": "Infrastructure & Cloud Services"
+    },
+    "redes": {
+      "titulo": "Our Social Media"
+    },
+    "end": "All rights reserved."
+  }
 }
