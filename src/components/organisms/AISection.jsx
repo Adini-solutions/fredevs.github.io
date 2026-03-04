@@ -161,6 +161,7 @@ export default function AISection() {
                                                 fontSize={{ base: "sm", sm: "md" }}
                                                 fontWeight="600"
                                                 lineHeight="1.3"
+                                                color={"white"}
                                             >
                                                 {cap}
                                             </Text>
