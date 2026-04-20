@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
 import DevServices from "../organisms/DevServices";
+import ProcessRoadmap from "../organisms/ProcessRoadmap";
 import Technologies from "../organisms/Technologies";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
@@ -53,6 +54,9 @@ export default function Dev() {
         </Box>
         <Box id="proyectos">
           <Portfolio />
+        </Box>
+        <Box id="proceso">
+          <ProcessRoadmap />
         </Box>
         <Box id="contacto">
           <Contact variant="dev" />

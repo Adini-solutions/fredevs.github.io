@@ -10,7 +10,8 @@
     "menu": "Menu",
     "contacto": "Contact",
     "blog": "Articles",
-    "cases": "Success Stories"
+    "cases": "Success Stories",
+    "proceso": "Methodology"
   },
   "banner": {
     "span": "IT Consulting",
@@ -451,6 +452,32 @@
       }
     ]
   },
+  "process": {
+    "titulo": "How we work",
+    "subtitulo": "from idea to production",
+    "steps": [
+      {
+        "titulo": "Discovery",
+        "descripcion": "We assess key users, objectives, and functional requirements to define the project scope."
+      },
+      {
+        "titulo": "Design",
+        "descripcion": "We build wireframes and prototypes, iterating until the proposal is validated and business-aligned."
+      },
+      {
+        "titulo": "Development",
+        "descripcion": "We deliver scalable architecture and clean code, reporting progress at every stage."
+      },
+      {
+        "titulo": "Deploy",
+        "descripcion": "We configure the production environment, SSL, and CI/CD pipeline for a stable, secure launch."
+      },
+      {
+        "titulo": "Support",
+        "descripcion": "Ongoing maintenance, evolutionary updates, and technical support for operational continuity."
+      }
+    ]
+  },
   "serviceAreas": {
     "titulo": "Our Specialties",
     "subtitulo": "that empower your projects",
@@ -854,7 +881,8 @@
       "menu": "Menu",
       "contacto": "Contact",
       "blog": "Articles",
-      "cases": "Success Stories"
+      "cases": "Success Stories",
+      "proceso": "Methodology"
     },
     "areas": {
       "titulo": "Service Areas",

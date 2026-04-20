@@ -10,7 +10,8 @@
     "menu": "Menú",
     "contacto": "Contacto",
     "blog": "Artículos",
-    "cases": "Casos de Éxito"
+    "cases": "Casos de Éxito",
+    "proceso": "Metodología"
   },
   "banner": {
     "span": "Consultoria IT",
@@ -451,6 +452,32 @@
       }
     ]
   },
+  "process": {
+    "titulo": "Cómo trabajamos",
+    "subtitulo": "de la idea a la producción",
+    "steps": [
+      {
+        "titulo": "Descubrimiento",
+        "descripcion": "Relevamos objetivos, usuarios clave y requisitos funcionales para definir el alcance del proyecto."
+      },
+      {
+        "titulo": "Diseño",
+        "descripcion": "Desarrollamos wireframes y prototipos, iterando hasta validar una propuesta alineada al negocio."
+      },
+      {
+        "titulo": "Desarrollo",
+        "descripcion": "Implementamos con arquitectura escalable y código limpio, reportando avances en cada etapa."
+      },
+      {
+        "titulo": "Deploy",
+        "descripcion": "Configuramos el entorno de producción, SSL y CI/CD para un lanzamiento estable y seguro."
+      },
+      {
+        "titulo": "Soporte",
+        "descripcion": "Mantenimiento continuo, actualizaciones evolutivas y soporte técnico para la continuidad operativa."
+      }
+    ]
+  },
   "serviceAreas": {
     "titulo": "Nuestras especialidades",
     "subtitulo": "que potencian tus proyectos",
@@ -854,7 +881,8 @@
       "menu": "Menú",
       "contacto": "Contacto",
       "blog": "Artículos",
-      "cases": "Casos de Éxito"
+      "cases": "Casos de Éxito",
+      "proceso": "Metodología"
     },
     "areas": {
       "titulo": "Áreas de Servicio",

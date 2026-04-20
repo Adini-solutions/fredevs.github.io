@@ -143,6 +143,12 @@ export default function AISection() {
                                             border="1px solid rgba(255,255,255,0.08)"
                                             transition="all 0.3s ease"
                                             role="group"
+                                            _hover={{
+                                                transform: "translateY(-3px)",
+                                                bg: "rgba(108,99,255,0.08)",
+                                                borderColor: "rgba(108,99,255,0.4)",
+                                                boxShadow: "0 12px 32px rgba(0,0,0,0.3)",
+                                            }}
                                         >
                                             <Box
                                                 p={2}
