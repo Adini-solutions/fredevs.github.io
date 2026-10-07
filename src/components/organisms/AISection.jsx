@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import {
     LuBrainCircuit,
     LuMessageSquare,
@@ -10,9 +11,11 @@ import {
     LuDatabase,
     LuFileSearch,
     LuChartBar,
+    LuArrowRight,
 } from "react-icons/lu";
 import Title from '../molecules/Title';
 import Button from "../molecules/Button";
+import { getAccent } from "../../utils/variants";
 
 const capabilityIcons = [
     LuMessageSquare,
@@ -25,16 +28,16 @@ const capabilityIcons = [
 
 export default function AISection() {
     const { t } = useTranslation();
+    const navigate = useNavigate();
     const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.15), []);
     const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
+    const accent = getAccent("ia");
     const capabilities = t("aiSection.capabilities", { returnObjects: true });
 
-    const scrollToContact = () => {
-        const section = document.getElementById("contacto");
-        if (!section) return;
-        const top = section.getBoundingClientRect().top + window.scrollY - 120;
-        window.scrollTo({ top, behavior: "smooth" });
+    const goToAI = () => {
+        navigate("/ia");
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
     return (
@@ -55,7 +58,7 @@ export default function AISection() {
                     w="350px"
                     h="350px"
                     borderRadius="full"
-                    bg="rgba(108, 99, 255, 0.08)"
+                    bg={`rgba(${accent.rgb}, 0.10)`}
                     filter="blur(60px)"
                     pointerEvents="none"
                 />
@@ -91,7 +94,7 @@ export default function AISection() {
                                         fontWeight="bold"
                                         letterSpacing="widest"
                                         textTransform="uppercase"
-                                        color="#a09bff"
+                                        color={accent.soft}
                                     >
                                         {t("aiSection.label")}
                                     </Text>
@@ -118,9 +121,10 @@ export default function AISection() {
                                 </Text>
 
                                 <Button
-                                    onClick={scrollToContact}
+                                    onClick={goToAI}
                                     text={t("aiSection.cta")}
-                                    variant="default"
+                                    variant="ia"
+                                    rightIcon={<Icon as={LuArrowRight} />}
                                 />
                             </VStack>
                         </motion.div>
@@ -145,21 +149,21 @@ export default function AISection() {
                                             role="group"
                                             _hover={{
                                                 transform: "translateY(-3px)",
-                                                bg: "rgba(108,99,255,0.08)",
-                                                borderColor: "rgba(108,99,255,0.4)",
+                                                bg: `rgba(${accent.rgb}, 0.10)`,
+                                                borderColor: `rgba(${accent.rgb}, 0.45)`,
                                                 boxShadow: "0 12px 32px rgba(0,0,0,0.3)",
                                             }}
                                         >
                                             <Box
                                                 p={2}
                                                 borderRadius="lg"
-                                                bg="rgba(108, 99, 255, 0.12)"
+                                                bg={`rgba(${accent.rgb}, 0.16)`}
                                                 flexShrink={0}
                                             >
                                                 <Icon
                                                     as={capabilityIcons[i] ?? LuBrainCircuit}
                                                     boxSize={4}
-                                                    color="#a09bff"
+                                                    color={accent.soft}
                                                 />
                                             </Box>
                                             <Text

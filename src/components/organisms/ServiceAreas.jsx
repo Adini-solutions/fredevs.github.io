@@ -11,8 +11,9 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { LuCode, LuCloudCog, LuArrowRight } from "react-icons/lu";
+import { LuCode, LuCloudCog, LuBrainCircuit, LuArrowRight } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
+import { getAccent } from "../../utils/variants";
 
 export default function ServiceAreas() {
   const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.2), []);
@@ -20,28 +21,34 @@ export default function ServiceAreas() {
   const navigate = useNavigate();
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
+  // Los tres pilares de la marca. El indice coincide con serviceAreas.areas
+  // en los archivos de idioma.
   const areas = [
     {
       key: "dev",
-      title: t("serviceAreas.areas.0.title"),
-      subtitle: t("serviceAreas.areas.0.subtitle"),
-      description: t("serviceAreas.areas.0.description"),
-      cta: t("serviceAreas.areas.0.cta"),
-      accent: "#6c63ff",
+      accent: getAccent("dev").solid,
       route: "/dev",
       icon: LuCode,
     },
     {
       key: "infra",
-      title: t("serviceAreas.areas.1.title"),
-      subtitle: t("serviceAreas.areas.1.subtitle"),
-      description: t("serviceAreas.areas.1.description"),
-      cta: t("serviceAreas.areas.1.cta"),
-      accent: "#2bb691",
+      accent: getAccent("infra").soft,
       route: "/infra",
       icon: LuCloudCog,
     },
-  ];
+    {
+      key: "ia",
+      accent: getAccent("ia").solid,
+      route: "/ia",
+      icon: LuBrainCircuit,
+    },
+  ].map((area, index) => ({
+    ...area,
+    title: t(`serviceAreas.areas.${index}.title`),
+    subtitle: t(`serviceAreas.areas.${index}.subtitle`),
+    description: t(`serviceAreas.areas.${index}.description`),
+    cta: t(`serviceAreas.areas.${index}.cta`),
+  }));
 
   const navigateWithScroll = (path) => {
     navigate(path);
@@ -60,7 +67,8 @@ export default function ServiceAreas() {
           justify="center"
           gap={{ base: 8, xl: 10 }}
           px={{ base: 8, md: 20 }}
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column", xl: "row" }}
+          align="stretch"
           maxW="1600px"
           mx={"auto"}
         >

@@ -11,10 +11,12 @@
     "contacto": "Contacto",
     "blog": "Artículos",
     "cases": "Casos de Éxito",
-    "proceso": "Metodología"
+    "proceso": "Metodología",
+    "casos": "Casos",
+    "faq": "Preguntas"
   },
   "banner": {
-    "span": "Consultoria IT",
+    "span": "Consultoría IT & Inteligencia Artificial",
     "titulo": "Transformamos ideas en soluciones informáticas",
     "subtitulo": "Somos un equipo multidisciplinario que te acompaña desde la concepción de la idea hasta su implementación.",
     "boton": "Contáctanos",
@@ -44,6 +46,17 @@
       "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
       "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
       "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
+    ]
+  },
+  "bannerIA": {
+    "span": "Inteligencia Artificial",
+    "titulo": "IA que llega a producción, no a una demo",
+    "subtitulo": "Diseñamos, construimos y operamos soluciones de IA sobre tus propios datos y sistemas, con resultados medibles y control total de la información.",
+    "boton": "Contáctanos",
+    "reviews": [
+      "[COMPLETAR: testimonio real de un cliente sobre el proyecto de IA]",
+      "[COMPLETAR: testimonio que mencione un resultado concreto — tiempo ahorrado, casos resueltos]",
+      "[COMPLETAR: testimonio sobre el proceso de trabajo y la puesta en producción]"
     ]
   },
   "infraServices": {
@@ -452,6 +465,190 @@
       }
     ]
   },
+  "aiServices": {
+    "titulo": "Soluciones de IA",
+    "subtitulo": "listas para operar en tu negocio",
+    "label": "Adini | Inteligencia Artificial",
+    "cerrar": "Cerrar",
+    "verMas": "Ver más",
+    "contactar": "Contactar",
+    "plazoLabel": "Plazo estimado",
+    "resultadoLabel": "Qué ganás",
+    "incluyeLabel": "Qué incluye",
+    "messageTemplate": "¡Hola!\n\nEstoy interesado en el servicio de “{{service}}”.\n\n",
+    "servicios": [
+      {
+        "titulo": "Asistente interno sobre tu documentación",
+        "resumen": "RAG sobre tus manuales, normativas, procedimientos y tickets.",
+        "descripcion": "Construimos un asistente que responde preguntas en lenguaje natural sobre la documentación de tu organización, citando siempre la fuente. Tu equipo deja de buscar en carpetas compartidas y obtiene la respuesta con el documento y la página de la que salió.",
+        "plazo": "[COMPLETAR: p. ej. 4 a 6 semanas]",
+        "resultado": "[COMPLETAR: resultado medible, p. ej. reduce X% el tiempo de búsqueda de información interna]",
+        "lista": [
+          "Respuestas con la fuente citada",
+          "Ingesta de PDFs, Office, wikis e intranets",
+          "Control de acceso por área o rol"
+        ],
+        "detalles": [
+          {
+            "icono": "MdDataObject",
+            "titulo": "Ingesta y normalización",
+            "descripcion": "Procesamos tus documentos en los formatos que ya usas, sin pedirte que reordenes todo antes de empezar."
+          },
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Búsqueda semántica (RAG)",
+            "descripcion": "El asistente recupera los fragmentos relevantes y responde sobre ellos, en lugar de inventar desde su memoria."
+          },
+          {
+            "icono": "MdSchool",
+            "titulo": "Respuestas trazables",
+            "descripcion": "Cada respuesta muestra de qué documento salió, para que cualquiera pueda verificarla."
+          },
+          {
+            "icono": "MdSupportAgent",
+            "titulo": "Integración con tus canales",
+            "descripcion": "Disponible desde la web interna, Slack, Teams o el sistema que ya usa tu equipo."
+          }
+        ]
+      },
+      {
+        "titulo": "Agentes que ejecutan procesos",
+        "resumen": "Agentes conectados a tus sistemas que completan tareas de punta a punta.",
+        "descripcion": "Más allá de responder preguntas, un agente ejecuta: consulta tus sistemas, aplica tus reglas de negocio y realiza la acción. Definimos juntos qué puede hacer solo, qué requiere aprobación humana y qué queda registrado en cada paso.",
+        "plazo": "[COMPLETAR: p. ej. 6 a 10 semanas]",
+        "resultado": "[COMPLETAR: resultado medible, p. ej. automatiza X tareas por mes]",
+        "lista": [
+          "Conexión con tus APIs y bases de datos",
+          "Aprobación humana en los pasos críticos",
+          "Trazabilidad completa de cada ejecución"
+        ],
+        "detalles": [
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Integración con tus sistemas",
+            "descripcion": "El agente opera sobre tu ERP, CRM o desarrollos propios mediante APIs, sin migraciones."
+          },
+          {
+            "icono": "MdTimeline",
+            "titulo": "Flujos con reglas de negocio",
+            "descripcion": "Traducimos tus procedimientos actuales en flujos que el agente respeta paso a paso."
+          },
+          {
+            "icono": "MdBuild",
+            "titulo": "Control humano",
+            "descripcion": "Defines qué acciones ejecuta solo y cuáles frenan a esperar una aprobación."
+          },
+          {
+            "icono": "MdCode",
+            "titulo": "Auditoría",
+            "descripcion": "Cada decisión y cada acción quedan registradas para poder revisarlas después."
+          }
+        ]
+      },
+      {
+        "titulo": "Automatización de procesos con IA",
+        "resumen": "Clasificación, extracción y derivación automática del trabajo repetitivo.",
+        "descripcion": "Tomamos el trabajo manual de alto volumen — leer correos, clasificar tickets, extraer datos de facturas y remitos, cargar información en sistemas — y lo automatizamos con modelos de lenguaje, dejando las excepciones para tu equipo.",
+        "plazo": "[COMPLETAR: p. ej. 3 a 5 semanas]",
+        "resultado": "[COMPLETAR: resultado medible, p. ej. X horas mensuales liberadas]",
+        "lista": [
+          "Extracción de datos de documentos",
+          "Clasificación y derivación automática",
+          "Escalamiento a una persona ante la duda"
+        ],
+        "detalles": [
+          {
+            "icono": "MdDataObject",
+            "titulo": "Procesamiento de documentos",
+            "descripcion": "Facturas, remitos, contratos y formularios convertidos en datos estructurados listos para cargar."
+          },
+          {
+            "icono": "MdTimeline",
+            "titulo": "Clasificación y ruteo",
+            "descripcion": "Cada caso llega al área correcta con su prioridad ya asignada."
+          },
+          {
+            "icono": "MdSupportAgent",
+            "titulo": "Excepciones a personas",
+            "descripcion": "Cuando el modelo no tiene confianza suficiente, deriva a un humano en lugar de arriesgar."
+          },
+          {
+            "icono": "MdBuild",
+            "titulo": "Medición desde el día uno",
+            "descripcion": "Instrumentamos el proceso para poder comparar contra la línea de base previa."
+          }
+        ]
+      },
+      {
+        "titulo": "Atención al cliente asistida por IA",
+        "resumen": "Respuestas sobre tu catálogo y tus políticas, con derivación a tu equipo.",
+        "descripcion": "Un asistente de cara al cliente que responde sobre tus productos, precios, plazos y políticas reales, integrado a tus canales. Cuando la consulta excede lo que puede resolver, deriva a una persona con todo el contexto de la conversación.",
+        "plazo": "[COMPLETAR: p. ej. 4 a 8 semanas]",
+        "resultado": "[COMPLETAR: resultado medible, p. ej. X% de consultas resueltas sin intervención humana]",
+        "lista": [
+          "WhatsApp, web y correo",
+          "Respuestas acotadas a tu información real",
+          "Derivación con el contexto completo"
+        ],
+        "detalles": [
+          {
+            "icono": "MdStorefront",
+            "titulo": "Sobre tu catálogo real",
+            "descripcion": "Conectado a tus datos de productos, stock y precios, no a información genérica."
+          },
+          {
+            "icono": "MdPhoneAndroid",
+            "titulo": "En los canales de tus clientes",
+            "descripcion": "WhatsApp, el chat de tu web o el correo, según dónde estén tus clientes."
+          },
+          {
+            "icono": "MdSupportAgent",
+            "titulo": "Traspaso a tu equipo",
+            "descripcion": "La derivación conserva el historial completo, para que nadie tenga que repetir su consulta."
+          },
+          {
+            "icono": "MdWeb",
+            "titulo": "Límites explícitos",
+            "descripcion": "Definimos qué temas no responde, para evitar compromisos que tu empresa no quiere asumir."
+          }
+        ]
+      },
+      {
+        "titulo": "Consultoría y prueba de concepto",
+        "resumen": "Antes de invertir: qué conviene automatizar, qué no, y cuánto rinde.",
+        "descripcion": "Si todavía no sabes por dónde empezar, relevamos tus procesos, identificamos los casos con mejor relación entre esfuerzo e impacto, y construimos una prueba de concepto acotada sobre tus datos reales para validar el resultado antes de comprometer un proyecto completo.",
+        "plazo": "[COMPLETAR: p. ej. 2 a 3 semanas]",
+        "resultado": "[COMPLETAR: resultado, p. ej. un caso validado con datos reales y su estimación de retorno]",
+        "lista": [
+          "Relevamiento de procesos candidatos",
+          "PoC sobre tus datos reales",
+          "Estimación de esfuerzo y retorno"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Relevamiento",
+            "descripcion": "Mapeamos tus procesos actuales y marcamos dónde la IA aporta y dónde no conviene."
+          },
+          {
+            "icono": "MdTimeline",
+            "titulo": "Priorización",
+            "descripcion": "Ordenamos los casos por impacto y esfuerzo, para empezar por el que rinde más rápido."
+          },
+          {
+            "icono": "MdCode",
+            "titulo": "Prueba de concepto",
+            "descripcion": "Construimos una versión acotada sobre tus datos reales para ver el resultado antes de escalar."
+          },
+          {
+            "icono": "MdSchool",
+            "titulo": "Transferencia al equipo",
+            "descripcion": "Documentamos hallazgos y capacitamos a tu gente para que puedan sostener la solución."
+          }
+        ]
+      }
+    ]
+  },
   "process": {
     "titulo": "Cómo trabajamos",
     "subtitulo": "de la idea a la producción",
@@ -478,6 +675,32 @@
       }
     ]
   },
+  "aiProcess": {
+    "titulo": "Cómo llevamos la IA",
+    "subtitulo": "de la idea a producción",
+    "steps": [
+      {
+        "titulo": "Relevamiento",
+        "descripcion": "Identificamos los procesos donde la IA rinde y descartamos los que no justifican el esfuerzo."
+      },
+      {
+        "titulo": "Prueba de concepto",
+        "descripcion": "Construimos una versión acotada sobre tus datos reales y medimos el resultado."
+      },
+      {
+        "titulo": "Puesta en producción",
+        "descripcion": "Integramos la solución a tus sistemas con los controles de seguridad y acceso que necesita."
+      },
+      {
+        "titulo": "Medición",
+        "descripcion": "Instrumentamos la solución para comparar contra la línea de base y detectar desvíos."
+      },
+      {
+        "titulo": "Evolución",
+        "descripcion": "Ajustamos el comportamiento con el uso real y acompañamos a tu equipo en el día a día."
+      }
+    ]
+  },
   "serviceAreas": {
     "titulo": "Nuestras especialidades",
     "subtitulo": "que potencian tus proyectos",
@@ -493,6 +716,12 @@
         "subtitle": "Confiable, Seguro y Escalable.",
         "description": "Ayudamos a las organizaciones a reducir sus costos operativos, escalar sus operaciones de forma eficiente y alcanzar nuevos niveles de crecimiento, alineando la tecnología con las necesidades específicas de su negocio.",
         "cta": "Ver servicios"
+      },
+      {
+        "title": "Inteligencia Artificial",
+        "subtitle": "AGENTES, RAG Y AUTOMATIZACIÓN",
+        "description": "Construimos agentes, asistentes sobre tus propios documentos y automatizaciones con IA que llegan a producción e integran los sistemas que ya usas, con resultados medibles y control total de tus datos.",
+        "cta": "Ver servicios"
       }
     ]
   },
@@ -501,8 +730,8 @@
     "subtitulo": "que transforma tu negocio",
     "label": "Inteligencia Artificial",
     "caratula": "IA aplicada a tu negocio",
-    "descripcion": "Integramos soluciones de IA robustas y escalables: desde automatización de procesos hasta asistentes inteligentes a medida.",
-    "cta": "Integremos IA en tu negocio",
+    "descripcion": "Agentes que ejecutan procesos, asistentes sobre tus propios documentos y automatizaciones que llegan a producción, integradas a los sistemas que ya usas.",
+    "cta": "Ver servicios de IA",
     "capabilities": [
       "Chatbots & Asistentes",
       "Automatización de procesos",
@@ -510,6 +739,62 @@
       "RAG & Knowledge Bases",
       "Procesamiento de documentos",
       "Análisis de datos con IA"
+    ]
+  },
+  "aiCases": {
+    "titulo": "IA en producción,",
+    "subtitulo": "con resultados medidos",
+    "etiquetaResultado": "Resultado Clave",
+    "aclaracion": "Cada implementación se mide contra la operación previa del cliente.",
+    "items": [
+      {
+        "cliente": "[COMPLETAR: nombre del cliente o rubro, p. ej. 'Empresa de logística']",
+        "titulo": "[COMPLETAR: qué se construyó, p. ej. 'Clasificación automática de remitos']",
+        "descripcion": "[COMPLETAR: el problema que tenía el cliente, qué se implementó y cómo cambió la operación. Dos o tres oraciones.]",
+        "resultado": "[COMPLETAR: la cifra, p. ej. '70% menos de carga manual']",
+        "tech": [
+          "[COMPLETAR: tecnologías]"
+        ]
+      },
+      {
+        "cliente": "[COMPLETAR: cliente o rubro]",
+        "titulo": "[COMPLETAR: qué se construyó]",
+        "descripcion": "[COMPLETAR: problema, solución y resultado en dos o tres oraciones.]",
+        "resultado": "[COMPLETAR: la cifra]",
+        "tech": [
+          "[COMPLETAR: tecnologías]"
+        ]
+      }
+    ]
+  },
+  "aiFaq": {
+    "titulo": "Las preguntas",
+    "subtitulo": "que siempre nos hacen",
+    "items": [
+      {
+        "pregunta": "¿Mis datos quedan expuestos o entrenan un modelo público?",
+        "respuesta": "No. Trabajamos con configuraciones donde tus datos no se usan para entrenar modelos de terceros, y cuando el caso lo requiere desplegamos modelos en tu propia infraestructura. Definimos juntos qué información sale de tu red y cuál no antes de escribir la primera línea de código."
+      },
+      {
+        "pregunta": "¿Qué pasa si el modelo se equivoca o inventa una respuesta?",
+        "respuesta": "Es el riesgo central y se diseña para contenerlo. Las respuestas se apoyan en tus documentos y citan la fuente, los pasos críticos requieren aprobación humana, y cuando el sistema no tiene confianza suficiente deriva a una persona en lugar de arriesgar una respuesta."
+      },
+      {
+        "pregunta": "¿Necesito tener mis datos ordenados para empezar?",
+        "respuesta": "No. Es el motivo más común por el que estos proyectos nunca arrancan. Trabajamos con la documentación en el estado en que está y nos ocupamos de la normalización como parte del proyecto."
+      },
+      {
+        "pregunta": "¿Cuánto cuesta operarlo por mes?",
+        "respuesta": "Depende del volumen de uso y del modelo elegido. En la prueba de concepto medimos el consumo real de tu caso y te damos el costo mensual estimado antes de que decidas escalar, sin sorpresas después."
+      },
+      {
+        "pregunta": "¿Esto reemplaza a mi equipo?",
+        "respuesta": "En los proyectos que hacemos, no. La IA absorbe el trabajo repetitivo y de alto volumen para que tu equipo dedique el tiempo a los casos que requieren criterio. Los mejores resultados que vimos son los que liberan horas, no los que eliminan puestos."
+      },
+      {
+        "pregunta": "¿Y si ya tengo sistemas propios?",
+        "respuesta": "Mejor. Todo lo que construimos se integra a tus sistemas actuales mediante APIs, sin pedirte migraciones ni reemplazos. Nuestro equipo desarrolla software e infraestructura desde antes de la IA, así que la integración es terreno conocido."
+      }
     ]
   },
   "blog": {
@@ -866,7 +1151,9 @@
     "fullstack": "Desarrollador Fullstack",
     "devops": "DevOps",
     "sysadmin": "SysAdmin",
-    "cloud": "Cloud Engineer"
+    "cloud": "Cloud Engineer",
+    "tituloIA": "Especialistas en",
+    "subtituloIA": "IA aplicada, datos e integración de sistemas"
   },
   "footer": {
     "descripcion": "Impulsamos la transformación digital con soluciones tecnológicas a medida, ayudando a empresas a crecer y adaptarse al futuro.",
@@ -882,12 +1169,15 @@
       "contacto": "Contacto",
       "blog": "Artículos",
       "cases": "Casos de Éxito",
-      "proceso": "Metodología"
+      "proceso": "Metodología",
+      "casos": "Casos",
+      "faq": "Preguntas"
     },
     "areas": {
       "titulo": "Áreas de Servicio",
       "desarrollo": "Desarrollo de Software",
-      "infra": "Infrastructure & Cloud Services"
+      "infra": "Infrastructure & Cloud Services",
+      "ia": "Inteligencia Artificial"
     },
     "redes": {
       "titulo": "Nuestras Redes"

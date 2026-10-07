@@ -11,21 +11,34 @@ import {
     LuLifeBuoy,
 } from "react-icons/lu";
 import Title from "../molecules/Title";
+import { getAccent } from "../../utils/variants";
 
-const stepIcons = [LuSearch, LuPencilRuler, LuCode, LuRocket, LuLifeBuoy];
+const defaultStepIcons = [LuSearch, LuPencilRuler, LuCode, LuRocket, LuLifeBuoy];
 
-export default function ProcessRoadmap() {
+/**
+ * Roadmap de proceso reutilizable. `ns` elige el bloque de i18n (process,
+ * aiProcess, ...) y `variant` el color, para que cada area cuente su propio
+ * metodo con el mismo componente.
+ */
+export default function ProcessRoadmap({
+    ns = "process",
+    variant = "default",
+    icons = defaultStepIcons,
+}) {
     const { t } = useTranslation();
     const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.15), []);
     const { ref, inView } = useInView({ triggerOnce: true, threshold });
+    const accent = getAccent(variant);
+    const stepIcons = icons;
 
-    const steps = t("process.steps", { returnObjects: true });
+    const steps = t(`${ns}.steps`, { returnObjects: true });
 
     return (
         <>
             <Title
-                title={t("process.titulo")}
-                subtitle={t("process.subtitulo")}
+                title={t(`${ns}.titulo`)}
+                subtitle={t(`${ns}.subtitulo`)}
+                variant={variant}
                 mt="60px"
                 mb="50px"
             />
@@ -44,7 +57,7 @@ export default function ProcessRoadmap() {
                     w="350px"
                     h="350px"
                     borderRadius="full"
-                    bg="rgba(108, 99, 255, 0.08)"
+                    bg={`rgba(${accent.rgb}, 0.08)`}
                     filter="blur(60px)"
                     pointerEvents="none"
                 />
@@ -83,7 +96,7 @@ export default function ProcessRoadmap() {
                                     left: "calc(10% + 28px)",
                                     right: "calc(10% + 28px)",
                                     height: "2px",
-                                    background: "linear-gradient(to right, #6c63ff, #2bb691)",
+                                    background: `linear-gradient(to right, ${accent.solid}, ${accent.gradientTo})`,
                                     transform: "translateY(-50%)",
                                     transformOrigin: "left",
                                     zIndex: 1,
@@ -106,24 +119,24 @@ export default function ProcessRoadmap() {
                                                     borderRadius="full"
                                                     bg="#12274d"
                                                     border="2px solid"
-                                                    borderColor="#6c63ff"
+                                                    borderColor={accent.solid}
                                                     display="flex"
                                                     alignItems="center"
                                                     justifyContent="center"
                                                     transition="all 0.3s ease"
                                                     cursor="default"
                                                     _hover={{
-                                                        boxShadow: "0 0 16px rgba(108,99,255,0.4)",
+                                                        boxShadow: `0 0 16px rgba(${accent.rgb}, 0.4)`,
                                                         transform: "scale(1.1)",
                                                     }}
                                                 >
-                                                    <Icon as={stepIcons[i]} boxSize={5} color="#a09bff" />
+                                                    <Icon as={stepIcons[i]} boxSize={5} color={accent.soft} />
                                                 </Box>
                                                 <Text
                                                     m={0}
                                                     fontSize="xs"
                                                     fontWeight="800"
-                                                    color="#a09bff"
+                                                    color={accent.soft}
                                                     letterSpacing="wider"
                                                 >
                                                     {String(i + 1).padStart(2, "0")}
@@ -154,8 +167,8 @@ export default function ProcessRoadmap() {
                                             role="group"
                                             _hover={{
                                                 transform: "translateY(-3px)",
-                                                bg: "rgba(108,99,255,0.08)",
-                                                borderColor: "rgba(108,99,255,0.4)",
+                                                bg: `rgba(${accent.rgb}, 0.08)`,
+                                                borderColor: `rgba(${accent.rgb}, 0.4)`,
                                                 boxShadow: "0 12px 32px rgba(0,0,0,0.3)",
                                             }}
                                         >
@@ -172,7 +185,7 @@ export default function ProcessRoadmap() {
                                                 <Box
                                                     h="2px"
                                                     w="32px"
-                                                    bg="linear-gradient(to right, #6c63ff, #2bb691)"
+                                                    bg={`linear-gradient(to right, ${accent.solid}, ${accent.gradientTo})`}
                                                     borderRadius="full"
                                                     transition="width 0.3s ease"
                                                     _groupHover={{ w: "56px" }}
@@ -208,20 +221,20 @@ export default function ProcessRoadmap() {
                                                     w="48px"
                                                     h="48px"
                                                     borderRadius="full"
-                                                    bg="rgba(108,99,255,0.15)"
-                                                    border="2px solid #6c63ff"
+                                                    bg={`rgba(${accent.rgb}, 0.15)`}
+                                                    border={`2px solid ${accent.solid}`}
                                                     display="flex"
                                                     alignItems="center"
                                                     justifyContent="center"
                                                     flexShrink={0}
                                                 >
-                                                    <Icon as={stepIcons[i]} boxSize={5} color="#a09bff" />
+                                                    <Icon as={stepIcons[i]} boxSize={5} color={accent.soft} />
                                                 </Box>
                                                 {i < steps.length - 1 && (
                                                     <Box
                                                         w="2px"
                                                         flexGrow={1}
-                                                        bg="linear-gradient(to bottom, #6c63ff, #2bb691)"
+                                                        bg={`linear-gradient(to bottom, ${accent.solid}, ${accent.gradientTo})`}
                                                         my={1}
                                                     />
                                                 )}
@@ -240,7 +253,7 @@ export default function ProcessRoadmap() {
                                                         m={0}
                                                         fontSize="xs"
                                                         fontWeight="800"
-                                                        color="#a09bff"
+                                                        color={accent.soft}
                                                         letterSpacing="wider"
                                                     >
                                                         {String(i + 1).padStart(2, "0")}

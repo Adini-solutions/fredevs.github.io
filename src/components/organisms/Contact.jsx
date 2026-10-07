@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import axios from "axios";
 import { Turnstile } from "@marsidev/react-turnstile";
+import { getAccent, getContactEmail } from "../../utils/variants";
 
 const WORKER_URL = "https://email-worker.adini.workers.dev";
 const TURNSTILE_SITE_KEY = "0x4AAAAAACH7eEMqIQ4uu34n";
@@ -22,12 +23,7 @@ export default function Contact({ variant = "default" }) {
   const [responseMessage, setResponseMessage] = useState(null);
   const { t } = useTranslation();
   const [turnstileToken, setTurnstileToken] = useState(null);
-
-  const getContactEmail = () => {
-    if (variant === "dev") return "dev@adini.com.ar";
-    if (variant === "infra") return "infra@adini.com.ar";
-    return "contacto@adini.com.ar";
-  };
+  const accent = getAccent(variant);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,7 +36,7 @@ export default function Contact({ variant = "default" }) {
       }
 
       const payload = {
-        to: getContactEmail(),
+        to: getContactEmail(variant),
         subject: `Contacto web - ${name || "Sin nombre"}`,
         text: [
           `Nombre: ${name}`,
@@ -112,7 +108,7 @@ export default function Contact({ variant = "default" }) {
               w={"100%"}
             >
               <Flex alignItems="center" mb={6}>
-                <Icon as={HiMail} boxSize={8} color={variant === "infra" ? "#238b6f" : "#6c63ff"} mr={4} />
+                <Icon as={HiMail} boxSize={8} color={accent.solid} mr={4} />
                 <Text my={0} fontSize="xl" fontWeight="bold" color="primary.500">
                   {t("contact.descripcion")}
                 </Text>
@@ -127,7 +123,7 @@ export default function Contact({ variant = "default" }) {
                     bg="#f9f9f9"
                     color="primary.500"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _focus={{ borderColor: accent.solid }}
                     _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
@@ -140,7 +136,7 @@ export default function Contact({ variant = "default" }) {
                     bg="#f9f9f9"
                     color="primary.500"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _focus={{ borderColor: accent.solid }}
                     _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
@@ -153,7 +149,7 @@ export default function Contact({ variant = "default" }) {
                     bg="#f9f9f9"
                     color="primary.500"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _focus={{ borderColor: accent.solid }}
                     _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
@@ -169,7 +165,7 @@ export default function Contact({ variant = "default" }) {
                     maxHeight="200px"
                     minHeight="150px"
                     border="2px solid #e0e0e0"
-                    _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
+                    _focus={{ borderColor: accent.solid }}
                     _placeholder={{ color: "#999999" }}
                     borderRadius="md"
                     p={4}
@@ -189,15 +185,15 @@ export default function Contact({ variant = "default" }) {
                         </Text>
                       ) :
                       (
-                        <Text pr={3} m={0} fontSize={{ base: "md", md: "lg" }} color={variant === "infra" ? "#238b6f" : "#6c63ff"} fontWeight="bold">
+                        <Text pr={3} m={0} fontSize={{ base: "md", md: "lg" }} color={accent.solid} fontWeight="bold">
                           {t("contact.span")}
                         </Text>
                       )
                     }
                     <Button
-                      bg={variant === "infra" ? "#238b6f" : "#6c63ff"}
+                      bg={accent.solid}
                       color="white"
-                      _hover={{ bg: variant === "infra" ? "#1f7862" : "#5548e6" }}
+                      _hover={{ bg: accent.hover }}
                       type="submit"
                       isDisabled={
                         !message.trim() ||

@@ -4,10 +4,13 @@ import { LuArrowRight } from "react-icons/lu";
 import { useDisclosure } from "@chakra-ui/react";
 import ServiceModal from "../organisms/ServiceModal";
 import { useTranslation } from "react-i18next";
+import { getAccent, getServiceNs } from "../../utils/variants";
 
 export default function Service({ service, variant }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useTranslation();
+  const accent = getAccent(variant);
+  const ns = getServiceNs(variant);
 
   return (
     <>
@@ -25,14 +28,12 @@ export default function Service({ service, variant }) {
         w={{ base: "330px", "2xl": "380px" }}
         textAlign="center"
         mb={"80px"}
-        borderBottom={variant === "infra" ? "4px solid #238b6f" : "4px solid #6c63ff"}
+        borderBottom={`4px solid ${accent.solid}`}
         transition="transform 0.2s ease-in-out"
         _hover={{
           transform: "translateY(-5px)",
           cursor: "pointer",
-          bg: variant === "infra"
-            ? "linear-gradient(to top, #f0fcf9, #f7f8ff)"
-            : "linear-gradient(to top, #f1f0ff, #f7f8ff)"
+          bg: `linear-gradient(to top, ${accent.tintBg}, #f7f8ff)`
         }}
       >
         <Flex justify={"center"} align={"center"}>
@@ -48,7 +49,7 @@ export default function Service({ service, variant }) {
         <List p={0} spacing={2} textAlign="left" color="gray.700">
           {service.lista.map((item, idx) => (
             <ListItem key={idx}>
-              <ListIcon mb={1} as={CheckCircleIcon} color={variant === "infra" ? "#238b6f" : "tertiary.500"} />
+              <ListIcon mb={1} as={CheckCircleIcon} color={accent.solid} />
               {item}
             </ListItem>
           ))}
@@ -61,7 +62,7 @@ export default function Service({ service, variant }) {
           alignItems="center"
           gap={1}
           fontSize="sm"
-          color={variant === "infra" ? "#238b6f" : "#6c63ff"}
+          color={accent.solid}
           opacity={{ base: 1, lg: 0 }}
           transform="translateX(-4px)"
           transition="all 0.2s ease"
@@ -71,7 +72,7 @@ export default function Service({ service, variant }) {
             transform: "translateX(0)",
           }}
         >
-          {t("infraServices.verMas")}
+          {t(`${ns}.verMas`)}
           <Box as={LuArrowRight} />
         </Box>
       </Box>

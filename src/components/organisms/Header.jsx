@@ -5,8 +5,9 @@ import { useTranslation } from "react-i18next"; import { useNavigate } from "rea
 
 import { useEffect, useState } from 'react';
 import Button from "../molecules/Button";
+import { getAccent, getBrandIcon, getContactEmail } from "../../utils/variants";
 
-export default function Header({ variant = "default" }) {
+export default function Header({ variant = "default", menuItems: menuItemsProp }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -18,25 +19,23 @@ export default function Header({ variant = "default" }) {
   const [itemsColor, setItemsColor] = useState('white');
   const [adiniIcon, setAdiniIcon] = useState('/assets/icons/adini-white.ico')
 
-  const getHoverColor = () => {
-    if (variant === "infra") {
-      return "#238b6f";
-    } else {
-      return "#5548e6";
-    };
-  }
+  const accent = getAccent(variant);
+
+  const getHoverColor = () => (variant === "infra" ? accent.solid : accent.hover);
 
   const menuType = {
     default: ["inicio", "areas", "ia", "cases", "blog", "nosotros", "contacto"],
     dev: ["inicio", "servicios", "tecnologías", "proyectos", "proceso", "contacto", "nosotros"],
     infra: ["inicio", "servicios", "contacto", "nosotros"],
+    ia: ["inicio", "servicios", "casos", "proceso", "faq", "contacto", "nosotros"],
   };
 
-  const menuItems = menuType[variant]
+  const menuItems = menuItemsProp ?? menuType[variant] ?? menuType.default;
 
   const variantType = {
     dev: "dev",
     infra: "infra",
+    ia: "ia",
   };
 
   useEffect(() => {
@@ -48,10 +47,10 @@ export default function Header({ variant = "default" }) {
       if (scrollY >= section2Offset) {
         setBackgroundColor('white');
         setHeaderBoxShadow('md');
-        setLogoColor(variant === "infra" ? "#238b6f" : '#4d45d6');
+        setLogoColor(accent.deep);
         setVariantColor('gray.700');
         setItemsColor('gray.700');
-        setAdiniIcon(variant === "infra" ? '/assets/icons/adini-infra.ico' : '/assets/icons/adini.ico');
+        setAdiniIcon(getBrandIcon(variant));
         setContactButtonStyle(true);
       } else {
         setBackgroundColor('linear-gradient(to right, rgba(7, 30, 55, 0.9), rgba(7, 30, 55, 0.5))');
@@ -69,7 +68,7 @@ export default function Header({ variant = "default" }) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [variant]);
+  }, [variant, accent.deep]);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -142,7 +141,7 @@ export default function Header({ variant = "default" }) {
               {t(`header.${section}`)}
             </Text>
           ))}
-          {(variant === "infra" || variant === "dev") && (
+          {variant !== "default" && (
             <Text
               as="button"
               onClick={() => navigateWithScroll("/")}
@@ -157,12 +156,12 @@ export default function Header({ variant = "default" }) {
         <Button
           display={{ base: "none", "2xl": "flex" }}
           leftIcon={<HiMail />}
-          text="contacto@adini.com.ar"
+          text={getContactEmail(variant)}
           variant={variant}
           fontSize={{ base: "sm", xl: "md" }}
           onClick={() => scrollToSection("contacto")}
           bg={contactButtonStyle ? "white" : undefined}
-          color={contactButtonStyle ? (variant === "infra" ? "#1f7862" : "#4d45d6") : undefined}
+          color={contactButtonStyle ? accent.deep : undefined}
           _hover={contactButtonStyle ? { transform: "scale(1.05)", bg: "#f0f0f0" } : undefined}
         />
         <IconButton
@@ -203,7 +202,7 @@ export default function Header({ variant = "default" }) {
                       {t(`header.${section}`)}
                     </Text>
                   ))}
-                  {(variant === "infra" || variant === "dev") && (
+                  {variant !== "default" && (
 
                     <Text
                       as="button"
@@ -223,7 +222,7 @@ export default function Header({ variant = "default" }) {
                   <Button
                     leftIcon={<HiMail />}
                     fontSize={"sm"}
-                    text={"contacto@adini.com.ar"}
+                    text={getContactEmail(variant)}
                     variant={variant}
                     onClick={() => scrollToSection("contacto")}
                     w="full"
@@ -235,14 +234,14 @@ export default function Header({ variant = "default" }) {
                     <Flex align="center" justify="center">
                       <Box width="30px" height="30px" mr="7px" mb="4px">
                         <img
-                          src={variant === "infra" ? "/assets/icons/adini-infra.ico" : "/assets/icons/adini.ico"}
+                          src={getBrandIcon(variant)}
                           alt="Adini"
                         />
                       </Box>
                       <Text
                         my={0}
                         fontSize="25px"
-                        color={variant === "infra" ? "#238b6f" : "#4d45d6"}
+                        color={accent.deep}
                         fontFamily="Poppins, sans-serif"
                         onClick={() => navigateWithScroll("/")}
                       >

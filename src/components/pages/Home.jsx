@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
@@ -12,32 +12,16 @@ import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
 import SEO from "../../utils/SEO";
+import useHeroPassed from "../../utils/useHeroPassed";
 
 export default function Home() {
-  const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
-  const [isTranslateVisible, setIsTranslateVisible] = useState(false);
-
-  const handleScroll = () => {
-    const inicio = document.getElementById("inicio");
-    if (inicio) {
-      const { bottom } = inicio.getBoundingClientRect();
-      setIsTranslateVisible(bottom < 0);
-      setIsWhatsAppVisible(bottom < 0);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const heroPassed = useHeroPassed();
 
   return (
     <>
       <SEO
         title="ADINI | Software Agency"
-        description="Diseñamos e implementamos soluciones digitales integrales para empresas."
+        description="Desarrollo de software, infraestructura cloud e inteligencia artificial aplicada. Diseñamos e implementamos soluciones digitales integrales para empresas."
         canonical="https://adini.com.ar/"
         image="https://adini.com.ar/assets/images/banner.webp"
       />
@@ -65,8 +49,8 @@ export default function Home() {
           <Contact />
         </Box>
         <Footer />
-        {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
-        {isTranslateVisible && <TranslateButton position={"fixed"} />}
+        {heroPassed && <WhatsAppIcon position={"fixed"} />}
+        {heroPassed && <TranslateButton position={"fixed"} />}
       </Box>
     </>
   );

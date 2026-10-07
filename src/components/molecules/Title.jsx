@@ -2,6 +2,7 @@ import { Heading, Text, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useBreakpointValue } from '@chakra-ui/react';
+import { getAccent } from '../../utils/variants';
 
 export default function Title({ title, subtitle, mt, mb, variant = "default" }) {
     const { ref, inView } = useInView({
@@ -28,7 +29,7 @@ export default function Title({ title, subtitle, mt, mb, variant = "default" }) 
                 transition={{ duration: 0.8 }}
             >
                 <Heading fontSize={{ base: "2xl", "2xl": "25px" }} color="primary.500">
-                    {title} <Text as="span" color={variant === "infra" ? "#1f7862" : "#3d2b99"}>{subtitle}</Text>
+                    {title} <Text as="span" color={getAccent(variant).title}>{subtitle}</Text>
                 </Heading>
             </motion.div>
         </Flex>

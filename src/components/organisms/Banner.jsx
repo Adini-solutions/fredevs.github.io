@@ -1,11 +1,12 @@
 import { Box, Text, VStack, HStack, Flex } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
 import { useTranslation } from "react-i18next";
-import { FiCode, FiServer, FiLayers } from "react-icons/fi";
+import { FiCode, FiServer, FiLayers, FiCpu } from "react-icons/fi";
 import Button from "../molecules/Button";
+import { isPlaceholder } from "../../utils/placeholders";
 
 const floatingVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -36,6 +37,7 @@ export default function Banner({ variant = "default" }) {
             reviews: "banner.reviews",
             icon: FiLayers,
             background: "/assets/images/banner.webp",
+            fallback: "linear-gradient(135deg, #091c30 0%, #16244a 100%)",
         },
         dev: {
             span: "bannerDev.span",
@@ -45,6 +47,7 @@ export default function Banner({ variant = "default" }) {
             reviews: "bannerDev.reviews",
             icon: FiCode,
             background: "/assets/images/bannerDev.webp",
+            fallback: "linear-gradient(135deg, #091c30 0%, #241f5e 100%)",
         },
         infra: {
             span: "bannerInfra.span",
@@ -54,13 +57,35 @@ export default function Banner({ variant = "default" }) {
             reviews: "bannerInfra.reviews",
             icon: FiServer,
             background: "/assets/images/bannerInfra.webp",
+            fallback: "linear-gradient(135deg, #091c30 0%, #123f37 100%)",
+        },
+        ia: {
+            span: "bannerIA.span",
+            titulo: "bannerIA.titulo",
+            subtitulo: "bannerIA.subtitulo",
+            boton: "bannerIA.boton",
+            reviews: "bannerIA.reviews",
+            icon: FiCpu,
+            // TODO(adini): falta la foto de portada de IA. Mientras no exista, el
+            // degradado de abajo sostiene el banner sin que se vea roto.
+            background: "/assets/images/bannerIA.webp",
+            fallback: "linear-gradient(135deg, #091c30 0%, #2b1747 55%, #3f1d63 100%)",
         },
     };
 
-    const config = bannerConfig[variant];
+    const config = bannerConfig[variant] ?? bannerConfig.default;
     const Icon = config.icon;
 
-    const testimonials = t(config.reviews, { returnObjects: true });
+    // Los testimonios que siguen siendo plantilla no se muestran: la tarjeta
+    // desaparece entera hasta que haya citas reales cargadas.
+    const rawTestimonials = t(config.reviews, { returnObjects: true });
+    const testimonials = useMemo(
+        () =>
+            (Array.isArray(rawTestimonials) ? rawTestimonials : []).filter(
+                (item) => typeof item === "string" && !isPlaceholder(item)
+            ),
+        [rawTestimonials]
+    );
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -73,7 +98,9 @@ export default function Banner({ variant = "default" }) {
     };
 
     useEffect(() => {
-        if (!testimonials?.length) return;
+        setIndex(0);
+
+        if (testimonials.length < 2) return;
 
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % testimonials.length);
@@ -92,7 +119,8 @@ export default function Banner({ variant = "default" }) {
                 display="flex"
                 justifyContent="center"
                 color="white"
-                backgroundImage={`url('${config.background}')`}
+                backgroundColor="#091c30"
+                backgroundImage={`url('${config.background}'), ${config.fallback}`}
                 backgroundSize="cover"
                 backgroundPosition="center"
                 backgroundRepeat="no-repeat"
@@ -134,6 +162,7 @@ export default function Banner({ variant = "default" }) {
                         <Button onClick={() => scrollToSection("contacto")} text={t(config.boton)} variant={variant} />
                     </VStack>
 
+                    {testimonials.length > 0 && (
                     <Flex
                         display={{ base: "none", lg: "flex" }}
                         gap={6}
@@ -168,18 +197,21 @@ export default function Banner({ variant = "default" }) {
                                 </motion.div>
                             </AnimatePresence>
                         </Flex>
-                        <Flex gap={2}>
-                            {testimonials.map((_, i) => (
-                                <Box
-                                    key={i}
-                                    w={3}
-                                    h={3}
-                                    bg={i === index ? "white" : "gray.400"}
-                                    borderRadius="50%"
-                                />
-                            ))}
-                        </Flex>
+                        {testimonials.length > 1 && (
+                            <Flex gap={2}>
+                                {testimonials.map((_, i) => (
+                                    <Box
+                                        key={i}
+                                        w={3}
+                                        h={3}
+                                        bg={i === index ? "white" : "gray.400"}
+                                        borderRadius="50%"
+                                    />
+                                ))}
+                            </Flex>
+                        )}
                     </Flex>
+                    )}
                 </Flex>
 
                 <motion.div

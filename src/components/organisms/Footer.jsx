@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Footer({ variant = "default" }) {
+export default function Footer({ variant = "default", menuItems: menuItemsProp }) {
     const { t } = useTranslation();
     const navigate = useNavigate();
 
@@ -12,9 +12,12 @@ export default function Footer({ variant = "default" }) {
         default: ["inicio", "areas", "ia", "cases", "blog", "nosotros", "contacto"],
         dev: ["inicio", "servicios", "tecnologías", "proyectos", "proceso", "contacto", "nosotros"],
         infra: ["inicio", "servicios", "contacto", "nosotros"],
+        ia: ["inicio", "servicios", "casos", "proceso", "faq", "contacto", "nosotros"],
     };
 
-    const empresaLinks = menuType[variant].map((item) => {
+    const menuItems = menuItemsProp ?? menuType[variant] ?? menuType.default;
+
+    const empresaLinks = menuItems.map((item) => {
         const label = t(`footer.empresa.${item}`, { defaultValue: item });
 
         return (
@@ -38,7 +41,7 @@ export default function Footer({ variant = "default" }) {
 
     const information = {
         name: "Adini",
-        email: "contacto@adini.com",
+        email: "contacto@adini.com.ar",
         instagram: "https://www.instagram.com/adini.solutions/",
         linkedin: "https://www.linkedin.com/company/adiniar",
         facebook: "https://www.facebook.com/profile.php?id=61581291992126",
@@ -98,6 +101,13 @@ export default function Footer({ variant = "default" }) {
                             _hover={{ color: "white", cursor: "pointer" }}
                         >
                             {t("footer.areas.infra")}
+                        </Link>
+
+                        <Link
+                            onClick={() => navigateWithScroll("/ia")}
+                            _hover={{ color: "white", cursor: "pointer" }}
+                        >
+                            {t("footer.areas.ia")}
                         </Link>
                     </VStack>
                 </GridItem>

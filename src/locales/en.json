@@ -11,10 +11,12 @@
     "contacto": "Contact",
     "blog": "Articles",
     "cases": "Success Stories",
-    "proceso": "Methodology"
+    "proceso": "Methodology",
+    "casos": "Cases",
+    "faq": "FAQ"
   },
   "banner": {
-    "span": "IT Consulting",
+    "span": "IT Consulting & Artificial Intelligence",
     "titulo": "We transform ideas into digital solutions",
     "subtitulo": "We are a multidisciplinary team that supports you from the initial concept through to full implementation.",
     "boton": "Contact us",
@@ -44,6 +46,17 @@
       "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
       "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
       "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
+    ]
+  },
+  "bannerIA": {
+    "span": "Artificial Intelligence",
+    "titulo": "AI that reaches production, not just a demo",
+    "subtitulo": "We design, build and operate AI solutions on your own data and systems, with measurable results and full control over your information.",
+    "boton": "Contact us",
+    "reviews": [
+      "[TO DO: real client testimonial about the AI project]",
+      "[TO DO: testimonial mentioning a concrete result — time saved, cases resolved]",
+      "[TO DO: testimonial about the working process and the rollout to production]"
     ]
   },
   "infraServices": {
@@ -452,6 +465,190 @@
       }
     ]
   },
+  "aiServices": {
+    "titulo": "AI solutions",
+    "subtitulo": "ready to run in your business",
+    "label": "Adini | Artificial Intelligence",
+    "cerrar": "Close",
+    "verMas": "Learn more",
+    "contactar": "Get in touch",
+    "plazoLabel": "Estimated timeline",
+    "resultadoLabel": "What you gain",
+    "incluyeLabel": "What it includes",
+    "messageTemplate": "Hi!\n\nI'm interested in the “{{service}}” service.\n\n",
+    "servicios": [
+      {
+        "titulo": "Internal assistant over your documentation",
+        "resumen": "RAG over your manuals, policies, procedures and tickets.",
+        "descripcion": "We build an assistant that answers natural-language questions about your organization's documentation, always citing its source. Your team stops digging through shared folders and gets the answer along with the document and page it came from.",
+        "plazo": "[TO DO: e.g. 4 to 6 weeks]",
+        "resultado": "[TO DO: measurable result, e.g. cuts internal search time by X%]",
+        "lista": [
+          "Answers with cited sources",
+          "Ingests PDFs, Office files, wikis and intranets",
+          "Access control by team or role"
+        ],
+        "detalles": [
+          {
+            "icono": "MdDataObject",
+            "titulo": "Ingestion and normalization",
+            "descripcion": "We process your documents in the formats you already use, without asking you to reorganize everything first."
+          },
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Semantic search (RAG)",
+            "descripcion": "The assistant retrieves the relevant passages and answers from them, instead of improvising from memory."
+          },
+          {
+            "icono": "MdSchool",
+            "titulo": "Traceable answers",
+            "descripcion": "Every answer shows which document it came from, so anyone can verify it."
+          },
+          {
+            "icono": "MdSupportAgent",
+            "titulo": "Integrated into your channels",
+            "descripcion": "Available from your intranet, Slack, Teams or whichever system your team already uses."
+          }
+        ]
+      },
+      {
+        "titulo": "Agents that run your processes",
+        "resumen": "Agents wired into your systems that complete tasks end to end.",
+        "descripcion": "Beyond answering questions, an agent acts: it queries your systems, applies your business rules and performs the action. Together we define what it can do on its own, what needs human approval, and what gets logged at every step.",
+        "plazo": "[TO DO: e.g. 6 to 10 weeks]",
+        "resultado": "[TO DO: measurable result, e.g. automates X tasks per month]",
+        "lista": [
+          "Connected to your APIs and databases",
+          "Human approval on critical steps",
+          "Full traceability of every run"
+        ],
+        "detalles": [
+          {
+            "icono": "MdIntegrationInstructions",
+            "titulo": "Integrated with your systems",
+            "descripcion": "The agent works against your ERP, CRM or in-house software through APIs, with no migrations."
+          },
+          {
+            "icono": "MdTimeline",
+            "titulo": "Business-rule driven flows",
+            "descripcion": "We translate your current procedures into flows the agent follows step by step."
+          },
+          {
+            "icono": "MdBuild",
+            "titulo": "Human control",
+            "descripcion": "You decide which actions run unattended and which pause for approval."
+          },
+          {
+            "icono": "MdCode",
+            "titulo": "Auditability",
+            "descripcion": "Every decision and action is logged so it can be reviewed later."
+          }
+        ]
+      },
+      {
+        "titulo": "AI process automation",
+        "resumen": "Automatic classification, extraction and routing of repetitive work.",
+        "descripcion": "We take high-volume manual work — reading email, triaging tickets, pulling data from invoices and delivery notes, loading records into systems — and automate it with language models, leaving the exceptions to your team.",
+        "plazo": "[TO DO: e.g. 3 to 5 weeks]",
+        "resultado": "[TO DO: measurable result, e.g. X hours freed up per month]",
+        "lista": [
+          "Data extraction from documents",
+          "Automatic classification and routing",
+          "Escalation to a person when in doubt"
+        ],
+        "detalles": [
+          {
+            "icono": "MdDataObject",
+            "titulo": "Document processing",
+            "descripcion": "Invoices, delivery notes, contracts and forms turned into structured data ready to load."
+          },
+          {
+            "icono": "MdTimeline",
+            "titulo": "Classification and routing",
+            "descripcion": "Every case reaches the right team with its priority already assigned."
+          },
+          {
+            "icono": "MdSupportAgent",
+            "titulo": "Exceptions go to people",
+            "descripcion": "When the model isn't confident enough, it hands off to a human instead of guessing."
+          },
+          {
+            "icono": "MdBuild",
+            "titulo": "Measured from day one",
+            "descripcion": "We instrument the process so it can be compared against the previous baseline."
+          }
+        ]
+      },
+      {
+        "titulo": "AI-assisted customer support",
+        "resumen": "Answers grounded in your catalog and policies, with handoff to your team.",
+        "descripcion": "A customer-facing assistant that answers questions about your real products, prices, lead times and policies, integrated into your channels. When a query goes beyond what it can resolve, it hands off to a person with the full conversation context.",
+        "plazo": "[TO DO: e.g. 4 to 8 weeks]",
+        "resultado": "[TO DO: measurable result, e.g. X% of queries resolved without human intervention]",
+        "lista": [
+          "WhatsApp, web and email",
+          "Answers limited to your real information",
+          "Handoff with full context"
+        ],
+        "detalles": [
+          {
+            "icono": "MdStorefront",
+            "titulo": "Grounded in your real catalog",
+            "descripcion": "Connected to your product, stock and pricing data, not to generic information."
+          },
+          {
+            "icono": "MdPhoneAndroid",
+            "titulo": "On your customers' channels",
+            "descripcion": "WhatsApp, your website chat or email, depending on where your customers are."
+          },
+          {
+            "icono": "MdSupportAgent",
+            "titulo": "Handoff to your team",
+            "descripcion": "The handoff carries the full history, so nobody has to repeat their question."
+          },
+          {
+            "icono": "MdWeb",
+            "titulo": "Explicit boundaries",
+            "descripcion": "We define which topics it won't answer, to avoid commitments your company doesn't want to make."
+          }
+        ]
+      },
+      {
+        "titulo": "Consulting and proof of concept",
+        "resumen": "Before investing: what's worth automating, what isn't, and what it returns.",
+        "descripcion": "If you don't yet know where to start, we map your processes, identify the cases with the best effort-to-impact ratio, and build a narrow proof of concept on your real data to validate the outcome before committing to a full project.",
+        "plazo": "[TO DO: e.g. 2 to 3 weeks]",
+        "resultado": "[TO DO: result, e.g. one validated case on real data with its estimated return]",
+        "lista": [
+          "Assessment of candidate processes",
+          "PoC on your real data",
+          "Effort and return estimates"
+        ],
+        "detalles": [
+          {
+            "icono": "MdBuild",
+            "titulo": "Assessment",
+            "descripcion": "We map your current processes and flag where AI pays off and where it doesn't."
+          },
+          {
+            "icono": "MdTimeline",
+            "titulo": "Prioritization",
+            "descripcion": "We rank cases by impact and effort, so you start with the one that pays back fastest."
+          },
+          {
+            "icono": "MdCode",
+            "titulo": "Proof of concept",
+            "descripcion": "We build a narrow version on your real data to see the result before scaling."
+          },
+          {
+            "icono": "MdSchool",
+            "titulo": "Handover to your team",
+            "descripcion": "We document the findings and train your people so they can sustain the solution."
+          }
+        ]
+      }
+    ]
+  },
   "process": {
     "titulo": "How we work",
     "subtitulo": "from idea to production",
@@ -478,6 +675,32 @@
       }
     ]
   },
+  "aiProcess": {
+    "titulo": "How we take AI",
+    "subtitulo": "from idea to production",
+    "steps": [
+      {
+        "titulo": "Assessment",
+        "descripcion": "We identify the processes where AI pays off and rule out those that don't justify the effort."
+      },
+      {
+        "titulo": "Proof of concept",
+        "descripcion": "We build a narrow version on your real data and measure the result."
+      },
+      {
+        "titulo": "Rollout to production",
+        "descripcion": "We integrate the solution into your systems with the security and access controls it needs."
+      },
+      {
+        "titulo": "Measurement",
+        "descripcion": "We instrument the solution to compare against the baseline and catch drift."
+      },
+      {
+        "titulo": "Evolution",
+        "descripcion": "We tune its behavior with real usage and support your team day to day."
+      }
+    ]
+  },
   "serviceAreas": {
     "titulo": "Our Specialties",
     "subtitulo": "that empower your projects",
@@ -493,6 +716,12 @@
         "subtitle": "Reliable, Secure and Scalable.",
         "description": "We help organizations reduce their operational costs, scale their operations efficiently, and reach new levels of growth by aligning technology with the specific needs of their business.",
         "cta": "View services"
+      },
+      {
+        "title": "Artificial Intelligence",
+        "subtitle": "AGENTS, RAG AND AUTOMATION",
+        "description": "We build agents, assistants grounded in your own documents, and AI automations that reach production and integrate with the systems you already run, with measurable results and full control of your data.",
+        "cta": "View services"
       }
     ]
   },
@@ -501,8 +730,8 @@
     "subtitulo": "that transforms your business",
     "label": "Artificial Intelligence",
     "caratula": "AI built for your business",
-    "descripcion": "We integrate robust, scalable AI solutions — from process automation to intelligent custom assistants.",
-    "cta": "Integrate AI into your business",
+    "descripcion": "Agents that run processes, assistants grounded in your own documents, and automations that reach production, integrated with the systems you already use.",
+    "cta": "View AI services",
     "capabilities": [
       "Chatbots & Assistants",
       "Process Automation",
@@ -510,6 +739,62 @@
       "RAG & Knowledge Bases",
       "Document Processing",
       "AI-driven Data Analytics"
+    ]
+  },
+  "aiCases": {
+    "titulo": "AI in production,",
+    "subtitulo": "with measured results",
+    "etiquetaResultado": "Key Result",
+    "aclaracion": "Every implementation is measured against the client's previous operation.",
+    "items": [
+      {
+        "cliente": "[TO DO: client name or industry, e.g. 'Logistics company']",
+        "titulo": "[TO DO: what was built, e.g. 'Automatic delivery-note classification']",
+        "descripcion": "[TO DO: the problem the client had, what was implemented and how the operation changed. Two or three sentences.]",
+        "resultado": "[TO DO: the figure, e.g. '70% less manual data entry']",
+        "tech": [
+          "[TO DO: technologies]"
+        ]
+      },
+      {
+        "cliente": "[TO DO: client or industry]",
+        "titulo": "[TO DO: what was built]",
+        "descripcion": "[TO DO: problem, solution and result in two or three sentences.]",
+        "resultado": "[TO DO: the figure]",
+        "tech": [
+          "[TO DO: technologies]"
+        ]
+      }
+    ]
+  },
+  "aiFaq": {
+    "titulo": "The questions",
+    "subtitulo": "we always get asked",
+    "items": [
+      {
+        "pregunta": "Is my data exposed, or used to train a public model?",
+        "respuesta": "No. We work with configurations where your data is not used to train third-party models, and when the case calls for it we deploy models on your own infrastructure. We agree on what information leaves your network — and what doesn't — before writing the first line of code."
+      },
+      {
+        "pregunta": "What happens if the model gets it wrong or makes something up?",
+        "respuesta": "That's the central risk, and the system is designed to contain it. Answers are grounded in your documents and cite their source, critical steps require human approval, and when the system isn't confident enough it hands off to a person rather than risk an answer."
+      },
+      {
+        "pregunta": "Do I need my data in order before starting?",
+        "respuesta": "No. That's the most common reason these projects never get off the ground. We work with your documentation as it is today and handle normalization as part of the project."
+      },
+      {
+        "pregunta": "What does it cost to run per month?",
+        "respuesta": "It depends on usage volume and the model chosen. During the proof of concept we measure your case's real consumption and give you the estimated monthly cost before you decide to scale — no surprises afterwards."
+      },
+      {
+        "pregunta": "Does this replace my team?",
+        "respuesta": "In the projects we run, no. AI absorbs the repetitive, high-volume work so your team can spend its time on the cases that need judgment. The best results we've seen free up hours rather than eliminate roles."
+      },
+      {
+        "pregunta": "What if I already have my own systems?",
+        "respuesta": "All the better. Everything we build integrates with your current systems through APIs, with no migrations or replacements. Our team has been building software and infrastructure since before the AI wave, so integration is familiar ground."
+      }
     ]
   },
   "blog": {
@@ -866,7 +1151,9 @@
     "fullstack": "Fullstack Developer",
     "devops": "DevOps",
     "sysadmin": "SysAdmin",
-    "cloud": "Cloud Engineer"
+    "cloud": "Cloud Engineer",
+    "tituloIA": "Specialists in",
+    "subtituloIA": "applied AI, data and systems integration"
   },
   "footer": {
     "descripcion": "We drive digital transformation with tailor-made technological solutions, helping businesses grow and adapt to the future.",
@@ -882,12 +1169,15 @@
       "contacto": "Contact",
       "blog": "Articles",
       "cases": "Success Stories",
-      "proceso": "Methodology"
+      "proceso": "Methodology",
+      "casos": "Cases",
+      "faq": "FAQ"
     },
     "areas": {
       "titulo": "Service Areas",
       "desarrollo": "Software development",
-      "infra": "Infrastructure & Cloud Services"
+      "infra": "Infrastructure & Cloud Services",
+      "ia": "Artificial Intelligence"
     },
     "redes": {
       "titulo": "Our Social Media"

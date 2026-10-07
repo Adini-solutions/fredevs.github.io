@@ -2,6 +2,7 @@ import { Box, Flex, Image, Text, Link } from "@chakra-ui/react";
 import { FaLinkedin } from "react-icons/fa";
 import Title from "../molecules/Title";
 import { useTranslation } from "react-i18next";
+import { getAccent } from "../../utils/variants";
 
 export default function AboutUs({ variant = "default" }) {
     const { t } = useTranslation();
@@ -71,21 +72,24 @@ export default function AboutUs({ variant = "default" }) {
             title: t("aboutUs.tituloInfra"),
             subtitle: t("aboutUs.subtituloInfra"),
         },
+        ia: {
+            title: t("aboutUs.tituloIA"),
+            subtitle: t("aboutUs.subtituloIA"),
+        },
     };
 
-    const currentTitle = titleByVariant[variant];
+    const currentTitle = titleByVariant[variant] ?? titleByVariant.default;
 
     const teamByVariant = {
         dev: ["juani", "alejo", "gon", "guido"],
         infra: ["gabi", "agus", "dani"],
     };
 
-    const filteredTeam =
-        variant === "default"
-            ? teamMembers
-            : teamMembers.filter(member =>
-                teamByVariant[variant]?.includes(member.id)
-            );
+    const variantTeam = teamByVariant[variant];
+
+    const filteredTeam = variantTeam
+        ? teamMembers.filter(member => variantTeam.includes(member.id))
+        : teamMembers;
 
     return (
         <>
@@ -129,7 +133,7 @@ export default function AboutUs({ variant = "default" }) {
                                 <Text m={0} color={'gray.700'} fontWeight="bold" fontSize={{ base: "sm", md: "xl" }}>
                                     {member.name}
                                 </Text>
-                                <Box my={2} color={'gray.700'} h="1px" bg={variant === "infra" ? "#238b6f" : "tertiary.500"}></Box>
+                                <Box my={2} color={'gray.700'} h="1px" bg={getAccent(variant).solid}></Box>
                                 <Text color="gray.500" fontSize={{ base: "xs", md: "md" }}>
                                     {member.role}
                                 </Text>
