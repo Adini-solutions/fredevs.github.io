@@ -23,7 +23,9 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
     };
 
     const { ref, inView } = useInView({
-        threshold: 0.4,
+        // En celular las tarjetas van en carrusel y la siguiente sólo asoma:
+        // con un umbral bajo se muestra igual.
+        threshold: window.innerWidth < 768 ? 0.05 : 0.4,
         triggerOnce: true,
     });
 
@@ -34,15 +36,15 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-
+                w="100%"
+                maxW="md"
             >
                 <Flex
                     direction={"column"}
                     justifyContent={"space-between"}
                     transition="transform 0.2s ease-in-out"
                     w="100%"
-                    maxW="md"
-                    mb={5} p={4}
+                    mb={0} p={4}
                     borderRadius="md"
                     boxShadow="md"
                     bg={"white"}
@@ -55,11 +57,11 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
                     }}
                     onClick={open}
                 >
-                    <Flex justify="center" align="center" mb={3}>
-                        <Heading fontSize="2xl" textAlign={"center"} fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
+                    <Flex justify="center" align="center" mb={{ base: 3, md: 1, "2xl": 3 }}>
+                        <Heading fontSize={{ base: "2xl", md: "xl", "2xl": "2xl" }} textAlign={"center"} fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
                     </Flex>
                     <Box
-                        h="150px"
+                        h={{ base: "150px", md: "6.5rem", "2xl": "150px" }}
                         display="flex"
                         alignItems="center"
                         justifyContent="center"
@@ -74,7 +76,8 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
                         />
                     </Box>
                     <Box p={4} pb={0}>
-                        <Text fontSize="md" color="gray.700" mb={4}>{summary}</Text>
+                        {/* En celular y pantallas intermedias el resumen se corta: el detalle completo está en el modal. */}
+                        <Text fontSize="md" color="gray.700" mb={4} noOfLines={{ base: 7, md: 5, "2xl": 12 }}>{summary}</Text>
                     </Box>
                     <Flex
                         as="button"

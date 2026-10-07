@@ -72,9 +72,9 @@
         "descripcion": "Gestión integral de la infraestructura core que soporta las aplicaciones y servicios críticos del negocio, tanto en datacenters propios como en entornos cloud e híbridos.",
         "lista": [
           "Virtualización, cómputo y storage",
-          "Entornos Cloud e híbridos",
+          "Entornos cloud e híbridos",
           "Mantenimiento de datacenter",
-          "Alta disponibilidad y continuidad operativa"
+          "Alta disponibilidad"
         ],
         "detalles": [
           {
@@ -114,9 +114,9 @@
         "imagen": "/assets/icons/dataManage.svg",
         "descripcion": "Gestión integral de los datos del negocio, enfocada en su disponibilidad, integridad y recuperación ante incidentes para asegurar la continuidad operativa.",
         "lista": [
-          "Administración de bases de datos (DBA)",
-          "Respaldo y recuperación (Backup & DR)",
-          "Gestión de archivos y colaboración"
+          "Administración de bases de datos",
+          "Backup y recuperación (DR)",
+          "Archivos y colaboración"
         ],
         "detalles": [
           {
@@ -185,7 +185,7 @@
         "lista": [
           "Firewalls y seguridad perimetral",
           "Endpoint security",
-          "Gestión de identidad y accesos (IAM)",
+          "Identidad y accesos (IAM)",
           "Protección de activos digitales"
         ],
         "detalles": [
@@ -211,8 +211,8 @@
         "imagen": "/assets/icons/monitoring.svg",
         "descripcion": "Servicios de monitoreo y observabilidad que brindan visibilidad continua sobre la infraestructura y los sistemas, permitiendo detectar, alertar y anticipar incidentes antes de que impacten en el negocio.",
         "lista": [
-          "Monitoreo de disponibilidad y rendimiento",
-          "Gestión de alertas y capacidad",
+          "Disponibilidad y rendimiento",
+          "Alertas y capacidad",
           "Prevención de incidentes"
         ],
         "detalles": [
@@ -233,10 +233,10 @@
         "imagen": "/assets/icons/automation.svg",
         "descripcion": "Servicios orientados a optimizar y estandarizar la operación IT mediante automatización, soporte continuo y una gestión alineada a las normativas y políticas internas de cada organización.",
         "lista": [
-          "Estandarización y automatización operativa",
+          "Automatización operativa",
           "Soporte a aplicaciones de negocio",
           "Control de activos tecnológicos",
-          "Alineación con compliance y normativas internas"
+          "Compliance y normativas internas"
         ],
         "detalles": [
           {
@@ -304,11 +304,10 @@
         "titulo": "Desarrollo a Medida",
         "imagen": "/assets/icons/dev.svg",
         "lista": [
-          "Análisis y relevamiento de necesidades",
-          "Soluciones adaptadas a procesos del negocio",
-          "Funcionalidades personalizadas",
-          "Escalabilidad y mantenimiento evolutivo",
-          "Integración con sistemas existentes"
+          "Relevamiento y análisis de necesidades",
+          "Sistemas adaptados a cada proceso",
+          "Integración con sistemas existentes",
+          "Mantenimiento evolutivo"
         ],
         "detalles": [
           {
@@ -337,11 +336,10 @@
         "titulo": "Desarrollo Mobile",
         "imagen": "/assets/icons/mobileDev.svg",
         "lista": [
-          "Aplicaciones móviles Android e iOS",
-          "Apps híbridas y multiplataforma",
-          "Integración con APIs y servicios externos",
-          "Publicación en stores y soporte post-lanzamiento",
-          "Optimización de rendimiento y experiencia de usuario"
+          "Apps para Android e iOS",
+          "Desarrollo multiplataforma",
+          "Integración con APIs",
+          "Publicación en stores y soporte"
         ],
         "detalles": [
           {
@@ -371,9 +369,8 @@
         "imagen": "/assets/icons/landing.svg",
         "lista": [
           "Landing pages institucionales",
-          "Sitios web rápidos y autoadministrables",
-          "Optimización para dispositivos móviles",
-          "Integración con formularios y contacto",
+          "Sitios autoadministrables",
+          "Diseño adaptado a móviles",
           "Implementación rápida y de bajo costo"
         ],
         "detalles": [
@@ -398,11 +395,10 @@
         "titulo": "Implementación de Soluciones Open Source",
         "imagen": "/assets/icons/openSource.svg",
         "lista": [
-          "Selección de herramientas open source según el negocio",
-          "Instalación y configuración inicial",
-          "Personalización y ajustes funcionales",
-          "Integración con infraestructura existente",
-          "Capacitación básica y soporte"
+          "Selección de la herramienta adecuada",
+          "Instalación y configuración",
+          "Personalización e integración",
+          "Capacitación y soporte"
         ],
         "detalles": [
           {
@@ -431,12 +427,10 @@
         "titulo": "Servicios Complementarios",
         "imagen": "/assets/icons/supportDev.svg",
         "lista": [
-          "Optimización y mejoras de sistemas existentes",
-          "Refactors y mejoras de performance",
-          "Integración con APIs y servicios de terceros",
+          "Optimización y refactor de sistemas",
+          "Integración con APIs de terceros",
           "ETLs y procesamiento de datos",
-          "Soporte técnico y mantenimiento evolutivo",
-          "Consultoría para decisiones tecnológicas"
+          "Soporte y consultoría técnica"
         ],
         "detalles": [
           {
@@ -577,97 +571,25 @@
     "detalles": "Ver caso",
     "stacks": "Tecnologias Utilizadas",
     "proyectosWeb": {
-      "sia": {
-        "titulo": "Sistema Integrado de Aplicaciones",
-        "resumen": "Sistema institucional para la gestión centralizada de procesos administrativos y académicos de la UTN Buenos Aires. La plataforma optimiza la operación interna mediante una arquitectura escalable y segura, permitiendo la administración de usuarios, credenciales, comunicaciones y reportes, con control de accesos por roles y soporte para trabajo remoto.",
-        "descripcion": {
-          "titulo": "Proyecto",
-          "descripcion": "Es el sistema principal de la Universidad Tecnológica Nacional (UTN), Buenos Aires, Argentina. Diseñado para gestionar y optimizar diversos procesos administrativos y académicos. Construido sobre una moderna infraestructura de microservicios, el SIA combina escalabilidad, seguridad y flexibilidad para satisfacer las demandas de una institución de alto nivel.",
-          "funcionalidades": "Funcionalidades Principales",
-          "listaFuncionalidades": [
-            {
-              "titulo": "Integración con OAuth 2.0",
-              "descripcion": "Utiliza servicios de autenticación para la gestión de usuarios institucionales, asegurando una experiencia segura y centralizada."
-            },
-            {
-              "titulo": "Segmentación de roles",
-              "descripcion": "Los usuarios se agrupan por roles, lo que permite una personalización detallada del acceso a recursos y funcionalidades."
-            },
-            {
-              "titulo": "Escalabilidad controlada",
-              "descripcion": "El diseño modular y basado en microservicios permite que el sistema crezca de forma eficiente."
-            }
-          ],
-          "modulos": "Módulos del Sistema",
-          "listaModulos": [
-            {
-              "titulo": "Credencial Estudiantil",
-              "descripcion": "Permite a los alumnos visualizar su información académica y generar un QR verificable."
-            },
-            {
-              "titulo": "Gestión de Alias",
-              "descripcion": "Facilita la creación y eliminación de alias institucionales."
-            },
-            {
-              "titulo": "Gestión de Áreas",
-              "descripcion": "Administra grupos institucionales con autenticación segmentada."
-            },
-            {
-              "titulo": "Módulo de Traducciones",
-              "descripcion": "Optimiza los flujos de trabajo de traducción académica."
-            },
-            {
-              "titulo": "Envío de Difusiones",
-              "descripcion": "Comunicación masiva con listas predefinidas de destinatarios."
-            },
-            {
-              "titulo": "Gestión de Usuarios",
-              "descripcion": "Administración de usuarios, permisos y accesos."
-            },
-            {
-              "titulo": "Módulo de VPN",
-              "descripcion": "Acceso remoto a recursos mediante VPN."
-            },
-            {
-              "titulo": "Reporte de Incidencias",
-              "descripcion": "Seguimiento de problemas técnicos con la ticketera institucional."
-            }
-          ],
-          "conclusion": "El SIA es una herramienta clave para el funcionamiento eficiente de la UTN, diseñada para atender las necesidades de alumnos, docentes y personal administrativo.",
-          "link": "Link al Sitio"
-        }
+      "utenia": {
+        "titulo": "UtenIA",
+        "resumen": "Un agente de IA que responde con la documentación de la facultad y los datos del campus virtual de cada estudiante, con toda la inferencia en servidores propios."
       },
-      "ripAdmin": {
-        "titulo": "RIP Alive Admin",
-        "resumen": "Plataforma de administración diseñada para gestionar y escalar la operación de la aplicación móvil RIP Alive. Centraliza la gestión de usuarios, suscripciones, pagos y catálogos, facilitando el control operativo, la configuración comercial y la generación de acciones promocionales desde un único entorno.",
-        "descripcion": {
-          "titulo": "Proyecto",
-          "descripcion": "RIP Admin es una plataforma web diseñada para la gestión completa de los contenidos y usuarios de RIP Alive, ofreciendo a los administradores un control centralizado y eficiente sobre las funcionalidades y datos de la aplicación. Desarrollada con un enfoque en la productividad y la seguridad, RIP Admin asegura que la operación de la app sea fluida y adaptable a las necesidades de los usuarios finales.",
-          "funcionalidades": "Funcionalidades Principales",
-          "listaFuncionalidades": [
-            {
-              "titulo": "Gestión de Usuarios",
-              "descripcion": "Control detallado de las cuentas de usuarios, incluyendo la verificación de perfiles, manejo de suscripciones y validación de códigos de invitación. Posibilidad de suspender, habilitar o modificar accesos según sea necesario."
-            },
-            {
-              "titulo": "Control de Contenido",
-              "descripcion": "Administración de los datos y configuraciones disponibles para los usuarios en RIP Alive, incluyendo plantillas de legado, configuraciones de QR y preferencias de perfil."
-            },
-            {
-              "titulo": "Gestión de Productos",
-              "descripcion": "Administración y seguimiento de la tienda integrada en la aplicación."
-            },
-            {
-              "titulo": "Seguimiento de Actividades",
-              "descripcion": "Monitoreo de suscripciones activas, historial de pagos realizados a través de Mercado Pago, control del estado de los envíos de productos comprados desde la tienda y generación de reportes financieros."
-            },
-            {
-              "titulo": "Personalización de la Experiencia",
-              "descripcion": "Gestión de notificaciones y comunicaciones directas con los usuarios de la app."
-            }
-          ],
-          "conclusion": "RIP Admin es el núcleo operativo que asegura el correcto funcionamiento de RIP Alive, ofreciendo a los administradores herramientas robustas y adaptables para mantener una experiencia de usuario óptima y un sistema escalable. Proporciona una visión centralizada de toda la actividad en RIP Alive, simplificando la toma de decisiones, la resolución de problemas y facilitando tareas administrativas para una gestión eficiente de los datos y funcionalidades."
-        }
+      "aura": {
+        "titulo": "Aura",
+        "resumen": "Una plataforma de recupero de costos hospitalarios que valoriza informes con IA, completa cada expediente y lo sigue hasta el cobro, con los datos clínicos en servidores propios."
+      },
+      "sia": {
+        "titulo": "SIA",
+        "resumen": "El portal único de la facultad: un solo acceso a todos sus servicios, con credencial digital, recibos, comunicaciones masivas con seguimiento y soporte técnico integrados."
+      },
+      "sicyt": {
+        "titulo": "SICYT",
+        "resumen": "Proyectos de investigación, equipos y categorización de investigadores en una única plataforma, con el reglamento validado automáticamente."
+      },
+      "roca": {
+        "titulo": "ROCA",
+        "resumen": "La gestión integral de un laboratorio de suelos: pedidos, curvas de calibración, cálculos configurables por método e informes firmados, sin planillas intermedias."
       },
       "moviltrack": {
         "titulo": "Moviltrack Gestión",

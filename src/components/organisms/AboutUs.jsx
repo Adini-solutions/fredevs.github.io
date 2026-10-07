@@ -87,22 +87,27 @@ export default function AboutUs({ variant = "default" }) {
                 teamByVariant[variant]?.includes(member.id)
             );
 
+    // Reparte al equipo en filas parejas de hasta cinco, para que no queden
+    // uno o dos integrantes solos en la última (7 → 4 + 3, 6 → 3 + 3).
+    const rows = Math.ceil(filteredTeam.length / 5);
+    const perRow = Math.ceil(filteredTeam.length / rows);
+
     return (
         <>
-            <Title title={currentTitle.title} subtitle={currentTitle.subtitle} variant={variant} mt="60px" mb="60px" />
+            <Title title={currentTitle.title} subtitle={currentTitle.subtitle} variant={variant} mt="60px" mb="40px" />
 
             <Flex align="center" justify="center">
-                <Box maxW="1200px" textAlign="center" mx={{ base: "20px", md: "50px" }}>
-                    <Flex justify="center" wrap="wrap" gap={{ base: "50px", md: 20 }}>
+                <Box w="100%" maxW={{ base: "1200px", md: `${perRow * 15}rem` }} textAlign="center" mx={{ base: "20px", md: "50px" }}>
+                    <Flex justify="center" wrap="wrap" columnGap={{ base: "50px", md: 0 }} rowGap={{ base: "50px", md: 10, "2xl": 14 }}>
                         {filteredTeam.map((member, index) => (
-                            <Box key={index} textAlign="center">
-                                <Box position={"relative"}>
+                            <Box key={index} textAlign="center" w={{ md: `${100 / perRow}%` }} px={{ md: 2 }}>
+                                <Box position={"relative"} w="fit-content" mx="auto">
                                     <Image
                                         boxShadow="md"
                                         src={member.image}
                                         alt={member.name}
                                         borderRadius="full"
-                                        boxSize={{ base: "130px", md: "180px" }}
+                                        boxSize={{ base: "130px", md: "9.5rem", "2xl": "180px" }}
                                         mx="auto"
                                         mb={4}
                                         borderBottom="1px solid #091c30"
@@ -126,11 +131,11 @@ export default function AboutUs({ variant = "default" }) {
                                         </Box>
                                     </Link>
                                 </Box>
-                                <Text m={0} color={'gray.700'} fontWeight="bold" fontSize={{ base: "sm", md: "xl" }}>
+                                <Text m={0} color={'gray.700'} fontWeight="bold" fontSize={{ base: "sm", md: "lg", "2xl": "xl" }}>
                                     {member.name}
                                 </Text>
-                                <Box my={2} color={'gray.700'} h="1px" bg={variant === "infra" ? "#238b6f" : "tertiary.500"}></Box>
-                                <Text color="gray.500" fontSize={{ base: "xs", md: "md" }}>
+                                <Box my={2} mx="auto" maxW="11rem" color={'gray.700'} h="1px" bg={variant === "infra" ? "#238b6f" : "tertiary.500"}></Box>
+                                <Text color="gray.500" fontSize={{ base: "xs", md: "md" }} mb={{ base: 4, md: 0 }}>
                                     {member.role}
                                 </Text>
                             </Box>

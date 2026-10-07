@@ -2,6 +2,7 @@ import { Heading, Text, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { useBreakpointValue } from '@chakra-ui/react';
+import { rem } from '../../utils/escala';
 
 export default function Title({ title, subtitle, mt, mb, variant = "default" }) {
     const { ref, inView } = useInView({
@@ -18,8 +19,9 @@ export default function Title({ title, subtitle, mt, mb, variant = "default" }) 
             justify={{ base: "center", md: "left" }}
             textAlign={{ base: "center", md: "left" }}
             mx={{ base: "20px", md: "10%" }}
-            mb={mb}
-            mt={mt}
+            // Los márgenes llegan en px; en rem siguen la escala global.
+            mb={mb && rem(mb)}
+            mt={mt && rem(mt)}
             ref={ref}
         >
             <motion.div

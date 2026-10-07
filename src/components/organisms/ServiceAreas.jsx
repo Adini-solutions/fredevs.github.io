@@ -58,8 +58,8 @@ export default function ServiceAreas() {
       <div ref={ref}>
         <Flex
           justify="center"
-          gap={{ base: 8, xl: 10 }}
-          px={{ base: 8, md: 20 }}
+          gap={{ base: 5, md: 8, xl: 10 }}
+          px={{ base: 5, md: 20 }}
           direction={{ base: "column", md: "row" }}
           maxW="1600px"
           mx={"auto"}
@@ -77,7 +77,7 @@ export default function ServiceAreas() {
                 bg="white"
                 borderRadius="3xl"
                 boxShadow="lg"
-                p={{ base: 8, xl: 12 }}
+                p={{ base: 6, md: 8, "2xl": 12 }}
                 cursor="pointer"
                 onClick={() => navigateWithScroll(area.route)}
                 position="relative"
@@ -94,11 +94,11 @@ export default function ServiceAreas() {
                 display="flex"
                 flexDirection="column"
               >
-                <Flex align="center" mb={6} justify="space-between" zIndex="1">
+                <Flex align="center" mb={{ base: 4, "2xl": 6 }} justify="space-between" zIndex="1">
                   <Flex
                     align="center"
                     justify="center"
-                    boxSize="60px"
+                    boxSize={{ base: "3rem", md: "3.75rem" }}
                     borderRadius="2xl"
                     bg="gray.50"
                     color={area.accent}
@@ -130,7 +130,7 @@ export default function ServiceAreas() {
                   </Text>
                 </Flex>
 
-                <VStack align="start" spacing={4} flex="1" zIndex="1">
+                <VStack align="start" spacing={{ base: 2, "2xl": 4 }} flex="1" zIndex="1">
                   <Text
                     fontSize={{ base: "2xl", xl: "3xl" }}
                     fontWeight="800"
@@ -140,13 +140,13 @@ export default function ServiceAreas() {
                     {area.title}
                   </Text>
 
-                  <Text fontSize="lg" color="gray.600" lineHeight="1.6">
+                  <Text fontSize={{ base: "md", "2xl": "lg" }} color="gray.600" lineHeight="1.6" m={0}>
                     {area.description}
                   </Text>
                 </VStack>
 
                 <HStack
-                  mt={10}
+                  mt={{ base: 5, md: 6, "2xl": 10 }}
                   spacing={2}
                   color={area.accent}
                   fontWeight="bold"

@@ -27,6 +27,16 @@ const theme = extendTheme({
         scrollbarWidth: "thin",
         scrollbarColor: "#091c30 #f7f8ff",
       },
+      // Escala global: en tablets y notebooks de 13" el tamaño base baja a
+      // 14px y vuelve a 16px de forma gradual entre 1280 y 1536px de ancho.
+      // Como el sitio mide casi todo en rem, tipografía, espaciados y
+      // tarjetas se achican juntos. El celular y las pantallas grandes no
+      // cambian.
+      "@media (min-width: 768px)": {
+        html: {
+          fontSize: "clamp(14px, calc(14px + (100vw - 1280px) * 0.0078125), 16px)",
+        },
+      },
     },
   },
   colors: {

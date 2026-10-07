@@ -60,11 +60,11 @@ export default function Footer({ variant = "default" }) {
     return (
         <Box bg="primary.500" color="gray.400" mt={"70px"} pt={12} px={{ base: 6, md: 20 }}>
             <Grid
-                templateColumns={{ base: "1fr", md: "2fr 1fr 1fr 1fr" }}
-                gap={10}
+                templateColumns={{ base: "1fr 1fr", md: "2fr 1fr 1fr 1fr" }}
+                gap={{ base: 8, md: 10 }}
                 textAlign={{ base: "center", md: "left" }}
             >
-                <GridItem>
+                <GridItem colSpan={{ base: 2, md: 1 }}>
                     <Text fontSize="2xl" color="white" fontFamily="Poppins, sans-serif">
                         {information.name}
                     </Text>
@@ -73,7 +73,7 @@ export default function Footer({ variant = "default" }) {
                     </Text>
                 </GridItem>
 
-                <Divider display={{ base: "inherit", md: "none" }} opacity={.2} my={0} />
+                <Divider display={{ base: "inherit", md: "none" }} gridColumn="1 / -1" opacity={.2} my={0} />
 
                 <GridItem>
                     <Text fontWeight="bold" color="white" mb={3}>{t("footer.empresa.titulo")}</Text>
@@ -107,7 +107,7 @@ export default function Footer({ variant = "default" }) {
                     </VStack>
                 </GridItem>
 
-                <GridItem>
+                <GridItem colSpan={{ base: 2, md: 1 }}>
                     <Text fontWeight="bold" color="white" mb={3}>{t("footer.redes.titulo")}</Text>
                     <HStack justify={{ base: "center", md: "start" }} spacing={4}>
                         <Link href={information.instagram} isExternal>

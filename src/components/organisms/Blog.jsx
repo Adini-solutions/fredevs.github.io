@@ -11,6 +11,7 @@ import {
   Button,
   Link
 } from '@chakra-ui/react';
+import Carrusel from "../molecules/Carrusel";
 import Article from '../molecules/Article';
 import Title from '../molecules/Title';
 import { useTranslation } from 'react-i18next';
@@ -52,7 +53,7 @@ export default function Blog() {
       >
         <Container maxW="container.xl">
           <Flex
-            mb={12}
+            mb={{ base: 8, md: 12 }}
             direction="column"
             gap={4}
           >
@@ -106,17 +107,19 @@ export default function Blog() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
               >
-                <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-                  {articles.map(article => (
-                    <Article key={article.id} article={article} />
-                  ))}
+                <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 0, md: 10 }}>
+                  <Carrusel px={0} color="#b794f4" inactive="whiteAlpha.400">
+                    {articles.map(article => (
+                      <Article key={article.id} article={article} />
+                    ))}
+                  </Carrusel>
                 </SimpleGrid>
               </motion.div>
 
               <Flex
                 justify="center"
                 display={{ base: "flex", md: 'none' }}
-                mt={12}
+                mt={8}
               >
                 <Button
                   as={Link}

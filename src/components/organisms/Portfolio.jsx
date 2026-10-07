@@ -1,129 +1,25 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import Title from "../molecules/Title";
 import Proyect from "../molecules/Proyect";
+import Carrusel from "../molecules/Carrusel";
 import { useTranslation } from "react-i18next";
 import { storyUrl } from "../../utils/stories";
 
 export default function Portfolio() {
     const { t } = useTranslation();
 
+    // Casos con página propia en stories.adini.com.ar: la tarjeta muestra el
+    // logo del sistema y abre el caso en vez del modal. El orden es el de
+    // la grilla. Los que no tienen caso (Moviltrack) siguen con su modal.
+    const storyProjects = ["utenia", "aura", "sia", "sicyt", "roca"].map((slug) => ({
+        logo: `/assets/portfolio/${slug}/logo.png`,
+        href: storyUrl(slug),
+        title: t(`portfolio.proyectosWeb.${slug}.titulo`),
+        summary: t(`portfolio.proyectosWeb.${slug}.resumen`),
+    }));
+
     const webProjects = [
-        {
-            logo: "/assets/portfolio/sia/logo.png",
-            imgs: [
-                '/assets/portfolio/sia/Home.png',
-                '/assets/portfolio/sia/Home 2.png',
-                '/assets/portfolio/sia/Alias.png',
-                '/assets/portfolio/sia/Alta de Usuarios.png',
-                '/assets/portfolio/sia/Areas.png',
-                '/assets/portfolio/sia/Credencial.png',
-                '/assets/portfolio/sia/Difusiones.png',
-                '/assets/portfolio/sia/Ticketera.png',
-                '/assets/portfolio/sia/Traducciones.png',
-                '/assets/portfolio/sia/Usuarios.png',
-                '/assets/portfolio/sia/VPN.png',
-            ],
-            tecnologies: [
-                { name: "React", path: "/assets/icons/react.webp" },
-                { name: "Node.js", path: "/assets/icons/node.webp" },
-                { name: "CSS3", path: "/assets/icons/css.webp" },
-                { name: "Material UI", path: "/assets/icons/material.webp" },
-                { name: "SQL", path: "/assets/icons/sql.webp" },
-                { name: "JavaScript", path: "/assets/icons/js.webp" },
-                { name: "Docker", path: "/assets/icons/docker.webp" },
-                { name: "PHP", path: "/assets/icons/php.webp" },
-                { name: "HTML5", path: "/assets/icons/html.webp" },
-                { name: "Doctrine", path: "/assets/icons/doctrine.webp" },
-                { name: "Sequelize", path: "/assets/icons/sequelize.webp" },
-                { name: "Express", path: "/assets/icons/express.webp" },
-            ],
-            // SIA tiene su caso completo en stories: la tarjeta lleva ahí.
-            href: storyUrl("sia"),
-            title: t("portfolio.proyectosWeb.sia.titulo"),
-            summary: t("portfolio.proyectosWeb.sia.resumen"),
-            description:
-                (
-                    <div>
-                        <h4>{t("portfolio.proyectosWeb.sia.descripcion.titulo")}</h4>
-                        <br />
-                        <p>{t("portfolio.proyectosWeb.sia.descripcion.descripcion")}</p>
-                        <br />
-                        <h4>{t("portfolio.proyectosWeb.sia.descripcion.funcionalidades")}</h4>
-                        <br />
-                        <ul>
-                            {t("portfolio.proyectosWeb.sia.descripcion.listaFuncionalidades", { returnObjects: true }).map((func, index) => (
-                                <li key={index}>
-                                    <strong>{func.titulo}:</strong> {func.descripcion}
-                                </li>
-                            ))}
-                        </ul>
-                        <br />
-                        <h4>{t("portfolio.proyectosWeb.sia.descripcion.modulos")}</h4>
-                        <br />
-                        <ul>
-                            {t("portfolio.proyectosWeb.sia.descripcion.listaModulos", { returnObjects: true }).map((func, index) => (
-                                <li key={index}>
-                                    <strong>{func.titulo}:</strong> {func.descripcion}
-                                </li>
-                            ))}
-                        </ul>
-                        <br />
-                        <p>{t("portfolio.proyectosWeb.sia.descripcion.conclusion")}
-                        </p>
-                        <p>
-                            {t("portfolio.proyectosWeb.sia.descripcion.link")}
-                            <a href="https://sia.frba.utn.edu.ar/" target="_blank" rel="noopener noreferrer" style={{ color: "blue" }}> sia.frba.utn.edu.ar</a>
-                        </p>
-                    </div >
-                )
-        },
-        {
-            logo: "/assets/portfolio/rip-admin/logo.png",
-            imgs: [
-                '/assets/portfolio/rip-admin/RIP Admin 1.png',
-                '/assets/portfolio/rip-admin/RIP Admin 2.png',
-                '/assets/portfolio/rip-admin/RIP Admin 3.png',
-                '/assets/portfolio/rip-admin/RIP Admin 4.png',
-                '/assets/portfolio/rip-admin/RIP Admin 5.png',
-                '/assets/portfolio/rip-admin/RIP Admin 6.png',
-                '/assets/portfolio/rip-admin/RIP Admin 7.png',
-                '/assets/portfolio/rip-admin/RIP Admin 8.png',
-                '/assets/portfolio/rip-admin/RIP Admin 9.png',
-            ],
-            tecnologies: [
-                { name: "React", path: "/assets/icons/react.webp" },
-                { name: "Node.js", path: "/assets/icons/node.webp" },
-                { name: "CSS3", path: "/assets/icons/css.webp" },
-                { name: "Chakra UI", path: "/assets/icons/chakra.webp" },
-                { name: "JavaScript", path: "/assets/icons/js.webp" },
-                { name: "MongoDB", path: "/assets/icons/mongo.webp" },
-                { name: "HTML5", path: "/assets/icons/html.webp" },
-                { name: "Express", path: "/assets/icons/express.webp" },
-            ],
-            title: t("portfolio.proyectosWeb.ripAdmin.titulo"),
-            summary: t("portfolio.proyectosWeb.ripAdmin.resumen"),
-            description:
-                (
-                    <div>
-                        <h4>{t("portfolio.proyectosWeb.ripAdmin.descripcion.titulo")}</h4>
-                        <br />
-                        <p>{t("portfolio.proyectosWeb.ripAdmin.descripcion.descripcion")}</p>
-                        <br />
-                        <h4>{t("portfolio.proyectosWeb.ripAdmin.descripcion.funcionalidades")}</h4>
-                        <br />
-                        <ul>
-                            {t("portfolio.proyectosWeb.ripAdmin.descripcion.listaFuncionalidades", { returnObjects: true }).map((func, index) => (
-                                <li key={index}>
-                                    <strong>{func.titulo}:</strong> {func.descripcion}
-                                </li>
-                            ))}
-                        </ul>
-                        <br />
-                        <p>{t("portfolio.proyectosWeb.ripAdmin.descripcion.conclusion")}
-                        </p>
-                    </div>
-                )
-        },
+        ...storyProjects,
         {
             logo: "/assets/portfolio/moviltrack/logo.png",
             imgs: [
@@ -334,22 +230,26 @@ export default function Portfolio() {
 
     return (
         <>
-            <Title title={t("portfolio.titulo")} subtitle={t("portfolio.subtitulo")} mt="130px" mb="40px" />
+            <Title title={t("portfolio.titulo")} subtitle={t("portfolio.subtitulo")} mt="130px" mb="20px" />
 
             <Box maxW="10xl" mx="auto" px={6}>
-                <Heading textAlign="center" fontWeight={0} fontFamily="Poppins, sans-serif" fontSize={{ base: "2xl", xl: "3xl" }} my={12} color="primary.500">{t("portfolio.web")}</Heading>
-                <Flex justify="center" wrap="wrap" gap={{ base: "40px", md: "60px" }}>
-                    {webProjects.map((project, index) => (
-                        <Proyect key={index} tecnologies={project.tecnologies} logo={project.logo} imgs={project.imgs} title={project.title} description={project.description} summary={project.summary} href={project.href} />
-                    ))}
-                </Flex>
+                <Heading textAlign="center" fontWeight={0} fontFamily="Poppins, sans-serif" fontSize={{ base: "2xl", "2xl": "3xl" }} my={{ base: 8, "2xl": 12 }} color="primary.500">{t("portfolio.web")}</Heading>
+                <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={{ base: 0, md: 6, "2xl": "60px" }} justifyItems="center" maxW="1500px" mx="auto">
+                    <Carrusel px={0}>
+                        {webProjects.map((project, index) => (
+                            <Proyect key={index} tecnologies={project.tecnologies} logo={project.logo} imgs={project.imgs} title={project.title} description={project.description} summary={project.summary} href={project.href} />
+                        ))}
+                    </Carrusel>
+                </SimpleGrid>
 
-                <Heading textAlign="center" fontWeight={0} fontFamily="Poppins, sans-serif" fontSize={{ base: "2xl", xl: "3xl" }} my={12} color="primary.500">{t("portfolio.movil")}</Heading>
-                <Flex justify="center" wrap="wrap" gap={{ base: "40px", md: "60px" }}>
-                    {mobileProjects.map((project, index) => (
-                        <Proyect key={index} tecnologies={project.tecnologies} logo={project.logo} imgs={project.imgs} description={project.description} title={project.title} summary={project.summary} mobile={true} />
-                    ))}
-                </Flex>
+                <Heading textAlign="center" fontWeight={0} fontFamily="Poppins, sans-serif" fontSize={{ base: "2xl", "2xl": "3xl" }} my={{ base: 8, "2xl": 12 }} color="primary.500">{t("portfolio.movil")}</Heading>
+                <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={{ base: 0, md: 6, "2xl": "60px" }} justifyItems="center" maxW="1500px" mx="auto">
+                    <Carrusel px={0}>
+                        {mobileProjects.map((project, index) => (
+                            <Proyect key={index} tecnologies={project.tecnologies} logo={project.logo} imgs={project.imgs} description={project.description} title={project.title} summary={project.summary} mobile={true} />
+                        ))}
+                    </Carrusel>
+                </SimpleGrid>
             </Box>
         </>
     );

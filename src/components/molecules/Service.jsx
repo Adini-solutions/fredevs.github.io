@@ -15,16 +15,19 @@ export default function Service({ service, variant }) {
         role="group"
         position="relative"
         onClick={onOpen}
-        p={6}
-        pb={10}
+        // El padding inferior va aparte y fijo: reserva el lugar del "Ver más".
+        px={{ base: 6, md: 5, "2xl": 6 }}
+        pt={{ base: 6, md: 5, "2xl": 6 }}
+        pb={14}
         boxShadow="lg"
         borderRadius="md"
         bg="linear-gradient(to top, white, #f7f8ff)"
         borderLeft={"1px solid #f3f3f3"}
         borderRight={"1px solid #f3f3f3"}
-        w={{ base: "330px", "2xl": "380px" }}
+        w={{ base: "100%", md: "19rem", "2xl": "380px" }}
+        maxW={{ base: "330px", md: "none" }}
         textAlign="center"
-        mb={"80px"}
+        mb={{ base: 0, "2xl": "80px" }}
         borderBottom={variant === "infra" ? "4px solid #238b6f" : "4px solid #6c63ff"}
         transition="transform 0.2s ease-in-out"
         _hover={{
@@ -39,13 +42,13 @@ export default function Service({ service, variant }) {
           <img
             src={service.imagen}
             alt={service.titulo}
-            style={{ marginTop: "-130px", width: "90%", borderRadius: "8px" }}
+            style={{ marginTop: "-8.125rem", width: "90%", borderRadius: "8px" }}
           />
         </Flex>
-        <Heading textAlign={"left"} mt={8} mb={6} color="gray.700" size="md">
+        <Heading textAlign={"left"} mt={{ base: 8, md: 5, "2xl": 8 }} mb={{ base: 6, md: 4, "2xl": 6 }} color="gray.700" size="md">
           {service.titulo}
         </Heading>
-        <List p={0} spacing={2} textAlign="left" color="gray.700">
+        <List p={0} m={0} spacing={{ base: 2, md: 1.5, "2xl": 2 }} textAlign="left" color="gray.700">
           {service.lista.map((item, idx) => (
             <ListItem key={idx}>
               <ListIcon mb={1} as={CheckCircleIcon} color={variant === "infra" ? "#238b6f" : "tertiary.500"} />

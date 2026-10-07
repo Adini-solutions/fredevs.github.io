@@ -43,7 +43,10 @@ export default function Header({ variant = "default" }) {
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      const section2Offset = 860;
+      // El header pasa a blanco cuando termina el banner, cuyo alto depende
+      // de la pantalla.
+      const banner = document.getElementById("inicio");
+      const section2Offset = banner ? banner.offsetHeight - 80 : 860;
 
       if (scrollY >= section2Offset) {
         setBackgroundColor('white');
@@ -132,7 +135,7 @@ export default function Header({ variant = "default" }) {
           </Flex>
         </Flex>
 
-        <Flex display={{ base: "none", xl: "flex" }} gap={12} fontSize="md">
+        <Flex display={{ base: "none", xl: "flex" }} gap={{ xl: 4, "2xl": 12 }} fontSize="md" whiteSpace="nowrap">
 
           {menuItems.map((section) => (
             <Text color={itemsColor} key={section} as="button" onClick={() => scrollToSection(section)} p="8px" _hover={{

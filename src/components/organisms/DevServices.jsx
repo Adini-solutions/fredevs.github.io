@@ -3,6 +3,7 @@ import Title from "../molecules/Title";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Service from "../molecules/Service";
+import Carrusel from "../molecules/Carrusel";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -25,14 +26,25 @@ export default function DevServices({ variant = "default" }) {
       >
         <Flex
           justify="center"
-          gap={{ base: 12, xl: 20 }}
+          gap={{ base: 12, "2xl": 20 }}
+          // En pantallas intermedias la separación entre filas contempla la
+          // ilustración, que sobresale unos 7rem por encima de cada tarjeta.
+          columnGap={{ base: 12, md: 12, "2xl": 20 }}
+          rowGap={{ base: 0, md: "10.5rem", "2xl": 20 }}
+          mb={{ base: 16, "2xl": 0 }}
           wrap="wrap"
-          maxWidth={"1700px"}
+          // Son cinco tarjetas: el ancho máximo deja tres por fila (3 + 2) y
+          // evita que quede una sola en la segunda.
+          maxWidth={{ base: "1700px", md: "66rem", "2xl": "1700px" }}
           mx="auto"
         >
-          {devServices.map((service, index) => (
-            <Service key={index} service={service} variant={variant} />
-          ))}
+          {/* En celular las tarjetas van en carrusel; el margen negativo
+              compensa el lugar que se reserva arriba para la ilustración. */}
+          <Carrusel pt="120px" mt="-110px">
+            {devServices.map((service, index) => (
+              <Service key={index} service={service} variant={variant} />
+            ))}
+          </Carrusel>
         </Flex>
       </motion.div>
     </>

@@ -103,7 +103,7 @@ export default function Contact({ variant = "default" }) {
           <Flex alignItems="center" justifyContent="left">
             <Box
               bg="white"
-              p={8}
+              p={{ base: 8, md: 6, "2xl": 8 }}
               pl={{ base: 8, lg: "15%" }}
               borderRadius={{ base: "none", lg: "md" }}
               borderTopLeftRadius={"none"}
@@ -111,7 +111,7 @@ export default function Contact({ variant = "default" }) {
               boxShadow="md"
               w={"100%"}
             >
-              <Flex alignItems="center" mb={6}>
+              <Flex alignItems="center" mb={{ base: 6, md: 4, "2xl": 6 }}>
                 <Icon as={HiMail} boxSize={8} color={variant === "infra" ? "#238b6f" : "#6c63ff"} mr={4} />
                 <Text my={0} fontSize="xl" fontWeight="bold" color="primary.500">
                   {t("contact.descripcion")}
@@ -119,7 +119,7 @@ export default function Contact({ variant = "default" }) {
               </Flex>
 
               <form onSubmit={handleSubmit}>
-                <VStack spacing={4} align="stretch">
+                <VStack spacing={{ base: 4, md: 3, "2xl": 4 }} align="stretch">
                   <Input
                     placeholder={t("contact.nombreInput")}
                     value={name}
@@ -167,7 +167,7 @@ export default function Contact({ variant = "default" }) {
                     color="primary.500"
                     resize="vertical"
                     maxHeight="200px"
-                    minHeight="150px"
+                    minHeight={{ base: "150px", md: "6.5rem", "2xl": "150px" }}
                     border="2px solid #e0e0e0"
                     _focus={{ borderColor: variant === "infra" ? "#238b6f" : "#6c63ff" }}
                     _placeholder={{ color: "#999999" }}
@@ -219,7 +219,7 @@ export default function Contact({ variant = "default" }) {
           </Flex>
         </motion.div>
         <Flex display={{ base: "none", lg: "inherit" }} align={"center"} justify={"center"}>
-          <Box mx={{ base: "40px", "2xl": "120px" }} w={{ base: 350, xl: 400 }}>
+          <Box mx={{ base: "40px", "2xl": "120px" }} w={{ base: "19rem", "2xl": 400 }}>
             <Image src="/assets/icons/contact.svg" />
           </Box>
         </Flex>

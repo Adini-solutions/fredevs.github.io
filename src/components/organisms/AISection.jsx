@@ -131,13 +131,13 @@ export default function AISection() {
                             animate={inView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
                         >
-                            <SimpleGrid columns={{ base: 1, sm: 2 }} spacing={4}>
+                            <SimpleGrid columns={2} spacing={{ base: 3, sm: 4 }}>
                                 {Array.isArray(capabilities) &&
                                     capabilities.map((cap, i) => (
                                         <HStack
                                             key={i}
-                                            spacing={3}
-                                            p={4}
+                                            spacing={{ base: 2, sm: 3 }}
+                                            p={{ base: 3, sm: 4 }}
                                             borderRadius="xl"
                                             bg="rgba(255,255,255,0.04)"
                                             border="1px solid rgba(255,255,255,0.08)"
@@ -164,7 +164,7 @@ export default function AISection() {
                                             </Box>
                                             <Text
                                                 m={0}
-                                                fontSize={{ base: "sm", sm: "md" }}
+                                                fontSize={{ base: "xs", sm: "md" }}
                                                 fontWeight="600"
                                                 lineHeight="1.3"
                                                 color={"white"}

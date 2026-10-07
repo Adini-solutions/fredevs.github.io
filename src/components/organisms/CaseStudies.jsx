@@ -43,11 +43,11 @@ export default function CaseStudies() {
 
       <Box
         as="section"
-        maxW="1280px"
+        maxW="80rem"
         mx="auto"
         px={{ base: "15px", md: "60px", }}
       >
-        <Stack spacing={{ base: 14, lg: 20 }}>
+        <Stack spacing={{ base: 14, lg: 12, "2xl": 20 }}>
           {caseStudies.map((study, index) => (
             <CaseStudyItem
               key={study.slug}
@@ -57,7 +57,7 @@ export default function CaseStudies() {
           ))}
         </Stack>
 
-        <Flex justify="center" mt={{ base: 12, lg: 16 }}>
+        <Flex justify="center" mt={{ base: 12, lg: 10, "2xl": 16 }}>
           <Button
             as="a"
             href={STORIES_URL}

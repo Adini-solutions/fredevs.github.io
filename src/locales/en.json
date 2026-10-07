@@ -74,7 +74,7 @@
           "Virtualization, compute and storage",
           "Cloud and hybrid environments",
           "Datacenter maintenance",
-          "High availability and operational continuity"
+          "High availability"
         ],
         "detalles": [
           {
@@ -114,9 +114,9 @@
         "imagen": "/assets/icons/dataManage.svg",
         "descripcion": "Comprehensive business data management, focused on availability, integrity, and incident recovery to ensure operational continuity.",
         "lista": [
-          "Database administration (DBA)",
-          "Backup and disaster recovery (Backup & DR)",
-          "File management and collaboration"
+          "Database administration",
+          "Backup and recovery (DR)",
+          "Files and collaboration"
         ],
         "detalles": [
           {
@@ -185,7 +185,7 @@
         "lista": [
           "Firewalls and perimeter security",
           "Endpoint security",
-          "Identity and access management (IAM)",
+          "Identity and access (IAM)",
           "Digital asset protection"
         ],
         "detalles": [
@@ -211,8 +211,8 @@
         "imagen": "/assets/icons/monitoring.svg",
         "descripcion": "Monitoring and observability services providing continuous visibility into infrastructure and systems, enabling detection, alerting, and anticipation of incidents before they impact the business.",
         "lista": [
-          "Availability and performance monitoring",
-          "Alerting and capacity management",
+          "Availability and performance",
+          "Alerting and capacity",
           "Incident prevention"
         ],
         "detalles": [
@@ -233,10 +233,10 @@
         "imagen": "/assets/icons/automation.svg",
         "descripcion": "Services aimed at optimizing and standardizing IT operations through automation, continuous support, and management aligned with each organization's internal regulations and policies.",
         "lista": [
-          "Standardization and operational automation",
+          "Operational automation",
           "Business application support",
           "Technology asset control",
-          "Alignment with compliance and internal regulations"
+          "Compliance and internal policies"
         ],
         "detalles": [
           {
@@ -304,11 +304,10 @@
         "titulo": "Custom Development",
         "imagen": "/assets/icons/dev.svg",
         "lista": [
-          "Requirements analysis and assessment",
-          "Solutions adapted to business processes",
-          "Custom functionalities",
-          "Scalability and evolutionary maintenance",
-          "Integration with existing systems"
+          "Requirements discovery and analysis",
+          "Systems tailored to each process",
+          "Integration with existing systems",
+          "Ongoing maintenance"
         ],
         "detalles": [
           {
@@ -337,11 +336,10 @@
         "titulo": "Mobile Development",
         "imagen": "/assets/icons/mobileDev.svg",
         "lista": [
-          "Android and iOS mobile applications",
-          "Hybrid and cross-platform apps",
-          "Integration with APIs and external services",
-          "Store publication and post-launch support",
-          "Performance optimization and user experience"
+          "Android and iOS apps",
+          "Cross-platform development",
+          "API integration",
+          "Store publishing and support"
         ],
         "detalles": [
           {
@@ -371,10 +369,9 @@
         "imagen": "/assets/icons/landing.svg",
         "lista": [
           "Institutional landing pages",
-          "Fast and self-manageable websites",
-          "Mobile optimization",
-          "Form and contact integration",
-          "Quick and cost-effective implementation"
+          "Self-managed websites",
+          "Mobile-friendly design",
+          "Fast, low-cost implementation"
         ],
         "detalles": [
           {
@@ -398,11 +395,10 @@
         "titulo": "Open Source Solutions Implementation",
         "imagen": "/assets/icons/openSource.svg",
         "lista": [
-          "Selection of open source tools according to business needs",
-          "Installation and initial configuration",
-          "Customization and functional adjustments",
-          "Integration with existing infrastructure",
-          "Basic training and support"
+          "Choosing the right tool",
+          "Installation and configuration",
+          "Customization and integration",
+          "Training and support"
         ],
         "detalles": [
           {
@@ -431,12 +427,10 @@
         "titulo": "Complementary Services",
         "imagen": "/assets/icons/supportDev.svg",
         "lista": [
-          "Optimization and improvements of existing systems",
-          "Refactors and performance enhancements",
-          "Integration with APIs and third-party services",
+          "System optimization and refactoring",
+          "Third-party API integration",
           "ETLs and data processing",
-          "Technical support and evolutionary maintenance",
-          "Consulting for technological decisions"
+          "Technical support and consulting"
         ],
         "detalles": [
           {
@@ -577,97 +571,25 @@
     "detalles": "See case",
     "stacks": "Used Stacks",
     "proyectosWeb": {
-      "sia": {
-        "titulo": "Integrated Applications System",
-        "resumen": "Institutional platform designed for the centralized management of administrative and academic processes at UTN Buenos Aires. The system enhances internal operations through a secure and scalable architecture, enabling user and credential management, internal communications, reporting, role-based access control, and support for remote work.",
-        "descripcion": {
-          "titulo": "Project",
-          "descripcion": "This is the main system of the National Technological University (UTN), Buenos Aires, Argentina. Designed to manage and optimize various administrative and academic processes. Built on a modern microservices infrastructure, SIA combines scalability, security, and flexibility to meet the demands of a high-level institution.",
-          "funcionalidades": "Main Features",
-          "listaFuncionalidades": [
-            {
-              "titulo": "OAuth 2.0 Integration",
-              "descripcion": "Uses authentication services for institutional user management, ensuring a secure and centralized experience."
-            },
-            {
-              "titulo": "Role Segmentation",
-              "descripcion": "Users are grouped by roles, allowing detailed customization of access to resources and functionalities."
-            },
-            {
-              "titulo": "Controlled Scalability",
-              "descripcion": "The modular and microservices-based design allows the system to grow efficiently."
-            }
-          ],
-          "modulos": "System Modules",
-          "listaModulos": [
-            {
-              "titulo": "Student Credential",
-              "descripcion": "Allows students to view their academic information and generate a verifiable QR code."
-            },
-            {
-              "titulo": "Alias Management",
-              "descripcion": "Facilitate the creation and elimination of institutional aliases."
-            },
-            {
-              "titulo": "Area Management",
-              "descripcion": "Manages institutional groups with segmented authentication."
-            },
-            {
-              "titulo": "Translations Module",
-              "descripcion": "Optimizes academic translation workflows."
-            },
-            {
-              "titulo": "Broadcast Sending",
-              "descripcion": "Mass communication with predefined recipient lists."
-            },
-            {
-              "titulo": "User Management",
-              "descripcion": "Manages users, permissions, and access."
-            },
-            {
-              "titulo": "VPN Module",
-              "descripcion": "Remote access to resources via VPN."
-            },
-            {
-              "titulo": "Incident Reporting",
-              "descripcion": "Tracks technical issues with the institutional ticketing system."
-            }
-          ],
-          "conclusion": "SIA is a key tool for the efficient operation of UTN, designed to meet the needs of students, teachers, and administrative staff.",
-          "link": "Website Link"
-        }
+      "utenia": {
+        "titulo": "UtenIA",
+        "resumen": "An AI agent that answers with the university's documentation and each student's virtual campus data, with all inference running on in-house servers."
       },
-      "ripAdmin": {
-        "titulo": "RIP Alive Admin",
-        "resumen": "Administration platform designed to manage and scale the operation of the RIP Alive mobile application. It centralizes user management, subscriptions, payments, and catalogs, enabling efficient operational control, commercial configuration, and the creation of promotional actions from a single environment.",
-        "descripcion": {
-          "titulo": "Project",
-          "descripcion": "RIP Admin is a web platform designed for complete management of content and users in RIP Alive, providing administrators with centralized and efficient control over the app's functionalities and data. Developed with a focus on productivity and security, RIP Admin ensures that the app operates smoothly and is adaptable to end users' needs.",
-          "funcionalidades": "Main Features",
-          "listaFuncionalidades": [
-            {
-              "titulo": "User Management",
-              "descripcion": "Detailed control of user accounts, including profile verification, subscription management, and invitation code validation. Ability to suspend, enable, or modify access as needed."
-            },
-            {
-              "titulo": "Content Control",
-              "descripcion": "Management of data and settings available to users in RIP Alive, including legacy templates, QR code settings, and profile preferences."
-            },
-            {
-              "titulo": "Product Management",
-              "descripcion": "Management and tracking of the store integrated within the application."
-            },
-            {
-              "titulo": "Activity Tracking",
-              "descripcion": "Monitoring of active subscriptions, payment history via Mercado Pago, control of the status of shipped products from the store, and generating financial reports."
-            },
-            {
-              "titulo": "User Experience Personalization",
-              "descripcion": "Management of notifications and direct communication with app users."
-            }
-          ],
-          "conclusion": "RIP Admin is the operational core that ensures the proper functioning of RIP Alive, providing administrators with robust and adaptable tools to maintain an optimal user experience and a scalable system. It offers a centralized view of all activities in RIP Alive, simplifying decision-making, problem-solving, and facilitating administrative tasks for efficient data and functionality management."
-        }
+      "aura": {
+        "titulo": "Aura",
+        "resumen": "A hospital cost-recovery platform that prices lab reports with AI, completes every case file and tracks it through to payment, keeping clinical data on in-house servers."
+      },
+      "sia": {
+        "titulo": "SIA",
+        "resumen": "The university's single portal: one login for every service, with digital ID, payslips, tracked mass communications and technical support built in."
+      },
+      "sicyt": {
+        "titulo": "SICYT",
+        "resumen": "Research projects, teams and researcher categorization on a single platform, with the regulations validated automatically."
+      },
+      "roca": {
+        "titulo": "ROCA",
+        "resumen": "End-to-end management of a soil laboratory: orders, calibration curves, calculations configurable per method and signed reports, with no spreadsheets in between."
       },
       "moviltrack": {
         "titulo": "Moviltrack Management",
