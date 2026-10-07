@@ -40,17 +40,21 @@ const UTN_CASES = [
 
 /**
  * Otros clientes. Los logos son los mismos que usa el portal de propuestas
- * (`resumen/public/clients/`). Se muestran a color y sin link. Para sumar
- * uno, dejá el archivo en `public/assets/clients/` y agregalo acá.
+ * (`resumen/public/clients/`), más los de Hospital El Cruce y Moviltrack. Se
+ * muestran a color y sin link, cada uno centrado en una celda del mismo
+ * tamaño. `h` es el alto del logo: se ajusta a mano para que todos pesen
+ * parecido, porque sus proporciones son muy distintas. Para sumar uno, dejá
+ * el archivo en `public/assets/clients/` y agregalo acá.
  */
 const CLIENTS = [
-  { name: "Improveet", logo: "/assets/clients/improveet.png" },
-  { name: "Universidad de Buenos Aires", logo: "/assets/clients/uba.png" },
-  { name: "Be Water", logo: "/assets/clients/be-water.png" },
-  { name: "The Brains", logo: "/assets/clients/the-brains.png" },
-  // Pendientes hasta tener sus logos:
-  // { name: "Hospital El Cruce", logo: "/assets/clients/hospital-el-cruce.png" },
-  // { name: "Química Morón", logo: "/assets/clients/quimica-moron.png" },
+  { name: "Universidad de Buenos Aires", logo: "/assets/clients/uba.png", h: "1.75rem" },
+  { name: "Hospital El Cruce", logo: "/assets/clients/hospital-el-cruce.png", h: "3rem" },
+  { name: "Moviltrack", logo: "/assets/clients/moviltrack.png", h: "1.15rem" },
+  { name: "Improveet", logo: "/assets/clients/improveet.png", h: "1.25rem" },
+  { name: "Be Water", logo: "/assets/clients/be-water.png", h: "2rem" },
+  { name: "The Brains", logo: "/assets/clients/the-brains.png", h: "1.6rem" },
+  // Pendiente hasta tener su logo:
+  // { name: "Química Morón", logo: "/assets/clients/quimica-moron.png", h: "2rem" },
 ];
 
 /**
@@ -63,7 +67,7 @@ export default function TrustedBy() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <Box as="section" maxW="1280px" mx="auto" px={{ base: "15px", md: "60px" }} mt={{ base: 10, md: 14 }}>
+    <Box as="section" maxW="80rem" mx="auto" px={{ base: "15px", md: "60px" }} mt={{ base: 10, md: 14 }}>
       <MotionBox
         ref={ref}
         initial={{ opacity: 0, y: 24 }}
@@ -179,22 +183,26 @@ export default function TrustedBy() {
               letterSpacing="0.14em"
               textTransform="uppercase"
               color="gray.500"
-              textAlign={{ base: "center", lg: "left" }}
+              textAlign="center"
             >
               {t("trust.clientesEtiqueta")}
             </Text>
 
-            <Grid templateColumns="repeat(2, 1fr)" columnGap={{ base: 6, md: 10 }} rowGap={{ base: 6, md: 8 }}>
+            <Grid templateColumns={{ base: "repeat(2, 1fr)", sm: "repeat(3, 1fr)", lg: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} gap={3}>
               {CLIENTS.map((client) => (
-                <Box
+                <Flex
                   key={client.name}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent={{ base: "center", lg: "flex-start" }}
-                  h="48px"
+                  align="center"
+                  justify="center"
+                  h="5.25rem"
+                  px={4}
+                  bg="white"
+                  border="1px solid"
+                  borderColor="gray.100"
+                  borderRadius="xl"
                 >
-                  <Image src={client.logo} alt={client.name} maxH="40px" maxW="100%" w="auto" objectFit="contain" />
-                </Box>
+                  <Image src={client.logo} alt={client.name} h={client.h} maxW="100%" w="auto" objectFit="contain" />
+                </Flex>
               ))}
             </Grid>
           </Flex>
