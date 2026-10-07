@@ -1,48 +1,36 @@
 import React from 'react';
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Flex, Stack } from '@chakra-ui/react';
+import { LuArrowRight } from "react-icons/lu";
 import Title from '../molecules/Title';
+import Button from '../molecules/Button';
 import { useTranslation } from 'react-i18next';
 import CaseStudyItem from '../molecules/CaseStudyItem';
-import { LuLayers, LuServer, LuMail } from "react-icons/lu";
+import { STORIES_URL, storyUrl } from '../../utils/stories';
+
+/**
+ * Adelanto de los casos de éxito. El detalle de cada uno vive en
+ * stories.adini.com.ar: acá van tres destacados, con prioridad para los que
+ * incluyen IA, y el acceso al resto.
+ *
+ * La lista se mantiene a mano. Los textos están en `cases.items` de cada
+ * locale, en el mismo orden que este array. Cada caso tiene en
+ * `public/assets/cases/` un clip corto en loop (webm y mp4) y su poster,
+ * recortados del video del caso en stories.
+ */
+const FEATURED = ["utenia", "aura", "sia"];
 
 export default function CaseStudies() {
   const { t } = useTranslation();
 
-  const caseStudies = [
-    {
-      id: 1,
-      clientKey: "cases.items.0.cliente",
-      titleKey: "cases.items.0.titulo",
-      descriptionKey: "cases.items.0.descripcion",
-      statKey: "cases.items.0.resultado",
-      tech: ["Node.js", "React", "Material UI", "Docker", "SMTP", "PHP"],
-      icon: LuMail,
-      image: "./assets/images/CaseStudies/difusiones_case.png",
-      link: "/cases/utn-difusiones"
-    },
-    {
-      id: 2,
-      clientKey: "cases.items.1.cliente",
-      titleKey: "cases.items.1.titulo",
-      descriptionKey: "cases.items.1.descripcion",
-      statKey: "cases.items.1.resultado",
-      tech: ["React", "Tailwind CSS", "Node.js", "Docker", "Keycloak (Auth)"],
-      icon: LuLayers,
-      image: "./assets/images/CaseStudies/sicyt_case.png",
-      link: "/cases/utn-sicyt"
-    },
-    {
-      id: 3,
-      clientKey: "cases.items.2.cliente",
-      titleKey: "cases.items.2.titulo",
-      descriptionKey: "cases.items.2.descripcion",
-      statKey: "cases.items.2.resultado",
-      tech: ["OpenNebula", "Linux", "Virtualización", "Infraestructura On-Prem"],
-      icon: LuServer,
-      image: "./assets/images/CaseStudies/openNebula_case.png",
-      link: "/cases/utn-opennebula"
-    }
-  ];
+  const caseStudies = FEATURED.map((slug, index) => ({
+    slug,
+    href: storyUrl(slug),
+    media: `/assets/cases/${slug}`,
+    clientKey: `cases.items.${index}.cliente`,
+    kindKey: `cases.items.${index}.tipo`,
+    titleKey: `cases.items.${index}.titulo`,
+    descriptionKey: `cases.items.${index}.descripcion`,
+  }));
 
   return (
     <>
@@ -59,17 +47,28 @@ export default function CaseStudies() {
         mx="auto"
         px={{ base: "15px", md: "60px", }}
       >
-        <Stack spacing={{ base: 12, lg: 16 }}>
+        <Stack spacing={{ base: 14, lg: 20 }}>
           {caseStudies.map((study, index) => (
             <CaseStudyItem
-              key={study.id}
+              key={study.slug}
               study={study}
               isEven={index % 2 === 0}
             />
           ))}
         </Stack>
-      </Box>
 
+        <Flex justify="center" mt={{ base: 12, lg: 16 }}>
+          <Button
+            as="a"
+            href={STORIES_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            text="cases.verTodos"
+            rightIcon={<LuArrowRight />}
+            size="lg"
+          />
+        </Flex>
+      </Box>
     </>
   );
 }

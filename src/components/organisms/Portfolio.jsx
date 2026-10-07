@@ -2,6 +2,7 @@ import { Box, Flex, Heading } from "@chakra-ui/react";
 import Title from "../molecules/Title";
 import Proyect from "../molecules/Proyect";
 import { useTranslation } from "react-i18next";
+import { storyUrl } from "../../utils/stories";
 
 export default function Portfolio() {
     const { t } = useTranslation();
@@ -36,6 +37,8 @@ export default function Portfolio() {
                 { name: "Sequelize", path: "/assets/icons/sequelize.webp" },
                 { name: "Express", path: "/assets/icons/express.webp" },
             ],
+            // SIA tiene su caso completo en stories: la tarjeta lleva ahí.
+            href: storyUrl("sia"),
             title: t("portfolio.proyectosWeb.sia.titulo"),
             summary: t("portfolio.proyectosWeb.sia.resumen"),
             description:
@@ -337,7 +340,7 @@ export default function Portfolio() {
                 <Heading textAlign="center" fontWeight={0} fontFamily="Poppins, sans-serif" fontSize={{ base: "2xl", xl: "3xl" }} my={12} color="primary.500">{t("portfolio.web")}</Heading>
                 <Flex justify="center" wrap="wrap" gap={{ base: "40px", md: "60px" }}>
                     {webProjects.map((project, index) => (
-                        <Proyect key={index} tecnologies={project.tecnologies} logo={project.logo} imgs={project.imgs} title={project.title} description={project.description} summary={project.summary} />
+                        <Proyect key={index} tecnologies={project.tecnologies} logo={project.logo} imgs={project.imgs} title={project.title} description={project.description} summary={project.summary} href={project.href} />
                     ))}
                 </Flex>
 

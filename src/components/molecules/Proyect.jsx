@@ -8,9 +8,19 @@ import { LuArrowRight } from "react-icons/lu";
 
 const MotionBox = motion(Flex);
 
-export default function Proyect({ title, summary, description, logo, imgs, tecnologies, mobile = false }) {
+/**
+ * Tarjeta de proyecto del portfolio. Por defecto abre un modal con el detalle;
+ * si recibe `href` (proyectos que tienen su caso en stories.adini.com.ar),
+ * abre esa página en una pestaña nueva en lugar del modal.
+ */
+export default function Proyect({ title, summary, description, logo, imgs, tecnologies, mobile = false, href }) {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
+
+    const open = () => {
+        if (href) window.open(href, "_blank", "noopener,noreferrer");
+        else setIsOpen(true);
+    };
 
     const { ref, inView } = useInView({
         threshold: 0.4,
@@ -43,7 +53,7 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
                         boxShadow: "xl",
                         transform: "translateY(-5px)",
                     }}
-                    onClick={() => setIsOpen(true)}
+                    onClick={open}
                 >
                     <Flex justify="center" align="center" mb={3}>
                         <Heading fontSize="2xl" textAlign={"center"} fontWeight={0} fontFamily="Poppins, sans-serif" color="gray.700" px={1} py={2}>{title}</Heading>
@@ -76,7 +86,7 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
                         fontWeight="600"
                         color="#3d2b99"
                         role="group"
-                        onClick={() => setIsOpen(true)}
+                        onClick={open}
                     >
                         <Text
                             as="span"
@@ -98,15 +108,17 @@ export default function Proyect({ title, summary, description, logo, imgs, tecno
                 </Flex>
             </MotionBox>
 
-            <ModalPortfolio
-                isOpen={isOpen}
-                setIsOpen={setIsOpen}
-                title={title}
-                description={description}
-                imgs={imgs}
-                tecnologies={tecnologies}
-                mobile={mobile}
-            />
+            {!href && (
+                <ModalPortfolio
+                    isOpen={isOpen}
+                    setIsOpen={setIsOpen}
+                    title={title}
+                    description={description}
+                    imgs={imgs}
+                    tecnologies={tecnologies}
+                    mobile={mobile}
+                />
+            )}
         </>
     );
 }

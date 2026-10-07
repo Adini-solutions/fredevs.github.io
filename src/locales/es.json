@@ -524,52 +524,26 @@
   "cases": {
     "titulo": "Desafíos reales,",
     "subtitulo": "resultados reales",
-    "etiquetaResultado": "Resultado Clave",
+    "verCaso": "Ver caso",
+    "verTodos": "Ver todos los casos",
     "items": [
       {
-        "id": 1,
-        "cliente": "Universidad Tecnológica Nacional",
-        "titulo": "Sistema de Difusiones Institucional",
-        "descripcion": "Diseñamos y desarrollamos un sistema propio de difusiones institucionales para la UTN, reemplazando software de terceros de origen no certificado, inseguro y con costos recurrentes. La solución centralizó las comunicaciones oficiales, mejoró el control y seguimiento de los envíos y eliminó riesgos de seguridad.",
-        "resultado": "Software Propio y Seguro",
-        "tecnologias": [
-          "Node.js",
-          "React",
-          "Material UI",
-          "Docker",
-          "SMTP",
-          "PHP"
-        ],
-        "link": "/casos/utn-difusiones"
+        "cliente": "UTN FRBA",
+        "tipo": "Agente de IA",
+        "titulo": "UtenIA",
+        "descripcion": "Un agente de IA que responde con la documentación de la facultad y los datos del campus virtual de cada estudiante, con toda la inferencia en servidores propios."
       },
       {
-        "id": 2,
-        "cliente": "Secretaría de Ciencia y Tecnología – UTN",
-        "titulo": "SICYT: Gestión Integral de Proyectos e Investigadores",
-        "descripcion": "Desarrollamos el sistema SICYT para digitalizar y centralizar la gestión de proyectos e investigadores, reemplazando procesos manuales basados en Excel y Microsoft Access. Se logró una gestión centralizada, auditable y consistente de la información científica.",
-        "resultado": "Gestión Centralizada y Auditable",
-        "tecnologias": [
-          "React",
-          "Tailwind CSS",
-          "Node.js",
-          "Docker",
-          "Keycloak (Auth)"
-        ],
-        "link": "/casos/utn-sicyt"
+        "cliente": "Hospital El Cruce",
+        "tipo": "Plataforma con IA",
+        "titulo": "Aura",
+        "descripcion": "Una plataforma de recupero de costos hospitalarios que valoriza informes con IA, completa cada expediente y lo sigue hasta el cobro, con los datos clínicos en servidores propios."
       },
       {
-        "id": 3,
-        "cliente": "Universidad Tecnológica Nacional",
-        "titulo": "Infraestructura de Virtualización con OpenNebula",
-        "descripcion": "Implementamos OpenNebula como plataforma principal de virtualización, reemplazando soluciones fragmentadas y costosas. La nueva infraestructura permitió centralizar la operación, mejorar el control y optimizar el uso de recursos para entornos académicos y de investigación.",
-        "resultado": "Control y Autonomía Operativa",
-        "tecnologias": [
-          "OpenNebula",
-          "Linux",
-          "Virtualización",
-          "Infraestructura On-Prem"
-        ],
-        "link": "/casos/utn-opennebula"
+        "cliente": "UTN FRBA",
+        "tipo": "Portal institucional",
+        "titulo": "SIA",
+        "descripcion": "El portal único de la facultad: un solo acceso a todos sus servicios, con credencial digital, recibos, comunicaciones masivas con seguimiento y soporte técnico integrados."
       }
     ]
   },
@@ -887,7 +861,8 @@
     "areas": {
       "titulo": "Áreas de Servicio",
       "desarrollo": "Desarrollo de Software",
-      "infra": "Infrastructure & Cloud Services"
+      "infra": "Infrastructure & Cloud Services",
+      "casos": "Casos de Éxito"
     },
     "redes": {
       "titulo": "Nuestras Redes"

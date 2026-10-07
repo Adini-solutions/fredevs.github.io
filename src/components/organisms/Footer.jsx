@@ -2,6 +2,7 @@ import { Box, Grid, GridItem, Text, Link, Icon, VStack, HStack, Divider } from "
 import { FaLinkedin, FaEnvelope, FaInstagram, FaFacebook } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { STORIES_URL } from "../../utils/stories";
 
 
 export default function Footer({ variant = "default" }) {
@@ -98,6 +99,10 @@ export default function Footer({ variant = "default" }) {
                             _hover={{ color: "white", cursor: "pointer" }}
                         >
                             {t("footer.areas.infra")}
+                        </Link>
+
+                        <Link href={STORIES_URL} isExternal _hover={{ color: "white" }}>
+                            {t("footer.areas.casos")}
                         </Link>
                     </VStack>
                 </GridItem>

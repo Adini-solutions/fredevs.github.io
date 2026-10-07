@@ -524,52 +524,26 @@
   "cases": {
     "titulo": "Real challenges,",
     "subtitulo": "real results",
-    "etiquetaResultado": "Key Outcome",
+    "verCaso": "View case",
+    "verTodos": "View all case studies",
     "items": [
       {
-        "id": 1,
-        "cliente": "National Technological University",
-        "titulo": "Institutional Broadcast System",
-        "descripcion": "We designed and developed a proprietary institutional broadcast system for UTN, replacing third-party software of unverified origin, insecure and with recurring costs. The solution centralized official communications, improved delivery control and monitoring, and eliminated security risks.",
-        "resultado": "Secure Proprietary Software",
-        "tecnologias": [
-          "Node.js",
-          "React",
-          "Material UI",
-          "Docker",
-          "SMTP",
-          "PHP"
-        ],
-        "link": "/casos/utn-difusiones"
+        "cliente": "UTN FRBA",
+        "tipo": "AI agent",
+        "titulo": "UtenIA",
+        "descripcion": "An AI agent that answers with the university's documentation and each student's virtual campus data, with all inference running on in-house servers."
       },
       {
-        "id": 2,
-        "cliente": "Secretariat of Science and Technology – UTN",
-        "titulo": "SICYT: Integrated Project and Researcher Management",
-        "descripcion": "We developed the SICYT system to digitalize and centralize the management of projects and researchers, replacing manual processes based on Excel and Microsoft Access. The result was a centralized, auditable and consistent management of scientific information.",
-        "resultado": "Centralized and Auditable Management",
-        "tecnologias": [
-          "React",
-          "Tailwind CSS",
-          "Node.js",
-          "Docker",
-          "Keycloak (Auth)"
-        ],
-        "link": "/casos/utn-sicyt"
+        "cliente": "Hospital El Cruce",
+        "tipo": "AI platform",
+        "titulo": "Aura",
+        "descripcion": "A hospital cost-recovery platform that prices lab reports with AI, completes every case file and tracks it through to payment, keeping clinical data on in-house servers."
       },
       {
-        "id": 3,
-        "cliente": "National Technological University",
-        "titulo": "Virtualization Infrastructure with OpenNebula",
-        "descripcion": "We implemented OpenNebula as the main virtualization platform, replacing fragmented and costly solutions. The new infrastructure enabled centralized operations, improved control, and optimized resource usage for academic and research environments.",
-        "resultado": "Operational Control and Autonomy",
-        "tecnologias": [
-          "OpenNebula",
-          "Linux",
-          "Virtualization",
-          "On-Prem Infrastructure"
-        ],
-        "link": "/casos/utn-opennebula"
+        "cliente": "UTN FRBA",
+        "tipo": "Institutional portal",
+        "titulo": "SIA",
+        "descripcion": "The university's single portal: one login for every service, with digital ID, payslips, tracked mass communications and technical support built in."
       }
     ]
   },
@@ -887,7 +861,8 @@
     "areas": {
       "titulo": "Service Areas",
       "desarrollo": "Software development",
-      "infra": "Infrastructure & Cloud Services"
+      "infra": "Infrastructure & Cloud Services",
+      "casos": "Case Studies"
     },
     "redes": {
       "titulo": "Our Social Media"
