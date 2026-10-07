@@ -24,6 +24,17 @@
       "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
     ]
   },
+  "trust": {
+    "partnerEtiqueta": "Partner oficial",
+    "partnerTitulo": "Partner oficial de la UTN Facultad Regional Buenos Aires",
+    "partnerTexto": "Diseñamos, desarrollamos y operamos sistemas institucionales que usan a diario estudiantes, docentes e investigadores de la facultad.",
+    "clientesEtiqueta": "También confían en nosotros",
+    "sistemas": {
+      "utenia": "Agente de IA",
+      "sicyt": "Sistema de gestión",
+      "sia": "Portal institucional"
+    }
+  },
   "bannerDev": {
     "span": "Desarrollo",
     "titulo": "Desarrollo de soluciones digitales a medida",

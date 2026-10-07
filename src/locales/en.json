@@ -24,6 +24,17 @@
       "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
     ]
   },
+  "trust": {
+    "partnerEtiqueta": "Official partner",
+    "partnerTitulo": "Official partner of UTN Facultad Regional Buenos Aires",
+    "partnerTexto": "We design, build and operate institutional systems used every day by the students, faculty and researchers of the university.",
+    "clientesEtiqueta": "Also trusted by",
+    "sistemas": {
+      "utenia": "AI agent",
+      "sicyt": "Management system",
+      "sia": "Institutional portal"
+    }
+  },
   "bannerDev": {
     "span": "Development",
     "titulo": "Custom digital solution development",

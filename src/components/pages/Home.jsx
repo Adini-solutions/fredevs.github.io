@@ -7,6 +7,7 @@ import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
 import AISection from "../organisms/AISection";
 import CaseStudies from "../organisms/CaseStudies";
+import TrustedBy from "../organisms/TrustedBy";
 import Blog from "../organisms/Blog";
 import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
@@ -46,6 +47,7 @@ export default function Home() {
         <Box id="inicio">
           <Banner />
         </Box>
+        <TrustedBy />
         <Box id="areas">
           <ServiceAreas />
         </Box>
