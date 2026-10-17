@@ -1,5 +1,6 @@
 import { Box, Flex, Image, Text, Link } from "@chakra-ui/react";
 import { FaLinkedin } from "react-icons/fa";
+import { LuBriefcase } from "react-icons/lu";
 import Title from "../molecules/Title";
 import { useTranslation } from "react-i18next";
 
@@ -13,6 +14,7 @@ export default function AboutUs({ variant = "default" }) {
             role: `${t("aboutUs.cloud")} | ${t("aboutUs.sysadmin")}`,
             image: "/assets/images/agus.png",
             linkedin: "https://www.linkedin.com/in/agustinezequielacevedo/",
+            portfolio: "https://agusacevedo.com.ar/",
         },
         {
             id: "alejo",
@@ -20,6 +22,7 @@ export default function AboutUs({ variant = "default" }) {
             role: `${t("aboutUs.fullstack")}`,
             image: "/assets/images/ale.png",
             linkedin: "https://www.linkedin.com/in/alejo-ezequiel-suarez/",
+            portfolio: "https://alejosuarez2001.github.io/alejosuarez/",
         },
         {
             id: "gabi",
@@ -27,6 +30,7 @@ export default function AboutUs({ variant = "default" }) {
             role: `${t("aboutUs.desarrollador")} | ${t("aboutUs.devops")}`,
             image: "/assets/images/gabi.png",
             linkedin: "https://www.linkedin.com/in/gabriel-olivieri-38437b1bb/",
+            portfolio: "https://gabrielolivieri.dev",
         },
         {
             id: "juani",
@@ -41,6 +45,7 @@ export default function AboutUs({ variant = "default" }) {
             role: `${t("aboutUs.fullstack")}`,
             image: "/assets/images/gon.png",
             linkedin: "https://www.linkedin.com/in/suarez-gonzalo/",
+            portfolio: "https://gonzalosuarez2001.github.io/gonzalosuarez/",
         },
         {
             id: "dani",
@@ -112,6 +117,31 @@ export default function AboutUs({ variant = "default" }) {
                                         mb={4}
                                         borderBottom="1px solid #091c30"
                                     />
+                                    {member.portfolio && (
+                                        <Link position={"absolute"} left={3} bottom={0} href={member.portfolio} isExternal aria-label={`Portfolio de ${member.name}`}>
+                                            <Box
+                                                as="span"
+                                                display="inline-flex"
+                                                alignItems="center"
+                                                justifyContent="center"
+                                                w="36px"
+                                                h="36px"
+                                                borderRadius="full"
+                                                bg="white"
+                                                color="primary.500"
+                                                border="1px solid"
+                                                borderColor="gray.200"
+                                                boxShadow="md"
+                                                transition="all 0.3s"
+                                                _hover={{
+                                                    transform: "scale(1.1)",
+                                                    color: variant === "infra" ? "#238b6f" : "tertiary.500",
+                                                }}
+                                            >
+                                                <LuBriefcase size={17} />
+                                            </Box>
+                                        </Link>
+                                    )}
                                     <Link position={"absolute"} right={3} bottom={0} href={member.linkedin} isExternal>
                                         <Box
                                             as="span"
