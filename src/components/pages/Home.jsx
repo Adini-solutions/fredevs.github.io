@@ -40,7 +40,7 @@ export default function Home() {
         title="ADINI | Software Agency"
         description="Diseñamos e implementamos soluciones digitales integrales para empresas."
         canonical="https://adini.com.ar/"
-        image="https://adini.com.ar/assets/images/banner.webp"
+        image="https://adini.com.ar/assets/brand/og-image.jpg"
       />
       <Header />
       <Box bg={"quarter.500"} overflowX={"hidden"}>

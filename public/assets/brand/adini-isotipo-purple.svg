@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 85 1024 850">
+  <!-- Isotipo ADINI redibujado con geometría: anillo y círculo centrados en (516, 499), radio del anillo 352, trazo 74, separación 40. -->
+  <defs>
+    <mask id="adini-purple-check" maskUnits="userSpaceOnUse" x="0" y="85" width="1024" height="850">
+      <rect x="0" y="85" width="1024" height="850" fill="#fff"/>
+      <path d="M428 502 L490 563 L612 443" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
+    <mask id="adini-purple-gap-line" maskUnits="userSpaceOnUse" x="0" y="85" width="1024" height="850">
+      <rect x="0" y="85" width="1024" height="850" fill="#fff"/>
+      <rect x="0" y="774" width="1024" height="154" fill="#000"/>
+    </mask>
+    <mask id="adini-purple-gap-ring" maskUnits="userSpaceOnUse" x="0" y="85" width="1024" height="850">
+      <rect x="0" y="85" width="1024" height="850" fill="#fff"/>
+      <circle cx="516" cy="499" r="352" fill="none" stroke="#000" stroke-width="154"/>
+    </mask>
+  </defs>
+  <g fill="#4d45d6" stroke="#4d45d6" stroke-linejoin="round">
+    <circle cx="516" cy="499" r="185" stroke="none" mask="url(#adini-purple-check)"/>
+    <!-- Arco superior con flecha hacia abajo -->
+    <path d="M164 499 A352 352 0 0 1 832.4 344.7" fill="none" stroke-width="74"/>
+    <path d="M105 499 H223 L164 571 Z" stroke-width="10"/>
+    <!-- Arco derecho con flecha hacia arriba, que baja hasta la línea -->
+    <path d="M868 499 A352 352 0 0 1 516 851" fill="none" stroke-width="74"/>
+    <path d="M809 499 H927 L868 427 Z" stroke-width="10"/>
+    <rect x="20" y="814" width="520" height="74" rx="10" stroke="none"/>
+    <!-- Tramo inferior izquierdo del anillo -->
+    <path d="M485.3 849.7 A352 352 0 0 1 192 636.5" fill="none" stroke-width="74" mask="url(#adini-purple-gap-line)"/>
+    <!-- Flecha de salida -->
+    <g mask="url(#adini-purple-gap-ring)">
+      <path d="M560 851 H926" fill="none" stroke-width="74"/>
+      <path d="M922 792 V910 L997 851 Z" stroke-width="10"/>
+    </g>
+  </g>
+</svg>

@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Divider, IconButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { useTranslation } from "react-i18next"; import { useNavigate } from "react-router-dom";
@@ -16,7 +16,6 @@ export default function Header({ variant = "default" }) {
   const [logoColor, setLogoColor] = useState('white');
   const [variantColor, setVariantColor] = useState('white');
   const [itemsColor, setItemsColor] = useState('white');
-  const [adiniIcon, setAdiniIcon] = useState('/assets/icons/adini-white.ico')
 
   const getHoverColor = () => {
     if (variant === "infra") {
@@ -33,6 +32,10 @@ export default function Header({ variant = "default" }) {
   };
 
   const menuItems = menuType[variant]
+
+  // Logotipo oficial (isotipo + "Adini"), en blanco sobre el banner y a color
+  // cuando el header pasa a blanco.
+  const colorLogo = variant === "infra" ? "/assets/brand/adini-logotipo-infra.svg" : "/assets/brand/adini-logotipo-purple.svg";
 
   const variantType = {
     dev: "dev",
@@ -54,7 +57,6 @@ export default function Header({ variant = "default" }) {
         setLogoColor(variant === "infra" ? "#238b6f" : '#4d45d6');
         setVariantColor('gray.700');
         setItemsColor('gray.700');
-        setAdiniIcon(variant === "infra" ? '/assets/icons/adini-infra.ico' : '/assets/icons/adini.ico');
         setContactButtonStyle(true);
       } else {
         setBackgroundColor('linear-gradient(to right, rgba(7, 30, 55, 0.9), rgba(7, 30, 55, 0.5))');
@@ -62,7 +64,6 @@ export default function Header({ variant = "default" }) {
         setLogoColor('white');
         setVariantColor('white');
         setItemsColor('white');
-        setAdiniIcon("/assets/icons/adini-white.ico");
         setContactButtonStyle(false);
       }
     };
@@ -99,30 +100,18 @@ export default function Header({ variant = "default" }) {
     <Box position="sticky" w="100%" height="auto" zIndex={10} top={0} transition="0.15s ease-in-out" bg={backgroundColor}>
       <Flex bg={backgroundColor} justifyContent="space-between" transition="0.15s ease-in-out" alignItems="center" py={{ base: 3, lg: 4 }} px={{ base: "30px", lg: "70px" }} boxShadow={headerBoxShadow}>
         <Flex align={"center"} onClick={() => scrollToSection("inicio")} cursor={"pointer"}>
-          <Box
-            width="33px"
-            height="33px"
-            mr={"7px"}
-            mb={"4px"}
-          >
-            <img
-              src={adiniIcon}
-              alt="Adini"
-            />
-          </Box>
           <Flex align="flex-end" gap={2}>
-            <Text
-              my={0}
-              fontSize="28px"
-              color={logoColor}
-              fontFamily="Poppins, sans-serif"
-            >
-              Adini
-            </Text>
+            {/* Las dos versiones van encimadas y se cruzan con opacidad: cambiar
+                el src parpadearía la primera vez que se carga la de color. El
+                tamaño iguala lo que ocupaban antes el ícono y el texto. */}
+            <Box position="relative" h="27px" w="103px" mb="3px" flexShrink={0}>
+              <Image src="/assets/brand/adini-logotipo-white.svg" alt="Adini" position="absolute" inset={0} h="100%" opacity={contactButtonStyle ? 0 : 1} transition="opacity 0.15s ease-in-out" />
+              <Image src={colorLogo} alt="" aria-hidden position="absolute" inset={0} h="100%" opacity={contactButtonStyle ? 1 : 0} transition="opacity 0.15s ease-in-out" />
+            </Box>
 
             {variantType[variant] && (
               <Text
-                mb="7px"
+                mb="3px"
                 color={variantColor}
                 fontSize="11px"
                 letterSpacing="0.025em"
@@ -236,21 +225,7 @@ export default function Header({ variant = "default" }) {
 
                   <Box mt={4} textAlign="center">
                     <Flex align="center" justify="center">
-                      <Box width="30px" height="30px" mr="7px" mb="4px">
-                        <img
-                          src={variant === "infra" ? "/assets/icons/adini-infra.ico" : "/assets/icons/adini.ico"}
-                          alt="Adini"
-                        />
-                      </Box>
-                      <Text
-                        my={0}
-                        fontSize="25px"
-                        color={variant === "infra" ? "#238b6f" : "#4d45d6"}
-                        fontFamily="Poppins, sans-serif"
-                        onClick={() => navigateWithScroll("/")}
-                      >
-                        Adini
-                      </Text>
+                      <Image src={colorLogo} alt="Adini" h="25px" cursor="pointer" onClick={() => navigateWithScroll("/")} />
                     </Flex>
                   </Box>
                 </Box>

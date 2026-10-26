@@ -39,7 +39,7 @@ const UTN_CASES = [
 ];
 
 /**
- * DigitalArts, agencia creativa y tecnológica. Toda su tarjeta lleva a su
+ * DigitalArts, empresa creativa y tecnológica. Toda su tarjeta lleva a su
  * sitio, con el verde de su logo. El logo es el mismo que usa stories.
  */
 const DIGITAL_ARTS = {

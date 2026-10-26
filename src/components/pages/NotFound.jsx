@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Button, Text } from "@chakra-ui/react";
+import { Flex, Button, Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 export default function NotFound() {
@@ -18,9 +18,7 @@ export default function NotFound() {
       w="100vw"
       p={3}
     >
-      <Text my={0} fontSize="5xl" color="#4d45d6" fontFamily="Poppins, sans-serif">
-        Adini
-      </Text>
+      <Image src="/assets/brand/adini-logotipo-purple.svg" alt="Adini" h="4rem" mb={6} />
       <h2 style={{ textAlign: "center" }}>404 - Página No Encontrada</h2>
       <p style={{ textAlign: "center" }}>
         Lo sentimos, no hemos podido encontrar la página que buscas.

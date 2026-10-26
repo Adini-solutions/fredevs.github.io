@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text, Link, Icon, VStack, HStack, Divider } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Image, Text, Link, Icon, VStack, HStack, Divider } from "@chakra-ui/react";
 import { FaLinkedin, FaEnvelope, FaInstagram, FaFacebook } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -65,9 +65,7 @@ export default function Footer({ variant = "default" }) {
                 textAlign={{ base: "center", md: "left" }}
             >
                 <GridItem colSpan={{ base: 2, md: 1 }}>
-                    <Text fontSize="2xl" color="white" fontFamily="Poppins, sans-serif">
-                        {information.name}
-                    </Text>
+                    <Image src="/assets/brand/adini-logotipo-white.svg" alt={information.name} h="2.25rem" mx={{ base: "auto", md: 0 }} mb={3} />
                     <Text fontSize="sm" mt={2} mb={0} maxW={{ base: "auto", md: "450px" }}>
                         {t("footer.descripcion")}
                     </Text>

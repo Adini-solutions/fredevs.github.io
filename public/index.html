@@ -5,7 +5,9 @@
   <meta charset="utf-8" />
   <html lang="es" />
 
+  <!-- El .ico queda de respaldo para los navegadores que no aceptan favicon en SVG. -->
   <link rel="icon" href="%PUBLIC_URL%/assets/icons/adini.ico" />
+  <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/assets/brand/adini-isotipo-purple.svg" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -41,10 +43,16 @@
   <meta property="og:description" content="Agencia de desarrollo de software y soluciones digitales." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://adini.com.ar/" />
-  <meta property="og:image" content="https://adini.com.ar/assets/images/banner.webp" />
+  <!-- Imagen al compartir (WhatsApp, LinkedIn, etc.): el logotipo sobre el azul de la marca. -->
+  <meta property="og:image" content="https://adini.com.ar/assets/brand/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Adini" />
 
   <!-- Twitter base -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://adini.com.ar/assets/brand/og-image.jpg" />
   <meta name="twitter:site" content="@adini" />
 
   <!-- Geolocalización -->

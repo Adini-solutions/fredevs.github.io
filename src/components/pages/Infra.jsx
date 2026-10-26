@@ -36,7 +36,7 @@ export default function Infra() {
         title="ADINI | Infrastructure & Cloud Services"
         description="Soluciones tecnológicas en infraestructura, cloud y servicios IT."
         canonical="https://adini.com.ar/infra"
-        image="https://adini.com.ar/assets/images/infra.webp"
+        image="https://adini.com.ar/assets/brand/og-image.jpg"
       />
 
       <Header variant="infra" />
