@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Flex, Grid, Image, Link, Text, Badge } from '@chakra-ui/react';
+import { Box, Flex, Grid, Image, Link, LinkBox, LinkOverlay, Text, Badge } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'react-i18next';
-import { LuArrowRight, LuBadgeCheck } from "react-icons/lu";
+import { LuArrowRight, LuBadgeCheck, LuHandshake } from "react-icons/lu";
 import { storyUrl } from '../../utils/stories';
 
 const MotionBox = motion(Box);
@@ -39,6 +39,16 @@ const UTN_CASES = [
 ];
 
 /**
+ * DigitalArts, agencia creativa y tecnológica. Toda su tarjeta lleva a su
+ * sitio, con el verde de su logo. El logo es el mismo que usa stories.
+ */
+const DIGITAL_ARTS = {
+  href: "https://bydigitalarts.com/",
+  domain: "bydigitalarts.com",
+  accent: "#2f8f78",
+};
+
+/**
  * Otros clientes. Los logos son los mismos que usa el portal de propuestas
  * (`resumen/public/clients/`), más los de Hospital El Cruce y Moviltrack. Se
  * muestran a color y sin link, cada uno centrado en una celda del mismo
@@ -58,9 +68,9 @@ const CLIENTS = [
 ];
 
 /**
- * Respaldo institucional, justo debajo del banner: el vínculo de partner
- * oficial con la UTN Facultad Regional Buenos Aires y los clientes que
- * confían en Adini.
+ * Respaldo institucional, justo debajo del banner. Arriba, los partners (la
+ * UTN Facultad Regional Buenos Aires y DigitalArts), cada uno en su tarjeta.
+ * Abajo, aparte, los clientes que confían en Adini.
  */
 export default function TrustedBy() {
   const { t } = useTranslation();
@@ -74,140 +84,203 @@ export default function TrustedBy() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
       >
-        <Grid
-          templateColumns={{ base: "1fr", lg: "1.15fr 1fr" }}
-          bg="white"
-          borderRadius="2xl"
-          boxShadow="md"
-          overflow="hidden"
-        >
+        <Grid templateColumns={{ base: "1fr", lg: "1.35fr 1fr" }} gap={{ base: 4, md: 6 }}>
           {/* Partner oficial de la UTN FRBA */}
-          <Flex
-            direction="column"
-            gap={4}
-            p={{ base: 6, md: 10 }}
-            borderRight={{ base: "none", lg: "1px solid" }}
-            borderBottom={{ base: "1px solid", lg: "none" }}
-            borderColor={{ base: "gray.100", lg: "gray.100" }}
+          <PartnerCard
+            icon={LuBadgeCheck}
+            label={t("trust.partnerEtiqueta")}
+            logo="/assets/clients/utn-frba.png"
+            logoAlt="UTN Facultad Regional Buenos Aires"
+            title={t("trust.partnerTitulo")}
+            text={t("trust.partnerTexto")}
           >
-            <Badge
-              alignSelf="flex-start"
-              display="inline-flex"
-              alignItems="center"
-              gap={1.5}
-              color="purple.700"
-              bg="#eee5f9"
-              fontSize="xs"
-              px={3}
-              py={1}
-              borderRadius="md"
-              textTransform="uppercase"
-            >
-              <LuBadgeCheck size={14} />
-              {t("trust.partnerEtiqueta")}
-            </Badge>
-
-            <Image
-              src="/assets/clients/utn-frba.png"
-              alt="UTN Facultad Regional Buenos Aires"
-              h={{ base: "44px", md: "56px" }}
-              w="auto"
-              alignSelf="flex-start"
-              objectFit="contain"
-            />
-
-            <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" color="primary.500" lineHeight="1.25" m={0}>
-              {t("trust.partnerTitulo")}
-            </Text>
-            <Text color="gray.600" fontSize="md" lineHeight="1.6" m={0}>
-              {t("trust.partnerTexto")}
-            </Text>
-
-            <Grid templateColumns={{ base: "1fr", sm: "repeat(3, 1fr)" }} gap={3} mt={2}>
+            <Grid templateColumns={{ base: "1fr", sm: "repeat(3, 1fr)" }} gap={3}>
               {UTN_CASES.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={storyUrl(c.slug)}
-                  isExternal
-                  role="group"
-                  display="flex"
-                  flexDirection={{ base: "row", sm: "column" }}
-                  borderRadius="xl"
-                  border="1px solid"
-                  borderColor="gray.200"
-                  overflow="hidden"
-                  bg="white"
-                  transition="transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease"
-                  _hover={{ textDecoration: "none", transform: "translateY(-3px)", boxShadow: "lg", borderColor: c.accent }}
-                >
-                  <Flex
-                    align="center"
-                    justify="center"
-                    gap={2}
-                    flexShrink={0}
-                    w={{ base: "120px", sm: "auto" }}
-                    h={{ base: "auto", sm: "72px" }}
-                    minH="64px"
-                    bg={c.bg}
-                    color={c.color}
-                  >
-                    {c.logo && <Image src={c.logo} alt="" boxSize="26px" />}
-                    <Text m={0} fontSize="lg" fontWeight="800" letterSpacing={c.logo ? "-0.01em" : "0.04em"} lineHeight="1">
-                      {c.name}
-                    </Text>
-                  </Flex>
-                  <Flex align="center" justify="space-between" gap={2} flex="1" px={3} py={2.5}>
-                    <Text m={0} fontSize="xs" fontWeight="600" color="gray.600" lineHeight="1.3">
-                      {t(`trust.sistemas.${c.slug}`)}
-                    </Text>
-                    <Box
-                      as={LuArrowRight}
-                      size={15}
-                      flexShrink={0}
-                      color={c.accent}
-                      transition="transform 0.2s ease"
-                      _groupHover={{ transform: "translateX(3px)" }}
-                    />
-                  </Flex>
-                </Link>
+                <CaseLink key={c.slug} study={c} href={storyUrl(c.slug)} label={t(`trust.sistemas.${c.slug}`)} />
               ))}
             </Grid>
-          </Flex>
+          </PartnerCard>
 
-          {/* Otros clientes */}
-          <Flex direction="column" justify="center" gap={{ base: 5, md: 7 }} p={{ base: 6, md: 10 }} bg="#fbfbff">
-            <Text
-              m={0}
-              fontSize="xs"
-              fontWeight="bold"
-              letterSpacing="0.14em"
-              textTransform="uppercase"
-              color="gray.500"
-              textAlign="center"
-            >
-              {t("trust.clientesEtiqueta")}
-            </Text>
-
-            <Grid templateColumns={{ base: "repeat(2, 1fr)", sm: "repeat(3, 1fr)", lg: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} gap={3}>
-              {CLIENTS.map((client) => (
-                <Flex
-                  key={client.name}
-                  align="center"
-                  justify="center"
-                  h="5.25rem"
-                  px={4}
-                  bg="white"
-                  border="1px solid"
-                  borderColor="gray.100"
-                  borderRadius="xl"
-                >
-                  <Image src={client.logo} alt={client.name} h={client.h} maxW="100%" w="auto" objectFit="contain" />
-                </Flex>
-              ))}
-            </Grid>
-          </Flex>
+          {/* Partner DigitalArts */}
+          <PartnerCard
+            icon={LuHandshake}
+            label={t("trust.digitalArts.etiqueta")}
+            logo="/assets/clients/digitalarts.svg"
+            logoAlt="DigitalArts"
+            href={DIGITAL_ARTS.href}
+            accent={DIGITAL_ARTS.accent}
+            // Su logotipo es más pesado que el de la UTN: un poco más bajo, pesan parecido.
+            logoH={{ base: "38px", md: "46px" }}
+            title={t("trust.digitalArts.titulo")}
+            text={t("trust.digitalArts.texto")}
+          >
+            {/* El dominio, con un subrayado verde que se completa al pasar por la tarjeta. */}
+            <Box alignSelf="flex-start">
+              <Text m={0} fontSize="sm" fontWeight="600" color="gray.500" transition="color 0.25s ease" _groupHover={{ color: DIGITAL_ARTS.accent }}>
+                {DIGITAL_ARTS.domain}
+              </Text>
+              <Box h="2px" w="1.5rem" mt={1} bg={DIGITAL_ARTS.accent} borderRadius="full" transition="width 0.35s ease" _groupHover={{ w: "100%" }} />
+            </Box>
+          </PartnerCard>
         </Grid>
+
+        {/* Otros clientes */}
+        <Flex
+          direction="column"
+          gap={{ base: 5, md: 6 }}
+          mt={{ base: 4, md: 6 }}
+          p={{ base: 6, md: 8 }}
+          bg="#fbfbff"
+          border="1px solid"
+          borderColor="gray.100"
+          borderRadius="2xl"
+        >
+          <Text
+            m={0}
+            fontSize="xs"
+            fontWeight="bold"
+            letterSpacing="0.14em"
+            textTransform="uppercase"
+            color="gray.500"
+            textAlign="center"
+          >
+            {t("trust.clientesEtiqueta")}
+          </Text>
+
+          <Grid templateColumns={{ base: "repeat(2, 1fr)", sm: "repeat(3, 1fr)", lg: "repeat(6, 1fr)" }} gap={3}>
+            {CLIENTS.map((client) => (
+              <Flex
+                key={client.name}
+                align="center"
+                justify="center"
+                h="5.25rem"
+                px={4}
+                bg="white"
+                border="1px solid"
+                borderColor="gray.100"
+                borderRadius="xl"
+              >
+                <Image src={client.logo} alt={client.name} h={client.h} maxW="100%" w="auto" objectFit="contain" />
+              </Flex>
+            ))}
+          </Grid>
+        </Flex>
       </MotionBox>
     </Box>
+  );
+}
+
+/**
+ * Tarjeta de un partner: etiqueta, logo, título, texto y, debajo, lo que
+ * llegue en `children`, pegado al pie para que las dos tarjetas queden
+ * alineadas. Con `href` toda la tarjeta es un enlace: se eleva y toma el
+ * borde de `accent`.
+ */
+function PartnerCard({ icon, label, logo, logoAlt, logoH = { base: "44px", md: "56px" }, href, accent, title, text, children }) {
+  const logoImage = (
+    <Image src={logo} alt={logoAlt} h={logoH} w="auto" objectFit="contain" />
+  );
+
+  return (
+    <LinkBox
+      as={Flex}
+      role="group"
+      direction="column"
+      gap={4}
+      p={{ base: 6, md: 10 }}
+      bg="white"
+      borderRadius="2xl"
+      boxShadow="md"
+      border="1px solid"
+      borderColor="transparent"
+      transition="transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease"
+      _hover={href ? { transform: "translateY(-4px)", boxShadow: "xl", borderColor: accent } : undefined}
+    >
+      <Badge
+        alignSelf="flex-start"
+        display="inline-flex"
+        alignItems="center"
+        gap={1.5}
+        color="purple.700"
+        bg="#eee5f9"
+        fontSize="xs"
+        px={3}
+        py={1}
+        borderRadius="md"
+        textTransform="uppercase"
+      >
+        <Box as={icon} size={14} />
+        {label}
+      </Badge>
+
+      {/* El alto es fijo aunque el logo sea más bajo: así los títulos de las dos tarjetas arrancan a la par. */}
+      <Flex align="center" h={{ base: "44px", md: "56px" }}>
+        {logoImage}
+      </Flex>
+
+      <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" color="primary.500" lineHeight="1.25" m={0}>
+        {href ? <LinkOverlay href={href} isExternal _hover={{ textDecoration: "none" }}>{title}</LinkOverlay> : title}
+      </Text>
+      <Text color="gray.600" fontSize="md" lineHeight="1.6" m={0}>
+        {text}
+      </Text>
+
+      <Flex direction="column" gap={3} mt="auto" pt={2}>
+        {children}
+      </Flex>
+    </LinkBox>
+  );
+}
+
+/**
+ * Enlace a un caso en stories: el nombre del sistema sobre su color y una
+ * línea que dice qué es. En fila en celular y en columna desde `sm`.
+ */
+function CaseLink({ study, href, label }) {
+  return (
+    <Link
+      href={href}
+      isExternal
+      role="group"
+      display="flex"
+      flexDirection={{ base: "row", sm: "column" }}
+      borderRadius="xl"
+      border="1px solid"
+      borderColor="gray.200"
+      overflow="hidden"
+      bg="white"
+      transition="transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease"
+      _hover={{ textDecoration: "none", transform: "translateY(-3px)", boxShadow: "lg", borderColor: study.accent }}
+    >
+      <Flex
+        align="center"
+        justify="center"
+        gap={2}
+        flexShrink={0}
+        w={{ base: "120px", sm: "auto" }}
+        h={{ base: "auto", sm: "72px" }}
+        minH="64px"
+        bg={study.bg}
+        color={study.color}
+      >
+        {study.logo && <Image src={study.logo} alt="" boxSize="26px" />}
+        <Text m={0} fontSize="lg" fontWeight="800" letterSpacing={study.logo ? "-0.01em" : "0.04em"} lineHeight="1">
+          {study.name}
+        </Text>
+      </Flex>
+      <Flex align="center" justify="space-between" gap={2} flex="1" px={3} py={2.5}>
+        <Text m={0} fontSize="xs" fontWeight="600" color="gray.600" lineHeight="1.3">
+          {label}
+        </Text>
+        <Box
+          as={LuArrowRight}
+          size={15}
+          flexShrink={0}
+          color={study.accent}
+          transition="transform 0.2s ease"
+          _groupHover={{ transform: "translateX(3px)" }}
+        />
+      </Flex>
+    </Link>
   );
 }
