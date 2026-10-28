@@ -17,12 +17,7 @@
     "span": "Consultoria IT",
     "titulo": "Transformamos ideas en soluciones informáticas",
     "subtitulo": "Somos un equipo multidisciplinario que te acompaña desde la concepción de la idea hasta su implementación.",
-    "boton": "Contáctanos",
-    "reviews": [
-      "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
-      "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
-      "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
-    ]
+    "boton": "Contáctanos"
   },
   "trust": {
     "partnerEtiqueta": "Partner oficial",
@@ -44,23 +39,23 @@
     "span": "Desarrollo",
     "titulo": "Desarrollo de soluciones digitales a medida",
     "subtitulo": "Diseñamos y construimos sistemas digitales que acompañan la evolución y el crecimiento de cada organización.",
-    "boton": "Contáctanos",
-    "reviews": [
-      "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
-      "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
-      "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
-    ]
+    "boton": "Contáctanos"
   },
   "bannerInfra": {
     "span": "Infrastructure & Cloud Services",
     "titulo": "Infraestructura y operaciones para entornos empresariales",
     "subtitulo": "Diseñamos y gestionamos infraestructuras modernas, seguras y escalables que permiten a nuestros clientes enfocarse en su negocio, mientras nosotros nos ocupamos de la operación, la seguridad y la evolución continua de su ecosistema tecnológico.",
-    "boton": "Contáctanos",
-    "reviews": [
-      "Trabajar con ADINI para el desarrollo de nuestra aplicación fue una experiencia excepcional, su equipo demostró un alto nivel de profesionalismo y habilidades técnicas.",
-      "Cumplieron con todos los plazos establecidos, asegurando que el proyecto se mantuviera dentro del cronograma con una comunicación fluida y efectiva en todo momento.",
-      "Fue una experiencia excelente, se encargaron de todo el proceso de manera profesional, siempre atentos y asegurándose de que todo estuviera listo a tiempo."
-    ]
+    "boton": "Contáctanos"
+  },
+  "bannerStats": {
+    "titulo": "ADINI en números",
+    "desde": "Desde 2024",
+    "proyectos": "Proyectos entregados",
+    "organizaciones": "Organizaciones que confían en nosotros",
+    "equipo": "Especialistas en el equipo",
+    "paises": "Países con clientes",
+    "ubicacion": "Argentina, Buenos Aires, Capital Federal",
+    "enProduccion": "En producción"
   },
   "infraServices": {
     "titulo": "Infraestructura ",

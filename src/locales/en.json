@@ -17,12 +17,7 @@
     "span": "IT Consulting",
     "titulo": "We transform ideas into digital solutions",
     "subtitulo": "We are a multidisciplinary team that supports you from the initial concept through to full implementation.",
-    "boton": "Contact us",
-    "reviews": [
-      "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
-      "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
-      "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
-    ]
+    "boton": "Contact us"
   },
   "trust": {
     "partnerEtiqueta": "Official partner",
@@ -44,23 +39,23 @@
     "span": "Development",
     "titulo": "Custom digital solution development",
     "subtitulo": "We design and build digital systems that support the evolution and growth of each organization.",
-    "boton": "Contact us",
-    "reviews": [
-      "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
-      "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
-      "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
-    ]
+    "boton": "Contact us"
   },
   "bannerInfra": {
     "span": "Infrastructure",
     "titulo": "Automated infrastructure and operations for modern, scalable environments",
     "subtitulo": "We design, implement, and manage infrastructure, data, network, and security environments that ensure continuity, performance, and operational control.",
-    "boton": "Contact us",
-    "reviews": [
-      "Working with ADINI on the development of our application was an outstanding experience. Their team demonstrated a high level of professionalism and technical expertise.",
-      "They met all established deadlines, ensuring the project stayed on schedule with clear and effective communication at all times.",
-      "It was an excellent experience. They handled the entire process professionally, always attentive and making sure everything was ready on time."
-    ]
+    "boton": "Contact us"
+  },
+  "bannerStats": {
+    "titulo": "ADINI in numbers",
+    "desde": "Since 2024",
+    "proyectos": "Projects delivered",
+    "organizaciones": "Organizations that trust us",
+    "equipo": "Specialists on the team",
+    "paises": "Countries with clients",
+    "ubicacion": "Argentina, Buenos Aires, Capital Federal",
+    "enProduccion": "In production"
   },
   "infraServices": {
     "titulo": "Infrastructure designed to be ",

@@ -16,13 +16,11 @@ import SEO from "../../utils/SEO";
 
 export default function Home() {
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
-  const [isTranslateVisible, setIsTranslateVisible] = useState(false);
 
   const handleScroll = () => {
     const inicio = document.getElementById("inicio");
     if (inicio) {
       const { bottom } = inicio.getBoundingClientRect();
-      setIsTranslateVisible(bottom < 0);
       setIsWhatsAppVisible(bottom < 0);
     }
   };
@@ -68,7 +66,7 @@ export default function Home() {
         </Box>
         <Footer />
         {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
-        {isTranslateVisible && <TranslateButton position={"fixed"} />}
+        <TranslateButton />
       </Box>
     </>
   );
