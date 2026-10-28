@@ -9,7 +9,7 @@ import { FiMapPin, FiArrowRight } from "react-icons/fi";
 // Si cambian esas secciones, actualizar acá.
 const stats = [
     { value: 19, key: "proyectos" },
-    { value: 8, key: "organizaciones" },
+    { value: 10, key: "organizaciones" },
     { value: 7, key: "equipo" },
     { value: 3, key: "paises" },
 ];

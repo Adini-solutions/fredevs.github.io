@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Flex, Grid, Image, Link, LinkBox, LinkOverlay, Text, Badge } from '@chakra-ui/react';
+import { Box, Flex, Grid, Image, Link, LinkBox, LinkOverlay, Text, Badge, usePrefersReducedMotion } from '@chakra-ui/react';
+import { keyframes } from '@emotion/react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'react-i18next';
@@ -55,6 +56,10 @@ const DIGITAL_ARTS = {
  * tamaño. `h` es el alto del logo: se ajusta a mano para que todos pesen
  * parecido, porque sus proporciones son muy distintas. Para sumar uno, dejá
  * el archivo en `public/assets/clients/` y agregalo acá.
+ *
+ * Cognitia sale de `cognitia-front/src/app/public/assets/cognitia-1.png`,
+ * recortado y achicado. HIP Game Park es el horizontal negro de su brandbook
+ * (`hip-monorepo/packages/ui/public/brand/`), que pide no bajar de 30px de alto.
  */
 const CLIENTS = [
   { name: "Universidad de Buenos Aires", logo: "/assets/clients/uba.png", h: "1.75rem" },
@@ -63,6 +68,8 @@ const CLIENTS = [
   { name: "Improveet", logo: "/assets/clients/improveet.png", h: "1.25rem" },
   { name: "Be Water", logo: "/assets/clients/be-water.png", h: "2rem" },
   { name: "The Brains", logo: "/assets/clients/the-brains.png", h: "1.6rem" },
+  { name: "Cognitia", logo: "/assets/clients/cognitia.png", h: "1.6rem" },
+  { name: "HIP Game Park", logo: "/assets/clients/hip-game-park.svg", h: "31px" },
   // Pendiente hasta tener su logo:
   // { name: "Química Morón", logo: "/assets/clients/quimica-moron.png", h: "2rem" },
 ];
@@ -72,8 +79,16 @@ const CLIENTS = [
  * UTN Facultad Regional Buenos Aires y DigitalArts), cada uno en su tarjeta.
  * Abajo, aparte, los clientes que confían en Adini.
  */
+// Desplaza la cinta la mitad de su ancho: como lleva los logos dos veces,
+// al reiniciar la segunda copia queda donde estaba la primera y no se nota el corte.
+const marquee = keyframes`
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+`;
+
 export default function TrustedBy() {
   const { t } = useTranslation();
+  const reduceMotion = usePrefersReducedMotion();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
@@ -147,26 +162,66 @@ export default function TrustedBy() {
             {t("trust.clientesEtiqueta")}
           </Text>
 
-          <Grid templateColumns={{ base: "repeat(2, 1fr)", sm: "repeat(3, 1fr)", lg: "repeat(6, 1fr)" }} gap={3}>
-            {CLIENTS.map((client) => (
+          {/* Carrusel infinito: la cinta corre sola, se frena al pasar el mouse
+              y se desvanece en los bordes. Con "reducir movimiento" vuelve a
+              ser una grilla quieta. */}
+          {reduceMotion ? (
+            <Grid templateColumns={{ base: "repeat(2, 1fr)", sm: "repeat(4, 1fr)" }} gap={3}>
+              {CLIENTS.map((client) => (
+                <ClientLogo key={client.name} client={client} />
+              ))}
+            </Grid>
+          ) : (
+            <Box
+              overflow="hidden"
+              mx={{ base: -6, md: -8 }}
+              sx={{
+                maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+                WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              }}
+            >
               <Flex
-                key={client.name}
-                align="center"
-                justify="center"
-                h="5.25rem"
-                px={4}
-                bg="white"
-                border="1px solid"
-                borderColor="gray.100"
-                borderRadius="xl"
+                w="max-content"
+                animation={`${marquee} 40s linear infinite`}
+                _hover={{ animationPlayState: "paused" }}
               >
-                <Image src={client.logo} alt={client.name} h={client.h} maxW="100%" w="auto" objectFit="contain" />
+                {[0, 1].map((copy) => (
+                  <Flex key={copy} gap={3} pr={3} aria-hidden={copy === 1 || undefined}>
+                    {CLIENTS.map((client) => (
+                      <ClientLogo key={client.name} client={client} w={{ base: "9.5rem", md: "11rem" }} />
+                    ))}
+                  </Flex>
+                ))}
               </Flex>
-            ))}
-          </Grid>
+            </Box>
+          )}
         </Flex>
       </MotionBox>
     </Box>
+  );
+}
+
+/**
+ * Celda con el logo de un cliente, a color y centrado.
+ */
+function ClientLogo({ client, ...props }) {
+  return (
+    <Flex
+      align="center"
+      justify="center"
+      flexShrink={0}
+      h="5.25rem"
+      px={4}
+      bg="white"
+      border="1px solid"
+      borderColor="gray.100"
+      borderRadius="xl"
+      transition="border-color 0.25s ease, box-shadow 0.25s ease"
+      _hover={{ borderColor: "gray.200", boxShadow: "sm" }}
+      {...props}
+    >
+      <Image src={client.logo} alt={client.name} h={client.h} maxW="100%" w="auto" objectFit="contain" />
+    </Flex>
   );
 }
 
