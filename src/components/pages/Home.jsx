@@ -13,8 +13,10 @@ import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
 import SEO from "../../utils/SEO";
+import useHashScroll from "../../utils/useHashScroll";
 
 export default function Home() {
+  useHashScroll();
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
 
   const handleScroll = () => {
@@ -64,7 +66,7 @@ export default function Home() {
         <Box id="contacto">
           <Contact />
         </Box>
-        <Footer />
+        <Footer mt={0} />
         {isWhatsAppVisible && <WhatsAppIcon position={"fixed"} />}
         <TranslateButton />
       </Box>

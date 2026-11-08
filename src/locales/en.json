@@ -15,8 +15,8 @@
   },
   "banner": {
     "span": "IT Consulting",
-    "titulo": "We transform ideas into digital solutions",
-    "subtitulo": "We are a multidisciplinary team that supports you from the initial concept through to full implementation.",
+    "titulo": "Software and applied AI, built for your infraestructure",
+    "subtitulo": "Less manual work. Faster operations. Lower costs",
     "boton": "Contact us"
   },
   "trust": {
@@ -758,7 +758,22 @@
     "boton": "Send",
     "mensajeEnviando": "Sending",
     "mensajeEnviado": "Message sent successfully.",
-    "mensajeNoEnviado": "Message could not be sent."
+    "mensajeNoEnviado": "Message could not be sent.",
+    "nombreLabel": "Full name",
+    "correoLabel": "Email address",
+    "telefonoLabel": "Phone (optional)",
+    "mensajeLabel": "How can we help you?",
+    "correoInvalido": "Please check the email format",
+    "progreso": "{{done}} of {{total}} fields ready",
+    "progresoListo": "All set to send!",
+    "respuesta": "We reply within 24 business hours",
+    "otroMensaje": "Send another message",
+    "etiqueta": "Let's talk",
+    "bajada": "Tell us what you need and we'll propose the best way to get there.",
+    "privacidad": "We only use your data to reply to you",
+    "directo": "Prefer to reach us directly?",
+    "chipRecibido": "New message",
+    "chipRespuesta": "Reply in under 24 h"
   },
   "aboutUs": {
     "titulo": "Our team",

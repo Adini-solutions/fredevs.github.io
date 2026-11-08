@@ -9,8 +9,10 @@ import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
 import SEO from "../../utils/SEO";
+import useHashScroll from "../../utils/useHashScroll";
 
 export default function Infra() {
+  useHashScroll();
   const [isWhatsAppVisible, setIsWhatsAppVisible] = useState(false);
 
   const handleScroll = () => {

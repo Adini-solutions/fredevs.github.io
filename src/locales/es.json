@@ -15,8 +15,8 @@
   },
   "banner": {
     "span": "Consultoria IT",
-    "titulo": "Transformamos ideas en soluciones informáticas",
-    "subtitulo": "Somos un equipo multidisciplinario que te acompaña desde la concepción de la idea hasta su implementación.",
+    "titulo": "Software e IA aplicadas a tu negocio",
+    "subtitulo": "Automatizamos los procesos de tu empresa para ganar tiempo y reducir costos",
     "boton": "Contáctanos"
   },
   "trust": {
@@ -758,7 +758,22 @@
     "boton": "Enviar",
     "mensajeEnviando": "Enviando",
     "mensajeEnviado": "Mensaje enviado con éxito.",
-    "mensajeNoEnviado": "No se ha podido enviar el mensaje."
+    "mensajeNoEnviado": "No se ha podido enviar el mensaje.",
+    "nombreLabel": "Nombre y apellido",
+    "correoLabel": "Correo electrónico",
+    "telefonoLabel": "Teléfono (opcional)",
+    "mensajeLabel": "¿En qué te podemos ayudar?",
+    "correoInvalido": "Revisá el formato del correo",
+    "progreso": "{{done}} de {{total}} campos listos",
+    "progresoListo": "¡Todo listo para enviar!",
+    "respuesta": "Respondemos en menos de 24 horas hábiles",
+    "otroMensaje": "Enviar otro mensaje",
+    "etiqueta": "Hablemos",
+    "bajada": "Contanos qué necesitás y te proponemos el mejor camino para resolverlo.",
+    "privacidad": "Usamos tus datos solo para responderte",
+    "directo": "¿Preferís escribirnos directo?",
+    "chipRecibido": "Nuevo mensaje",
+    "chipRespuesta": "Respuesta en menos de 24 h"
   },
   "aboutUs": {
     "titulo": "Nuestro equipo",

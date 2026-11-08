@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { STORIES_URL } from "../../utils/stories";
 
 
-export default function Footer({ variant = "default" }) {
+export default function Footer({ variant = "default", mt = "70px" }) {
     const { t } = useTranslation();
     const navigate = useNavigate();
 
@@ -58,7 +58,7 @@ export default function Footer({ variant = "default" }) {
     };
 
     return (
-        <Box bg="primary.500" color="gray.400" mt={"70px"} pt={12} px={{ base: 6, md: 20 }}>
+        <Box bg="primary.500" color="gray.400" mt={mt} pt={12} px={{ base: 6, md: 20 }}>
             <Grid
                 templateColumns={{ base: "1fr 1fr", md: "2fr 1fr 1fr 1fr" }}
                 gap={{ base: 8, md: 10 }}

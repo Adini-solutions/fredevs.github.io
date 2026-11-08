@@ -209,34 +209,6 @@ export default function Banner({ variant = "default" }) {
                     </Box>
 
                     <VStack spacing={{ base: 5, md: 7 }} textAlign="center" maxW="980px" position="relative">
-                        <HStack
-                            as={motion.div}
-                            {...fadeUp(0)}
-                            spacing={2}
-                            px={3}
-                            py={1.5}
-                            borderRadius="full"
-                            bg="rgba(255,255,255,0.06)"
-                            border="1px solid rgba(255,255,255,0.14)"
-                            backdropFilter="blur(8px)"
-                        >
-                            <Box position="relative" w="8px" h="8px">
-                                <Box
-                                    as={motion.div}
-                                    position="absolute"
-                                    inset={0}
-                                    borderRadius="full"
-                                    bg={config.secondary}
-                                    animate={{ scale: [1, 2.4], opacity: [0.7, 0] }}
-                                    transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
-                                />
-                                <Box position="absolute" inset={0} borderRadius="full" bg={config.secondary} />
-                            </Box>
-                            <Icon size={16} />
-                            <Text m={0} fontSize={{ base: "xs", md: "sm" }} fontWeight="semibold" letterSpacing="0.08em" textTransform="uppercase">
-                                {t(config.span)}
-                            </Text>
-                        </HStack>
 
                         <Text
                             as={motion.h1}
