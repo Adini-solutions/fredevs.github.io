@@ -116,12 +116,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Fuente sin bloquear el primer pintado; solo los pesos que usa el sitio.
-       Poppins no se carga: la URL anterior la pedía con un rango de pesos que
-       Google no acepta para Poppins y nunca llegaba, así que el diseño se
-       ajustó con la fuente del sistema en los títulos. -->
+  <!-- Fuentes sin bloquear el primer pintado; solo los pesos que usa el sitio:
+       Noto Sans (texto) y Poppins 400/500/600 (títulos y cifras). -->
   <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300..800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300..800&family=Poppins:wght@400;500;600&display=swap"
     onload="this.onload=null;this.rel='stylesheet'" />
 </head>
 

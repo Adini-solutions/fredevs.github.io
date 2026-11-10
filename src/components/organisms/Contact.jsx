@@ -251,9 +251,9 @@ export default function Contact({ variant = "default" }) {
               mb={0}
               fontFamily="'Poppins', sans-serif"
               fontSize={{ base: "4xl", md: "5xl" }}
-              fontWeight="bold"
+              fontWeight="600"
               lineHeight="1.08"
-              letterSpacing="-0.03em"
+              letterSpacing="-0.015em"
               sx={{ textWrap: "balance" }}
             >
               {t("contact.titulo")}{" "}

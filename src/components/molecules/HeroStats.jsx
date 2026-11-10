@@ -103,7 +103,7 @@ export default function HeroStats({ primary, secondary, showCaseLink, onCaseClic
                             m={0}
                             fontFamily="'Poppins', sans-serif"
                             fontSize={{ base: "3xl", lg: "4xl" }}
-                            fontWeight="bold"
+                            fontWeight="600"
                             lineHeight="1"
                             bgGradient={`linear(to-r, white, ${secondary})`}
                             bgClip="text"
