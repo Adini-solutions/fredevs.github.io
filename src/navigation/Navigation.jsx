@@ -4,10 +4,12 @@ import NotFound from "../components/pages/NotFound";
 import Dev from "../components/pages/Dev";
 import Infra from "../components/pages/Infra";
 import IA from "../components/pages/IA";
+import RouteTracker from "./RouteTracker.jsx";
 
 export default function Navigation() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <RouteTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dev" element={<Dev />} />
