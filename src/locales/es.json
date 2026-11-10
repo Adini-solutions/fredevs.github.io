@@ -40,6 +40,10 @@
       "utenia": "Agente de IA",
       "sicyt": "Sistema de gestión",
       "sia": "Portal institucional"
+    },
+    "curso": {
+      "texto": "Dictamos el curso de IA híbrida, privada y local en la UTN.BA.",
+      "link": "Conocer el curso"
     }
   },
   "bannerDev": {
@@ -783,7 +787,7 @@
     "mensajeEnviando": "Enviando",
     "mensajeEnviado": "Recibimos tu consulta",
     "mensajeNoEnviado": "No pudimos enviar tu consulta. Intentá de nuevo o escribinos por correo.",
-    "nombreLabel": "Nombre y apellido",
+    "nombreLabel": "Nombre o empresa",
     "correoLabel": "Correo electrónico",
     "telefonoLabel": "Teléfono (opcional)",
     "mensajeLabel": "Contexto de tu consulta (opcional)",
@@ -833,7 +837,7 @@
       "infra": "Por ejemplo: cómo está compuesta hoy tu infraestructura y qué necesitás mejorar.",
       "ia": "Por ejemplo: qué tarea querés delegar en un agente, con qué sistemas trabaja hoy tu equipo y en qué plazos."
     },
-    "nombreError": "Ingresá tu nombre y apellido",
+    "nombreError": "Ingresá tu nombre o el de tu empresa",
     "obligatorios": "* Campos obligatorios",
     "verificando": "Verificando",
     "verificacionError": "No pudimos verificar el envío. Recargá la página e intentá de nuevo.",
@@ -880,7 +884,8 @@
       "desarrollo": "Desarrollo de Software",
       "infra": "Infrastructure & Cloud Services",
       "casos": "Casos de Éxito",
-      "ia": "Agentes de IA"
+      "ia": "Agentes de IA",
+      "curso": "Curso de IA en la UTN.BA"
     },
     "redes": {
       "titulo": "Nuestras Redes"
@@ -1016,6 +1021,12 @@
           "respuesta": "Podemos operarlo y evolucionarlo nosotros, con monitoreo continuo, o transferirlo a tu equipo con la documentación y el acompañamiento necesarios."
         }
       ]
+    },
+    "curso": {
+      "etiqueta": "Formación",
+      "titulo": "Dictamos el curso de IA híbrida, privada y local en la UTN.BA",
+      "texto": "Para equipos que quieren diseñar y rentabilizar IA en la nube, en infraestructura privada o en un esquema híbrido. También lo dictamos en ediciones cerradas para empresas.",
+      "boton": "Conocer el curso"
     }
   }
 }

@@ -4,8 +4,9 @@ import { keyframes } from '@emotion/react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'react-i18next';
-import { LuArrowRight, LuBadgeCheck, LuHandshake } from "react-icons/lu";
+import { LuArrowRight, LuArrowUpRight, LuBadgeCheck, LuGraduationCap, LuHandshake } from "react-icons/lu";
 import { storyUrl } from '../../utils/stories';
+import { CURSO_URL } from '../../utils/curso';
 
 const MotionBox = motion(Box);
 
@@ -114,6 +115,7 @@ export default function TrustedBy() {
                 <CaseLink key={c.slug} study={c} href={storyUrl(c.slug)} label={t(`trust.sistemas.${c.slug}`)} />
               ))}
             </Grid>
+            <CourseLink text={t("trust.curso.texto")} cta={t("trust.curso.link")} />
           </PartnerCard>
 
           {/* Partner DigitalArts */}
@@ -284,6 +286,42 @@ function PartnerCard({ icon, label, logo, logoAlt, logoH = { base: "44px", md: "
         {children}
       </Flex>
     </LinkBox>
+  );
+}
+
+/**
+ * Línea al curso de IA que ADINI dicta en la UTN.BA, al pie de la tarjeta de
+ * la UTN. Va a la web del curso (innovia.adini.com.ar).
+ */
+function CourseLink({ text, cta }) {
+  return (
+    <Link
+      href={CURSO_URL}
+      isExternal
+      role="group"
+      display="flex"
+      alignItems={{ base: "flex-start", sm: "center" }}
+      flexDirection={{ base: "column", sm: "row" }}
+      gap={{ base: 2, sm: 3 }}
+      mt={1}
+      pt={4}
+      borderTop="1px dashed"
+      borderColor="gray.200"
+      _hover={{ textDecoration: "none" }}
+    >
+      <Flex align="center" gap={3} flex={1} minW={0}>
+        <Flex boxSize="36px" flexShrink={0} borderRadius="lg" align="center" justify="center" bg="#fbe9ed" color="#a31235">
+          <Box as={LuGraduationCap} size={18} />
+        </Flex>
+        <Text m={0} fontSize="sm" color="gray.700" fontWeight="500">
+          {text}
+        </Text>
+      </Flex>
+      <Flex align="center" gap={1} fontSize="sm" fontWeight="700" color="#a31235" whiteSpace="nowrap" pl={{ base: "48px", sm: 0 }}>
+        {cta}
+        <Box as={LuArrowUpRight} size={16} transition="transform .2s" _groupHover={{ transform: "translate(2px,-2px)" }} />
+      </Flex>
+    </Link>
   );
 }
 

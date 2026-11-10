@@ -84,7 +84,7 @@ export default function Contact({ variant = "default" }) {
           subject: `Contacto web · ${subjectTopic} · ${name.trim()}`,
           text: [
             `Tema: ${subjectTopic}`,
-            `Nombre: ${name.trim()}`,
+            `Nombre o empresa: ${name.trim()}`,
             `Email: ${email.trim()}`,
             `Tel: ${phone.trim() || "N/D"}`,
             `Página: ${window.location.href}`,

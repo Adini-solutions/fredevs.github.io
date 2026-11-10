@@ -40,6 +40,10 @@
       "utenia": "AI agent",
       "sicyt": "Management system",
       "sia": "Institutional portal"
+    },
+    "curso": {
+      "texto": "We teach the hybrid, private and local AI course at UTN.BA.",
+      "link": "See the course"
     }
   },
   "bannerDev": {
@@ -783,7 +787,7 @@
     "mensajeEnviando": "Sending",
     "mensajeEnviado": "We received your inquiry",
     "mensajeNoEnviado": "We couldn't send your inquiry. Try again or email us.",
-    "nombreLabel": "Full name",
+    "nombreLabel": "Name or company",
     "correoLabel": "Email address",
     "telefonoLabel": "Phone (optional)",
     "mensajeLabel": "Context of your inquiry (optional)",
@@ -833,7 +837,7 @@
       "infra": "For example: what your infrastructure looks like today and what you need to improve.",
       "ia": "For example: which task you want to delegate to an agent, which systems your team uses today and your timeline."
     },
-    "nombreError": "Please enter your full name",
+    "nombreError": "Please enter your name or company",
     "obligatorios": "* Required fields",
     "verificando": "Verifying",
     "verificacionError": "We couldn't verify the submission. Reload the page and try again.",
@@ -880,7 +884,8 @@
       "desarrollo": "Software development",
       "infra": "Infrastructure & Cloud Services",
       "casos": "Case Studies",
-      "ia": "AI Agents"
+      "ia": "AI Agents",
+      "curso": "AI course at UTN.BA"
     },
     "redes": {
       "titulo": "Our Social Media"
@@ -1016,6 +1021,12 @@
           "respuesta": "We can run and evolve it ourselves, with continuous monitoring, or hand it over to your team with the necessary documentation and support."
         }
       ]
+    },
+    "curso": {
+      "etiqueta": "Training",
+      "titulo": "We teach the hybrid, private and local AI course at UTN.BA",
+      "texto": "For teams that want to design and make AI cost-effective in the cloud, on private infrastructure or in a hybrid setup. We also run private editions for companies.",
+      "boton": "See the course"
     }
   }
 }

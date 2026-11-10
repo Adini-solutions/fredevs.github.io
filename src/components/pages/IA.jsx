@@ -8,6 +8,7 @@ import AgentFlow from "../organisms/AgentFlow";
 import CaseStudies from "../organisms/CaseStudies";
 import ProcessRoadmap from "../organisms/ProcessRoadmap";
 import FAQ from "../organisms/FAQ";
+import CourseBanner from "../organisms/CourseBanner";
 import Contact from "../organisms/Contact";
 import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
@@ -60,6 +61,7 @@ export default function IA() {
         <Box id="metodo">
           <ProcessRoadmap ns="processIa" icons={PROCESS_ICONS} variant="ia" />
         </Box>
+        <CourseBanner />
         <Box id="preguntas">
           <FAQ />
         </Box>

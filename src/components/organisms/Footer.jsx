@@ -3,6 +3,7 @@ import { FaLinkedin, FaEnvelope, FaInstagram, FaFacebook } from "react-icons/fa"
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { STORIES_URL } from "../../utils/stories";
+import { CURSO_URL } from "../../utils/curso";
 
 
 export default function Footer({ variant = "default", mt = "70px" }) {
@@ -109,6 +110,10 @@ export default function Footer({ variant = "default", mt = "70px" }) {
 
                         <Link href={STORIES_URL} isExternal _hover={{ color: "white" }}>
                             {t("footer.areas.casos")}
+                        </Link>
+
+                        <Link href={CURSO_URL} isExternal _hover={{ color: "white" }}>
+                            {t("footer.areas.curso")}
                         </Link>
                     </VStack>
                 </GridItem>
