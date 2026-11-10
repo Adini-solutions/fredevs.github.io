@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { LuBot, LuCode, LuCloudCog, LuArrowRight } from "react-icons/lu";
+import { LuSparkles, LuCode, LuCloudCog, LuArrowRight } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
 
 export default function ServiceAreas() {
@@ -23,7 +23,7 @@ export default function ServiceAreas() {
 
   // El orden de `serviceAreas.areas` en los locales es el mismo que este.
   const areas = [
-    { key: "ia", accent: "#3b82f6", route: "/ia", icon: LuBot },
+    { key: "ia", accent: "#3b82f6", route: "/ia", icon: LuSparkles },
     { key: "dev", accent: "#6c63ff", route: "/dev", icon: LuCode },
     { key: "infra", accent: "#2bb691", route: "/infra", icon: LuCloudCog },
   ].map((area, i) => ({
