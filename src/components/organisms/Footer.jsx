@@ -1,14 +1,13 @@
 import { Box, Grid, GridItem, Image, Text, Link, Icon, VStack, HStack, Divider } from "@chakra-ui/react";
 import { FaLinkedin, FaEnvelope, FaInstagram, FaFacebook } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { STORIES_URL } from "../../utils/stories";
 import { CURSO_URL } from "../../utils/curso";
 
 
 export default function Footer({ variant = "default", mt = "70px" }) {
     const { t } = useTranslation();
-    const navigate = useNavigate();
 
     const menuType = {
         default: ["inicio", "areas", "ia", "cases", "blog", "nosotros", "contacto"],
@@ -23,7 +22,11 @@ export default function Footer({ variant = "default", mt = "70px" }) {
         return (
             <Link
                 key={item}
-                onClick={() => (scrollToSection(item))}
+                href={`#${item}`}
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item);
+                }}
                 _hover={{ color: "white" }}
             >
                 {label}
@@ -31,13 +34,6 @@ export default function Footer({ variant = "default", mt = "70px" }) {
         );
     });
 
-    const navigateWithScroll = (path) => {
-        navigate(path);
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
 
     const information = {
         name: "Adini",
@@ -88,22 +84,25 @@ export default function Footer({ variant = "default", mt = "70px" }) {
                     </Text>
                     <VStack align={{ base: "center", md: "start" }} spacing={2}>
                         <Link
-                            onClick={() => navigateWithScroll("/ia")}
-                            _hover={{ color: "white", cursor: "pointer" }}
+                            as={RouterLink}
+                            to="/ia"
+                            _hover={{ color: "white" }}
                         >
                             {t("footer.areas.ia")}
                         </Link>
 
                         <Link
-                            onClick={() => navigateWithScroll("/dev")}
-                            _hover={{ color: "white", cursor: "pointer" }}
+                            as={RouterLink}
+                            to="/dev"
+                            _hover={{ color: "white" }}
                         >
                             {t("footer.areas.desarrollo")}
                         </Link>
 
                         <Link
-                            onClick={() => navigateWithScroll("/infra")}
-                            _hover={{ color: "white", cursor: "pointer" }}
+                            as={RouterLink}
+                            to="/infra"
+                            _hover={{ color: "white" }}
                         >
                             {t("footer.areas.infra")}
                         </Link>

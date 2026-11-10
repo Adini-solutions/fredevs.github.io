@@ -37,12 +37,7 @@ export default function IA() {
 
   return (
     <>
-      <SEO
-        title="ADINI | Agentes de IA para empresas e instituciones"
-        description="Diseñamos agentes de IA que consultan tus sistemas y documentos, ejecutan tareas y escalan a una persona cuando hace falta, con tus datos bajo control."
-        canonical="https://adini.com.ar/ia"
-        image="https://adini.com.ar/assets/brand/og-image.jpg"
-      />
+      <SEO />
 
       <Header variant="ia" />
       <Box bg={"quarter.500"} overflowX={"hidden"}>

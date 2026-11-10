@@ -11,14 +11,13 @@ import Title from "../molecules/Title";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { LuSparkles, LuCode, LuCloudCog, LuArrowRight } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
 
 export default function ServiceAreas() {
   const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.2), []);
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
   // El orden de `serviceAreas.areas` en los locales es el mismo que este.
@@ -33,14 +32,6 @@ export default function ServiceAreas() {
     description: t(`serviceAreas.areas.${i}.description`),
     cta: t(`serviceAreas.areas.${i}.cta`),
   }));
-
-  const navigateWithScroll = (path) => {
-    navigate(path);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <>
@@ -68,20 +59,22 @@ export default function ServiceAreas() {
                 borderRadius="3xl"
                 boxShadow="lg"
                 p={{ base: 6, md: 8, "2xl": 12 }}
-                cursor="pointer"
-                onClick={() => navigateWithScroll(area.route)}
+                as={RouterLink}
+                to={area.route}
+                display="flex"
+                textDecoration="none"
                 position="relative"
                 overflow="hidden"
                 border="1px solid"
                 borderColor="gray.100"
                 transition="all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
                 _hover={{
+                  textDecoration: "none",
                   transform: "translateY(-8px)",
                   boxShadow: `0 0 20px ${area.accent}50`,
                   borderColor: `${area.accent}60`,
                 }}
                 height="100%"
-                display="flex"
                 flexDirection="column"
               >
                 <Flex align="center" mb={{ base: 4, "2xl": 6 }} justify="space-between" zIndex="1">

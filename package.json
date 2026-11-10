@@ -2,7 +2,6 @@
   "name": "adini",
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://adini.com.ar",
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development react-scripts start",
@@ -10,7 +9,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+    "postbuild": "node scripts/seo-files.js",
+    "prerender": "node scripts/prerender.js"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.2.1",
@@ -59,6 +59,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.3.0"
+    "playwright": "^1.56.1"
   }
 }

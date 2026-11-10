@@ -1,0 +1,7 @@
+# adini.com.ar: todo el sitio es público y se puede indexar, también por
+# buscadores y asistentes de IA (OAI-SearchBot, ChatGPT-User, PerplexityBot,
+# Claude-SearchBot, Google-Extended, etc.).
+User-agent: *
+Allow: /
+
+Sitemap: https://adini.com.ar/sitemap.xml

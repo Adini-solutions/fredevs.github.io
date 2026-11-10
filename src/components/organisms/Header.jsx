@@ -1,7 +1,8 @@
 import { Box, Flex, Image, Text, Divider, IconButton, Button as ChakraButton, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
-import { useTranslation } from "react-i18next"; import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Link as RouterLink } from "react-router-dom";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 import { useEffect, useRef, useState } from 'react';
@@ -10,7 +11,6 @@ import Button from "../molecules/Button";
 export default function Header({ variant = "default" }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
   // scrolled: el banner ya quedó atrás y el header pasa a blanco.
   const [scrolled, setScrolled] = useState(false);
   // atTop: todavía no se scrolleó; el header es transparente y se funde con
@@ -164,13 +164,6 @@ export default function Header({ variant = "default" }) {
     }
   };
 
-  const navigateWithScroll = (path) => {
-    navigate(path);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   const itemsColor = scrolled ? "gray.700" : "whiteAlpha.900";
 
@@ -268,7 +261,8 @@ export default function Header({ variant = "default" }) {
           })}
           {isArea && (
             <Text
-              as="button"
+              as={RouterLink}
+              to="/"
               m={0}
               ml={2}
               px={3}
@@ -276,12 +270,12 @@ export default function Header({ variant = "default" }) {
               borderRadius="full"
               border="1px solid"
               borderColor={scrolled ? "#5548e6" : "#a09bff"}
-              onClick={() => navigateWithScroll("/")}
+              textDecoration="none"
               fontWeight="semibold"
               fontSize="sm"
               color={scrolled ? "#5548e6" : "#c4c1ff"}
               transition="all 0.2s ease"
-              _hover={{ bg: scrolled ? "#5548e6" : "#6c63ff", borderColor: scrolled ? "#5548e6" : "#6c63ff", color: "white" }}
+              _hover={{ bg: scrolled ? "#5548e6" : "#6c63ff", borderColor: scrolled ? "#5548e6" : "#6c63ff", color: "white", textDecoration: "none" }}
             >
               ADINI
             </Text>
@@ -349,9 +343,11 @@ export default function Header({ variant = "default" }) {
                   {isArea && (
 
                     <Text
-                      as="button"
+                      as={RouterLink}
+                      to="/"
+                      onClick={onClose}
                       textAlign={"left"}
-                      onClick={() => navigateWithScroll("/")}
+                      textDecoration="none"
                       fontSize="lg"
                       fontWeight="semibold"
                       color="#5548e6"
@@ -379,7 +375,7 @@ export default function Header({ variant = "default" }) {
 
                   <Box mt={4} textAlign="center">
                     <Flex align="center" justify="center">
-                      <Image src={colorLogo} alt="Adini" h="25px" cursor="pointer" onClick={() => navigateWithScroll("/")} />
+                      <RouterLink to="/" onClick={onClose} aria-label="Inicio"><Image src={colorLogo} alt="Adini" h="25px" /></RouterLink>
                     </Flex>
                   </Box>
                 </Box>

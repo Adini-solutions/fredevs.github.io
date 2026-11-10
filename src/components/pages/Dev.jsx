@@ -35,12 +35,7 @@ export default function Dev() {
 
   return (
     <>
-      <SEO
-        title="ADINI | Desarrollo de Software"
-        description="Desarrollo web, aplicaciones móviles y software a medida para empresas."
-        canonical="https://adini.com.ar/dev"
-        image="https://adini.com.ar/assets/brand/og-image.jpg"
-      />
+      <SEO />
       <Header variant="dev" />
       <Box bg={"quarter.500"} overflowX={"hidden"}>
         <Box id="inicio">

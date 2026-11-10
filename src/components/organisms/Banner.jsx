@@ -3,16 +3,22 @@ import { motion } from "framer-motion";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import HeroNetwork from "../molecules/HeroNetwork";
 import HeroStats from "../molecules/HeroStats";
+import { PRERENDERED } from "../../utils/prerender";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { FiCode, FiServer, FiLayers, FiCloud, FiCpu, FiDatabase, FiGitBranch, FiArrowRight } from "react-icons/fi";
 import Button from "../molecules/Button";
 
-const fadeUp = (delay = 0) => ({
-    initial: { opacity: 0, y: 24 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.9, delay, ease: "easeOut" },
-});
+// Entrada del hero. Si la página llegó pre-renderizada ya está a la vista y no
+// se anima de nuevo (ver utils/prerender.js).
+const fadeUp = (delay = 0) =>
+    PRERENDERED
+        ? {}
+        : {
+              initial: { opacity: 0, y: 24 },
+              animate: { opacity: 1, y: 0 },
+              transition: { duration: 0.9, delay, ease: "easeOut" },
+          };
 
 // Anillos orbitales detrás del titular: núcleo, servicios y nube. Giran
 // lento, alternando el sentido, con satélites que los recorren.
@@ -33,7 +39,6 @@ const chips = [
 
 export default function Banner({ variant = "default" }) {
     const { t } = useTranslation();
-    const navigate = useNavigate();
 
     const bannerConfig = {
         default: {
@@ -204,7 +209,7 @@ export default function Banner({ variant = "default" }) {
                                     fontSize="sm"
                                     fontWeight="medium"
                                     whiteSpace="nowrap"
-                                    initial={{ opacity: 0 }}
+                                    initial={PRERENDERED ? false : { opacity: 0 }}
                                     animate={{ opacity: 1, y: [0, -8, 0] }}
                                     transition={{
                                         opacity: { duration: 0.8, delay: 0.8 + delay / 2 },
@@ -282,15 +287,9 @@ export default function Banner({ variant = "default" }) {
                                 boxShadow={`0 10px 30px -8px ${config.primary}`}
                             />
                             <ChakraButton
-                                onClick={() => {
-                                    const { route, section } = config.secundario;
-                                    if (route) {
-                                        navigate(route);
-                                        window.scrollTo({ top: 0 });
-                                    } else {
-                                        scrollToSection(section);
-                                    }
-                                }}
+                                {...(config.secundario.route
+                                    ? { as: RouterLink, to: config.secundario.route }
+                                    : { onClick: () => scrollToSection(config.secundario.section) })}
                                 size="lg"
                                 px={7}
                                 borderRadius="full"

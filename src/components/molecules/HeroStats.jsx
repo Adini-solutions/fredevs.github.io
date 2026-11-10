@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FiMapPin, FiArrowRight } from "react-icons/fi";
+import { PRERENDERED } from "../../utils/prerender";
 
 // Cifras del sitio: proyectos entregados (se muestra como "+10"),
 // organizaciones de "confían en nosotros", integrantes de "Nosotros" y países
@@ -23,10 +24,12 @@ const caseVariants = {
 // Cuenta de 0 al valor al aparecer el banner.
 function CountUp({ value }) {
     const reduceMotion = useReducedMotion();
-    const [display, setDisplay] = useState(reduceMotion ? value : 0);
+    // Con la página pre-renderizada la cifra ya está escrita: no se recuenta.
+    const skip = reduceMotion || PRERENDERED;
+    const [display, setDisplay] = useState(skip ? value : 0);
 
     useEffect(() => {
-        if (reduceMotion) return;
+        if (skip) return;
         const delay = 500;
         const duration = 1600;
         let start = null;
@@ -40,7 +43,7 @@ function CountUp({ value }) {
         };
         frame = requestAnimationFrame(step);
         return () => cancelAnimationFrame(frame);
-    }, [value, reduceMotion]);
+    }, [value, skip]);
 
     return display;
 }

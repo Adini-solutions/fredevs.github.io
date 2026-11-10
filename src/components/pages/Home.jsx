@@ -36,12 +36,7 @@ export default function Home() {
 
   return (
     <>
-      <SEO
-        title="ADINI | Agentes de IA y software a medida"
-        description="Diseñamos, integramos y operamos agentes de IA, software a medida e infraestructura para empresas e instituciones."
-        canonical="https://adini.com.ar/"
-        image="https://adini.com.ar/assets/brand/og-image.jpg"
-      />
+      <SEO />
       <Header />
       <Box bg={"quarter.500"} overflowX={"hidden"}>
         <Box id="inicio">

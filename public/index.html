@@ -1,109 +1,128 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 
 <head>
   <meta charset="utf-8" />
-  <html lang="es" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- El .ico queda de respaldo para los navegadores que no aceptan favicon en SVG. -->
   <link rel="icon" href="%PUBLIC_URL%/assets/icons/adini.ico" />
   <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/assets/brand/adini-isotipo-purple.svg" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/brand/adini-isotipo-512.png" />
+  <meta name="theme-color" content="#091c30" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Manejo de rutas para github pages -->
-  <script type="text/javascript">
-    // Single Page Apps for GitHub Pages
-    // https://github.com/rafgraph/spa-github-pages
-    (function(l) {
-      if (l.search[1] === '/' ) {
-        var decoded = l.search.slice(1).split('&').map(function(s) { 
-          return s.replace(/~and~/g, '&')
-        }).join('?');
-        window.history.replaceState(null, null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    }(window.location))
-  </script>
-  
-  <!-- SEO base -->
+  <!--
+    Valores por defecto (los del home). Cada página los reemplaza con los suyos
+    desde src/seo/pages.js: data-rh="true" hace que react-helmet-async los
+    sustituya en vez de duplicarlos, y el prerender (scripts/prerender.js) los
+    deja escritos en el HTML de cada ruta.
+  -->
   <title>ADINI | Agentes de IA y software a medida</title>
-  <meta name="description" content="ADINI diseña, integra y opera agentes de IA, software a medida e infraestructura para empresas e instituciones en Argentina." />
+  <meta data-rh="true" name="description" content="ADINI diseña, integra y opera agentes de IA, software a medida e infraestructura para empresas e instituciones. Partner oficial de la UTN FRBA." />
+  <meta data-rh="true" name="robots" content="index, follow, max-image-preview:large" />
+  <link data-rh="true" rel="canonical" href="https://adini.com.ar/" />
 
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="ADINI - Agencia de Desarrollo de Software" />
-  <meta name="theme-color" content="#000000" />
-
-  <!-- Canonical base -->
-  <link rel="canonical" href="https://adini.com.ar/" />
-
-  <!-- Open Graph base (fallback) -->
-  <meta property="og:title" content="ADINI | Agentes de IA y software a medida" />
-  <meta property="og:description" content="Diseñamos, integramos y operamos agentes de IA, software a medida e infraestructura para empresas e instituciones." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://adini.com.ar/" />
+  <meta data-rh="true" property="og:type" content="website" />
+  <meta data-rh="true" property="og:site_name" content="ADINI" />
+  <meta data-rh="true" property="og:locale" content="es_AR" />
+  <meta data-rh="true" property="og:title" content="ADINI | Agentes de IA y software a medida" />
+  <meta data-rh="true" property="og:description" content="ADINI diseña, integra y opera agentes de IA, software a medida e infraestructura para empresas e instituciones. Partner oficial de la UTN FRBA." />
+  <meta data-rh="true" property="og:url" content="https://adini.com.ar/" />
   <!-- Imagen al compartir (WhatsApp, LinkedIn, etc.): el logotipo sobre el azul de la marca. -->
-  <meta property="og:image" content="https://adini.com.ar/assets/brand/og-image.jpg" />
+  <meta data-rh="true" property="og:image" content="https://adini.com.ar/assets/brand/og-image.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Adini" />
+  <meta property="og:image:alt" content="ADINI" />
 
-  <!-- Twitter base -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://adini.com.ar/assets/brand/og-image.jpg" />
-  <meta name="twitter:site" content="@adini" />
+  <meta data-rh="true" name="twitter:card" content="summary_large_image" />
+  <meta data-rh="true" name="twitter:title" content="ADINI | Agentes de IA y software a medida" />
+  <meta data-rh="true" name="twitter:description" content="ADINI diseña, integra y opera agentes de IA, software a medida e infraestructura para empresas e instituciones. Partner oficial de la UTN FRBA." />
+  <meta data-rh="true" name="twitter:image" content="https://adini.com.ar/assets/brand/og-image.jpg" />
 
-  <!-- Geolocalización -->
-  <meta name="geo.region" content="AR" />
-  <meta name="geo.placename" content="Argentina" />
+  <meta name="geo.region" content="AR-C" />
+  <meta name="geo.placename" content="Ciudad Autónoma de Buenos Aires" />
 
-  <!-- JSON-LD Organización (GLOBAL) -->
+  <!-- Resumen para modelos de lenguaje (https://llmstxt.org) -->
+  <link rel="alternate" type="text/markdown" href="/llms.txt" title="ADINI para LLMs" />
+
+  <!--
+    JSON-LD global: la organización y el sitio. Cada página suma el suyo
+    (WebPage, servicio, preguntas frecuentes) desde src/seo/schema.js y los
+    referencia por @id.
+  -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ADINI",
-      "url": "https://adini.com.ar",
-      "logo": "https://adini.com.ar/assets/icons/adini.ico",
-      "description": "Agencia de desarrollo de software y soluciones digitales en Argentina.",
-      "sameAs": [
-        "https://www.facebook.com/adini",
-        "https://www.instagram.com/adini",
-        "https://www.linkedin.com/company/adini"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://adini.com.ar/#organization",
+          "name": "ADINI",
+          "url": "https://adini.com.ar/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://adini.com.ar/assets/brand/adini-isotipo-512.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://adini.com.ar/assets/brand/og-image.jpg",
+          "description": "Empresa argentina que diseña, integra y opera agentes de IA, software a medida e infraestructura para empresas e instituciones, con modelos en servidores propios o en la nube. Partner oficial de la UTN Facultad Regional Buenos Aires, donde dicta el curso de IA híbrida, privada y local.",
+          "slogan": "Agentes de IA y software para automatizar tu operación",
+          "foundingDate": "2024",
+          "email": "contacto@adini.com.ar",
+          "telephone": "+54 9 11 4412-3760",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ciudad Autónoma de Buenos Aires",
+            "addressRegion": "CABA",
+            "addressCountry": "AR"
+          },
+          "areaServed": { "@type": "Country", "name": "Argentina" },
+          "knowsAbout": [
+            "Agentes de IA",
+            "IA privada",
+            "Modelos de lenguaje en servidores propios",
+            "Automatización de procesos",
+            "Desarrollo de software a medida",
+            "Infraestructura y cloud"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "contacto@adini.com.ar",
+            "telephone": "+54 9 11 4412-3760",
+            "areaServed": "AR",
+            "availableLanguage": ["es", "en"]
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/adiniar",
+            "https://www.instagram.com/adini.solutions/",
+            "https://www.facebook.com/profile.php?id=61581291992126",
+            "https://stories.adini.com.ar"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://adini.com.ar/#website",
+          "url": "https://adini.com.ar/",
+          "name": "ADINI",
+          "inLanguage": "es-AR",
+          "publisher": { "@id": "https://adini.com.ar/#organization" }
+        }
       ]
     }
   </script>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&family=Poppins:wght@100..900&display=swap"
     rel="stylesheet" />
-
-  <!-- Bootstrap (si realmente lo necesitás) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    crossorigin="anonymous" />
 </head>
 
 <body style="font-family: 'Noto Sans', sans-serif">
-  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>

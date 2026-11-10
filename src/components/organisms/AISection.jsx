@@ -2,7 +2,7 @@ import { Box, Flex, Text, VStack, HStack, Icon, SimpleGrid, Link, Button as Chak
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LuMessagesSquare, LuFileText, LuChartColumn, LuWorkflow, LuShieldCheck, LuArrowRight, LuArrowUpRight } from "react-icons/lu";
 import Title from "../molecules/Title";
@@ -21,7 +21,6 @@ const ACCENT = "#8b85ff";
 
 export default function AISection() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.15), []);
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
@@ -74,10 +73,8 @@ export default function AISection() {
 
                 <Flex gap={3} wrap="wrap" pt={2}>
                   <ChakraButton
-                    onClick={() => {
-                      navigate("/ia");
-                      window.scrollTo({ top: 0 });
-                    }}
+                    as={RouterLink}
+                    to="/ia"
                     h="3rem"
                     px={6}
                     borderRadius="full"
