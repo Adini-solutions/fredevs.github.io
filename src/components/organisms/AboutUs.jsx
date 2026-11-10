@@ -54,13 +54,6 @@ export default function AboutUs({ variant = "default" }) {
             image: "/assets/images/dani.png",
             linkedin: "https://www.linkedin.com/in/daniel-alberto-pi%C3%B1ero-104a83119/",
         },
-        {
-            id: "guido",
-            name: "Guido Gelvan",
-            role: `${t("aboutUs.analista")} | ${t("aboutUs.desarrollador")}`,
-            image: "/assets/images/guido.png",
-            linkedin: "https://www.linkedin.com/in/guido-gelvan-b47070210/",
-        },
     ];
 
     const titleByVariant = {
@@ -81,7 +74,7 @@ export default function AboutUs({ variant = "default" }) {
     const currentTitle = titleByVariant[variant];
 
     const teamByVariant = {
-        dev: ["juani", "alejo", "gon", "guido"],
+        dev: ["juani", "alejo", "gon"],
         infra: ["gabi", "agus", "dani"],
     };
 
