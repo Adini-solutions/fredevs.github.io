@@ -64,18 +64,13 @@ export default function HeroStats({ primary, secondary, showCaseLink, onCaseClic
     return (
         <Box>
             <Flex
-                justify="space-between"
+                justify={{ base: "center", md: "flex-end" }}
                 align="center"
-                direction={{ base: "column", md: "row" }}
-                gap={2}
                 mb={3}
                 px={1}
                 fontSize="xs"
                 color="whiteAlpha.700"
             >
-                <Text m={0} fontWeight="semibold" letterSpacing="0.12em" textTransform="uppercase">
-                    {t("bannerStats.titulo")} · {t("bannerStats.desde")}
-                </Text>
                 <HStack spacing={1.5}>
                     <Box color={secondary}>
                         <FiMapPin size={13} />

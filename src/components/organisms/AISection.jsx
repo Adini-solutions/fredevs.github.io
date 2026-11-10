@@ -151,14 +151,10 @@ export default function AISection() {
                           role="group"
                           _hover={{ textDecoration: "none", color: "white" }}
                         >
-                          <Box boxSize="6px" borderRadius="full" bg="#2fbf94" boxShadow="0 0 8px #2fbf94" flexShrink={0} />
-                          <Text as="span" m={0} color="whiteAlpha.600">
-                            {t("aiSection.enProduccion")}:
-                          </Text>
                           <Text as="span" m={0} fontWeight="700">
                             {proof.name}
                           </Text>
-                          <Text as="span" m={0} color="whiteAlpha.600" display={{ base: "none", "2xl": "inline" }}>
+                          <Text as="span" m={0} color="whiteAlpha.600">
                             · {proof.client}
                           </Text>
                           <Icon as={LuArrowUpRight} transition="transform .2s" _groupHover={{ transform: "translate(2px,-2px)" }} />

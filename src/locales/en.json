@@ -23,7 +23,7 @@
     "titulo": "AI agents and software to automate your operations",
     "subtitulo": "We design, integrate and run AI agents, custom systems and infrastructure, with your data under your control.",
     "boton": "Contact us",
-    "secundario": "Explore our AI agents",
+    "secundario": "AI agents",
     "partnerUtn": "Official partner"
   },
   "trust": {
@@ -496,7 +496,7 @@
     "areas": [
       {
         "title": "AI Agents",
-        "subtitle": "Intelligent automation",
+        "subtitle": "AI automations",
         "description": "Agents that query your systems and documents, handle repetitive tasks and hand off to a person when needed, with data on the infrastructure you choose.",
         "cta": "View solutions"
       },
@@ -522,7 +522,6 @@
     "descripcion": "An agent is more than a chat: it queries your organization's information, carries out tasks in your systems and logs every step. We design it around your real processes and integrate it with the tools your team already uses.",
     "cta": "See how we work",
     "ctaContacto": "Let's talk about your project",
-    "enProduccion": "In production",
     "datos": "Models can run on your own servers, as in UtenIA and Aura.",
     "usos": [
       {

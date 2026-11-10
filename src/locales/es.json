@@ -23,7 +23,7 @@
     "titulo": "Agentes de IA y software para automatizar tu operación",
     "subtitulo": "Diseñamos, integramos y operamos agentes de IA, sistemas a medida e infraestructura, con tus datos bajo control.",
     "boton": "Contáctanos",
-    "secundario": "Conocé nuestros agentes de IA",
+    "secundario": "Agentes de IA",
     "partnerUtn": "Partner oficial"
   },
   "trust": {
@@ -496,7 +496,7 @@
     "areas": [
       {
         "title": "Agentes de IA",
-        "subtitle": "Automatización inteligente",
+        "subtitle": "Automatizaciones IA",
         "description": "Agentes que consultan tus sistemas y documentos, resuelven tareas repetitivas y derivan a una persona cuando hace falta, con los datos en la infraestructura que definas.",
         "cta": "Ver soluciones"
       },
@@ -522,7 +522,6 @@
     "descripcion": "Un agente no es solo un chat: consulta la información de tu organización, ejecuta tareas en tus sistemas y deja registro de cada paso. Lo diseñamos sobre tus procesos reales y lo integramos con lo que tu equipo ya usa.",
     "cta": "Conocé cómo trabajamos",
     "ctaContacto": "Hablemos de tu proyecto",
-    "enProduccion": "En producción",
     "datos": "Los modelos pueden correr en tus propios servidores, como en UtenIA y Aura.",
     "usos": [
       {
