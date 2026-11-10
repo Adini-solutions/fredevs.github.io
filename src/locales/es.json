@@ -2,7 +2,7 @@
   "header": {
     "inicio": "Inicio",
     "servicios": "Servicios",
-    "areas": "Areas de Servicio",
+    "areas": "Áreas de Servicio",
     "ia": "IA",
     "tecnologías": "Tecnologías",
     "proyectos": "Proyectos",
@@ -19,7 +19,7 @@
     "preguntas": "Preguntas"
   },
   "banner": {
-    "span": "Consultoria IT",
+    "span": "Consultoría IT",
     "titulo": "Agentes de IA y software para automatizar tu operación",
     "subtitulo": "Diseñamos, integramos y operamos agentes de IA, sistemas a medida e infraestructura, con tus datos bajo control.",
     "boton": "Contáctanos",
@@ -863,7 +863,7 @@
     "empresa": {
       "titulo": "Empresa",
       "servicios": "Servicios",
-      "areas": "Areas de Servicio",
+      "areas": "Áreas de Servicio",
       "tecnologías": "Tecnologías",
       "proyectos": "Proyectos",
       "ia": "IA",
@@ -1028,5 +1028,12 @@
       "texto": "Para equipos que quieren diseñar y rentabilizar IA en la nube, en infraestructura privada o en un esquema híbrido. También lo dictamos en ediciones cerradas para empresas.",
       "boton": "Conocer el curso"
     }
+  },
+  "whatsapp": {
+    "default": "Hola, les escribo desde adini.com.ar. Quería hacerles una consulta.",
+    "ia": "Hola, les escribo desde adini.com.ar/ia. Quería consultarles por agentes de IA.",
+    "dev": "Hola, les escribo desde adini.com.ar/dev. Quería consultarles por desarrollo de software.",
+    "infra": "Hola, les escribo desde adini.com.ar/infra. Quería consultarles por infraestructura y cloud.",
+    "tema": "Hola, les escribo desde {{pagina}}. Quería consultarles por {{tema}}."
   }
 }

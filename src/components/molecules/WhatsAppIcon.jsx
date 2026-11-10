@@ -1,11 +1,11 @@
 import { Box } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { useWhatsAppUrl } from "../../utils/whatsapp";
 
 const WhatsAppIcon = ({ position }) => {
-  
+  const href = useWhatsAppUrl();
 
   return (
-    <Link to={`https://wa.me/5491144123760`} target="_blank">
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
       <Box
         position={position}
         bottom="20px"
@@ -22,11 +22,11 @@ const WhatsAppIcon = ({ position }) => {
       >
         <img
           src="/assets/icons/whatsappIcon.png"
-          alt="WhatsApp"
+          alt=""
           style={{ width: "70%", height: "70%" }}
         />
       </Box>
-    </Link>
+    </a>
   );
 };
 

@@ -9,10 +9,10 @@ import { useInView } from "react-intersection-observer";
 import axios from "axios";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { rem } from "../../utils/escala";
+import { useWhatsAppUrl } from "../../utils/whatsapp";
 
 const WORKER_URL = "https://email-worker.adini.workers.dev";
 const TURNSTILE_SITE_KEY = "0x4AAAAAACH7eEMqIQ4uu34n";
-const WHATSAPP_URL = "https://wa.me/5491144123760";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const NAVY = "#091c30";
 const ERROR = "#e5484d";
@@ -64,6 +64,8 @@ export default function Contact({ variant = "default" }) {
   const [error, setError] = useState(null);
   const [sentTo, setSentTo] = useState(null);
   const topicRef = useRef(null);
+  // El WhatsApp del contacto suma el tema elegido al mensaje precargado.
+  const whatsappUrl = useWhatsAppUrl(topic);
 
   const nameOk = name.trim().length >= 2;
   const emailOk = EMAIL_RE.test(email.trim());
@@ -283,7 +285,7 @@ export default function Contact({ variant = "default" }) {
               <Flex gap={3} wrap="wrap">
                 {[
                   { href: `mailto:${contactEmail}`, icon: FiMail, label: contactEmail },
-                  { href: WHATSAPP_URL, icon: FaWhatsapp, label: "WhatsApp", external: true },
+                  { href: whatsappUrl, icon: FaWhatsapp, label: "WhatsApp", external: true },
                 ].map(({ href, icon, label, external }) => (
                   <Link
                     key={label}

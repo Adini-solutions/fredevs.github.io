@@ -1028,5 +1028,12 @@
       "texto": "For teams that want to design and make AI cost-effective in the cloud, on private infrastructure or in a hybrid setup. We also run private editions for companies.",
       "boton": "See the course"
     }
+  },
+  "whatsapp": {
+    "default": "Hi, I'm writing from adini.com.ar. I'd like to ask you something.",
+    "ia": "Hi, I'm writing from adini.com.ar/ia. I'd like to ask about AI agents.",
+    "dev": "Hi, I'm writing from adini.com.ar/dev. I'd like to ask about software development.",
+    "infra": "Hi, I'm writing from adini.com.ar/infra. I'd like to ask about infrastructure and cloud.",
+    "tema": "Hi, I'm writing from {{pagina}}. I'd like to ask about {{tema}}."
   }
 }
