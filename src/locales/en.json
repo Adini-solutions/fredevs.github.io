@@ -895,7 +895,7 @@
   "bannerIa": {
     "span": "AI agents",
     "titulo": "AI agents that work with your systems",
-    "subtitulo": "Agents that query your information, carry out tasks and hand off to a person when needed.",
+    "subtitulo": "Agents that query your information, carry out tasks and hand off to a person when needed. On your servers or in the cloud, with your data under your control.",
     "boton": "Contact us",
     "secundario": "See cases in production"
   },
