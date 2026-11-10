@@ -15,9 +15,10 @@
   },
   "banner": {
     "span": "IT Consulting",
-    "titulo": "Software and applied AI, built for your infraestructure",
-    "subtitulo": "Less manual work. Faster operations. Lower costs",
-    "boton": "Contact us"
+    "titulo": "AI agents and software to automate your operations",
+    "subtitulo": "We design, integrate and run AI agents, custom systems and infrastructure, with your data under your control.",
+    "boton": "Contact us",
+    "secundario": "Explore our AI agents"
   },
   "trust": {
     "partnerEtiqueta": "Official partner",
@@ -488,33 +489,52 @@
     "subtitulo": "that empower your projects",
     "areas": [
       {
+        "title": "AI Agents",
+        "subtitle": "Intelligent automation",
+        "description": "Agents that query your systems and documents, handle repetitive tasks and hand off to a person when needed, with data on the infrastructure you choose.",
+        "cta": "View solutions"
+      },
+      {
         "title": "Software Development",
-        "subtitle": "CUSTOM SOLUTIONS",
+        "subtitle": "Custom solutions",
         "description": "We design and develop custom, scalable, and maintainable software solutions, crafted to support the growth and objectives of your organization.",
         "cta": "View services"
       },
       {
         "title": "Infrastructure & Cloud",
-        "subtitle": "Reliable, Secure and Scalable.",
+        "subtitle": "Reliable, secure and scalable",
         "description": "We help organizations reduce their operational costs, scale their operations efficiently, and reach new levels of growth by aligning technology with the specific needs of their business.",
         "cta": "View services"
       }
     ]
   },
   "aiSection": {
-    "titulo": "Artificial Intelligence",
-    "subtitulo": "that transforms your business",
-    "label": "Artificial Intelligence",
-    "caratula": "AI built for your business",
-    "descripcion": "We integrate robust, scalable AI solutions — from process automation to intelligent custom assistants.",
-    "cta": "Integrate AI into your business",
-    "capabilities": [
-      "Chatbots & Assistants",
-      "Process Automation",
-      "LLM Integration",
-      "RAG & Knowledge Bases",
-      "Document Processing",
-      "AI-driven Data Analytics"
+    "titulo": "AI agents",
+    "subtitulo": "applied to your operations",
+    "label": "Applied artificial intelligence",
+    "caratula": "Agents that work with your systems and your data",
+    "descripcion": "An agent is more than a chat: it queries your organization's information, carries out tasks in your systems and logs every step. We design it around your real processes and integrate it with the tools your team already uses.",
+    "cta": "See how we work",
+    "ctaContacto": "Let's talk about your project",
+    "enProduccion": "In production",
+    "datos": "Models can run on your own servers, as in UtenIA and Aura.",
+    "usos": [
+      {
+        "titulo": "Support and inquiries",
+        "texto": "They answer questions from customers, students or patients using your documentation and each person's data."
+      },
+      {
+        "titulo": "Documents and case files",
+        "texto": "They read reports, invoices and forms, extract the data and fill in the records in your systems."
+      },
+      {
+        "titulo": "Data and reporting",
+        "texto": "They analyze comments, logs and metrics and turn them into reports ready for decision-making."
+      },
+      {
+        "titulo": "Internal processes",
+        "texto": "They carry out repetitive tasks across systems and ask a person for approval when required."
+      }
     ]
   },
   "blog": {
@@ -545,10 +565,10 @@
         "descripcion": "A hospital cost-recovery platform that prices lab reports with AI, completes every case file and tracks it through to payment, keeping clinical data on in-house servers."
       },
       {
-        "cliente": "UTN FRBA",
-        "tipo": "Institutional portal",
-        "titulo": "SIA",
-        "descripcion": "The university's single portal: one login for every service, with digital ID, payslips, tracked mass communications and technical support built in."
+        "cliente": "The Brains",
+        "tipo": "AI data platform",
+        "titulo": "Cognitia",
+        "descripcion": "The audience of every live stream measured every five minutes, and comments from seven social networks classified by sentiment and emotion with AI."
       }
     ]
   },

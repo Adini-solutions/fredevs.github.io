@@ -17,7 +17,7 @@ import { STORIES_URL, storyUrl } from '../../utils/stories';
  * `public/assets/cases/` un clip corto en loop (webm y mp4) y su poster,
  * recortados del video del caso en stories.
  */
-const FEATURED = ["utenia", "aura", "sia"];
+const FEATURED = ["utenia", "aura", "cognitia"];
 
 export default function CaseStudies() {
   const { t } = useTranslation();

@@ -15,9 +15,10 @@
   },
   "banner": {
     "span": "Consultoria IT",
-    "titulo": "Software e IA aplicadas a tu negocio",
-    "subtitulo": "Automatizamos los procesos de tu empresa para ganar tiempo y reducir costos",
-    "boton": "Contáctanos"
+    "titulo": "Agentes de IA y software para automatizar tu operación",
+    "subtitulo": "Diseñamos, integramos y operamos agentes de IA, sistemas a medida e infraestructura, con tus datos bajo control.",
+    "boton": "Contáctanos",
+    "secundario": "Conocé nuestros agentes de IA"
   },
   "trust": {
     "partnerEtiqueta": "Partner oficial",
@@ -488,33 +489,52 @@
     "subtitulo": "que potencian tus proyectos",
     "areas": [
       {
+        "title": "Agentes de IA",
+        "subtitle": "Automatización inteligente",
+        "description": "Agentes que consultan tus sistemas y documentos, resuelven tareas repetitivas y derivan a una persona cuando hace falta, con los datos en la infraestructura que definas.",
+        "cta": "Ver soluciones"
+      },
+      {
         "title": "Desarrollo de Software",
-        "subtitle": "SOLUCIONES A MEDIDA",
+        "subtitle": "Soluciones a medida",
         "description": "Diseñamos y desarrollamos soluciones de software a medida, escalables y mantenibles, pensadas para acompañar el crecimiento y los objetivos de tu organización.",
         "cta": "Ver servicios"
       },
       {
-        "title": "Infrastructure & Cloud Services",
-        "subtitle": "Confiable, Seguro y Escalable.",
+        "title": "Infraestructura y Cloud",
+        "subtitle": "Confiable, segura y escalable",
         "description": "Ayudamos a las organizaciones a reducir sus costos operativos, escalar sus operaciones de forma eficiente y alcanzar nuevos niveles de crecimiento, alineando la tecnología con las necesidades específicas de su negocio.",
         "cta": "Ver servicios"
       }
     ]
   },
   "aiSection": {
-    "titulo": "Inteligencia Artificial",
-    "subtitulo": "que transforma tu negocio",
-    "label": "Inteligencia Artificial",
-    "caratula": "IA aplicada a tu negocio",
-    "descripcion": "Integramos soluciones de IA robustas y escalables: desde automatización de procesos hasta asistentes inteligentes a medida.",
-    "cta": "Integremos IA en tu negocio",
-    "capabilities": [
-      "Chatbots & Asistentes",
-      "Automatización de procesos",
-      "Integración con LLMs",
-      "RAG & Knowledge Bases",
-      "Procesamiento de documentos",
-      "Análisis de datos con IA"
+    "titulo": "Agentes de IA",
+    "subtitulo": "aplicados a tu operación",
+    "label": "Inteligencia artificial aplicada",
+    "caratula": "Agentes que trabajan con tus sistemas y tus datos",
+    "descripcion": "Un agente no es solo un chat: consulta la información de tu organización, ejecuta tareas en tus sistemas y deja registro de cada paso. Lo diseñamos sobre tus procesos reales y lo integramos con lo que tu equipo ya usa.",
+    "cta": "Conocé cómo trabajamos",
+    "ctaContacto": "Hablemos de tu proyecto",
+    "enProduccion": "En producción",
+    "datos": "Los modelos pueden correr en tus propios servidores, como en UtenIA y Aura.",
+    "usos": [
+      {
+        "titulo": "Atención y consultas",
+        "texto": "Responden consultas de clientes, estudiantes o pacientes con tu documentación y los datos de cada persona."
+      },
+      {
+        "titulo": "Documentos y expedientes",
+        "texto": "Leen informes, facturas y formularios, extraen los datos y completan los registros en tus sistemas."
+      },
+      {
+        "titulo": "Datos y reportes",
+        "texto": "Analizan comentarios, registros y métricas y los convierten en reportes listos para tomar decisiones."
+      },
+      {
+        "titulo": "Procesos internos",
+        "texto": "Ejecutan tareas repetitivas entre sistemas y piden la aprobación de una persona cuando corresponde."
+      }
     ]
   },
   "blog": {
@@ -545,10 +565,10 @@
         "descripcion": "Una plataforma de recupero de costos hospitalarios que valoriza informes con IA, completa cada expediente y lo sigue hasta el cobro, con los datos clínicos en servidores propios."
       },
       {
-        "cliente": "UTN FRBA",
-        "tipo": "Portal institucional",
-        "titulo": "SIA",
-        "descripcion": "El portal único de la facultad: un solo acceso a todos sus servicios, con credencial digital, recibos, comunicaciones masivas con seguimiento y soporte técnico integrados."
+        "cliente": "The Brains",
+        "tipo": "Plataforma de datos con IA",
+        "titulo": "Cognitia",
+        "descripcion": "La audiencia de cada transmisión en vivo medida cada cinco minutos y los comentarios de siete redes clasificados por sentimiento y emoción con IA."
       }
     ]
   },

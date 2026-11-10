@@ -4,6 +4,7 @@ import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import HeroNetwork from "../molecules/HeroNetwork";
 import HeroStats from "../molecules/HeroStats";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { FiCode, FiServer, FiLayers, FiCloud, FiCpu, FiDatabase, FiGitBranch, FiArrowRight } from "react-icons/fi";
 import Button from "../molecules/Button";
 
@@ -26,12 +27,13 @@ const rings = [
 const chips = [
     { icon: FiCloud, label: "Cloud", x: -516, y: -160, delay: 0 },
     { icon: FiDatabase, label: "Data", x: -526, y: 120, delay: 1.2 },
-    { icon: FiCpu, label: "AI / LLM", x: 511, y: -175, delay: 0.6 },
+    { icon: FiCpu, label: "AI Agents", x: 511, y: -175, delay: 0.6 },
     { icon: FiGitBranch, label: "CI/CD", x: 528, y: 110, delay: 1.8 },
 ];
 
 export default function Banner({ variant = "default" }) {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     const bannerConfig = {
         default: {
@@ -39,7 +41,7 @@ export default function Banner({ variant = "default" }) {
             titulo: "banner.titulo",
             subtitulo: "banner.subtitulo",
             boton: "banner.boton",
-            secundario: { text: "cases.verTodos", section: "cases" },
+            secundario: { text: "banner.secundario", route: "/ia" },
             icon: FiLayers,
             primary: "#6c63ff",
             secondary: "#22d3ee",
@@ -70,7 +72,6 @@ export default function Banner({ variant = "default" }) {
     };
 
     const config = bannerConfig[variant];
-    const Icon = config.icon;
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -250,7 +251,15 @@ export default function Banner({ variant = "default" }) {
                                 boxShadow={`0 10px 30px -8px ${config.primary}`}
                             />
                             <ChakraButton
-                                onClick={() => scrollToSection(config.secundario.section)}
+                                onClick={() => {
+                                    const { route, section } = config.secundario;
+                                    if (route) {
+                                        navigate(route);
+                                        window.scrollTo({ top: 0 });
+                                    } else {
+                                        scrollToSection(section);
+                                    }
+                                }}
                                 size="lg"
                                 px={7}
                                 borderRadius="full"

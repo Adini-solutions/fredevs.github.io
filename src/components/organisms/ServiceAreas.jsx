@@ -1,5 +1,6 @@
 import {
   Flex,
+  Grid,
   Box,
   Text,
   VStack,
@@ -11,7 +12,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { LuCode, LuCloudCog, LuArrowRight } from "react-icons/lu";
+import { LuBot, LuCode, LuCloudCog, LuArrowRight } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
 
 export default function ServiceAreas() {
@@ -20,28 +21,18 @@ export default function ServiceAreas() {
   const navigate = useNavigate();
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
+  // El orden de `serviceAreas.areas` en los locales es el mismo que este.
   const areas = [
-    {
-      key: "dev",
-      title: t("serviceAreas.areas.0.title"),
-      subtitle: t("serviceAreas.areas.0.subtitle"),
-      description: t("serviceAreas.areas.0.description"),
-      cta: t("serviceAreas.areas.0.cta"),
-      accent: "#6c63ff",
-      route: "/dev",
-      icon: LuCode,
-    },
-    {
-      key: "infra",
-      title: t("serviceAreas.areas.1.title"),
-      subtitle: t("serviceAreas.areas.1.subtitle"),
-      description: t("serviceAreas.areas.1.description"),
-      cta: t("serviceAreas.areas.1.cta"),
-      accent: "#2bb691",
-      route: "/infra",
-      icon: LuCloudCog,
-    },
-  ];
+    { key: "ia", accent: "#3b82f6", route: "/ia", icon: LuBot },
+    { key: "dev", accent: "#6c63ff", route: "/dev", icon: LuCode },
+    { key: "infra", accent: "#2bb691", route: "/infra", icon: LuCloudCog },
+  ].map((area, i) => ({
+    ...area,
+    title: t(`serviceAreas.areas.${i}.title`),
+    subtitle: t(`serviceAreas.areas.${i}.subtitle`),
+    description: t(`serviceAreas.areas.${i}.description`),
+    cta: t(`serviceAreas.areas.${i}.cta`),
+  }));
 
   const navigateWithScroll = (path) => {
     navigate(path);
@@ -56,11 +47,10 @@ export default function ServiceAreas() {
       <Title title={t("serviceAreas.titulo")} subtitle={t("serviceAreas.subtitulo")} mt="50px" mb="40px" />
 
       <div ref={ref}>
-        <Flex
-          justify="center"
-          gap={{ base: 5, md: 8, xl: 10 }}
-          px={{ base: 5, md: 20 }}
-          direction={{ base: "column", md: "row" }}
+        <Grid
+          templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+          gap={{ base: 5, md: 6, xl: 8 }}
+          px={{ base: 5, md: 12, xl: 20 }}
           maxW="1600px"
           mx={"auto"}
         >
@@ -70,7 +60,7 @@ export default function ServiceAreas() {
               style={{ width: "100%" }}
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
             >
               <Box
                 role="group"
@@ -164,7 +154,7 @@ export default function ServiceAreas() {
               </Box>
             </motion.div>
           ))}
-        </Flex>
+        </Grid>
       </div>
     </>
   );
