@@ -3,6 +3,7 @@ import Home from "../components/pages/Home";
 import NotFound from "../components/pages/NotFound";
 import Dev from "../components/pages/Dev";
 import Infra from "../components/pages/Infra";
+import IA from "../components/pages/IA";
 
 export default function Navigation() {
   return (
@@ -11,6 +12,7 @@ export default function Navigation() {
         <Route path="/" element={<Home />} />
         <Route path="/dev" element={<Dev />} />
         <Route path="/infra" element={<Infra />} />
+        <Route path="/ia" element={<IA />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

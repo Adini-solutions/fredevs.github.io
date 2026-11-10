@@ -24,12 +24,14 @@ const palettes = {
   default: { primary: "#6c63ff", hover: "#5548e6", secondary: "#22d3ee" },
   dev: { primary: "#6c63ff", hover: "#5548e6", secondary: "#c084fc" },
   infra: { primary: "#2fbf94", hover: "#238b6f", secondary: "#22d3ee" },
+  ia: { primary: "#3b82f6", hover: "#2563eb", secondary: "#22d3ee" },
 };
 
 const EMAILS = {
   default: "contacto@adini.com.ar",
   dev: "dev@adini.com.ar",
   infra: "infra@adini.com.ar",
+  ia: "contacto@adini.com.ar",
 };
 
 // Los bloques entran en cascada cuando la sección aparece en pantalla.

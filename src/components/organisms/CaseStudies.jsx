@@ -19,7 +19,7 @@ import { STORIES_URL, storyUrl } from '../../utils/stories';
  */
 const FEATURED = ["utenia", "aura", "cognitia"];
 
-export default function CaseStudies() {
+export default function CaseStudies({ variant = "default" }) {
   const { t } = useTranslation();
 
   const caseStudies = FEATURED.map((slug, index) => ({
@@ -37,6 +37,7 @@ export default function CaseStudies() {
       <Title
         title={t("cases.titulo")}
         subtitle={t("cases.subtitulo")}
+        variant={variant}
         mt="50px"
         mb="40px"
       />

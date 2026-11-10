@@ -69,6 +69,17 @@ export default function Banner({ variant = "default" }) {
             secondary: "#22d3ee",
             titleTint: "#b5f0dc",
         },
+        ia: {
+            span: "bannerIa.span",
+            titulo: "bannerIa.titulo",
+            subtitulo: "bannerIa.subtitulo",
+            boton: "bannerIa.boton",
+            secundario: { text: "bannerIa.secundario", section: "casos" },
+            icon: FiCpu,
+            primary: "#3b82f6",
+            secondary: "#22d3ee",
+            titleTint: "#bfdbfe",
+        },
     };
 
     const config = bannerConfig[variant];

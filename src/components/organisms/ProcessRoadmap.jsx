@@ -14,18 +14,21 @@ import Title from "../molecules/Title";
 
 const stepIcons = [LuSearch, LuPencilRuler, LuCode, LuRocket, LuLifeBuoy];
 
-export default function ProcessRoadmap() {
+// `ns` elige los textos (process en /dev, processIa en /ia) y `icons` los
+// íconos de cada paso, en el mismo orden.
+export default function ProcessRoadmap({ ns = "process", icons = stepIcons, variant = "default" }) {
     const { t } = useTranslation();
     const threshold = useMemo(() => (window.innerWidth < 768 ? 0.04 : 0.15), []);
     const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
-    const steps = t("process.steps", { returnObjects: true });
+    const steps = t(`${ns}.steps`, { returnObjects: true });
 
     return (
         <>
             <Title
-                title={t("process.titulo")}
-                subtitle={t("process.subtitulo")}
+                title={t(`${ns}.titulo`)}
+                subtitle={t(`${ns}.subtitulo`)}
+                variant={variant}
                 mt="60px"
                 mb="50px"
             />
@@ -117,7 +120,7 @@ export default function ProcessRoadmap() {
                                                         transform: "scale(1.1)",
                                                     }}
                                                 >
-                                                    <Icon as={stepIcons[i]} boxSize={5} color="#a09bff" />
+                                                    <Icon as={icons[i]} boxSize={5} color="#a09bff" />
                                                 </Box>
                                                 <Text
                                                     m={0}
@@ -215,7 +218,7 @@ export default function ProcessRoadmap() {
                                                     justifyContent="center"
                                                     flexShrink={0}
                                                 >
-                                                    <Icon as={stepIcons[i]} boxSize={5} color="#a09bff" />
+                                                    <Icon as={icons[i]} boxSize={5} color="#a09bff" />
                                                 </Box>
                                                 {i < steps.length - 1 && (
                                                     <Box

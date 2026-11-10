@@ -11,7 +11,12 @@
     "contacto": "Contacto",
     "blog": "Artículos",
     "cases": "Casos de Éxito",
-    "proceso": "Metodología"
+    "proceso": "Metodología",
+    "soluciones": "Soluciones",
+    "funcionamiento": "Cómo funciona",
+    "casos": "Casos",
+    "metodo": "Metodología",
+    "preguntas": "Preguntas"
   },
   "banner": {
     "span": "Consultoria IT",
@@ -813,12 +818,20 @@
         "Datos y continuidad",
         "Monitoreo y soporte",
         "Otro tema"
+      ],
+      "ia": [
+        "Atención y consultas",
+        "Documentos y expedientes",
+        "Datos y reportes",
+        "Procesos internos",
+        "Otro tema"
       ]
     },
     "ayuda": {
       "default": "Por ejemplo: qué proceso querés resolver, con qué sistemas trabaja hoy tu equipo y en qué plazos.",
       "dev": "Por ejemplo: qué necesitás construir, para quién y con qué sistemas debe integrarse.",
-      "infra": "Por ejemplo: cómo está compuesta hoy tu infraestructura y qué necesitás mejorar."
+      "infra": "Por ejemplo: cómo está compuesta hoy tu infraestructura y qué necesitás mejorar.",
+      "ia": "Por ejemplo: qué tarea querés delegar en un agente, con qué sistemas trabaja hoy tu equipo y en qué plazos."
     },
     "nombreError": "Ingresá tu nombre y apellido",
     "obligatorios": "* Campos obligatorios",
@@ -855,17 +868,177 @@
       "contacto": "Contacto",
       "blog": "Artículos",
       "cases": "Casos de Éxito",
-      "proceso": "Metodología"
+      "proceso": "Metodología",
+      "soluciones": "Soluciones",
+      "funcionamiento": "Cómo funciona",
+      "casos": "Casos",
+      "metodo": "Metodología",
+      "preguntas": "Preguntas"
     },
     "areas": {
       "titulo": "Áreas de Servicio",
       "desarrollo": "Desarrollo de Software",
       "infra": "Infrastructure & Cloud Services",
-      "casos": "Casos de Éxito"
+      "casos": "Casos de Éxito",
+      "ia": "Agentes de IA"
     },
     "redes": {
       "titulo": "Nuestras Redes"
     },
     "end": "Todos los derechos reservados."
+  },
+  "bannerIa": {
+    "span": "Agentes de IA",
+    "titulo": "Agentes de IA que trabajan con tus sistemas",
+    "subtitulo": "Diseñamos agentes que consultan tu información, ejecutan tareas y derivan a una persona cuando hace falta. Integrados con las herramientas de tu equipo y con los datos bajo control.",
+    "boton": "Contáctanos",
+    "secundario": "Ver casos en producción"
+  },
+  "processIa": {
+    "titulo": "Cómo trabajamos",
+    "subtitulo": "del diagnóstico a la producción",
+    "steps": [
+      {
+        "titulo": "Diagnóstico",
+        "descripcion": "Relevamos el proceso, los sistemas involucrados y los datos disponibles para definir dónde un agente aporta valor."
+      },
+      {
+        "titulo": "Diseño",
+        "descripcion": "Definimos qué hace el agente, con qué información trabaja, qué permisos tiene y cuándo interviene una persona."
+      },
+      {
+        "titulo": "Piloto",
+        "descripcion": "Lo implementamos sobre un caso acotado y lo validamos con usuarios reales antes de ampliar el alcance."
+      },
+      {
+        "titulo": "Producción",
+        "descripcion": "Lo integramos a tus sistemas en la infraestructura definida, con monitoreo y registro de cada interacción."
+      },
+      {
+        "titulo": "Evolución",
+        "descripcion": "Seguimos su funcionamiento, ajustamos respuestas y sumamos tareas a medida que crece su uso."
+      }
+    ]
+  },
+  "iaPage": {
+    "usos": {
+      "titulo": "Qué puede resolver",
+      "subtitulo": "un agente en tu organización",
+      "hoy": "Hoy",
+      "conAgente": "Con un agente",
+      "items": [
+        {
+          "titulo": "Atención y consultas",
+          "hoy": "El equipo responde a mano las mismas preguntas, por varios canales y fuera de horario.",
+          "agente": "Responde con tu documentación y los datos de cada persona, a cualquier hora, y deriva a alguien del equipo lo que lo requiere."
+        },
+        {
+          "titulo": "Documentos y expedientes",
+          "hoy": "Informes, facturas y formularios se leen y se cargan a mano en cada sistema.",
+          "agente": "Lee cada documento, extrae los datos, los valida contra tus reglas y completa los registros."
+        },
+        {
+          "titulo": "Datos y reportes",
+          "hoy": "La información está repartida en planillas y sistemas, y armar un reporte lleva días.",
+          "agente": "Reúne la información, la analiza y entrega reportes listos para tomar decisiones."
+        },
+        {
+          "titulo": "Procesos internos",
+          "hoy": "Las tareas entre áreas dependen de correos, recordatorios y cargas duplicadas.",
+          "agente": "Ejecuta los pasos repetitivos entre sistemas y pide aprobación cuando una decisión lo requiere."
+        },
+        {
+          "titulo": "Gestión comercial",
+          "hoy": "Las consultas entrantes se acumulan y el seguimiento depende de cada persona del equipo.",
+          "agente": "Clasifica cada consulta, completa el CRM y prepara el seguimiento para tu equipo comercial."
+        },
+        {
+          "titulo": "Conocimiento interno",
+          "hoy": "Procedimientos, manuales y políticas existen, pero cuesta encontrarlos cuando hacen falta.",
+          "agente": "Responde a tu equipo con la información interna vigente e indica la fuente de cada respuesta."
+        }
+      ]
+    },
+    "flujo": {
+      "titulo": "Cómo funciona",
+      "subtitulo": "un agente de IA",
+      "bajada": "Un agente combina un modelo de lenguaje con acceso controlado a tu información y a tus sistemas. Cada uno se diseña sobre un proceso concreto, con límites y permisos definidos.",
+      "pasos": [
+        {
+          "titulo": "Recibe",
+          "texto": "Una consulta, un documento o un evento, por la web, WhatsApp, correo o desde tus sistemas."
+        },
+        {
+          "titulo": "Consulta",
+          "texto": "Busca en tu documentación, bases de datos y sistemas internos, solo con los permisos que le asignes."
+        },
+        {
+          "titulo": "Actúa",
+          "texto": "Responde, completa registros, genera reportes o inicia un proceso en tus herramientas."
+        },
+        {
+          "titulo": "Supervisión",
+          "texto": "Las decisiones sensibles pasan por una persona antes de ejecutarse."
+        }
+      ],
+      "trazaTitulo": "Cada paso queda registrado",
+      "trazaTexto": "Podés revisar qué consultó el agente, qué respondió y qué acciones ejecutó, para auditar su funcionamiento y mejorarlo con el tiempo."
+    },
+    "porque": {
+      "titulo": "Por qué",
+      "subtitulo": "trabajar con Adini",
+      "items": [
+        {
+          "titulo": "Tus datos bajo control",
+          "texto": "Podemos desplegar los modelos en tus propios servidores, como en UtenIA y Aura, para que la información sensible no salga de tu organización."
+        },
+        {
+          "titulo": "Integración con tus sistemas",
+          "texto": "Desarrollamos software a medida, así que conectamos el agente con tus bases de datos, sistemas de gestión y herramientas internas."
+        },
+        {
+          "titulo": "Desarrollo e infraestructura en un mismo equipo",
+          "texto": "Diseñamos, implementamos y operamos la solución completa: el agente, las integraciones y la infraestructura donde corre."
+        },
+        {
+          "titulo": "Partner oficial de la UTN FRBA",
+          "texto": "Desarrollamos y operamos sistemas institucionales que la facultad usa a diario, incluido su agente de IA."
+        }
+      ]
+    },
+    "faq": {
+      "titulo": "Preguntas",
+      "subtitulo": "frecuentes",
+      "items": [
+        {
+          "pregunta": "¿Qué diferencia hay entre un agente y un chatbot?",
+          "respuesta": "Un chatbot responde con textos predefinidos o información general. Un agente trabaja con la información de tu organización, consulta tus sistemas y puede ejecutar tareas, como completar un registro o generar un reporte, dentro de los límites que se le definen."
+        },
+        {
+          "pregunta": "¿Dónde quedan los datos de mi organización?",
+          "respuesta": "Se define en cada proyecto. Podemos desplegar los modelos en tus propios servidores, sin enviar información a terceros, o usar servicios en la nube cuando los requisitos lo permiten."
+        },
+        {
+          "pregunta": "¿Con qué sistemas se puede integrar?",
+          "respuesta": "Con los que tu organización ya usa: bases de datos, sistemas de gestión, CRM, correo, WhatsApp o aplicaciones propias. Durante el diagnóstico relevamos cada integración necesaria."
+        },
+        {
+          "pregunta": "¿Qué modelos de IA utilizan?",
+          "respuesta": "Elegimos el modelo según el caso: modelos comerciales o modelos abiertos que pueden correr en tu infraestructura, en función de la calidad requerida, el costo y las condiciones de privacidad."
+        },
+        {
+          "pregunta": "¿Qué pasa cuando el agente no sabe la respuesta?",
+          "respuesta": "Está diseñado para reconocerlo. En lugar de improvisar, deriva la consulta a una persona del equipo junto con el contexto necesario para resolverla."
+        },
+        {
+          "pregunta": "¿Cuánto tiempo lleva implementarlo?",
+          "respuesta": "Depende del alcance y de las integraciones. Por eso empezamos con un piloto sobre un caso acotado, que permite validar resultados en producción antes de ampliar."
+        },
+        {
+          "pregunta": "¿Quién lo mantiene una vez en producción?",
+          "respuesta": "Podemos operarlo y evolucionarlo nosotros, con monitoreo continuo, o transferirlo a tu equipo con la documentación y el acompañamiento necesarios."
+        }
+      ]
+    }
   }
 }

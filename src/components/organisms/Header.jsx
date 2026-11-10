@@ -22,16 +22,21 @@ export default function Header({ variant = "default" }) {
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 });
 
-  const accent = variant === "infra" ? "#238b6f" : "#5548e6";
-  const accentLight = variant === "infra" ? "#2fbf94" : "#8b85ff";
-  const accentGradient = variant === "infra"
-    ? "linear-gradient(90deg, #2fbf94, #22d3ee)"
-    : "linear-gradient(90deg, #6c63ff, #22d3ee)";
+  // Colores, logo y menú de cada página.
+  const themes = {
+    default: { accent: "#5548e6", accentLight: "#8b85ff", gradient: "linear-gradient(90deg, #6c63ff, #22d3ee)", ctaBg: "#6c63ff", ctaHover: "#5548e6", logo: "/assets/brand/adini-logotipo-purple.svg" },
+    dev: { accent: "#5548e6", accentLight: "#8b85ff", gradient: "linear-gradient(90deg, #6c63ff, #22d3ee)", ctaBg: "#6c63ff", ctaHover: "#5548e6", logo: "/assets/brand/adini-logotipo-purple.svg" },
+    infra: { accent: "#238b6f", accentLight: "#2fbf94", gradient: "linear-gradient(90deg, #2fbf94, #22d3ee)", ctaBg: "#238b6f", ctaHover: "#1f7862", logo: "/assets/brand/adini-logotipo-infra.svg" },
+    ia: { accent: "#2563eb", accentLight: "#60a5fa", gradient: "linear-gradient(90deg, #3b82f6, #22d3ee)", ctaBg: "#3b82f6", ctaHover: "#2563eb", logo: "/assets/brand/adini-logotipo-navy.svg" },
+  };
+  const { accent, accentLight, gradient: accentGradient, ctaBg, ctaHover, logo: colorLogo } = themes[variant] || themes.default;
+  const isArea = variant !== "default";
 
   const menuType = {
     default: ["inicio", "areas", "ia", "cases", "blog", "nosotros", "contacto"],
     dev: ["inicio", "servicios", "tecnologías", "proyectos", "proceso", "contacto", "nosotros"],
     infra: ["inicio", "servicios", "contacto", "nosotros"],
+    ia: ["inicio", "soluciones", "funcionamiento", "casos", "metodo", "preguntas", "contacto"],
   };
 
   const menuItems = menuType[variant]
@@ -42,16 +47,14 @@ export default function Header({ variant = "default" }) {
   const travelerRef = useRef(null);
   const ctaLabelRef = useRef(null);
   const mailLabelRef = useRef(null);
-  const ctaText = { default: "banner.boton", dev: "bannerDev.boton", infra: "bannerInfra.boton" }[variant];
-  const ctaBg = variant === "infra" ? "#238b6f" : "#6c63ff";
+  const ctaText = { default: "banner.boton", dev: "bannerDev.boton", infra: "bannerInfra.boton", ia: "bannerIa.boton" }[variant];
 
   // Logotipo oficial (isotipo + "Adini"), en blanco sobre el banner y a color
-  // cuando el header pasa a blanco.
-  const colorLogo = variant === "infra" ? "/assets/brand/adini-logotipo-infra.svg" : "/assets/brand/adini-logotipo-purple.svg";
-
+  // cuando el header pasa a blanco. Las áreas suman su etiqueta al lado.
   const variantType = {
     dev: "dev",
     infra: "infra",
+    ia: "ia",
   };
 
   useEffect(() => {
@@ -261,7 +264,7 @@ export default function Header({ variant = "default" }) {
               </Text>
             );
           })}
-          {(variant === "infra" || variant === "dev") && (
+          {isArea && (
             <Text
               as="button"
               m={0}
@@ -340,7 +343,7 @@ export default function Header({ variant = "default" }) {
                       {t(`header.${section}`)}
                     </Text>
                   ))}
-                  {(variant === "infra" || variant === "dev") && (
+                  {isArea && (
 
                     <Text
                       as="button"
@@ -415,7 +418,7 @@ export default function Header({ variant = "default" }) {
       overflow="hidden"
       whiteSpace="nowrap"
       transition="background 0.2s ease"
-      _hover={{ bg: variant === "infra" ? "#1f7862" : "#5548e6" }}
+      _hover={{ bg: ctaHover }}
     >
       <Flex ref={ctaLabelRef} position="absolute" inset={0} align="center" justify="center">
         {t(ctaText)}

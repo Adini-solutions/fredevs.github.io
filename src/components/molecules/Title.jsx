@@ -30,7 +30,7 @@ export default function Title({ title, subtitle, mt, mb, variant = "default" }) 
                 transition={{ duration: 0.8 }}
             >
                 <Heading fontSize={{ base: "2xl", "2xl": "25px" }} color="primary.500">
-                    {title} <Text as="span" color={variant === "infra" ? "#1f7862" : "#3d2b99"}>{subtitle}</Text>
+                    {title} <Text as="span" color={{ infra: "#1f7862", ia: "#1d4ed8" }[variant] || "#3d2b99"}>{subtitle}</Text>
                 </Heading>
             </motion.div>
         </Flex>

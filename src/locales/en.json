@@ -11,7 +11,12 @@
     "contacto": "Contact",
     "blog": "Articles",
     "cases": "Success Stories",
-    "proceso": "Methodology"
+    "proceso": "Methodology",
+    "soluciones": "Solutions",
+    "funcionamiento": "How it works",
+    "casos": "Cases",
+    "metodo": "Methodology",
+    "preguntas": "FAQ"
   },
   "banner": {
     "span": "IT Consulting",
@@ -813,12 +818,20 @@
         "Data & continuity",
         "Monitoring & support",
         "Other"
+      ],
+      "ia": [
+        "Support and inquiries",
+        "Documents and case files",
+        "Data and reporting",
+        "Internal processes",
+        "Other"
       ]
     },
     "ayuda": {
       "default": "For example: which process you want to solve, which systems your team uses today and your timeline.",
       "dev": "For example: what you need to build, for whom and which systems it must integrate with.",
-      "infra": "For example: what your infrastructure looks like today and what you need to improve."
+      "infra": "For example: what your infrastructure looks like today and what you need to improve.",
+      "ia": "For example: which task you want to delegate to an agent, which systems your team uses today and your timeline."
     },
     "nombreError": "Please enter your full name",
     "obligatorios": "* Required fields",
@@ -855,17 +868,177 @@
       "contacto": "Contact",
       "blog": "Articles",
       "cases": "Success Stories",
-      "proceso": "Methodology"
+      "proceso": "Methodology",
+      "soluciones": "Solutions",
+      "funcionamiento": "How it works",
+      "casos": "Cases",
+      "metodo": "Methodology",
+      "preguntas": "FAQ"
     },
     "areas": {
       "titulo": "Service Areas",
       "desarrollo": "Software development",
       "infra": "Infrastructure & Cloud Services",
-      "casos": "Case Studies"
+      "casos": "Case Studies",
+      "ia": "AI Agents"
     },
     "redes": {
       "titulo": "Our Social Media"
     },
     "end": "All rights reserved."
+  },
+  "bannerIa": {
+    "span": "AI agents",
+    "titulo": "AI agents that work with your systems",
+    "subtitulo": "We design agents that query your information, carry out tasks and hand off to a person when needed. Integrated with your team's tools and with your data under your control.",
+    "boton": "Contact us",
+    "secundario": "See cases in production"
+  },
+  "processIa": {
+    "titulo": "How we work",
+    "subtitulo": "from assessment to production",
+    "steps": [
+      {
+        "titulo": "Assessment",
+        "descripcion": "We map the process, the systems involved and the available data to define where an agent adds value."
+      },
+      {
+        "titulo": "Design",
+        "descripcion": "We define what the agent does, which information it uses, what permissions it has and when a person steps in."
+      },
+      {
+        "titulo": "Pilot",
+        "descripcion": "We implement it on a focused use case and validate it with real users before expanding the scope."
+      },
+      {
+        "titulo": "Production",
+        "descripcion": "We integrate it with your systems on the agreed infrastructure, with monitoring and a log of every interaction."
+      },
+      {
+        "titulo": "Evolution",
+        "descripcion": "We track how it performs, refine its answers and add tasks as its use grows."
+      }
+    ]
+  },
+  "iaPage": {
+    "usos": {
+      "titulo": "What an agent can solve",
+      "subtitulo": "in your organization",
+      "hoy": "Today",
+      "conAgente": "With an agent",
+      "items": [
+        {
+          "titulo": "Support and inquiries",
+          "hoy": "Your team answers the same questions by hand, across several channels and after hours.",
+          "agente": "It answers with your documentation and each person's data, at any time, and hands off to your team whatever requires it."
+        },
+        {
+          "titulo": "Documents and case files",
+          "hoy": "Reports, invoices and forms are read and entered by hand into each system.",
+          "agente": "It reads each document, extracts the data, validates it against your rules and fills in the records."
+        },
+        {
+          "titulo": "Data and reporting",
+          "hoy": "Information is scattered across spreadsheets and systems, and building a report takes days.",
+          "agente": "It gathers the information, analyzes it and delivers reports ready for decision-making."
+        },
+        {
+          "titulo": "Internal processes",
+          "hoy": "Cross-team tasks depend on emails, reminders and duplicate data entry.",
+          "agente": "It carries out repetitive steps across systems and asks for approval when a decision requires it."
+        },
+        {
+          "titulo": "Sales operations",
+          "hoy": "Incoming inquiries pile up and follow-up depends on each team member.",
+          "agente": "It classifies each inquiry, updates the CRM and prepares the follow-up for your sales team."
+        },
+        {
+          "titulo": "Internal knowledge",
+          "hoy": "Procedures, manuals and policies exist, but they're hard to find when needed.",
+          "agente": "It answers your team with current internal information and cites the source of each answer."
+        }
+      ]
+    },
+    "flujo": {
+      "titulo": "How an AI agent",
+      "subtitulo": "works",
+      "bajada": "An agent combines a language model with controlled access to your information and systems. Each one is designed around a specific process, with defined limits and permissions.",
+      "pasos": [
+        {
+          "titulo": "Receives",
+          "texto": "An inquiry, a document or an event, via the web, WhatsApp, email or your systems."
+        },
+        {
+          "titulo": "Queries",
+          "texto": "It searches your documentation, databases and internal systems, only with the permissions you grant."
+        },
+        {
+          "titulo": "Acts",
+          "texto": "It answers, fills in records, generates reports or starts a process in your tools."
+        },
+        {
+          "titulo": "Oversight",
+          "texto": "Sensitive decisions go through a person before they're carried out."
+        }
+      ],
+      "trazaTitulo": "Every step is logged",
+      "trazaTexto": "You can review what the agent queried, what it answered and which actions it took, to audit how it works and improve it over time."
+    },
+    "porque": {
+      "titulo": "Why work",
+      "subtitulo": "with Adini",
+      "items": [
+        {
+          "titulo": "Your data under your control",
+          "texto": "We can deploy models on your own servers, as in UtenIA and Aura, so sensitive information never leaves your organization."
+        },
+        {
+          "titulo": "Integration with your systems",
+          "texto": "We build custom software, so we connect the agent to your databases, management systems and internal tools."
+        },
+        {
+          "titulo": "Development and infrastructure in one team",
+          "texto": "We design, build and run the complete solution: the agent, the integrations and the infrastructure it runs on."
+        },
+        {
+          "titulo": "Official partner of UTN FRBA",
+          "texto": "We build and run institutional systems the university uses every day, including its AI agent."
+        }
+      ]
+    },
+    "faq": {
+      "titulo": "Frequently asked",
+      "subtitulo": "questions",
+      "items": [
+        {
+          "pregunta": "What's the difference between an agent and a chatbot?",
+          "respuesta": "A chatbot replies with predefined text or general information. An agent works with your organization's information, queries your systems and can carry out tasks, such as filling in a record or generating a report, within the limits defined for it."
+        },
+        {
+          "pregunta": "Where does my organization's data stay?",
+          "respuesta": "It's defined for each project. We can deploy models on your own servers, without sending information to third parties, or use cloud services when the requirements allow it."
+        },
+        {
+          "pregunta": "Which systems can it integrate with?",
+          "respuesta": "The ones your organization already uses: databases, management systems, CRM, email, WhatsApp or in-house applications. During the assessment we map every integration needed."
+        },
+        {
+          "pregunta": "Which AI models do you use?",
+          "respuesta": "We choose the model for each case: commercial models or open models that can run on your infrastructure, depending on the required quality, cost and privacy conditions."
+        },
+        {
+          "pregunta": "What happens when the agent doesn't know the answer?",
+          "respuesta": "It's designed to recognize it. Instead of improvising, it hands the inquiry off to a person on your team along with the context needed to resolve it."
+        },
+        {
+          "pregunta": "How long does implementation take?",
+          "respuesta": "It depends on the scope and the integrations. That's why we start with a pilot on a focused use case, which lets us validate results in production before expanding."
+        },
+        {
+          "pregunta": "Who maintains it once it's in production?",
+          "respuesta": "We can run and evolve it ourselves, with continuous monitoring, or hand it over to your team with the necessary documentation and support."
+        }
+      ]
+    }
   }
 }

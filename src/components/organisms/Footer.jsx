@@ -13,6 +13,7 @@ export default function Footer({ variant = "default", mt = "70px" }) {
         default: ["inicio", "areas", "ia", "cases", "blog", "nosotros", "contacto"],
         dev: ["inicio", "servicios", "tecnologías", "proyectos", "proceso", "contacto", "nosotros"],
         infra: ["inicio", "servicios", "contacto", "nosotros"],
+        ia: ["inicio", "soluciones", "funcionamiento", "casos", "metodo", "preguntas", "contacto"],
     };
 
     const empresaLinks = menuType[variant].map((item) => {
@@ -85,6 +86,13 @@ export default function Footer({ variant = "default", mt = "70px" }) {
                         {t("footer.areas.titulo")}
                     </Text>
                     <VStack align={{ base: "center", md: "start" }} spacing={2}>
+                        <Link
+                            onClick={() => navigateWithScroll("/ia")}
+                            _hover={{ color: "white", cursor: "pointer" }}
+                        >
+                            {t("footer.areas.ia")}
+                        </Link>
+
                         <Link
                             onClick={() => navigateWithScroll("/dev")}
                             _hover={{ color: "white", cursor: "pointer" }}

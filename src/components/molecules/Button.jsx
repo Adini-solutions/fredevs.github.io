@@ -20,9 +20,14 @@ export default function Button({ variant = "default", text = "", leftIcon = null
             hover: "#1f7862",
             color: "white",
         },
+        ia: {
+            bg: "#3b82f6",
+            hover: "#2563eb",
+            color: "white",
+        },
     };
 
-    const { bg, hover, color } = colors[variant];
+    const { bg, hover, color } = colors[variant] || colors.default;
 
     return (
         <ChakraButton
