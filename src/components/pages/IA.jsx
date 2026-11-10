@@ -7,7 +7,6 @@ import AgentUseCases from "../organisms/AgentUseCases";
 import AgentFlow from "../organisms/AgentFlow";
 import CaseStudies from "../organisms/CaseStudies";
 import ProcessRoadmap from "../organisms/ProcessRoadmap";
-import WhyAdini from "../organisms/WhyAdini";
 import FAQ from "../organisms/FAQ";
 import Contact from "../organisms/Contact";
 import Footer from "../organisms/Footer";
@@ -61,7 +60,6 @@ export default function IA() {
         <Box id="metodo">
           <ProcessRoadmap ns="processIa" icons={PROCESS_ICONS} variant="ia" />
         </Box>
-        <WhyAdini />
         <Box id="preguntas">
           <FAQ />
         </Box>

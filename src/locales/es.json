@@ -983,28 +983,6 @@
       "trazaTitulo": "Cada paso queda registrado",
       "trazaTexto": "Podés revisar qué consultó el agente, qué respondió y qué acciones ejecutó, para auditar su funcionamiento y mejorarlo con el tiempo."
     },
-    "porque": {
-      "titulo": "Por qué",
-      "subtitulo": "trabajar con Adini",
-      "items": [
-        {
-          "titulo": "Tus datos bajo control",
-          "texto": "Podemos desplegar los modelos en tus propios servidores, como en UtenIA y Aura, para que la información sensible no salga de tu organización."
-        },
-        {
-          "titulo": "Integración con tus sistemas",
-          "texto": "Desarrollamos software a medida, así que conectamos el agente con tus bases de datos, sistemas de gestión y herramientas internas."
-        },
-        {
-          "titulo": "Desarrollo e infraestructura en un mismo equipo",
-          "texto": "Diseñamos, implementamos y operamos la solución completa: el agente, las integraciones y la infraestructura donde corre."
-        },
-        {
-          "titulo": "Partner oficial de la UTN FRBA",
-          "texto": "Desarrollamos y operamos sistemas institucionales que la facultad usa a diario, incluido su agente de IA."
-        }
-      ]
-    },
     "faq": {
       "titulo": "Preguntas",
       "subtitulo": "frecuentes",

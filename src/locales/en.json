@@ -983,28 +983,6 @@
       "trazaTitulo": "Every step is logged",
       "trazaTexto": "You can review what the agent queried, what it answered and which actions it took, to audit how it works and improve it over time."
     },
-    "porque": {
-      "titulo": "Why work",
-      "subtitulo": "with Adini",
-      "items": [
-        {
-          "titulo": "Your data under your control",
-          "texto": "We can deploy models on your own servers, as in UtenIA and Aura, so sensitive information never leaves your organization."
-        },
-        {
-          "titulo": "Integration with your systems",
-          "texto": "We build custom software, so we connect the agent to your databases, management systems and internal tools."
-        },
-        {
-          "titulo": "Development and infrastructure in one team",
-          "texto": "We design, build and run the complete solution: the agent, the integrations and the infrastructure it runs on."
-        },
-        {
-          "titulo": "Official partner of UTN FRBA",
-          "texto": "We build and run institutional systems the university uses every day, including its AI agent."
-        }
-      ]
-    },
     "faq": {
       "titulo": "Frequently asked",
       "subtitulo": "questions",
