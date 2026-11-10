@@ -104,7 +104,10 @@ export default function Banner({ variant = "default" }) {
             {/* El header va encima del banner (ver Header.jsx), por eso el
                 banner ocupa toda la pantalla y deja lugar arriba. */}
             <Flex
-                minH={`${window.innerHeight}px`}
+                // Alto de pantalla en CSS (no en JS): así el HTML pre-renderizado
+                // coincide con el de React en cualquier dispositivo.
+                minH="100vh"
+                sx={{ "@supports (min-height: 100svh)": { minHeight: "100svh" } }}
                 direction="column"
                 align="center"
                 color="white"
@@ -240,7 +243,7 @@ export default function Banner({ variant = "default" }) {
                             borderColor="whiteAlpha.200"
                             backdropFilter="blur(8px)"
                         >
-                            <Image src="/assets/clients/utn-frba-white.png" alt="UTN Facultad Regional Buenos Aires" h={{ base: "20px", md: "24px" }} />
+                            <Image src="/assets/clients/utn-frba-white.webp" alt="UTN Facultad Regional Buenos Aires" h={{ base: "20px", md: "24px" }} />
                             <Box w="1px" h="16px" bg="whiteAlpha.300" />
                             <Text m={0} fontSize={{ base: "xs", md: "sm" }} fontWeight="600" color="whiteAlpha.900" letterSpacing="0.01em">
                                 {t("banner.partnerUtn")}

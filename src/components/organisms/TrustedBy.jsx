@@ -63,13 +63,13 @@ const DIGITAL_ARTS = {
  * (`hip-monorepo/packages/ui/public/brand/`), que pide no bajar de 30px de alto.
  */
 const CLIENTS = [
-  { name: "Universidad de Buenos Aires", logo: "/assets/clients/uba.png", h: "1.75rem" },
-  { name: "Hospital El Cruce", logo: "/assets/clients/hospital-el-cruce.png", h: "3rem" },
-  { name: "Moviltrack", logo: "/assets/clients/moviltrack.png", h: "1.15rem" },
-  { name: "Improveet", logo: "/assets/clients/improveet.png", h: "1.25rem" },
-  { name: "Be Water", logo: "/assets/clients/be-water.png", h: "2rem" },
-  { name: "The Brains", logo: "/assets/clients/the-brains.png", h: "1.6rem" },
-  { name: "Cognitia", logo: "/assets/clients/cognitia.png", h: "1.6rem" },
+  { name: "Universidad de Buenos Aires", logo: "/assets/clients/uba.webp", h: "1.75rem" },
+  { name: "Hospital El Cruce", logo: "/assets/clients/hospital-el-cruce.webp", h: "3rem" },
+  { name: "Moviltrack", logo: "/assets/clients/moviltrack.webp", h: "1.15rem" },
+  { name: "Improveet", logo: "/assets/clients/improveet.webp", h: "1.25rem" },
+  { name: "Be Water", logo: "/assets/clients/be-water.webp", h: "2rem" },
+  { name: "The Brains", logo: "/assets/clients/the-brains.webp", h: "1.6rem" },
+  { name: "Cognitia", logo: "/assets/clients/cognitia.webp", h: "1.6rem" },
   { name: "HIP Game Park", logo: "/assets/clients/hip-game-park.svg", h: "31px" },
   // Pendiente hasta tener su logo:
   // { name: "Química Morón", logo: "/assets/clients/quimica-moron.png", h: "2rem" },
@@ -105,7 +105,7 @@ export default function TrustedBy() {
           <PartnerCard
             icon={LuBadgeCheck}
             label={t("trust.partnerEtiqueta")}
-            logo="/assets/clients/utn-frba.png"
+            logo="/assets/clients/utn-frba.webp"
             logoAlt="UTN Facultad Regional Buenos Aires"
             title={t("trust.partnerTitulo")}
             text={t("trust.partnerTexto")}

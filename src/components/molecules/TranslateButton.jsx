@@ -1,6 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { setLanguage } from "../../i18n";
 import { FiGlobe } from "react-icons/fi";
 
 const languages = ["es", "en"];
@@ -36,7 +37,7 @@ export default function TranslateButton() {
                 <Box
                     key={lng}
                     as="button"
-                    onClick={() => i18n.changeLanguage(lng)}
+                    onClick={() => setLanguage(lng)}
                     aria-pressed={current === lng}
                     position="relative"
                     w="40px"

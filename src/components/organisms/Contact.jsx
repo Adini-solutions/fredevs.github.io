@@ -6,7 +6,6 @@ import FloatingField from "../molecules/FloatingField";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
-import axios from "axios";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { rem } from "../../utils/escala";
 import { useWhatsAppUrl } from "../../utils/whatsapp";
@@ -79,9 +78,10 @@ export default function Contact({ variant = "default" }) {
     const subjectTopic = topic ?? t("contact.temaGeneral");
 
     try {
-      await axios.post(
-        WORKER_URL,
-        {
+      const res = await fetch(WORKER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
           to: contactEmail,
           subject: `Contacto web · ${subjectTopic} · ${name.trim()}`,
           text: [
@@ -95,9 +95,12 @@ export default function Contact({ variant = "default" }) {
           ].join("\n"),
           html: null,
           turnstileToken: token,
-        },
-        { headers: { "Content-Type": "application/json" } }
-      );
+        }),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw Object.assign(new Error(body.error || res.statusText), { userMessage: body.error });
+      }
 
       setSentTo(email.trim());
       setTopic(null);
@@ -108,7 +111,7 @@ export default function Contact({ variant = "default" }) {
       setSubmitted(false);
     } catch (err) {
       console.error("Error al enviar el formulario:", err);
-      setError(err?.response?.data?.error || t("contact.mensajeNoEnviado"));
+      setError(err?.userMessage || t("contact.mensajeNoEnviado"));
     } finally {
       // El token de Turnstile es de un solo uso.
       setTurnstileToken(null);
@@ -161,6 +164,11 @@ export default function Contact({ variant = "default" }) {
   }, []);
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
+  // Turnstile pesa ~200 KB: se carga cuando el formulario está por verse o
+  // cuando alguien hace foco en un campo, no al entrar a la página.
+  const { ref: formRef, inView: nearForm } = useInView({ triggerOnce: true, rootMargin: "600px 0px" });
+  const [touchedForm, setTouchedForm] = useState(false);
+  const loadTurnstile = nearForm || touchedForm;
   const field = { accent: c.primary, tone: "light", forceError: submitted };
   const busy = loading || waitingToken;
 
@@ -317,6 +325,8 @@ export default function Contact({ variant = "default" }) {
 
         {/* Columna derecha: formulario en tarjeta */}
         <MotionBox
+          ref={formRef}
+          onFocusCapture={() => setTouchedForm(true)}
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
@@ -480,6 +490,7 @@ export default function Contact({ variant = "default" }) {
 
                   {/* Turnstile invisible: solo ocupa lugar si pide interacción */}
                   <Box>
+                  {loadTurnstile && (
                   <Turnstile
                     siteKey={TURNSTILE_SITE_KEY}
                     onSuccess={(token) => {
@@ -493,6 +504,7 @@ export default function Contact({ variant = "default" }) {
                     }}
                     options={{ theme: "light", appearance: "interaction-only", size: "flexible" }}
                   />
+                  )}
 
                   <Flex
                     justify="space-between"

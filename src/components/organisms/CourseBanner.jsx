@@ -33,7 +33,7 @@ export default function CourseBanner() {
         >
           <Box position="absolute" left={0} top={0} bottom={0} w="4px" bg={UTN_RED} />
 
-          <Image src="/assets/clients/utn-frba.png" alt="UTN Facultad Regional Buenos Aires" h={{ base: "40px", md: "52px" }} w="auto" flexShrink={0} />
+          <Image src="/assets/clients/utn-frba.webp" alt="UTN Facultad Regional Buenos Aires" h={{ base: "40px", md: "52px" }} w="auto" flexShrink={0} />
 
           <Box flex={1}>
             <Flex align="center" gap={2} color={UTN_RED} fontSize="xs" fontWeight="700" letterSpacing="wider" textTransform="uppercase">

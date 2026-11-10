@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import axios from 'axios';
 import {
   Box,
   Container,
@@ -27,14 +26,9 @@ export default function Blog() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
   useEffect(() => {
-    axios
-      .get('https://dev.to/api/articles', {
-        params: {
-          username: 'adini',
-          per_page: 3
-        }
-      })
-      .then(res => setArticles(res.data))
+    fetch('https://dev.to/api/articles?username=adini&per_page=3')
+      .then(res => (res.ok ? res.json() : Promise.reject(new Error(res.statusText))))
+      .then(setArticles)
       .catch(err => console.error('Error fetching dev.to articles', err))
       .finally(() => setLoading(false));
   }, []);

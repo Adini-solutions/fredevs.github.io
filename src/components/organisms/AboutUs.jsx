@@ -12,7 +12,7 @@ export default function AboutUs({ variant = "default" }) {
             id: "agus",
             name: "Agustín Acevedo",
             role: `${t("aboutUs.cloud")} | ${t("aboutUs.sysadmin")}`,
-            image: "/assets/images/agus.png",
+            image: "/assets/images/agus.webp",
             linkedin: "https://www.linkedin.com/in/agustinezequielacevedo/",
             portfolio: "https://agusacevedo.com.ar/",
         },
@@ -20,7 +20,7 @@ export default function AboutUs({ variant = "default" }) {
             id: "alejo",
             name: "Alejo Suarez",
             role: `${t("aboutUs.fullstack")}`,
-            image: "/assets/images/ale.png",
+            image: "/assets/images/ale.webp",
             linkedin: "https://www.linkedin.com/in/alejo-ezequiel-suarez/",
             portfolio: "https://alejosuarez2001.github.io/alejosuarez/",
         },
@@ -28,7 +28,7 @@ export default function AboutUs({ variant = "default" }) {
             id: "gabi",
             name: "Gabriel Olivieri",
             role: `${t("aboutUs.desarrollador")} | ${t("aboutUs.devops")}`,
-            image: "/assets/images/gabi.png",
+            image: "/assets/images/gabi.webp",
             linkedin: "https://www.linkedin.com/in/gabriel-olivieri-38437b1bb/",
             portfolio: "https://gabrielolivieri.dev",
         },
@@ -36,14 +36,14 @@ export default function AboutUs({ variant = "default" }) {
             id: "juani",
             name: "Juan Ignacio Diaz",
             role: `${t("aboutUs.bi")}`,
-            image: "/assets/images/juani.png",
+            image: "/assets/images/juani.webp",
             linkedin: "https://www.linkedin.com/in/juan-ignacio-diaz-puig-49ab08231/",
         },
         {
             id: "gon",
             name: "Gonzalo Suarez",
             role: `${t("aboutUs.fullstack")}`,
-            image: "/assets/images/gon.png",
+            image: "/assets/images/gon.webp",
             linkedin: "https://www.linkedin.com/in/suarez-gonzalo/",
             portfolio: "https://gonzalosuarez2001.github.io/gonzalosuarez/",
         },
@@ -51,7 +51,7 @@ export default function AboutUs({ variant = "default" }) {
             id: "dani",
             name: "Daniel Piñero",
             role: `${t("aboutUs.cloud")} | ${t("aboutUs.sysadmin")}`,
-            image: "/assets/images/dani.png",
+            image: "/assets/images/dani.webp",
             linkedin: "https://www.linkedin.com/in/daniel-alberto-pi%C3%B1ero-104a83119/",
         },
     ];
@@ -104,6 +104,10 @@ export default function AboutUs({ variant = "default" }) {
                                         boxShadow="md"
                                         src={member.image}
                                         alt={member.name}
+                                        loading="lazy"
+                                        decoding="async"
+                                        width="180"
+                                        height="180"
                                         borderRadius="full"
                                         boxSize={{ base: "130px", md: "9.5rem", "2xl": "180px" }}
                                         mx="auto"

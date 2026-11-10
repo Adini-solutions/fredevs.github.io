@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Header from "../organisms/Header";
 import Banner from "../organisms/Banner";
 import DevServices from "../organisms/DevServices";
 import ProcessRoadmap from "../organisms/ProcessRoadmap";
-import Technologies from "../organisms/Technologies";
 import AboutUs from "../organisms/AboutUs";
 import Contact from "../organisms/Contact";
-import Portfolio from "../organisms/Portfolio";
 import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import TranslateButton from "../molecules/TranslateButton";
 import SEO from "../../utils/SEO";
 import useHashScroll from "../../utils/useHashScroll";
+
+// Tecnologías y portfolio usan react-slick (y su CSS): van en un archivo aparte
+// para no sumar ese peso al home ni a /ia.
+const Technologies = lazy(() => import("../organisms/Technologies"));
+const Portfolio = lazy(() => import("../organisms/Portfolio"));
 
 export default function Dev() {
   useHashScroll();
@@ -45,10 +48,14 @@ export default function Dev() {
           <DevServices variant="dev" />
         </Box>
         <Box id="tecnologías">
-          <Technologies />
+          <Suspense fallback={null}>
+            <Technologies />
+          </Suspense>
         </Box>
         <Box id="proyectos">
-          <Portfolio />
+          <Suspense fallback={null}>
+            <Portfolio />
+          </Suspense>
         </Box>
         <Box id="proceso">
           <ProcessRoadmap />

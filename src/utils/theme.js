@@ -27,6 +27,14 @@ const theme = extendTheme({
         scrollbarWidth: "thin",
         scrollbarColor: "#091c30 #f7f8ff",
       },
+      // Márgenes tipográficos que antes ponía Bootstrap (su "reboot"). El
+      // sitio se diseñó con ellos: los componentes que no fijan margen cuentan
+      // con este espacio debajo de párrafos, títulos y listas.
+      p: { marginTop: 0, marginBottom: "1rem" },
+      "h1, h2, h3, h4, h5, h6": { marginTop: 0, marginBottom: "0.5rem", fontWeight: 500, lineHeight: 1.2 },
+      "ol, ul": { paddingLeft: "2rem", marginTop: 0, marginBottom: "1rem" },
+      "ol ol, ul ul, ol ul, ul ol": { marginBottom: 0 },
+      "img, svg": { verticalAlign: "middle" },
       // Escala global: en tablets y notebooks de 13" el tamaño base baja a
       // 14px y vuelve a 16px de forma gradual entre 1280 y 1536px de ancho.
       // Como el sitio mide casi todo en rem, tipografía, espaciados y

@@ -120,16 +120,16 @@ export default function Footer({ variant = "default", mt = "70px" }) {
                 <GridItem colSpan={{ base: 2, md: 1 }}>
                     <Text fontWeight="bold" color="white" mb={3}>{t("footer.redes.titulo")}</Text>
                     <HStack justify={{ base: "center", md: "start" }} spacing={4}>
-                        <Link href={information.instagram} isExternal>
+                        <Link href={information.instagram} isExternal aria-label="Instagram de ADINI">
                             <Icon as={FaInstagram} w={5} h={5} _hover={{ color: "white" }} />
                         </Link>
-                        <Link href={information.linkedin} isExternal>
+                        <Link href={information.linkedin} isExternal aria-label="LinkedIn de ADINI">
                             <Icon as={FaLinkedin} w={5} h={5} _hover={{ color: "white" }} />
                         </Link>
-                        <Link href={information.facebook} isExternal>
+                        <Link href={information.facebook} isExternal aria-label="Facebook de ADINI">
                             <Icon as={FaFacebook} w={5} h={5} _hover={{ color: "white" }} />
                         </Link>
-                        <Link href={`mailto:${information.email}`} isExternal>
+                        <Link href={`mailto:${information.email}`} aria-label={`Escribir a ${information.email}`}>
                             <Icon as={FaEnvelope} w={5} h={5} _hover={{ color: "white" }} />
                         </Link>
                     </HStack>
