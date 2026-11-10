@@ -22,14 +22,16 @@ export default function Header({ variant = "default" }) {
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30, restDelta: 0.001 });
 
-  // Colores, logo y menú de cada página.
+  // Colores y menú de cada página.
   const themes = {
-    default: { accent: "#5548e6", accentLight: "#8b85ff", gradient: "linear-gradient(90deg, #6c63ff, #22d3ee)", ctaBg: "#6c63ff", ctaHover: "#5548e6", logo: "/assets/brand/adini-logotipo-purple.svg" },
-    dev: { accent: "#5548e6", accentLight: "#8b85ff", gradient: "linear-gradient(90deg, #6c63ff, #22d3ee)", ctaBg: "#6c63ff", ctaHover: "#5548e6", logo: "/assets/brand/adini-logotipo-purple.svg" },
-    infra: { accent: "#238b6f", accentLight: "#2fbf94", gradient: "linear-gradient(90deg, #2fbf94, #22d3ee)", ctaBg: "#238b6f", ctaHover: "#1f7862", logo: "/assets/brand/adini-logotipo-infra.svg" },
-    ia: { accent: "#2563eb", accentLight: "#60a5fa", gradient: "linear-gradient(90deg, #3b82f6, #22d3ee)", ctaBg: "#3b82f6", ctaHover: "#2563eb", logo: "/assets/brand/adini-logotipo-navy.svg" },
+    default: { accent: "#5548e6", accentLight: "#8b85ff", gradient: "linear-gradient(90deg, #6c63ff, #22d3ee)", ctaBg: "#6c63ff", ctaHover: "#5548e6" },
+    dev: { accent: "#5548e6", accentLight: "#8b85ff", gradient: "linear-gradient(90deg, #6c63ff, #22d3ee)", ctaBg: "#6c63ff", ctaHover: "#5548e6" },
+    infra: { accent: "#238b6f", accentLight: "#2fbf94", gradient: "linear-gradient(90deg, #2fbf94, #22d3ee)", ctaBg: "#238b6f", ctaHover: "#1f7862" },
+    ia: { accent: "#2563eb", accentLight: "#60a5fa", gradient: "linear-gradient(90deg, #3b82f6, #22d3ee)", ctaBg: "#3b82f6", ctaHover: "#2563eb" },
   };
-  const { accent, accentLight, gradient: accentGradient, ctaBg, ctaHover, logo: colorLogo } = themes[variant] || themes.default;
+  const { accent, accentLight, gradient: accentGradient, ctaBg, ctaHover } = themes[variant] || themes.default;
+  // El logotipo es siempre el violeta, en todas las áreas.
+  const colorLogo = "/assets/brand/adini-logotipo-purple.svg";
   const isArea = variant !== "default";
 
   const menuType = {

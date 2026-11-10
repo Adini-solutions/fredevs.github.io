@@ -1,4 +1,4 @@
-import { Box, Text, VStack, HStack, Flex, Button as ChakraButton } from "@chakra-ui/react";
+import { Box, Text, VStack, HStack, Flex, Image, Button as ChakraButton } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
 import HeroNetwork from "../molecules/HeroNetwork";
@@ -221,6 +221,26 @@ export default function Banner({ variant = "default" }) {
                     </Box>
 
                     <VStack spacing={{ base: 5, md: 7 }} textAlign="center" maxW="980px" position="relative">
+                        {/* Partner oficial de la UTN FRBA: va en todos los banners para
+                            que se vea aunque se entre directo a un área. */}
+                        <HStack
+                            as={motion.div}
+                            {...fadeUp(0)}
+                            spacing={3}
+                            px={4}
+                            py={2}
+                            borderRadius="full"
+                            bg="whiteAlpha.100"
+                            border="1px solid"
+                            borderColor="whiteAlpha.200"
+                            backdropFilter="blur(8px)"
+                        >
+                            <Image src="/assets/clients/utn-frba-white.png" alt="UTN Facultad Regional Buenos Aires" h={{ base: "20px", md: "24px" }} />
+                            <Box w="1px" h="16px" bg="whiteAlpha.300" />
+                            <Text m={0} fontSize={{ base: "xs", md: "sm" }} fontWeight="600" color="whiteAlpha.900" letterSpacing="0.01em">
+                                {t("banner.partnerUtn")}
+                            </Text>
+                        </HStack>
 
                         <Text
                             as={motion.h1}

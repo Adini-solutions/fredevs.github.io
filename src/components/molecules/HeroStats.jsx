@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FiMapPin, FiArrowRight } from "react-icons/fi";
 
-// Cifras verificables del sitio: proyectos del portfolio, organizaciones de
-// "confían en nosotros", integrantes de "Nosotros" y países con clientes.
-// Si cambian esas secciones, actualizar acá.
+// Cifras del sitio: proyectos entregados (se muestra como "+10"),
+// organizaciones de "confían en nosotros", integrantes de "Nosotros" y países
+// con clientes. Si cambian esas secciones, actualizar acá.
 const stats = [
-    { value: 19, key: "proyectos" },
+    { value: 10, prefix: "+", key: "proyectos" },
     { value: 10, key: "organizaciones" },
     { value: 6, key: "equipo" },
     { value: 3, key: "paises" },
@@ -93,7 +93,7 @@ export default function HeroStats({ primary, secondary, showCaseLink, onCaseClic
                 boxShadow="0 20px 50px rgba(0,0,0,0.35)"
                 overflow="hidden"
             >
-                {stats.map(({ value, key }, i) => (
+                {stats.map(({ value, prefix, key }, i) => (
                     <Box
                         key={key}
                         px={{ base: 5, lg: 6 }}
@@ -110,6 +110,7 @@ export default function HeroStats({ primary, secondary, showCaseLink, onCaseClic
                             bgGradient={`linear(to-r, white, ${secondary})`}
                             bgClip="text"
                         >
+                            {prefix}
                             <CountUp value={value} />
                         </Text>
                         <Text m={0} mt={1.5} fontSize="sm" lineHeight="1.3" color="whiteAlpha.700">
