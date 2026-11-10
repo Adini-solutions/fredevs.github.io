@@ -743,8 +743,8 @@
     }
   },
   "contact": {
-    "titulo": "Contáctanos",
-    "subtitulo": "para poder ayudarte",
+    "titulo": "Hablemos de",
+    "subtitulo": "tu proyecto",
     "descripcion": "Envíanos tu mensaje",
     "nombreInput": "Tu nombre",
     "correoInput": "Tu correo electrónico",
@@ -754,26 +754,57 @@
       "encabezado": "Contacto desde la web",
       "cuerpo": "Hola, mi nombre es"
     },
-    "span": "¡Gracias por confiar en nosotros!",
-    "boton": "Enviar",
+    "boton": "Enviar consulta",
     "mensajeEnviando": "Enviando",
-    "mensajeEnviado": "Mensaje enviado con éxito.",
-    "mensajeNoEnviado": "No se ha podido enviar el mensaje.",
+    "mensajeEnviado": "Recibimos tu consulta",
+    "mensajeNoEnviado": "No pudimos enviar tu consulta. Intentá de nuevo o escribinos por correo.",
     "nombreLabel": "Nombre y apellido",
     "correoLabel": "Correo electrónico",
     "telefonoLabel": "Teléfono (opcional)",
-    "mensajeLabel": "¿En qué te podemos ayudar?",
+    "mensajeLabel": "Contexto de tu consulta (opcional)",
     "correoInvalido": "Revisá el formato del correo",
-    "progreso": "{{done}} de {{total}} campos listos",
-    "progresoListo": "¡Todo listo para enviar!",
     "respuesta": "Respondemos en menos de 24 horas hábiles",
-    "otroMensaje": "Enviar otro mensaje",
-    "etiqueta": "Hablemos",
-    "bajada": "Contanos qué necesitás y te proponemos el mejor camino para resolverlo.",
+    "otroMensaje": "Enviar otra consulta",
+    "etiqueta": "Contacto",
+    "bajada": "Contanos qué necesitás resolver. Analizamos cada consulta y te respondemos con una propuesta de próximos pasos.",
     "privacidad": "Usamos tus datos solo para responderte",
-    "directo": "¿Preferís escribirnos directo?",
-    "chipRecibido": "Nuevo mensaje",
-    "chipRespuesta": "Respuesta en menos de 24 h"
+    "directo": "También podés escribirnos por",
+    "temaLabel": "¿Sobre qué querés consultarnos?",
+    "temaError": "Elegí un tema o describí brevemente tu consulta.",
+    "temaGeneral": "Consulta general",
+    "temas": {
+      "default": [
+        "Agentes de IA",
+        "Automatización de procesos",
+        "Software a medida",
+        "Infraestructura y cloud",
+        "Otro tema"
+      ],
+      "dev": [
+        "Software a medida",
+        "Aplicación móvil",
+        "Sitio o aplicación web",
+        "Integración de sistemas",
+        "Otro tema"
+      ],
+      "infra": [
+        "Infraestructura y datacenter",
+        "Redes y seguridad",
+        "Datos y continuidad",
+        "Monitoreo y soporte",
+        "Otro tema"
+      ]
+    },
+    "ayuda": {
+      "default": "Por ejemplo: qué proceso querés resolver, con qué sistemas trabaja hoy tu equipo y en qué plazos.",
+      "dev": "Por ejemplo: qué necesitás construir, para quién y con qué sistemas debe integrarse.",
+      "infra": "Por ejemplo: cómo está compuesta hoy tu infraestructura y qué necesitás mejorar."
+    },
+    "nombreError": "Ingresá tu nombre y apellido",
+    "obligatorios": "* Campos obligatorios",
+    "verificando": "Verificando",
+    "verificacionError": "No pudimos verificar el envío. Recargá la página e intentá de nuevo.",
+    "enviadoDetalle": "Te vamos a responder a {{email}} en menos de 24 horas hábiles."
   },
   "aboutUs": {
     "titulo": "Nuestro equipo",

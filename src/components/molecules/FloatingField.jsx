@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiCheck, FiAlertCircle } from "react-icons/fi";
 
 const MotionBox = motion(Box);
-const ERROR = "#ff6b6b";
+const ERROR = "#e5484d";
 const EASE = "cubic-bezier(.4,0,.2,1)";
 
 /**
@@ -25,6 +25,7 @@ export default function FloatingField({
   tone = "light",
   isValid = false,
   error,
+  forceError = false,
   required = false,
   autoComplete,
 }) {
@@ -32,7 +33,9 @@ export default function FloatingField({
   const [touched, setTouched] = useState(false);
   const dark = tone === "dark";
   const floating = focused || value.length > 0;
-  const showError = Boolean(error) && touched && !focused && value.length > 0;
+  // El error aparece al salir de un campo con contenido inválido o, después de
+  // intentar enviar, en todos los obligatorios que falten (forceError).
+  const showError = Boolean(error) && (forceError || (touched && !focused && value.length > 0));
   const color = showError ? ERROR : accent;
 
   const palette = dark
@@ -84,7 +87,7 @@ export default function FloatingField({
           display="block"
           w="100%"
           h={multiline ? undefined : "3.6rem"}
-          minH={multiline ? { base: "150px", md: "8rem", "2xl": "150px" } : undefined}
+          minH={multiline ? { base: "120px", md: "7rem" } : undefined}
           maxH={multiline ? "240px" : undefined}
           resize={multiline ? "vertical" : undefined}
           pl="46px"

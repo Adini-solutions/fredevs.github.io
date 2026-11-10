@@ -743,8 +743,8 @@
     }
   },
   "contact": {
-    "titulo": "Contact us",
-    "subtitulo": "to assist you",
+    "titulo": "Let's talk about",
+    "subtitulo": "your project",
     "descripcion": "Send us your message",
     "nombreInput": "Your name",
     "correoInput": "Your email",
@@ -754,26 +754,57 @@
       "encabezado": "Contact from the web",
       "cuerpo": "Hello, my name is"
     },
-    "span": "Thank you for trusting us!",
-    "boton": "Send",
+    "boton": "Send inquiry",
     "mensajeEnviando": "Sending",
-    "mensajeEnviado": "Message sent successfully.",
-    "mensajeNoEnviado": "Message could not be sent.",
+    "mensajeEnviado": "We received your inquiry",
+    "mensajeNoEnviado": "We couldn't send your inquiry. Try again or email us.",
     "nombreLabel": "Full name",
     "correoLabel": "Email address",
     "telefonoLabel": "Phone (optional)",
-    "mensajeLabel": "How can we help you?",
+    "mensajeLabel": "Context of your inquiry (optional)",
     "correoInvalido": "Please check the email format",
-    "progreso": "{{done}} of {{total}} fields ready",
-    "progresoListo": "All set to send!",
     "respuesta": "We reply within 24 business hours",
-    "otroMensaje": "Send another message",
-    "etiqueta": "Let's talk",
-    "bajada": "Tell us what you need and we'll propose the best way to get there.",
+    "otroMensaje": "Send another inquiry",
+    "etiqueta": "Contact",
+    "bajada": "Tell us what you need to solve. We review every inquiry and reply with a proposal for next steps.",
     "privacidad": "We only use your data to reply to you",
-    "directo": "Prefer to reach us directly?",
-    "chipRecibido": "New message",
-    "chipRespuesta": "Reply in under 24 h"
+    "directo": "You can also reach us by",
+    "temaLabel": "What would you like to discuss?",
+    "temaError": "Choose a topic or briefly describe your inquiry.",
+    "temaGeneral": "General inquiry",
+    "temas": {
+      "default": [
+        "AI agents",
+        "Process automation",
+        "Custom software",
+        "Infrastructure & cloud",
+        "Other"
+      ],
+      "dev": [
+        "Custom software",
+        "Mobile app",
+        "Website or web app",
+        "Systems integration",
+        "Other"
+      ],
+      "infra": [
+        "Infrastructure & datacenter",
+        "Networking & security",
+        "Data & continuity",
+        "Monitoring & support",
+        "Other"
+      ]
+    },
+    "ayuda": {
+      "default": "For example: which process you want to solve, which systems your team uses today and your timeline.",
+      "dev": "For example: what you need to build, for whom and which systems it must integrate with.",
+      "infra": "For example: what your infrastructure looks like today and what you need to improve."
+    },
+    "nombreError": "Please enter your full name",
+    "obligatorios": "* Required fields",
+    "verificando": "Verifying",
+    "verificacionError": "We couldn't verify the submission. Reload the page and try again.",
+    "enviadoDetalle": "We'll reply to {{email}} within 24 business hours."
   },
   "aboutUs": {
     "titulo": "Our team",

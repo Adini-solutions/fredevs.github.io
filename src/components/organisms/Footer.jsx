@@ -39,7 +39,7 @@ export default function Footer({ variant = "default", mt = "70px" }) {
 
     const information = {
         name: "Adini",
-        email: "contacto@adini.com",
+        email: "contacto@adini.com.ar",
         instagram: "https://www.instagram.com/adini.solutions/",
         linkedin: "https://www.linkedin.com/company/adiniar",
         facebook: "https://www.facebook.com/profile.php?id=61581291992126",
