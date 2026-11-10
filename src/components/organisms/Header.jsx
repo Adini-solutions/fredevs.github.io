@@ -29,7 +29,7 @@ export default function Header({ variant = "default" }) {
     infra: { accent: "#238b6f", accentLight: "#2fbf94", gradient: "linear-gradient(90deg, #2fbf94, #22d3ee)", ctaBg: "#238b6f", ctaHover: "#1f7862" },
     ia: { accent: "#2563eb", accentLight: "#60a5fa", gradient: "linear-gradient(90deg, #3b82f6, #22d3ee)", ctaBg: "#3b82f6", ctaHover: "#2563eb" },
   };
-  const { accent, accentLight, gradient: accentGradient, ctaBg, ctaHover } = themes[variant] || themes.default;
+  const { accent, gradient: accentGradient, ctaBg, ctaHover } = themes[variant] || themes.default;
   // El logotipo es siempre el violeta, en todas las áreas.
   const colorLogo = "/assets/brand/adini-logotipo-purple.svg";
   const isArea = variant !== "default";
