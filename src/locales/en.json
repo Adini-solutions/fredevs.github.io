@@ -962,7 +962,6 @@
     "flujo": {
       "titulo": "How an AI agent",
       "subtitulo": "works",
-      "bajada": "An agent combines a language model with controlled access to your information and systems. Each one is designed around a specific process, with defined limits and permissions.",
       "pasos": [
         {
           "titulo": "Receives",

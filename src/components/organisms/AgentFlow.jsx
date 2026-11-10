@@ -34,10 +34,6 @@ export default function AgentFlow() {
         />
 
         <Box maxW="1300px" mx="auto" position="relative" ref={ref}>
-          <Text m={0} mb={{ base: 10, md: 14 }} maxW="720px" fontSize={{ base: "md", md: "lg" }} color="whiteAlpha.800" lineHeight="1.7">
-            {t("iaPage.flujo.bajada")}
-          </Text>
-
           <Box position="relative">
             {/* Línea que une los pasos (solo en pantallas anchas) */}
             <Box

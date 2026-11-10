@@ -962,7 +962,6 @@
     "flujo": {
       "titulo": "Cómo funciona",
       "subtitulo": "un agente de IA",
-      "bajada": "Un agente combina un modelo de lenguaje con acceso controlado a tu información y a tus sistemas. Cada uno se diseña sobre un proceso concreto, con límites y permisos definidos.",
       "pasos": [
         {
           "titulo": "Recibe",
