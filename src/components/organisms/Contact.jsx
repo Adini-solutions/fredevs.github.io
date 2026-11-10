@@ -170,9 +170,10 @@ export default function Contact({ variant = "default" }) {
       overflow="hidden"
       bg="quarter.500"
       color={NAVY}
-      mt={rem(60)}
+      mt={rem(20)}
       px={{ base: 5, md: 10, lg: "6%", xl: "8%" }}
-      py={{ base: 16, md: 20, "2xl": 24 }}
+      pt={{ base: 10, md: 12, "2xl": 14 }}
+      pb={{ base: 16, md: 20, "2xl": 24 }}
     >
       {/* Fondo decorativo que se funde arriba y abajo con las secciones vecinas */}
       <Box
