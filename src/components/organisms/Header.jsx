@@ -275,12 +275,13 @@ export default function Header({ variant = "default" }) {
               py={1}
               borderRadius="full"
               border="1px solid"
-              borderColor={scrolled ? "gray.300" : "whiteAlpha.400"}
+              borderColor={scrolled ? "#5548e6" : "#a09bff"}
               onClick={() => navigateWithScroll("/")}
               fontWeight="semibold"
               fontSize="sm"
-              color={itemsColor}
-              _hover={{ color: scrolled ? accent : accentLight, borderColor: scrolled ? accent : accentLight }}
+              color={scrolled ? "#5548e6" : "#c4c1ff"}
+              transition="all 0.2s ease"
+              _hover={{ bg: scrolled ? "#5548e6" : "#6c63ff", borderColor: scrolled ? "#5548e6" : "#6c63ff", color: "white" }}
             >
               ADINI
             </Text>
@@ -352,7 +353,8 @@ export default function Header({ variant = "default" }) {
                       textAlign={"left"}
                       onClick={() => navigateWithScroll("/")}
                       fontSize="lg"
-                      color="gray.700"
+                      fontWeight="semibold"
+                      color="#5548e6"
                       pl={3}
                       transition="0.3s ease-in-out"
                       _hover={{ color: accent, transform: "translateX(5px)" }}
