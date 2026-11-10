@@ -229,7 +229,6 @@ export default function Contact({ variant = "default" }) {
               fontWeight={600}
               color={c.hover}
             >
-              <Box boxSize="7px" borderRadius="full" bg={c.primary} />
               <Text m={0}>{t("contact.etiqueta")}</Text>
             </HStack>
           </MotionBox>
