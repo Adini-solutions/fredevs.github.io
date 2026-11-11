@@ -845,14 +845,7 @@
     "tituloDev": "Specialists in",
     "subtituloDev": "software, product, and analytics",
     "tituloInfra": "Specialists in",
-    "subtituloInfra": "operations, security, and system continuity",
-    "desarrollador": "Developer",
-    "analista": "Analyst",
-    "bi": "Business Intelligence",
-    "fullstack": "Fullstack Developer",
-    "devops": "DevOps",
-    "sysadmin": "SysAdmin",
-    "cloud": "Cloud Engineer"
+    "subtituloInfra": "operations, security, and system continuity"
   },
   "footer": {
     "descripcion": "We drive digital transformation with tailor-made technological solutions, helping businesses grow and adapt to the future.",
