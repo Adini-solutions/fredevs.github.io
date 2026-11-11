@@ -8,8 +8,8 @@ import { CURSO_URL } from "../../utils/curso";
 const UTN_RED = "#a31235";
 
 /**
- * Prueba de confianza en /ia: el curso de IA que ADINI dicta en la UTN.BA,
- * con enlace a su web (innovia.adini.com.ar).
+ * El curso de IA que ADINI dicta en la UTN.BA, con enlace a su web
+ * (innovia.adini.com.ar). Va en el home y en /ia.
  */
 export default function CourseBanner() {
   const { t } = useTranslation();
@@ -31,7 +31,7 @@ export default function CourseBanner() {
           position="relative"
           overflow="hidden"
         >
-          <Box position="absolute" left={0} top={0} bottom={0} w="4px" bg={UTN_RED} />
+          <Box position="absolute" left={0} right={0} bottom={0} h="4px" bg={UTN_RED} />
 
           <Image src="/assets/clients/utn-frba.webp" alt="UTN Facultad Regional Buenos Aires" h={{ base: "40px", md: "52px" }} w="auto" flexShrink={0} />
 

@@ -8,6 +8,7 @@ import Contact from "../organisms/Contact";
 import AISection from "../organisms/AISection";
 import CaseStudies from "../organisms/CaseStudies";
 import TrustedBy from "../organisms/TrustedBy";
+import CourseBanner from "../organisms/CourseBanner";
 import Blog from "../organisms/Blog";
 import Footer from "../organisms/Footer";
 import WhatsAppIcon from "../molecules/WhatsAppIcon";
@@ -49,6 +50,7 @@ export default function Home() {
         <Box id="ia">
           <AISection />
         </Box>
+        <CourseBanner />
         <Box id="cases">
           <CaseStudies />
         </Box>
