@@ -1,0 +1,97 @@
+# Landing de Adini (adini.com.ar). deploy/deploy-vm.sh reemplaza ${LANDING_IMAGE}
+# con envsubst antes de aplicar.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: landing
+  namespace: default
+  labels:
+    app: landing
+    component: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: landing
+  template:
+    metadata:
+      labels:
+        app: landing
+        component: frontend
+    spec:
+      imagePullSecrets:
+        - name: ghcr-auth
+      containers:
+        - name: landing
+          image: ${LANDING_IMAGE}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 2
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 20m
+              memory: 16Mi
+            limits:
+              cpu: 200m
+              memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: landing
+  namespace: default
+  labels:
+    app: landing
+spec:
+  type: ClusterIP
+  selector:
+    app: landing
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+---
+# Sin TLS en el ingress: Cloudflare termina TLS en el tunnel.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: landing-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: adini.com.ar
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: landing
+                port:
+                  number: 80
+    - host: www.adini.com.ar
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: landing
+                port:
+                  number: 80
