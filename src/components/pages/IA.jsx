@@ -44,6 +44,7 @@ export default function IA() {
         <Box id="inicio">
           <Banner variant="ia" />
         </Box>
+        <CourseBanner />
         <Box id="soluciones">
           <AgentUseCases />
         </Box>
@@ -56,7 +57,6 @@ export default function IA() {
         <Box id="metodo">
           <ProcessRoadmap ns="processIa" icons={PROCESS_ICONS} variant="ia" />
         </Box>
-        <CourseBanner />
         <Box id="preguntas">
           <FAQ />
         </Box>
