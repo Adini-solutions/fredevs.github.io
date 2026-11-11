@@ -11,7 +11,7 @@ la landing:
 
 El deploy entra a `golivieri@ssh.adini.com.ar` por Cloudflare Access
 (`cloudflared access ssh` con service token) y corre `deploy/deploy-vm.sh`,
-que aplica `deploy/k8s/landing.yaml` (Deployment `landing`, Service y un Ingress
+que aplica `deploy/k8s/adini-web.yaml` (Deployment y Service `adini-web`, Ingress `adini-web-ingress`
 para `adini.com.ar` y `www.adini.com.ar`) en el namespace `default`. Cada deploy
 usa el tag del commit, así que el rollout pasa solo y para volver atrás alcanza
 con re-correr el workflow de un commit anterior (o `kubectl set image`).
@@ -30,11 +30,8 @@ con re-correr el workflow de un commit anterior (o `kubectl set image`).
    privada completa en formato OpenSSH/PEM, con las líneas `-----BEGIN` y
    `-----END` y un salto de línea al final; si no, `ssh-add` falla con
    `error in libcrypto`.
-3. **Cloudflare Zero Trust**: en el tunnel `cloudflared`, Public Hostnames
-   `adini.com.ar` y `www.adini.com.ar` →
-   `http://quickstart-ingress-nginx-controller:80`. Hasta que no se haga esto,
-   el deploy queda corriendo en el cluster pero el tráfico sigue yendo a donde
-   va hoy.
+3. **Cloudflare Zero Trust**: el tunnel `cloudflared` ya manda `adini.com.ar` y
+   `www.adini.com.ar` a `http://quickstart-ingress-nginx-controller:80`.
 
 ## A mano
 

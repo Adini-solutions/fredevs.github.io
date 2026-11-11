@@ -1,29 +1,29 @@
-# Landing de Adini (adini.com.ar). deploy/deploy-vm.sh reemplaza ${LANDING_IMAGE}
+# Landing de Adini (adini.com.ar). deploy/deploy-vm.sh reemplaza ${ADINI_WEB_IMAGE}
 # con envsubst antes de aplicar.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: landing
+  name: adini-web
   namespace: default
   labels:
-    app: landing
+    app: adini-web
     component: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: landing
+      app: adini-web
   template:
     metadata:
       labels:
-        app: landing
+        app: adini-web
         component: frontend
     spec:
       imagePullSecrets:
         - name: ghcr-auth
       containers:
-        - name: landing
-          image: ${LANDING_IMAGE}
+        - name: web
+          image: ${ADINI_WEB_IMAGE}
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -33,7 +33,7 @@ spec:
               path: /health
               port: http
             initialDelaySeconds: 3
-            periodSeconds: 10
+            periodSeconds: 15
           readinessProbe:
             httpGet:
               path: /health
@@ -42,7 +42,7 @@ spec:
             periodSeconds: 10
           resources:
             requests:
-              cpu: 20m
+              cpu: 10m
               memory: 16Mi
             limits:
               cpu: 200m
@@ -51,14 +51,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: landing
+  name: adini-web
   namespace: default
   labels:
-    app: landing
+    app: adini-web
 spec:
   type: ClusterIP
   selector:
-    app: landing
+    app: adini-web
   ports:
     - name: http
       port: 80
@@ -68,7 +68,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: landing-ingress
+  name: adini-web-ingress
   namespace: default
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
@@ -82,7 +82,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: landing
+                name: adini-web
                 port:
                   number: 80
     - host: www.adini.com.ar
@@ -92,6 +92,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: landing
+                name: adini-web
                 port:
                   number: 80

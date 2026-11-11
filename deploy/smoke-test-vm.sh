@@ -12,7 +12,7 @@ SSH_HOST="${1:-}"
 
 ssh "$SSH_HOST" 'bash -s' <<'REMOTE'
 set -euo pipefail
-kubectl port-forward svc/landing 18093:80 -n default >/tmp/landing-pf.log 2>&1 &
+kubectl port-forward svc/adini-web 18093:80 -n default >/tmp/adini-web-pf.log 2>&1 &
 PF_PID=$!
 trap 'kill $PF_PID 2>/dev/null || true' EXIT
 for i in $(seq 1 20); do
