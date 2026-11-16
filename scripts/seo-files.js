@@ -72,7 +72,7 @@ ${CASES.map(([slug, name, client, text]) => `- [${name} · ${client}](${STORIES}
 
 ## Formación
 
-- [Curso de IA híbrida, privada y local en la UTN.BA](https://innovia.adini.com.ar/): curso abierto y ediciones cerradas para empresas sobre cómo diseñar y rentabilizar IA en la nube, en infraestructura privada o híbrida.
+- [Curso de IA híbrida, privada y local en la UTN.BA](https://frba.utn.edu.ar/subim/ia/): curso abierto y ediciones cerradas para empresas sobre cómo diseñar y rentabilizar IA en la nube, en infraestructura privada o híbrida.
 
 ## Preguntas frecuentes sobre agentes de IA
 

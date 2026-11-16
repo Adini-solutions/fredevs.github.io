@@ -8,8 +8,8 @@ import { CURSO_URL } from "../../utils/curso";
 const UTN_RED = "#a31235";
 
 /**
- * El curso de IA que ADINI dicta en la UTN.BA, con enlace a su web
- * (innovia.adini.com.ar). Va en el home y en /ia.
+ * El curso de IA que ADINI dicta en la UTN.BA, con enlace a su página en
+ * el sitio de la facultad (ver utils/curso.js). Va en el home y en /ia.
  */
 export default function CourseBanner() {
   const { t } = useTranslation();
