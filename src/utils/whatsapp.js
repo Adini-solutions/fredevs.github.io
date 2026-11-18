@@ -19,3 +19,7 @@ export function useWhatsAppUrl(topic) {
     : t(`whatsapp.${page}`);
   return `https://wa.me/${NUMBER}?text=${encodeURIComponent(text)}`;
 }
+
+export function trackWhatsAppClick() {
+  window.gtag?.("event", "generate_lead", { method: "whatsapp" });
+}

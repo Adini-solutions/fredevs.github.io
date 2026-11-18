@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { rem } from "../../utils/escala";
-import { useWhatsAppUrl } from "../../utils/whatsapp";
+import { trackWhatsAppClick, useWhatsAppUrl } from "../../utils/whatsapp";
 
 const WORKER_URL = "https://email-worker.adini.workers.dev";
 const TURNSTILE_SITE_KEY = "0x4AAAAAACH7eEMqIQ4uu34n";
@@ -102,6 +102,7 @@ export default function Contact({ variant = "default" }) {
         throw Object.assign(new Error(body.error || res.statusText), { userMessage: body.error });
       }
 
+      window.gtag?.("event", "generate_lead", { method: "formulario" });
       setSentTo(email.trim());
       setTopic(null);
       setName("");
@@ -293,12 +294,13 @@ export default function Contact({ variant = "default" }) {
               <Flex gap={3} wrap="wrap">
                 {[
                   { href: `mailto:${contactEmail}`, icon: FiMail, label: contactEmail },
-                  { href: whatsappUrl, icon: FaWhatsapp, label: "WhatsApp", external: true },
-                ].map(({ href, icon, label, external }) => (
+                  { href: whatsappUrl, icon: FaWhatsapp, label: "WhatsApp", external: true, onClick: trackWhatsAppClick },
+                ].map(({ href, icon, label, external, onClick }) => (
                   <Link
                     key={label}
                     href={href}
                     isExternal={external}
+                    onClick={onClick}
                     display="inline-flex"
                     alignItems="center"
                     gap={2}

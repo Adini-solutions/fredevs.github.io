@@ -1,11 +1,11 @@
 import { Box } from "@chakra-ui/react";
-import { useWhatsAppUrl } from "../../utils/whatsapp";
+import { trackWhatsAppClick, useWhatsAppUrl } from "../../utils/whatsapp";
 
 const WhatsAppIcon = ({ position }) => {
   const href = useWhatsAppUrl();
 
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" onClick={trackWhatsAppClick}>
       <Box
         position={position}
         bottom="20px"
